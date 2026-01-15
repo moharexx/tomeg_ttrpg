@@ -1,0 +1,117 @@
+module.exports = {
+    name: "Animate Dead (WIP)",
+    category: "active",
+    type: [
+        "Spell",
+    ],
+    reqs_short: [
+        "10 Anima",
+    ],
+    reqs_full: [
+        "<b>Spell:</b> (20 INT | 20 WILL | 50 EGO), (10 Anima)",
+    ],
+    tags: [
+        "Offense, Defense, Utility",
+        "Proxy",
+        "Main-Action + Bonus-Action",
+    ],
+    unlock_cost: 20,
+    description: [
+        {
+            type: "p",
+            content: [
+                "When used, a Target Corpse in Range gets Animated as an Undead.",
+                `The Undead has the <a href="../abilities/undying.html" target="_blank">Undying Passive,</a> and needs no food, water, air, or sleep.`,
+                "The Undead can see even in pitch black darkness.",
+                "The Undead do not Naturally Regenerate.",
+                "The Undeads have <box>(6 × ESS) Radiant Weakness</box>",
+            ],
+        },
+        {
+            type: "p",
+            content: [
+                "Each Undead under the Caster occupies <box>(10 × ESS) Proxy</box>",
+                "As a Bonus-Action the Caster can issue a Verbal Command to the Controlled Undead, which will follow it if heard.",
+                "The Command can be General, or Targeted to a single Undead.",
+                "The Undead will still try to protect their Masters, and go along their plans without any Command.",
+                "This means the Undead can have Commands which they remember, and can improvise on the spot (to the best of their abilities).",
+                "The Caster can forgo Control as a Free-Action, this does not make the Undead Perish.",
+                "The Caster loses Control if the Distance is greater than <box>1000 × CS^(1/3) meters</box> for 1 Day.",
+                "Undead without any Control will wander and Attack any moving Living thing.",
+                "Defeated Undead are in too bad of a Condition to be used again.",
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                "<b>Undead Form:</b>",
+                "The form and type of Undead is determined by the Corpse.",
+                "A fleshy Corpse will make a Zombie Type.",
+                "A Skeletal Corpse will make a Skeleton Type, which have <box>(6 × ESS) Bludgeon Weakness</box>",
+                "Limbs are based on the Corpse, and may have the Multi Legged Passive.",
+                "The Undead are able to wear Armor, and if they have the appropriate limbs, even wield Weapons, and Shields.",
+                "If the Undead has claws, it is considered as a <box>1d6 × ESS</box> Base Damage Natural Weapon.",
+                "If the Undead is from a Corpse of an Animal which uses Bites, the mouth is considered as a <box>1d8 × ESS</box> Base Damage Natural Weapon.",
+            ],
+        },
+        {
+            type: "table",
+            full_width: "60%",
+            width: ["30%", "70%"],
+            content: [
+                ["Zombie Type", "Stats"],
+                ["HP", "20 × ESS"],
+                ["HD", "5 × ESS"],
+                ["MS Override", "2 × ESS^(1/3)"],
+                ["STR", "10 × ESS"],
+                ["AGI", "2 × ESS"],
+                ["VIT", "10 × ESS"],
+                ["INT", "1 × ESS"],
+                ["WILL", "2 × ESS"],
+                ["EGO", "1 × ESS"],
+                ["Melee To-Hit Modifier", "3 × ESS"],
+                ["Ranged To-Hit Modifier", "1 × ESS"],
+            ],
+        },
+        {
+            type: "table",
+            full_width: "60%",
+            width: ["30%", "70%"],
+            content: [
+                ["Skeleton Type", "Stats"],
+                ["HP", "8 × ESS"],
+                ["HD", "20 × ESS (10 AGI + 10 Melee Weapon Mastery)"],
+                ["MS Override", "4 × ESS^(1/3)"],
+                ["STR", "4 × ESS"],
+                ["AGI", "10 × ESS"],
+                ["VIT", "4 × ESS"],
+                ["INT", "2 × ESS"],
+                ["WILL", "4 × ESS"],
+                ["EGO", "2 × ESS"],
+                ["Melee To-Hit Modifier", "5 × ESS"],
+                ["Ranged To-Hit Modifier", "5 × ESS"],
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                "<b>Telepathic Communication</b> (Any Telepathy Spell):",
+                "You can issue Commands with Telepathy, up to <box>1000 × CS^(1/3) meters</box>",
+                "You also know if an Undead of yours gets Destroyed, and which within <box>1000 × CS^(1/3) meters</box>",
+            ],
+        },
+    ],
+    stats: [
+        {
+            type: "table",
+            full_width: "100%",
+            width: ["30%", "70%"],
+            content: [
+                ["Ability Stat", "Value"],
+                ["Cast Time", "Main-Action + Bonus-Action"],
+                ["Range", "CS^(1/3)"],
+                ["Proxy per Undead", "10 × ESS"],
+            ],
+        },
+    ],
+}

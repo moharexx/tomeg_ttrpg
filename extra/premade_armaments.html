@@ -1,0 +1,622 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=0.35">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../assets/style_main.css">
+    <script src="../assets/script_main.js"></script>
+    <title>Premade Armaments</title>
+</head>
+
+<body>
+    <header>
+        <div onclick="gear_button_onclick()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
+        <div onclick="go_to('main/main.html')">Main Page</div>
+        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
+        <div onclick="go_to('main/abilities.html')">Abilities</div>
+        <div onclick="go_to('main/extra.html')">Extra</div>
+    </header>
+    <side_menu id="side_menu"></side_menu>
+    <main>
+        <!--PREMADE ARMAMENTS-->
+        <h1 id="premade_armaments">PREMADE ARMAMENTS</h1>
+        <hr>
+        <p>
+            If looking at the Weapon table is too much, here is a collection of Premade Weapons, Armors, and Shields.<br>
+            There are Deluxe Versions for most of the Armaments written down below, which have some extra Armor-Pen.<br>
+            For <b>Tiered Up</b> Variants of these Armaments the Price is written in <a href="../extra/curios.html#tiered_armament" target="_blank">Curios</a>
+        </p>
+
+        <!--MELEE WEAPONS-->
+        <h1 id="melee_weapons">MELEE WEAPONS</h1>
+        <hr>
+        <h2 id="bladed_weapons">Bladed Weapons</h2>
+        <hr>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Name
+                </td>
+                <td width="5%">
+                    Price
+                </td>
+                <td width="70%">
+                    Stats
+                </td>
+            </tr>
+            <tr>
+                <td>Dagger</td>
+                <td>5</td>
+                <td>
+                    1d4 Base Damage, Slashing, Piercing<br>
+                    Light, Throw, Finesse<br>
+                    <b>Deluxe: Costs 40, has 7 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Sickle</td>
+                <td>5</td>
+                <td>
+                    1d4 Base Damage, Slashing, Piercing<br>
+                    Light, Finesse<br>
+                    <b>Deluxe: Costs 40, has 8 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Tomahawk</td>
+                <td>10</td>
+                <td>
+                    1d6 Base Damage, Slashing<br>
+                    Light, Throw<br>
+                    <b>Deluxe: Costs 40, has 6 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Shortsword<br>Scimitar</td>
+                <td>10</td>
+                <td>
+                    1d6 Base Damage, Slashing, Piercing<br>
+                    Light, Finesse<br>
+                    <b>Deluxe: Costs 40, has 6 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Hand Axe</td>
+                <td>20</td>
+                <td>
+                    1d8 Base Damage, Slashing<br>
+                    Throw<br>
+                    <b>Deluxe: Costs 40, has 4 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Longsword</td>
+                <td>15</td>
+                <td>
+                    1d8 Base Damage, Slashing, Piercing<br>
+                    Versatile<br>
+                    <b>Deluxe: Costs 40, has 5 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Rapier<br>Katana</td>
+                <td>20</td>
+                <td>
+                    1d8 Base Damage, Slashing, Piercing<br>
+                    Versatile, Finesse<br>
+                    <b>Deluxe: Costs 40, has 4 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Greatsword<br>Greataxe</td>
+                <td>20</td>
+                <td>
+                    1d12 Base Damage, Slashing, Piercing<br>
+                    Heavy<br>
+                    <b>Deluxe: Costs 40, has 4 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Odachi</td>
+                <td>25</td>
+                <td>
+                    1d12 Base Damage, Slashing, Piercing<br>
+                    Heavy, 1 Reach<br>
+                    <b>Deluxe: Costs 40, has 3 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Bastard Sword<br>Colossal Axe</td>
+                <td>40</td>
+                <td>
+                    1d20 Base Damage, Slashing, Piercing<br>
+                    Heavy
+                </td>
+            </tr>
+        </table>
+        <h2 id="polearms">Polearms</h2>
+        <hr>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Name
+                </td>
+                <td width="5%">
+                    Price
+                </td>
+                <td width="70%">
+                    Stats
+                </td>
+            </tr>
+            <tr>
+                <td>Javelin</td>
+                <td>20</td>
+                <td>
+                    1d8 Base Damage, Piercing<br>
+                    Throw<br>
+                    <b>Deluxe: Costs 40, has 4 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Quarterstaff</td>
+                <td>20</td>
+                <td>
+                    1d8 Base Damage, Bludgeoning<br>
+                    Versatile, Finesse<br>
+                    <b>Deluxe: Costs 40, has 4 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Spear<br>Trident</td>
+                <td>25</td>
+                <td>
+                    1d8 Base Damage, Piercing<br>
+                    Versatile, Reach 1, Throw<br>
+                    <b>Deluxe: Costs 40, has 3 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Pike</td>
+                <td>25</td>
+                <td>
+                    1d10 Base Damage, Piercing<br>
+                    Heavy, Reach 2<br>
+                    <b>Deluxe: Costs 40, has 3 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Halberd<br>Naginata</td>
+                <td>25</td>
+                <td>
+                    1d12 Base Damage, Slashing, Piercing<br>
+                    Heavy, Reach 1<br>
+                    <b>Deluxe: Costs 40, has 3 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Scythe</td>
+                <td>20</td>
+                <td>
+                    1d12 Base Damage, Slashing, Piercing<br>
+                    Heavy<br>
+                    <b>Deluxe: Costs 40, has 4 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Lance</td>
+                <td>30</td>
+                <td>
+                    1d12 Base Damage, Piercing<br>
+                    Heavy, Reach 2<br>
+                    <b>Deluxe: Costs 40, has 2 Armor-Pen</b>
+                </td>
+            </tr>
+        </table>
+        <h2 id="mace_and_hammer_type_weapon">Mace and Hammer Type Weapons</h2>
+        <hr>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Name
+                </td>
+                <td width="5%">
+                    Price
+                </td>
+                <td width="70%">
+                    Stats
+                </td>
+            </tr>
+            <tr>
+                <td>Club</td>
+                <td>5</td>
+                <td>
+                    1d4 Base Damage, Bludgeoning<br>
+                    Light
+                </td>
+            </tr>
+            <tr>
+                <td>Mace</td>
+                <td>5</td>
+                <td>
+                    1d6 Base Damage, Bludgeoning<br>
+                    Light<br>
+                    <b>Deluxe: Costs 40, has 7 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Throwing Hammer</td>
+                <td>10</td>
+                <td>
+                    1d6 Base Damage, Bludgeoning<br>
+                    Light, Throw<br>
+                    <b>Deluxe: Costs 40, has 6 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Warhammer</td>
+                <td>15</td>
+                <td>
+                    1d8 Base Damage, Bludgeoning<br>
+                    Versatile<br>
+                    <b>Deluxe: Costs 40, has 5 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Morningstar</td>
+                <td>20</td>
+                <td>
+                    1d8 Base Damage, Bludgeoning<br>
+                    Versatile, Reach 1<br>
+                    <b>Deluxe: Costs 40, has 4 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Maul</td>
+                <td>20</td>
+                <td>
+                    1d12 Base Damage, Bludgeoning<br>
+                    Heavy<br>
+                    <b>Deluxe: Costs 40, has 4 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Oversized Hammer</td>
+                <td>40</td>
+                <td>
+                    1d20 Base Damage, Bludgeoning<br>
+                    Heavy
+                </td>
+            </tr>
+        </table>
+        <h2 id="other_melee_weapons">Other Melee Weapons</h2>
+        <hr>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Name
+                </td>
+                <td width="5%">
+                    Price
+                </td>
+                <td width="70%">
+                    Stats
+                </td>
+            </tr>
+            <tr>
+                <td>Whip</td>
+                <td>10</td>
+                <td>
+                    1d4 Base Damage, Slashing, Piercing<br>
+                    Reach 2, Finesse<br>
+                    <b>Deluxe: Costs 40, has 6 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Brass Knuckles</td>
+                <td>5</td>
+                <td>
+                    1d4 Base Damage, Bludgeoning | Piercing<br>
+                    Light, Finesse<br>
+                    <b>Deluxe: Costs 40, has 8 Armor-Pen</b>
+                </td>
+            </tr>
+        </table>
+
+        <!--RANGED WEAPONS-->
+        <h1 id="ranged_weapons">RANGED WEAPONS</h1>
+        <hr>
+        <h2 id="bows">Bows</h2>
+        <hr>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Name
+                </td>
+                <td width="5%">
+                    Price
+                </td>
+                <td width="70%">
+                    Stats
+                </td>
+            </tr>
+            <tr>
+                <td>Shortbow</td>
+                <td>15</td>
+                <td>
+                    1d8 Base Damage, Piercing<br>
+                    40 / 80 Range<br>
+                    -<br>
+                    <b>Deluxe: Costs 40, has 5 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Longbow</td>
+                <td>25</td>
+                <td>
+                    1d12 Base Damage, Piercing<br>
+                    80 / 160 Range<br>
+                    Heavy<br>
+                    <b>Deluxe: Costs 40, has 3 Armor-Pen</b>
+                </td>
+            </tr>
+        </table>
+        <h2 id="bows">Guns and Crossbows</h2>
+        <hr>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Name
+                </td>
+                <td width="5%">
+                    Price
+                </td>
+                <td width="70%">
+                    Stats
+                </td>
+            </tr>
+            <tr>
+                <td>Hand Crossbow</td>
+                <td>5</td>
+                <td>
+                    1d6 Base Damage, Piercing<br>
+                    30 / 60 Range<br>
+                    Light, Reload<br>
+                    <b>Deluxe: Costs 40, has 8 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Flintlock</td>
+                <td>5</td>
+                <td>
+                    1d6 Base Damage, Piercing<br>
+                    30 / 60 Range<br>
+                    Light, Aim, Slow-Reload<br>
+                    <b>Deluxe: Costs 40, has 7 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Wheellock</td>
+                <td>20</td>
+                <td>
+                    1d6 Base Damage, Piercing<br>
+                    30 / 60 Range<br>
+                    Light, Aim<br>
+                    <b>Deluxe: Costs 40, has 4 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Crossbow</td>
+                <td>5</td>
+                <td>
+                    1d8 Base Damage, Piercing<br>
+                    40 / 80 Range<br>
+                    Reload<br>
+                    <b>Deluxe: Costs 40, has 7 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Heavy Crossbow</td>
+                <td>15</td>
+                <td>
+                    1d12 Base Damage, Piercing<br>
+                    80 / 160 Range<br>
+                    Heavy, Reload<br>
+                    <b>Deluxe: Costs 40, has 5 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Musket</td>
+                <td>30</td>
+                <td>
+                    1d20 Base Damage, Piercing<br>
+                    120 / 240 Range<br>
+                    Heavy, Slow-Reload<br>
+                    <b>Deluxe: Costs 40, has 2 Armor-Pen</b>
+                </td>
+            </tr>
+        </table>
+        <h2 id="shotguns">Shotguns</h2>
+        <hr>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Name
+                </td>
+                <td width="5%">
+                    Price
+                </td>
+                <td width="70%">
+                    Stats
+                </td>
+            </tr>
+            <tr>
+                <td>Hand Blunderbuss</td>
+                <td>10</td>
+                <td>
+                    1d6 Base Damage, Piercing<br>
+                    3 Range<br>
+                    Light, Spread, Slow-Reload<br>
+                    <b>Deluxe: Costs 40, has 6 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Heavy Blunderbuss</td>
+                <td>25</td>
+                <td>
+                    1d12 Base Damage, Piercing<br>
+                    8 Range<br>
+                    Heavy, Spread, Slow-Reload<br>
+                    <b>Deluxe: Costs 40, has 3 Armor-Pen</b>
+                </td>
+            </tr>
+        </table>
+        <h2 id="other_ranged_weapons">Other Ranged Weapons</h2>
+        <hr>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Name
+                </td>
+                <td width="5%">
+                    Price
+                </td>
+                <td width="70%">
+                    Stats
+                </td>
+            </tr>
+            <tr>
+                <td>Blowgun</td>
+                <td>5</td>
+                <td>
+                    1d4 Base Damage, Piercing<br>
+                    20 / 40 Range<br>
+                    Light
+                </td>
+            </tr>
+            <tr>
+                <td>Sling</td>
+                <td>10</td>
+                <td>
+                    1d6 Base Damage, Bludgeoning<br>
+                    30 / 60 Range<br>
+                    Light
+                </td>
+            </tr>
+            <tr>
+                <td>Slingshot</td>
+                <td>15</td>
+                <td>
+                    1d8 Base Damage, Bludgeoning<br>
+                    40 / 80 Range<br>
+                    -<br>
+                    <b>Deluxe: Costs 40, has 5 Armor-Pen</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Staff Sling</td>
+                <td>25</td>
+                <td>
+                    1d12 Base Damage, Bludgeoning<br>
+                    80 / 160 Range<br>
+                    Heavy<br>
+                    <b>Deluxe: Costs 40, has 3 Armor-Pen</b>
+                </td>
+            </tr>
+        </table>
+
+        <!--SHIELDS-->
+        <h1 id="shields">SHIELDS</h1>
+        <hr>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Name
+                </td>
+                <td width="5%">
+                    Price
+                </td>
+                <td width="70%">
+                    Stats
+                </td>
+            </tr>
+            <tr>
+                <td>Buckler Shield</td>
+                <td>10</td>
+                <td>
+                    10 HD<br>
+                    Light
+                </td>
+            </tr>
+            <tr>
+                <td>Deluxe Shield</td>
+                <td>30</td>
+                <td>
+                    10 HD<br>
+                    Light<br>
+                    <b>Fast:</b> You can take the Defense-Action with a Bonus-Action.<br>
+                    <b>Efficient:</b> When taking the Defense-Action with a Main-Action, gain an extra Bonus-Action.
+                </td>
+            </tr>
+            <tr>
+                <td>Large Shield</td>
+                <td>20</td>
+                <td>
+                    4 Armor VS HP<br>
+                    <b>Heavy:</b> When taking the Defense-Action, gain extra 4 Armor VS HP.
+                </td>
+            </tr>
+            <tr>
+                <td>Tower Shield</td>
+                <td>30</td>
+                <td>
+                    4 Armor VS HP<br>
+                    <b>Heavy:</b> When taking the Defense-Action, gain extra 4 Armor VS HP.<br>
+                    <b>Tower:</b> Extra Cover Rules, exact details in Mechanics Page.
+                </td>
+            </tr>
+        </table>
+
+        <!--ARMORS-->
+        <h1 id="armors">ARMORS</h1>
+        <hr>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Name
+                </td>
+                <td width="5%">
+                    Price
+                </td>
+                <td width="70%">
+                    Stats
+                </td>
+            </tr>
+            <tr>
+                <td>Leather</td>
+                <td>40</td>
+                <td>
+                    2 Armor, 2 Demat-RES<br>
+                    <b>Light:</b> No Impact on HD
+                </td>
+            </tr>
+            <tr>
+                <td>Chainmail</td>
+                <td>80</td>
+                <td>
+                    4 Armor, 4 Demat-RES<br>
+                    <b>Medium:</b> HD doesn't benefit from Acrobatics.
+                </td>
+            </tr>
+            <tr>
+                <td>Plate</td>
+                <td>120</td>
+                <td>
+                    6 Armor, 6 Demat-RES<br>
+                    <b>Heavy:</b> HD doesn't benefit from Acrobatics and AGI.
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+</html>

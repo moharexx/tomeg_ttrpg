@@ -1,0 +1,2034 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=0.35">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../assets/style_main.css">
+    <script src="../assets/script_main.js"></script>
+    <title>Mechanics</title>
+</head>
+
+<body>
+    <header>
+        <div onclick="gear_button_onclick()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
+        <div onclick="go_to('main/main.html')">Main Page</div>
+        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
+        <div onclick="go_to('main/abilities.html')">Abilities</div>
+        <div onclick="go_to('main/extra.html')">Extra</div>
+    </header>
+    <side_menu id="side_menu"></side_menu>
+    <main>
+        <!--BASICS-->
+        <h1 id="d10_checks">d10 CHECKS</h1>
+        <hr>
+        <p>
+            d10 Checks are the heart of the game, they are used to determine if things succeed or fail.<br>
+        </p>
+        <p>
+            You throw a d10, add the Modifier, and add any Bonuses.<br>
+            For the Finalized Value, the d10 Check's Natural Value is Multiplied, so it remains relevant at higher levels.<br>
+            d10 Multiplier: <box>Modifier / 5</box> (Minimum of 1)<br>
+        </p>
+        <p>
+            <b>Example:</b> Throwing a Natural 4, with a Modifier of +12, will result in a Finalized Value of
+            20 (4 × 2 + 12)
+        </p>
+        <p>
+            <box><span style="color: green;">(<span style="color: red;">(d10 Base Value × <span style="color: blue;">Max(1, Modifier / 5)</span>)</span> + Modifier + Bonus)</span> × (Advantage|Disadvantage) + Finalized Bonus</box>
+        </p>
+        <h2 id="criticals">Criticals</h2>
+        <hr>
+        <p>
+            There is a Stat called CRIT Range, by default this is equal to 1.<br>
+            When Rolling a d10 Check, if the Natural Value is atleast <box>11 - CRIT Range</box> then the Check is a CRIT.<br>
+            <b>A CRIT Results in:</b> 2× Damage, 2× Healing, 2× Shielding, 2× BUFFER<br>
+        </p>
+        <p>
+            You may roll a d10 to determine CRIT for things which by default don't require a d10 Check, like Healing Spells.<br>
+            Some features might add or subtract from the CRIT Range, potentionally making it impossible to CRIT.
+        </p>
+        <p>
+            <b>Example:</b> Throwing a Natural 10 with the base CRIT Range of 1 will result in a CRIT.<br>
+            <b>Example:</b> Throwing a Natural 7 with 4 CRIT Range is a CRIT.<br>
+            <b>Example:</b> With 0 or less CRIT Range, even a Natural 10 won't be a CRIT.
+        </p>
+        <h2 id="advantage_and_disadvantage">Advantage and Disadvantage</h2>
+        <hr>
+        <p>
+            <b>Advantage:</b> Double the Value of the d10 Check, including Bonuses.<br>
+            <b>Disadvantage:</b> Half the Value of the d10 Check, including Bonuses.<br>
+        </p>
+        <p>
+            Advantage and Disadvantage do not stack, and cancel each other out.<br>
+            This means even 1 Advantage cancels out 3 Disadvantages, to where there is no Multiplier.
+        </p>
+        <h2 id="stable_checks">Stable Checks</h2>
+        <hr>
+        <p>
+            For Stable Checks, the d10 Natural Value Multiplication is Overridden to <box>Total XP / 100</box> (Minimum of 1)<br>
+            Advantage and Disadvantage Double and Half only the Dice's Value, leaving Modifier and Bonuses unchanged.<br>
+            <a href="#saves">Saves</a> and <a href="#initiative">Initiatives</a> are <b>Stable Checks.</b>
+        </p>
+        <h2 id="multi_checks">Multi-Checks</h2>
+        <hr>
+        <p>
+            Multi-Checks are Single Checks with multiple different Modifiers.<br>
+            You Roll only one d10, and seperately calculate the values with the different Modifiers.<br>
+            Note that Success with one of the Modifiers usually has the same effect as with the other.
+        </p>
+        <p>
+            <b>Example:</b> You make a Check which uses both Perception and Intuition, with Modifiers of +5 and +10.<br>
+            You Rolled a 6 on the d10, this means the Perception part of the Multi-Check is 11, and the Intuition part is 22.
+        </p>
+        <h2 id="passive_checks">Passive Checks</h2>
+        <hr>
+        <p>
+            Passive Checks are a Type of Check where the d10 is not thrown, and only the Modifier and Bonuses are counted.<br>
+            These Checks are always a Free-Action, and are assumed to be automatically made, unless someone specifies they don't make said Passive Check.
+        </p>
+        <h1 id="base_stats">BASE STATS</h1>
+        <hr>
+        <p>
+            There are 6 Base Stats Entities can have.<br>
+            Maximum of any Base Stat of an Entity: <box>Total XP / 10</box><br>
+            Base Stat d10 Check Modifier: <box>Stat / 2</box>
+        </p>
+        <table width="80%">
+            <tr>
+                <td width="20%">
+                    Name
+                </td>
+                <td width="10%">
+                    Index
+                </td>
+                <td width="70%">
+                    Description
+                </td>
+            </tr>
+            <tr>
+                <td>Strength</td>
+                <td>STR</td>
+                <td>Practical force and power output of the Physical Body.</td>
+            </tr>
+            <tr>
+                <td>Agility</td>
+                <td>AGI</td>
+                <td>Reaction, and fine control of movements.</td>
+            </tr>
+            <tr>
+                <td>Vitality</td>
+                <td>VIT</td>
+                <td>Resiliance against bodily change, inluding biological.</td>
+            </tr>
+            <tr>
+                <td>Intelligence</td>
+                <td>INT</td>
+                <td>Processing power, memeory, and pattern recognition.</td>
+            </tr>
+            <tr>
+                <td>Willpower</td>
+                <td>WILL</td>
+                <td>Subconscious mind, and concentration.</td>
+            </tr>
+            <tr>
+                <td>Ego</td>
+                <td>EGO</td>
+                <td>Character, desires, and emotions.</td>
+            </tr>
+        </table>
+        <p>
+            0 STR will stop all bodily movement, even internal, the Entity is <a href="#conditions">Paralyzed</a>.<br>
+            At 0 STR an Entity which needs air or blood flow will begin <a href="#underwater_rules">Suffocating</a>.
+        </p>
+        <p>
+            0 AGI means the Entity is <a href="#conditions">Paralyzed</a>.
+        </p>
+        <p>
+            0 VIT means the Entity is <a href="#death">Dead</a>.
+        </p>
+        <p>
+            0 INT means the Entity is <a href="#conditions">Unconscious</a>.
+        </p>
+        <p>
+            0 WILL normally means the Entity is <a href="#conditions">Paralyzed</a>.<br>
+            Some Entities may not require WILL, like some constructs.<br>
+        </p>
+        <p>
+            0 EGO normally means the Entity is <a href="#conditions">Unconscious</a>.<br>
+            If the Entity is controlled by another, or doesn't require EGO, then it <b>isn't Unconscious.</b>
+        </p>
+        <h1 id="extra_stats">EXTRA STATS</h1>
+        <hr>
+        <p>
+            Each Entity has a few additional stats.<br>
+            Note that Entity Features can override some of these calculations.
+        </p>
+        <p>
+            For Stats classified as a Resource these values indicate the Maximum the Entity can have under normal
+            conditions.<br>
+            Resources are used and regenerated, like Health.
+        </p>
+        <p class="bottomless"><b>Stat Types:</b></p>
+        <ul>
+            <li><b>Static:</b> This is a (mostly) static value.</li>
+            <li><b>Resource:</b> This has a Max Value, and a Current Value; regenerating and depleting.</li>
+            <li><b>Output:</b> This indicates a Max Output, like an electrical current, only being used when something's active.</li>
+        </ul>
+        <table width="80%">
+            <tr>
+                <td width="20%">
+                    Name
+                </td>
+                <td width="10%">
+                    Index
+                </td>
+                <td width="10%">
+                    Type
+                </td>
+                <td width="60%">
+                    Calculation
+                </td>
+            </tr>
+            <tr>
+                <td>Health</td>
+                <td>HP</td>
+                <td>Resource</td>
+                <td>VIT + STR</td>
+            </tr>
+            <tr>
+                <td>Hit-Difficulty</td>
+                <td>HD</td>
+                <td>Resource</td>
+                <td>AGI + Acrobatics + (Melee Weapon | Ballistic | Martial Arts)</td>
+            </tr>
+            <tr>
+                <td>Soul Points</td>
+                <td>SP</td>
+                <td>Resource</td>
+                <td>INT + WILL + EGO</td>
+            </tr>
+            <tr>
+                <td>Grit</td>
+                <td>GRIT</td>
+                <td>Resource</td>
+                <td>STR + Athletics</td>
+            </tr>
+            <tr>
+                <td>Restorable Health</td>
+                <td>REST-HP</td>
+                <td>Resource</td>
+                <td>4 × VIT</td>
+            </tr>
+            <tr>
+                <td>Proxy</td>
+                <td>PROXY</td>
+                <td>Output</td>
+                <td>INT + WILL + EGO</td>
+            </tr>
+            <tr>
+                <td>Move Speed</td>
+                <td>MS</td>
+                <td>Static</td>
+                <td>2 × (STR | AGI)^(1/3)</td>
+            </tr>
+            <tr>
+                <td>Initiative</td>
+                <td>INIT</td>
+                <td>Static</td>
+                <td>(AGI + (Perception | Intuition)) / 2</td>
+            </tr>
+        </table>
+        <p>
+            If an Entity reaches 0 HP, the Entity gains the <a href="#conditions">Dying Condition.</a><br>
+            When HP goes below <box>-(Max HP)</box> then the Body cannot contain the Soul, so it's ejected.
+        </p>
+        <p>
+            If SP reaches 0, then the Entity's <b>Soul Saves are Halved</b>, and it's PROXY is treated as being 0.<br>
+            When SP goes below <box>-(Max SP)</box> then the Entity's Soul is Destroyed.
+        </p>
+        <p>
+            A Soul without a Body has 0 STR, 0 VIT, 0 AGI<br>
+            A Soul without a Body takes 2 × SP Damage.<br>
+            A Soul without a Body has 1/10 Effective ESS on Abilities.<br>
+            A Soul without a Body only use Spell Type Abilities.<br>
+            Bodyless Soul Max HD: Max SP<br>
+            Bodyless Soul MS: SP^(1/3)
+        </p>
+
+        <!--MASTERIES-->
+        <h1 id="masteries">MASTERIES</h1>
+        <hr>
+        <p>
+            Each Entity has Masteries, these are specific skills they do better.<br>
+            The Maximum of any Mastery is the same as it's associated Base Stat.<br>
+            Mastery d10 Check Modifier: <box>(Main Stat + Mastery) / 2</box>
+        </p>
+        <table width="75%">
+            <tr>
+                <td width="20%">
+                    Name
+                </td>
+                <td width="15%">
+                    Base Stat
+                </td>
+                <td width="65%">
+                    Examples
+                </td>
+            </tr>
+            <tr>
+                <td>Athletics</td>
+                <td>STR</td>
+                <td>Climbing, Swimming, Jumping, Lifting</td>
+            </tr>
+            <tr>
+                <td>Acrobatics</td>
+                <td>AGI</td>
+                <td>Balancing, Dodging, Gymnastics, Stunts</td>
+            </tr>
+            <tr>
+                <td>Slight</td>
+                <td>AGI</td>
+                <td>Hiding, Moving Sliently, Slight of Hand, Lockpicking</td>
+            </tr>
+            <tr>
+                <td>Arcana</td>
+                <td>INT</td>
+                <td>Recognizing Magical Influence, Knowledge of Magic<br>Scrolls, Potions, Magical Entities</td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>INT</td>
+                <td>Mathematics, Physics, Chemistery, Biology, Technology</td>
+            </tr>
+            <tr>
+                <td>Lore</td>
+                <td>INT</td>
+                <td>History, Religion, Geography, Literature</td>
+            </tr>
+            <tr>
+                <td>Perception</td>
+                <td>WILL</td>
+                <td>Noticing Details, Sensing</td>
+            </tr>
+            <tr>
+                <td>Intuition</td>
+                <td>WILL</td>
+                <td>Gut Feeling, Reading People, Sensing Danger and Magic</td>
+            </tr>
+            <tr>
+                <td>Performance</td>
+                <td>EGO</td>
+                <td>Persuasion, Deception, Acting, Inspiring, Leading</td>
+            </tr>
+        </table>
+        <h2 id="martial_masteries">Martial-Masteries</h2>
+        <hr>
+        <p>
+            Martial-Masteries are for increasing Martial related Stats, and Unlocking Skill Type Abilities.<br>
+            The Maximum of any Martial-Mastery is the same as it's associated Base Stat.<br>
+            <b>Martial Mastery d10 Check Modifier:</b> <box>(Base Stat + Martial Mastery) / 4</box>
+        </p>
+        <table width="45%">
+            <tr>
+                <td width="60%">
+                    Name
+                </td>
+                <td width="40%">
+                    Base Stat
+                </td>
+            </tr>
+            <tr>
+                <td>Melee Weapon Mastery</td>
+                <td>STR | AGI</td>
+            </tr>
+            <tr>
+                <td>Ballistic Mastery</td>
+                <td>AGI</td>
+            </tr>
+            <tr>
+                <td>Martial Arts</td>
+                <td>STR | AGI</td>
+            </tr>
+        </table>
+        <h2 id="magic_masteries">Magic-Masteries</h2>
+        <hr>
+        <p>
+            Magic-Masteries are for Unlocking Spell Type Abilities.<br>
+            These Magic-Masteries are Divided into 7 Groups, each governing a collection of Meta-Concepts.<br>
+            The Maximum of any Magic-Mastery is the same as it's associated Base Stat.<br>
+            Magic Mastery d10 Check Modifier: <box>Magic Mastery</box>
+        </p>
+        <table width="65%">
+            <tr>
+                <td width="20%">
+                    Name
+                </td>
+                <td width="25%">
+                    Base Stat
+                </td>
+                <td width="55%">
+                    Main Meta-Concepts
+                </td>
+            </tr>
+            <tr>
+                <td>Evocation</td>
+                <td>INT | WILL | EGO</td>
+                <td>Energy, Action, Power</td>
+            </tr>
+            <tr>
+                <td>Transmutation</td>
+                <td>INT | WILL | EGO</td>
+                <td>Transformation, Change, Shape</td>
+            </tr>
+            <tr>
+                <td>Conjuration</td>
+                <td>INT | WILL | EGO</td>
+                <td>Creation, Recreation</td>
+            </tr>
+            <tr>
+                <td>Enchantment</td>
+                <td>INT | WILL | EGO</td>
+                <td>Manipulate, Influence, Enhance, Degrade</td>
+            </tr>
+            <tr>
+                <td>Abjuration</td>
+                <td>INT | WILL | EGO</td>
+                <td>Negate, Cancel, Inaction</td>
+            </tr>
+            <tr>
+                <td>Divination</td>
+                <td>INT | WILL | EGO</td>
+                <td>Information</td>
+            </tr>
+            <tr>
+                <td>Anima</td>
+                <td>INT | WILL | EGO</td>
+                <td>Souls, Autonomy, Rules</td>
+            </tr>
+        </table>
+
+        <!--CHARACTER-->
+        <h1 id="player_characters">PLAYER CHARACTERS</h1>
+        <hr>
+        <h2 id="character_creation">Character Creation</h2>
+        <hr>
+        <p>
+            When creating a character, you have 100 XP Points.<br>
+            No Base Stat can go over 10, or below 2 on character creation.<br>
+            Characters will also have 100C worth of items to their name.
+        </p>
+        <p>
+            Note that this is just a "Level 1" template.<br>
+            XP can be more or less depending on Game Master.
+        </p>
+        <p class="bottomless"><b>Resources:</b></p>
+        <ul>
+            <li><a href="./../assets/character_sheet.pdf" target="_blank">Character Sheet</a></li>
+            <li><a href="./../extra/character_assembler.html" target="_blank">Character Assembler</a></li>
+            <li><a href="./../assets/mob_sheet.pdf" target="_blank">Mob Sheet</a></li>
+        </ul>
+        <h2 id="experience">Experience</h2>
+        <hr>
+        <p>
+            Each Player Character has a Total XP, and a Stored XP.<br>
+            To gain XP, Players must perform actions, like combat encounters, quests, ect...<br>
+            XP is usually given in a batch at the end of a game session, split among the players.<br>
+            Note that Encounters can be defeated NOT only by killing them.
+        </p>
+        <p>
+            To increase a Base Stat by 1 you must spend 2 XP<br>
+            To increase a Mastery by 1 you must spend 0.5 XP<br>
+            Maximum of any one Base Stat: <box>Total XP / 10</box>
+        </p>
+        <h2 id="fate">Fate</h2>
+        <hr>
+        <p>
+            Player Characters are guided by <b>A</b>, Fated for greatness.<br>
+            When a Player does something cool, smart, completes an objective, or plays their character well, the GM may reward them a Fate Point.<br>
+            All Fate Effects are <b>Non-Actions</b>, and can be applied after Rolls!<br>
+            After Character Creation a Player starts with 1 Fate, and the Maximum they can have is 3 at a time.
+        </p>
+        <p class="bottomless"><b>Spending Fate:</b></p>
+        <ul>
+            <li><b>Lucky:</b> 1 Fate to Reroll any 1 of your Dice, or Remove Disadvantage from a d10 Check.</li>
+            <li><b>Resolve:</b> 1 Fate to Double your Save's Finalized Value.</li>
+            <li><b>Miracle:</b> 2 Fate to <a href="#max_value">Minimize</a> Damage and/or To-Hit of an Attack.</li>
+            <li><b>Unyielding:</b> 2 Fate to bring back your HP or SP to 1, and instantly End the <a href="#conditions">Prone Condition</a>.</li>
+            <li><b>Determination:</b> 3 Fate to make your d10 Check a 10 and a CRIT.</li>
+        </ul>
+        <p>
+            The GM might allow other custom effects for some <b>Fate</b>, haggle with them.<br>
+            <b>Example:</b> 1 Fate -> By guessing, the blind Player Character perfectly describes a nearby painting.
+        </p>
+        <p>
+            Note for the GM; be generous, grant 1-2 Fate per Player per session. It's the lifeline of your Players.
+        </p>
+
+        <!--COMBAT-->
+        <h1 id="combat_basics">COMBAT BASICS</h1>
+        <hr>
+        <h2 id="action_economy">Action Economy</h2>
+        <hr>
+        <p>
+            Combat is split into Rounds, each Round is 3 seconds in real time.<br>
+            Entities participating in Combat will have a Turn each Round.
+        </p>
+        <p class="bottomless">Each Entity has the following actions, restoring at the Start of their Turns:</p>
+        <ul>
+            <li>1 Main-Action</li>
+            <li>1 Bonus-Action</li>
+            <li>Unlimited Free-Actions</li>
+        </ul>
+        <p>
+            <b>You can use a Main-Action in place of a Bonus-Action!</b><br>
+            By default, <a href="#interact">interacting with an object</a> is a Bonus-Action.<br>
+            Some Actions can be made as <a href="#reactions">Reactions</a>, Reactions are NOT a seperate Resource!
+        </p>
+        <p>
+            Free-Actions are Actions that have no Action Cost, but are still Actions; only limited by their description.<br>
+            There are <b>Non-Actions</b>, these can always be <b>Reactions</b>, and you can do them even if you cannot take any Actions.<br>
+            <b>Non-Action Examples:</b> Spending Resources, Making Saves (Not always!), Using <a href="#fate">Fate.</a>
+        </p>
+        <p>
+            <b>Note:</b> At the Start of an Encounter, Entites will have their Actions from the previous Turn from before the Encounter!<br>
+            This means Reactions are possible before the first Turn in Combat.
+        </p>
+        <h2 id="initiative">Initiative</h2>
+        <hr>
+        <p>
+            At the Start of an Encounter each Entity Rolls a <a href="#stable_checks">Stable d10 Check</a> to determine Turn Orders.<br>
+            At the Start of a Round, each Entity's Turn comes in Descending Order.<br>
+            Each Round, Entities can delay their Turn to be after any Entity which Rolled less on Initiative.
+        </p>
+        <h2 id="health">Health</h2>
+        <hr>
+        <p>
+            HP is a Resource. It has a Max Value, and a Current Value.<br>
+            When taking <a href="#damage_types">Damage</a> you subtract from your HP.<br>
+            <a href="#resistances">Resistances, Weaknesses, and Absorptions</a> change how your HP interacts with Damage.
+        </p>
+        <p>
+            When HP reaches 0 you gain the <a href="#conditions">Dying Condition.</a><br>
+            When HP goes below <box>- Max HP</box> then your <a href="#death">Soul leaves your Body.</a>
+        </p>
+        <h2 id="hit_difficulty">Hit-Difficulty</h2>
+        <hr>
+        <p>
+            HD is a Resource, like Health.<br>
+            When an Attack is thrown, the Target can Spend HD to not get Hit by the Attack.<br>
+            The Target needs to Spend HD equal to the <a href="#attack">Attack's</a> <b>To-Hit</b>, only if they have enough HD.<br>
+            After a Minute (20 Rounds) of not Spending HD, it's gained back.<br>
+        </p>
+        <p>
+            If Maximum HD of an Entity increases, it's Current HD does NOT increase with it.<br>
+            If the Maximum HD decreases below Current HD, the Current HD decreases with it.
+        </p>
+        <h2 id="soul_points">Soul-Points</h2>
+        <hr>
+        <p>
+            SP is the Resource of the mind and Soul, like the mental version of HP.<br>
+            Psychic Damage goes into SP.<br>
+            Radiant, and Necrotic Damage go both into HP and SP.
+        </p>
+        <p>
+            When SP reaches 0, all of your Soul <a href="#saves">Saves</a> are <b>Halved</b>, this is <b>NOT Disadvantage!</b><br>
+            When SP goes below <box>- Max SP</box> then the Soul is destroyed. (You are very dead...)
+        </p>
+        <h2 id="attacks">Attacks</h2>
+        <hr>
+        <p>
+            Attacks are d10 Checks, the Result of the Check is called the <b>To-Hit.</b><br>
+            Target(s) must Spend HD equal to <box>To-Hit</box> to make the Attack Miss, or they get Hit.<br>
+            <a href="#attack_action">Attack-Actions</a> are the basic Attacks of the game, <b>but not all Attacks are Attack-Actions!</b>
+        </p>
+        <p>
+            Attacks can be <b>Ranged</b> or <b>Melee</b>, and on top of that some Attacks can be <a href="#aoe">AOE.</a><br>
+        </p>
+        <p>
+            When a Ranged Attack is used, it can have 2 different ranges, Normal Range, and Long Range.<br>
+            When using the Long Range, gain Disadvantage on the Attack Roll.<br>
+            Ranged Attacks against Targets who have you in their Melee Reach gain Disadvantage.
+        </p>
+        <h2 id="saves">Saves</h2>
+        <hr>
+        <p>
+            Saves are a different type of Attack, where the Target must Succeed the Save, or be Hit by the Attack.<br>
+            When a Save is presented, the Target must make a <a href="#stable_checks">Stable d10 Check.</a><br>
+            Saves have a Difficulty. (Example: <box>STR Save 10</box>)<br>
+            To Succeed a Save the Finalized Value of the Save must be at least the Save's Difficulty.<br>
+            Some Saves can have multiple types, in such case the Target decides what Save they use.<br>
+        </p>
+        <p class="bottomless"><b>Save Types:</b></p>
+        <ul>
+            <li>STR Save Modifier: <box>STR Modifier</box></li>
+            <li>AGI Save Modifier: <box>AGI Modifier</box></li>
+            <li>VIT Save Modifier: <box>VIT Modifier</box></li>
+            <li>Soul Save Modifier: <box>(INT | WILL | EGO) Modifier</box></li>
+        </ul>
+        <p>
+            By default making a Save is a <b>Non-Action!</b> (Unless stated otherwise.)
+        </p>
+        <h2 id="conditions">Conditions</h2>
+        <hr>
+        <p class="bottomless"><b>Prone</b></p>
+        <ul>
+            <li>Incoming Melee Attacks have Advantage.</li>
+            <li>Your Melee Attacks have Disadvantage.</li>
+            <li>AGI Saves are made with Disadvantage.</li>
+            <li>Cannot Jump, and have Half MS.</li>
+            <li>Bonus-Action -> End the Prone Condition.</li>
+            <li>Free-Action -> Start the Prone Condition on Self.</li>
+        </ul>
+        <p class="bottomless"><b>Stunned</b></p>
+        <ul>
+            <li>Lose 1 Main-Action.</li>
+            <li>Incoming Attacks have Advantage.</li>
+            <li>AGI Saves are made with Disadvantage.</li>
+            <li>Have Half MS.</li>
+        </ul>
+        <p class="bottomless"><b>Dazed</b></p>
+        <ul>
+            <li>Lose 1 Bonus-Action.</li>
+            <li>Have Half MS.</li>
+        </ul>
+        <p class="bottomless"><b>Rooted</b></p>
+        <ul>
+            <li>Incoming Attacks have Advantage.</li>
+            <li>AGI Saves are made with Disadvantage.</li>
+            <li>Have 0 MS.</li>
+        </ul>
+        <p class="bottomless"><b>Paralyzed</b></p>
+        <ul>
+            <li>Cannot take Actions, only innate internal mental ones, like <a href="#recall_knowledge">Recall Knowledge</a> and <a href="#scan">Scan.</a></li>
+            <li>Have 0 MS, and cannot use HD and GRIT.</li>
+            <li>Incoming Attacks always Hit, and Damage CRITs.</li>
+            <li>All STR and AGI Based Checks have a Finalized Value of 0.</li>
+            <li><i>you are fucked</i></li>
+        </ul>
+        <p class="bottomless"><b>Unconscious</b></p>
+        <ul>
+            <li>Cannot take Actions, other than <b>Passive</b> <a href="#scan">Scan.</a></li>
+            <li>Have 0 MS, and cannot use HD and GRIT.</li>
+            <li>Incoming Attacks always Hit, and Damage CRITs.</li>
+            <li>All STR and AGI Based Checks have a Finalized Value of 0.</li>
+            <li>Unconsciousness from regular Sleep can be awoken easily, up to GM.</li>
+            <li><i>you are mimir</i></li>
+        </ul>
+        <p class="bottomless"><b>Airborne</b></p>
+        <ul>
+            <li>Cannot Jump, and have 0 MS, unless you have some sort of flight feature.</li>
+            <li>Airborne is automatically applied to Entities not on Ground.</li>
+            <li>Some Abilities may override the Rule above.</li>
+        </ul>
+        <p class="bottomless"><b>Staggered</b></p>
+        <ul>
+            <li>Breaks Stances, and Disables Reactions.</li>
+            <li>Incoming Attacks have Advantage.</li>
+            <li>You Attack with Disadvantage.</li>
+            <li>STR and AGI Saves are made with Disadvantage.</li>
+            <li>Damaging a Staggered Entity makes it fall Prone.</li>
+            <li>Staggered is Removed at the End of the Entity's Next Turn, or when it gets Damaged.</li>
+        </ul>
+        <p class="bottomless"><a href="#death">Dying</a></p>
+        <ul>
+            <li>Lose 1 Main-Action.</li>
+            <li>Falls Prone, and cannot End the Prone Condition.</li>
+            <li>Fall Unconscious after <box>(VIT / 5)</box> Rounds.</li>
+        </ul>
+
+        <!--ACTIONS-->
+        <h1 id="actions">ACTIONS</h1>
+        <hr>
+        <h2 id="move_action" class="collapsible">Move-Action</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                By using a <b>Bonus-Action</b> an Entity can move <box>MS</box> meters, this movement can be curved.<br>
+                (on square fields you can move diagonally)
+            </p>
+            <p>
+                The Move-Action can be modified with <a href="#sprint">Sprint</a>, <a href="#climb">Climb</a>, <a href="#swim">Swim</a> and <a href="#pass_through">Pass-Through</a>
+            </p>
+        </div>
+        <h2 id="jump" class="collapsible">Jump</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                You can Jump using a <b>Bonus-Action.</b><br>
+                Jump Distance is <box>MS</box> meters.<br>
+                Jump Height is <box>MS / 4</box> meters.
+            </p>
+            <p>
+                At 50+ STR or AGI Jump Height becomes <box>MS</box> meters.
+            </p>
+        </div>
+        <h2 id="sprint" class="collapsible">Sprint</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As a <b>Free-Action</b> an Entity can Start Sprinting.<br>
+                When doing so it will be count as Sprinting till the Start of it's Next Turn.<br>
+                Using the Move-Action while Sprinting covers Double the distance.<br>
+                Attacks are made with <b>Advantage</b> against Sprinting Targets.
+            </p>
+        </div>
+        <h2 id="speak" class="collapsible">Speak</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As a <b>Free-Action</b> you can Speak.<br>
+                In combat, this is used to convey information about spotted enemies, what stance someone's using, ect...
+            </p>
+            <p>
+                When you Speak you can Lie, this is a Performance Check.<br>
+                A Successful <a href="#scan">Scan Action (Intuition)</a> with Difficulty equal to your Performance Check reveals it's a lie.
+            </p>
+        </div>
+        <h2 id="interact_action" class="collapsible">Interact-Action</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                Interacting with Objects is a <b>Bonus-Action,</b> unless specifically stated otherwise.
+            </p>
+            <p>
+                <b>Examples:</b> Opening or closing a door, picking up an object from the floor, drinking a Potion, ect...
+            </p>
+        </div>
+                <h2 id="ready" class="collapsible">Ready</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                You can Ready any Action (Including Abilities), by Spending the Action Cost in advance.<br>
+                The Readied Action can be Cast as a Free-Action Reaction.<br>
+                You can only have one Readied Action at a time.<br>
+                If you have not used the Readied Action by the Start of Your Next Turn, it gets wasted.
+            </p>
+            <p>
+                If an Entity can Pinpoint you, then they also know what you're Readying.<br>
+                With a <a href="../main/mechanics.html#feint" target="_blank">Feint</a> you can hide that you're Readying.
+            </p>
+        </div>
+        <h2 id="attack_action" class="collapsible">Attack-Action</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                When you use the <b>Attack-Action</b>, you make an <a href="#attacks">Attack</a> with a <a href="#basic_weaponry">Weapon</a>, against one Target.
+            </p>
+            <p>
+                By default the Attack-Action costs a <b>Main-Action.</b><br>
+                It costs a <b>Bonus-Action</b> if the Weapon is Light, or you're <a href="#wielding">Dual Wielding.</a><br>
+            </p>
+            <p>
+                The Modifier of this Attack is equal to the used Mastery's <b>Modifier.</b><br>
+                For Melee Weapons use Melee Weapon Mastery, and for Ranged Weapons use Ballistic Mastery.<br>
+                Weapons with the Throw Property still use Melee Weapon Mastery when thrown.<br>
+                Natural Weapons can use Martial Arts Mastery in place of the relevant Mastery.<br>
+            </p>
+            <p>
+                On top of the Weapon's Base Damage there is an added Bonus of: <box>Base Stat / 5</box><br>
+                The Base Stat being <b>STR</b> for Melee and Thrown, and <b>AGI</b> for Ranged.
+            </p>
+            <p>
+                Arms and legs count as One-Handed, Light, Natural Melee Weapons, with 1d4 Base Damage.<br>
+                The Tier of your Natural Weapons are <box>Total XP / 100</box>
+            </p>
+            <p>
+                When Dual Wielding you can choose to Attack with the same Weapon multiple times, rather than alternating.<br>
+                When Dual Wielding your Natural Weapons can be considered as Weapons, but Shields cannot!
+            </p>
+            <p>
+                The Attack-Action Counts as a Skill Type Ability, with the <b>Offense</b> and <b>Weapon Damage</b> Tags.<br>
+                Attack-Action is Casted at ESS equal to the Weapon's Tier for the purpose of Abilities.
+            </p>
+        </div>
+        <h2 id="defense_action" class="collapsible">Defense-Action</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                Using the Defense-Action is a Main-Action.<br>
+                You can only take the Defense-Action once per Turn.<br>
+                The Defense-Action lasts until the Start of your Next Turn. 
+            </p>
+            <p class="bottomless">While in Defense-Action, you gain the following:</p>
+            <ul>
+                <li>Incoming Attacks are made with Disadvantage.</li>
+                <li>Make AGI Saves with Advantage.</li>
+            </ul>
+            <p>
+                The Defense-Action Counts as a Skill Type Ability, with the <b>Defense</b> and <b>Negation</b> Tags.
+            </p>
+        </div>
+        <h2 id="take_cover" class="collapsible">Take Cover</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As a Bonus-Action you can Take Cover.<br>
+                This can only be done when there is something to give you Cover, and it only gives Cover from appropriate angles.<br>
+                When you are in Cover from an Attack, it applies Disadvantage to the Attack.<br>
+                Flow AOE Saves which you have Cover Against, you Roll Save with Advantage.<br>
+                You can Take Cover behind objects which cover half your body at least, precise interpretation is up to GM.
+            </p>
+            <p>
+                When the thing you Take Cover behind is moved, destroyed, or somehow not there, then you are no longer in Cover. duh!?<br>
+                <b>Note:</b> At high levels so called "solids" aren't really that solid, and may not be able to give you Cover.
+            </p>
+            <p>
+                <b>Example:</b> You take cover on the edge of a wall, attacks, including melee, which have a hard angle to hit you, come with Disadvantage.<br>
+                One of the enemies moves next to you, and gets a better angle to attack, you are no longer in Cover against them.
+            </p>
+        </div>
+        <h2 id="switch_action" class="collapsible">Switch-Action</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                Once on your Turns, as a <b>Free-Action</b> you can switch what Weapons and other Items you are Wielding.<br>
+                Additionally to the once Free-Action you get, you can also Switch Weapon as a Bonus-Action.
+            </p>
+        </div>
+        <h2 id="climb" class="collapsible">Climb</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As part of the Move-Action, an Entity can make an Athletics Check to Start Climbing.<br>
+                Failing the Check to Start Climbing Ends the Move-Action which initiated it.
+            </p>
+            <p>
+                While Climbing your Move-Actions cover Half the distance.<br>
+                You make a new Check as a Free-Action at the Start of each of Your Turns while Climbing.<br>
+                Failing the Check while already Climbing lets go of the Surface, potentionally making you Airborne.<br>
+                On a Fail you can reattempt the Climb Check, and anchor yourself again, as a Bonus-Action Reaction.<br>
+                When taking Damage you make a STR Save VS Damage Taken, on a Fail you Fail Climbing as usual.
+            </p>
+            <p>
+                The Surface must be in Natural Melee Weapon Reach.<br>
+                Movement not from the Move-Action Stops the Climb.<br>
+                If you have Staggered, Dazed, or Stunned, then make the Climb Check with <b>Disadvantage.</b><br>
+                The <a href="../abilities/olympic_athlete.html">Olympic Athlete</a> Ability enhances your Climbing abilities.
+            </p>
+            <table width="60%">
+                <tr>
+                    <td width="70%">
+                        Example Surface
+                    </td>
+                    <td width="30%">
+                        Difficulty
+                    </td>
+                </tr>
+                <tr>
+                    <td>Knotted Rope</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Rope</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Rocks, Trees</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Cliffs</td>
+                    <td>10-20</td>
+                </tr>
+                <tr>
+                    <td>Brick Walls</td>
+                    <td>20-40</td>
+                </tr>
+                <tr>
+                    <td>Concrete Walls</td>
+                    <td>40-80</td>
+                </tr>
+                <tr>
+                    <td>Smooth Flat Surface</td>
+                    <td>100</td>
+                </tr>
+            </table>
+            <p>
+                <a href="#falling">For Falling rules click here.</a>
+            </p>
+        </div>
+        <h2 id="swim" class="collapsible">Swim</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As part of the Move-Action, an Entity can make an Athletics Check to Start Swimming.<br>
+                Failing the Check to Start Swimming Ends the Move-Action which initiated it.<br>
+            </p>
+            <p>
+                While in Water you have Half MS.<br>
+                You make a new Check as a Free-Action at the Start of each of Your Turns while Swimming.<br>
+                Failing the Check while already Swimming makes you sink 2 meter, and stops Swimming.<br>
+            </p>
+            <p>
+                If you are Staggered, Dazed, or Stunned, then make the Swim Check with <b>Disadvantage.</b><br>
+                The <a href="../abilities/olympic_athlete.html">Olympic Athlete</a> Ability enhances your Swimming abilities.
+            </p>
+            <table width="60%">
+                <tr>
+                    <td width="70%">
+                        Example Water
+                    </td>
+                    <td width="30%">
+                        Difficulty
+                    </td>
+                </tr>
+                <tr>
+                    <td>Still Water</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Calm Water (~15 cm Waves)</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Mild Waves (~40 cm Waves)</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Harsh Waves (~1 m Waves)</td>
+                    <td>10-20</td>
+                </tr>
+                <tr>
+                    <td>Large Waves (~2 m Waves)</td>
+                    <td>20-40</td>
+                </tr>
+                <tr>
+                    <td>Huge Waves (~4 m Waves)</td>
+                    <td>40-80</td>
+                </tr>
+                <tr>
+                    <td>Collosal Waves (5+ m Waves)</td>
+                    <td>100+</td>
+                </tr>
+            </table>
+            <p>
+                <a href="#underwater_rules">For Underwater rules click here.</a>
+            </p>
+        </div>
+        <h2 id="grapple" class="collapsible">Grapple</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As a Bonus-Action, you can Attempt a Grapple againts a Target in Natural Melee Weapon Reach.<br>
+                A Grappled a Target takes up 1 Wielding Slot of the Grappler.<br>
+                The Target must pass a <b>(STR | AGI) Save</b> of <box>Athletics Modifier</box>, or be Grappled.<br>
+                A Grappled Target is <a href="#conditions">Rooted.</a><br>
+                You can move your Target in a way that it stays in your Reach.<br>
+                The Target may Attempt the Save again as a Bonus-Action.
+            </p>
+            <p>
+                Grapple Counts as a Skill Type Ability, with the <b>Offense</b> and <b>Crowd Control</b> Tag.<br>
+                Grapple is Casted at ESS equal to <box>Modifier / 10</box>, to a Min of 1, for the purpose of Abilities.
+            </p>
+        </div>
+        <h2 id="shove" class="collapsible">Shove</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As a Bonus-Action, you can Attempt a Shove againts a Target in Melee Weapon Reach.<br>
+                The Target must pass a <b>(STR | AGI) Save</b> of <box>(Athletics | Acrobatics) Modifier</box>, or be Shoved.<br>
+                After a Successful Shove the Target is <a href="#conditions">Prone</a>, and knocked back.<br>
+                <b>Max Knock Back Distance:</b> <box>STR^(1/3)</box>
+            </p>
+            <p>
+                Shove Counts as a Skill Type Ability, with the <b>Offense</b> and <b>Crowd Control</b> Tag.<br>
+                Shove is Casted at ESS equal to <box>Modifier / 10</box>, to a Min of 1, for the purpose of Abilities.
+            </p>
+        </div>
+        <h2 id="pass_through" class="collapsible">Pass Through</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                During Movement, as a Free-Action you can Attempt to Pass Through another Entity's space.<br>
+                Targets are eligable to make a <b>(STR | AGI) Save</b> of <box>Acrobatics Modifier</box> to stop you.<br>
+                On a Successful Save your Movement is stopped right infront of your Target as you Fail to pass them.
+            </p>
+            <p>
+                As a Bonus-Action you can increase the Save Difficulty to the Result of an Acrobatics Check.<br>
+                When you do so, the effect lasts until the End of Your Turn.<br>
+            </p>
+            <p>
+                You can replace Acrobatics, and instead use <box><b>Half</b> of your Athletics</box>
+            </p>
+        </div>
+        <h2 id="stealth" class="collapsible">Stealth (WIP)</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As a <b>Bonus-Action</b> you can do the Stealth Action.<br>
+                This is a Slight Check.<br>
+                You can make a Passive Stealth Action as a Free-Action.
+            </p>
+            <p>
+                With the Stealth Action you attempt to hide, this is hiding against all type of Senses, even Smell and Essence.<br>
+                Being hidden is relative, so some Entites might Sense you, some might not.<br>
+                Sometimes you cannot hide against a Sense, like standing in broad sight, or having an item on you emit sound.<br>
+            </p>
+            <p>
+                <a href="#scan">Scan Area</a> with Difficulty equal to your Slight Check reveals you.<br>
+            </p>
+            <p>
+                When you move, or get moved, you must make another Stealth Action to maintain Stealth.<br>
+                If you already used a Stealth Action that Turn you don't need to repeat till the Start of Your Next Turn.
+            </p>
+        </div>
+        <h2 id="recall_knowledge" class="collapsible">Recall Knowledge</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As a <b>Bonus-Action</b> you can do the Recall Knowledge Action.<br>
+                This is an Arcana, Science, and Lore <a href="#multi_checks">Multi-Check.</a><br>
+                You can make a Passive Recall Knowledge Action as a Free-Action.
+            </p>
+            <p>
+                If you Fail a Non-Passive Recall Knowledge Check, you cannot repeat it until a Long-Rest.
+            </p>
+            <p>
+                <b>Example:</b> You know you will be fighting a Cosmic Monolith soon, so you try to remember what it does, it's weaknesses, and strengths.<br>
+                It has Difficulties of Arcana 15, Science 50, Lore 10. You roll a 4, after calculations that's a 18 in Arcana, 12 in Science, and 9 in Lore.<br>
+                You get to know everything the Arcana part of the check gives, like how they work, that it has a forcefield, but weak to water.<br>
+                You cannot repeat the Recall Knowledge to know about Cosmic Monolith's again, until you Long-Rest, but could to Prismatic Monoliths.<br>
+                Note that Different aspects usually overlap in what information they reveal, so a Success in Science or Lore would probably reveal the same.
+            </p>
+        </div>
+        <h2 id="medicate" class="collapsible">Medicate</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                You can Treat Wounds, Poisons, diseases and other ailments, and even perform Surgeries.<br>
+                This is a Science Check, which can only be done on a willing or somehow restrained Target.<br>
+                Medicate Actions are thrown with Disadvantage if you don't have the necessary tools; <a href="../extra/items_and_costs.html#toolkits" target="_blank">Medkit</a> or alike.<br>
+            </p>
+            <p>
+                Treating Wounds takes <box>1 Minute (20 Rounds)</box><br>
+                The Target can Spend REST-HP equal to the Result of the Check to Heal itself.<br>
+                On a CRIT the Target Heals 2 HP per REST-HP Spent.
+            </p>
+            <p>
+                As a <b>Bonus-Action</b> you can Treat other ailments, like poisons and disease.<br>
+                Poisons and diseases will often have a Difficulty written.<br>
+                If there is no specific written Difficulty, then the Difficulty is <box>10 × (ESS or Tier)</box>
+            </p>
+            <p>
+                You can perform Surgeries, the speed and type of surgery determine the Difficulty.<br>
+                On a Fail, the Target takes True HP Damage equal to the Difficulty of the surgery.<br>
+                On a CRIT Success, you somehow finish faster by 1 Jump in the Surgery Time Table.
+            </p>
+            <table width="60%">
+                <tr>
+                    <td width="70%">
+                        Surgery Type
+                    </td>
+                    <td width="30%">
+                        Difficulty
+                    </td>
+                </tr>
+                <tr>
+                    <td>Circumcise(???)</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Stitch up</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Remove limb</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Remove organ</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Attach limb</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Implant organ</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Attach head</td>
+                    <td>60</td>
+                </tr>
+            </table>
+            <table width="60%">
+                <tr>
+                    <td width="70%">
+                        Surgery Time
+                    </td>
+                    <td width="30%">
+                        Difficulty Multiplier
+                    </td>
+                </tr>
+                <tr>
+                    <td>1 Day (28800 Rounds)</td>
+                    <td>0.25×</td>
+                </tr>
+                <tr>
+                    <td>8 Hours (9600 Rounds)</td>
+                    <td>0.5×</td>
+                </tr>
+                <tr>
+                    <td>2 Hours (2400 Rounds)</td>
+                    <td>0.75×</td>
+                </tr>
+                <tr>
+                    <td>1 Hour (1200 Rounds)</td>
+                    <td>1×</td>
+                </tr>
+                <tr>
+                    <td>10 Minutes (200 Rounds)</td>
+                    <td>2×</td>
+                </tr>
+                <tr>
+                    <td>1 Minute (20 Rounds)</td>
+                    <td>3×</td>
+                </tr>
+                <tr>
+                    <td>1 Main-Action (<a href="../abilities/battle_medic.html" target="_blank">Battle Medic</a> Required)</td>
+                    <td>4×</td>
+                </tr>
+            </table>
+        </div>
+        <h2 id="scan" class="collapsible">Scan</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                You can do the Scan Action to reveal information otherwise hidden.<br>
+                This is usually a Perception and/or Intuition Check.<br>
+                You can make Passive Scan Actions as a Free-Action.
+            </p>
+            <p class="bottomless"><b>Scan Area</b> (Bonus-Action):</p>
+            <ul>
+                <li>Perception and Intuition <a href="#multi_check">Multi-Check</a> against an Area.</li>
+                <li><b>Difficulty:</b> <box>Targets' rolled Stealth</box></li>
+                <li>On the Perception part's Success hidden Targets' position are revealed to you.</li>
+                <li>On the Intuition part's Success hidden Targets' presence, but not position, and potentional dangers are revealed to you.</li>
+            </ul>
+            <p class="bottomless"><b>Scan Motive</b> (Bonus-Action):</p>
+            <ul>
+                <li>Intuition Check against a Target.</li>
+                <li><b>Difficulty:</b> <box>Target's Performance Check</box></li>
+                <li>On a Success you reveal the Target's motives, like friendliness, hostility, if they <a href="#speak">lie</a>, ect...</li>
+            </ul>
+            <p class="bottomless"><b>Scan Entity</b> (Main-Action):</p>
+            <ul>
+                <li>(Perception | Intuition) Check against a Pinpointed Target.</li>
+                <li><b>Difficulty:</b> <box>Target Total XP / 10</box></li>
+                <li>On a Success you know the Target's Stats, Masteries, Resources, Resistances, ect... But NOT Abilities.</li>
+                <li>As part of the Scan-Entity Action you can also make a <a href="#recall_knowledge">Recall Knowledge</a> on the same Target.</li>
+            </ul>
+        </div>
+        <h2 id="sense_nature" class="collapsible">Sense Nature</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As a Main-Action you can sense the surrounding nature, and make conclusions.<br>
+                This is an Intuition Check, but can become a <a href="#multi_check">Multi-Check.</a><br>
+                If you can clearly observe or deduce the thing, Perception and/or Science can be added to make it a Multi-Check.
+            </p>
+            <p>
+                <b>Example:</b> You wish to know the weather 1 Hour from now, you can look up at the sky and make a Science, Perception, Intuition Multi-Check.<br>
+                But if you are underground, and have no way of seeing the sky, you can only make an Intuition Check.
+            </p>
+            <table width="70%">
+                <tr>
+                    <td width="50%">
+                        Sense Example
+                    </td>
+                    <td width="50%">
+                        Difficulty
+                    </td>
+                </tr>
+                <tr>
+                    <td>Orientation (Perception, Science)</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Orientation (Intuition)</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Time (Perception, Science)</td>
+                    <td>1 × (Hours spent without any measuring device)</td>
+                </tr>
+                <tr>
+                    <td>Time (Intuition)</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Weather</td>
+                    <td>10 × (Time in Hours + Distance in Km)</td>
+                </tr>
+                <tr>
+                    <td>Natural formation</td>
+                    <td>20 × (Years in the future + Distance in Km)</td>
+                </tr>
+                <tr>
+                    <td>Magnetic fields (Intuition)</td>
+                    <td>30</td>
+                </tr>
+            </table>
+        </div>
+        <h2 id="feint" class="collapsible">Feint</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As a <b>Bonus-Action</b> you can do the Feint Action.<br>
+                This is a Performance Check.<br>
+                You can make a Passive Feint Action as a Free-Action.
+            </p>
+            <p>
+                With a Feint you Hide or Fake doing something, like hiding that you're in a <b>Stance</b>, or faking using the <a href="#defense_action">Defense Action.</a><br>
+                <b>You can Hide or Fake:</b> <a href="#defense_action">Defense Action</a>, <a href="#ready">Ready</a>, <a href="#ready">Sprint</a>, Stances, Styles, <a href="../abilities/charge.html" target="_blank">Charge</a>, <a href="../abilities/anticipation.html" target="_blank">Anticipation</a><br>
+                You can also Hide or Fake yourself from <a href="#scan">Scan Entity</a>, hiding your Stats or making up fake Stats.<br>
+                You can Feint (Hide or Fake) other things if it's written down, or if the GM allows.
+            </p>
+            <p>
+                The Target must Succeed a <a href="#scan">Scan Action</a> (Perception | Intuition) against the Feint's result to know what you're hiding.<br>
+                This Scan Action can be a Passive Check, and is taken together with any other Scan against you.<br>
+            </p>
+            <p>
+                <b>Example:</b> You enter the Parry Stance, you use a Passive Feint as a Free-Action to hide that you're in a Stance.<br>
+                The bandit, with it's Passive Scan cannot determine that you're in a Stance, but so happens to use Scan Entity on you.<br>
+                The Checks result is equal to your Passive Feint, he determines that you're in a Stance, and it's Parry.
+            </p>
+        </div>
+        <h2 id="intimidate" class="collapsible">Intimidate</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As a <b>Bonus-Action</b> you can attempt to Intimidate a Target.<br>
+                If the Target can <b>Sense</b> you, on a Failed <b>Soul Save</b> of <box>Performance Modifier</box> it gains the <b>Terror Effect.</b><br>
+            </p>
+            <p class="bottomless"><b>Terror Effect:</b></p>
+            <ul>
+                <li>Applies Disadvantage on Attacks against the User, and cannot willfully move closer.</li>
+                <li>This Effect Ends if the User gets the <a href="#conditions">Dying Condition</a> or Dies.</li>
+                <li>The <b>Terror Effect</b> Last till End of Target's Next Turn.</li>
+            </ul>
+            <p>
+                Intimidate also has social interactions, to extract information, make opponents surrender or run away, ect...<br>
+                Exact effects up to GM.
+            </p>
+        </div>
+        <h2 id="taunt" class="collapsible">Taunt</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                As a <b>Bonus-Action</b> you can attempt to Taunt a Target.<br>
+                If the Target can <b>Sense</b> you, on a Failed <b>Soul Save</b> of <box>Performance Modifier</box> it gains the <b>Charm Effect.</b><br>
+            </p>
+            <p class="bottomless"><b>Charm Effect:</b></p>
+            <ul>
+                <li>Applies Disadvantage on Attacks made against any other Entity than the User.</li>
+                <li>This Effect Ends if the User gets the <a href="#conditions">Dying Condition</a> or Dies.</li>
+                <li>The <b>Charm Effect</b> Last till End of Target's Next Turn.</li>
+            </ul>
+            <p>
+                Taunt also has social interactions, to divert attention, ect...<br>
+                Exact effects up to GM.
+            </p>
+        </div>
+
+        <!--MECHANICS-->
+        <h1 id="mechanics">MECHANICS</h1>
+        <hr>
+        <h2 id="resting" class="collapsible">Resting</h1>
+        <hr>
+        <div class="collapsed">
+            <p>
+                Resting is the act of recovery, this can be many things, and not necessarily just actively doing nothing.<br>
+                For example sitting and reading a book, <a href="../main/abilities.html#spell_memorization">memorizing spells</a>, or other light things would still be Resting.<br>
+                Combat, travel or similar difficult activities break Resting, meaning you need to restart it.
+            </p>
+            <p class="bottomless"><b>Short-Rest:</b></p>
+            <ul>
+                <li>Takes 1 Hour (1200 Rounds)</li>
+                <li>Recover GRIT to full.</li>
+                <li>Spend REST-HP to recover HP.</li>
+            </ul>
+            <p class="bottomless"><b>Long-Rest:</b></p>
+            <ul>
+                <li>Takes 8 Hour (9600 Rounds)</li>
+                <li>Recover all Resources to full.</li>
+            </ul>
+        </div>
+        <h2 id="reactions" class="collapsible">Reactions</h1>
+        <hr>
+        <div class="collapsed">
+            <p>
+                Reactions are Actions which you can do out of your Turn Order.<br>
+                Reactions have an Action Cost just like regular Actions.<br>
+                Reactions may have a Trigger, this is when you can use said Reaction.<br>
+                Reactions without any specific Trigger can just be done anytime you feel like it.
+            </p>
+            <p>
+                When more Entities want to use Reactions at the same time, they do in Descending INIT Order.<br>
+                Reacting before an Attack, with a Reaction without a specific Trigger can only be if your <box>4 × INIT</box> is higher than <b>Attack's To-Hit.</b><br>
+                Unaware Targets cannot make <b>Reactions</b>, unless their <box>2 × INIT</box> is at least <b>Attack's To-Hit</b> or <box>2 × Save's Difficulty</box>
+            </p>
+        </div>
+        <h2 id="wielding" class="collapsible">Wielding</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                Each Entity has 2 Wielding Slots, even if they have more limbs.<br>
+                One-Handed Weapons and Shields take 1 Wielding Slot.<br>
+                Two-Handed and Solo-Wielded Weapons take 2 Wielding Slots.<br>
+                Natural Weapons must also be Wielded, and thus take up a Wielding Slot to be used.<br>
+                Some Magical Items only apply their effects when Wielded.<br>
+                Free limbs can still Hold things which can be used without Active Wielding, like Potions and Scrolls.<br>
+                When taking the <a href="#switch_weapon">Switch Weapon Action</a> you can change what you are Wielding and Holding.
+            </p>
+            <p>
+                Dual Wielding is when you're Wielding 2 Weapons.<br>
+                The <a href="#attack_action">Attack-Action</a> becomes a <b>Bonus-Action</b> when Dual Wielding.<br>
+                When Dual Wielding you can choose to Attack with the same Weapon multiple times, rather than alternating.<br>
+                For Dual Wielding your Natural Weapons can be considered as Weapons, but Shields cannot.
+            </p>
+        </div>
+        <h2 id="effects" class="collapsible">Effects</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                Effects are a things which can afflict Entites and Objects.<br>
+                Effects might be the same Type, but still do different things.<br>
+                <b>Example:</b> The Soaked Effect might just be from water, but could also be a Damaging Effect from Acid.
+            </p>
+            <p>
+                Effects can interact with eachother and even other features.<br>
+                When Opposing Effects interact, they either Cancel eachother, or the stroger Effect wins.<br>
+                When the weak Effect's ESS is at least Half of the stronger's, then they both Cancel.<br>
+                Otherwise the stronger Effect overrides the weaker.
+            </p>
+            <p class="bottomless"><b>Opposing Effects:</b></p>
+            <ul>
+                <li>Heat &lt-> Cold, Soaked</li>
+                <li>Light &lt-> Darkness</li>
+            </ul>
+        </div>
+        <h2 id="lighting" class="collapsible">Lighting</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                There are 3 leves of lighting, Bright-Light, Low-Light, Darkness.<br>
+                When something emits Bright-Light, it also emits Low-Light to Double the Distance.
+            </p>
+            <p class="bottomless"><b>Bright-Light:</b></p>
+            <ul>
+                <li>Sight based Perception Checks work normally.</li>
+            </ul>
+            <p class="bottomless"><b>Low-Light:</b></p>
+            <ul>
+                <li>Sight based Perception Checks are with Disadvantage.</li>
+                <li>Attacks are made with Disadvantage against Targets in Low-Light.</li>
+            </ul>
+            <p class="bottomless"><b>Darkness:</b></p>
+            <ul>
+                <li>Sight based Perception Checks have a Finalized Value of 0.</li>
+                <li>You cannot Pinpoint Targets in Darkness using Sight.</li>
+            </ul>
+        </div>
+        <h2 id="cover" class="collapsible">Cover</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                Cover is something you get from using the <a href="#take_cover">Take Cover Action.</a><br>
+                An Entity in Cover from an Attack, applies Disadvantage to the Attack.<br>
+                Entities in Cover from Flow AOE Saves, Roll Save with Advantage.<br>
+            </p>
+            <p>
+                Cover only applies to Attacks coming in from appropriate angles.<br>
+                Entities behind Cover can still be regularly attacked from other vantage points.<br>
+            </p>
+            <p>
+                <b>Note:</b> At high levels so called "solids" aren't really that solid, and may not be able to give you Cover.
+            </p>
+        </div>
+        <h2 id="falling" class="collapsible">Falling</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                If you are not touching the ground at the End of Your Turn, you fall (10 × Rounds spent midair) meters.<br>
+                <b>Fall Damage:</b> <box>(2 × Fall Distance) - (VIT | Acrobatics)</box><br>
+                Fall Damage has <b>Armor-Pen</b> equal to the Damage of the Fall.<br>
+                Taking Fall Damage gives the <a href="#conditions">Prone Condition.</a>
+            </p>
+        </div>
+        <h2 id="underwater_rules" class="collapsible">Underwater Rules</h2>
+        <hr>
+        <div class="collapsed">
+            <p class="bottomless"><b>While you are submerged in water (or another liquid):</b></p>
+            <ul>
+                <li>Attacks are made with a Disadvantage.</li>
+                <li>Ranged Attacks don't have their Long-Range.</li>
+                <li>For Heat and Cold Based Flow and Crawl AOEs, every meter counts as double for their flow. (Will be Half as big.)</li>
+            </ul>
+            <p>
+                Entites which ned to breath but cannot will begin to deplete their air.<br>
+                An Entity has <box>5 × VIT Rounds of Air (15 × VIT Seconds of Air)</box>, at 0 they begin to Suffocate.<br>
+                When an Entity gets Damaged it loses 5 Rounds (15 Seconds) of Air.<br>
+                While Suffocating, at the End of Each of Your Turns you take <box>5 × (Rounds Spent Suffocating) Bio Damage</box><br>
+                Suffocation Damage has 100 Bio-Pen.
+            </p>
+        </div>
+        <h2 id="senses" class="collapsible">Senses</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                <b>Sensing</b> is when you know something is there, but not necessarily <b>Pinpointing</b> it.
+            </p>
+            <p>
+                <b>Pinpointing</b> is when a Sense can accurately define the position of a Target.<br>
+                By default, a regular human (or alike) can only Pinpoint with Sight.<br>
+                If another Sense can Pinpoint, then it is usually written out, and made obvious.<br>
+                An Entity which cannot Pinpoint another has Disadvantage againts them, and the hidden one has Advantage against said Entity.
+            </p>
+            <p>
+                <b>Example:</b> You hear a person speak, but not see them. You Sense them, but not Pinpoint them.<br>
+                <b>Example:</b> A Blinded Bandit has Disadvantage toward all other Entities, and all others (who can
+                Pinpoint said Bandit) have Advantage againts the Bandit.<br>
+            </p>
+        </div>
+        <h2 id="surprise" class="collapsible">Surprise</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                An Entity is <b>Unaware</b> towards a Target it doesn't expect is there.<br>
+                An Entity is <b>Surprised</b> towards a Target which suddenly reveals itself, until the Start of their Next
+                Turn.<br>
+                <b>Note:</b> An Entity can be Unaware/Surprised towards some Targets, while not to others.
+            </p>
+            <p class="bottomless"><b>Against Unaware Targets:</b></p>
+            <ul>
+                <li>Attacks are made with <b>Advantage.</b></li>
+                <li>Cannot Spend <b>HD</b>, unless their <box>2 × INIT</box> is at least the <b>Attack's To-Hit.</b>
+                </li>
+                <li>Fail <b>AGI Saves</b> and have Disadvantage on <b>STR Saves</b>, unless their <box>2 × INIT</box> is at
+                    least than <box>Save's Difficulty</box>
+                </li>
+                <li>Cannot take <b>Reactions</b>, unless their <box>2 × INIT</box> is at least <b>Attack's To-Hit</b> or <b>Save's Difficulty</b>
+                </li>
+            </ul>
+            <p class="bottomless"><b>Against Surprised Targets:</b></p>
+            <ul>
+                <li>Attacks are made with <b>Advantage.</b></li>
+                <li>Cannot take <b>Reactions</b>, unless their <box>2 × INIT</box> is at least <b>Attack's To-Hit</b> or <b>Save's Difficulty</b>
+                </li>
+            </ul>
+        </div>
+        <h2 id="economy" class="collapsible">Economy (WIP)</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                Economy is based around Currency, often denoted as C, COCKONOMY !!!!
+            </p>
+            <p>
+                ???
+            </p>
+        </div>
+        <h2 id="death" class="collapsible">Death</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                When an Entity's <b>HP</b> gets to 0, they gain the <a href="#conditions">Dying Condition.</a><br>
+                An Entity with the Dying Condition falls Unconscious after <box>(VIT / 5)</box> Rounds.<br>
+                If the Entity remains peacefully in Dying Condition for an hour (1200 Rounds), and has enough REST-HP to spend, it recovers to 1 HP.<br>
+                Otherwise it dies fr fr.
+            </p>
+            <p>
+                When an Entity's <b>HP</b> gets below <b>-Max HP</b>, their body can no longer support their <b>Soul.</b><br>
+                This means the Soul is ejected from the Body, and the Body gains the <a href="#conditions">Prone Condition.</a><br>
+                By default, a Soul without a Body in Unconscious.<br>
+                The Soul stays close for <box>1 Minute (20 Rounds)</box>, after which it floats away.
+            </p>
+            <p>
+                Even if the Body is repaired, the Soul won't come back, and it will remain dead.<br>
+                Some Abilities can Revive the Entity by putting the Soul back in, but only if the Soul is still close.
+            </p>
+        </div>
+
+        <!--ITEMS-->
+        <h1 id="basic_weaponry">BASIC WEAPONRY</h1>
+        <hr>
+        <p class="bottomless">
+            Max Property Points of an Item is dependant on Type.<br>
+            When Wielding Weapons, or a Shield, an Entity must be able to use it.<br>
+            To use it, the Entity must have <box>Weapon's Property Points</box> of Mastery in the Appropriate Mastery.
+        </p>
+        <ul>
+            <li>Melee Weapon Mastery for Melee Weapons or Shields</li>
+            <li>Ballistic Mastery for Ranged Weapons</li>
+        </ul>
+        <p>
+            If Weapon requirements are not met, all Attacks and Abilities with the weapon are at a Disadvantage.<br>
+            If Shield requirements are not met, then the Shield has no effect.
+        </p>
+        <h2 id="tier_level">Tier Level</h2>
+        <hr>
+        <p>
+            Items have a Tier Level. This is most commonly a Magical boost.<br>
+            This Tier Level effects a lot of Stats of Items.<br>
+            Tier Level 1 being Normal. Tier Level 2 being better (By magical enhancements or other means).
+        </p>
+        <p class="bottomless">Tier Levels increase the Stats of Armaments:</p>
+        <ul>
+            <li>Base Damage Dice, Armor, Armor-Pen, and HD Gain are Multiplied by: <box>Tier Level</box></li>
+            <li>Range of Ranged Weapons are Multiplied by: <box>(Tier Level)^(1/3)</box></li>
+        </ul>
+        <p class="bottomless"><b>Tier 1 Basic Item Pricing:</b></p>
+        <ul>
+            <li><b>Melee Weapons:</b> 5C × Property Points</li>
+            <li><b>Ranged Weapons:</b> 5C × Property Points</li>
+            <li><b>Shields:</b> 5C × Property Points</li>
+            <li><b>Armors:</b> 20C × Property Points</li>
+        </ul>
+        <p>
+            When calculating price of Items with less than 1 Property Point, treat them as having 1 Property Point.<br>
+            Pricing of Magical Items depends on the Magical Effect, and is up to GM's interpretation.<br>
+            Market Price for simple Tiered Up Magical Items is <box>400C × Tier</box>
+        </p>
+        <h2 id="melee_weapons">Melee Weapons</h2>
+        <hr>
+        <p>
+            Melee Weapons have Max 8 Property Points.<br>
+            Melee Weapons which are not Heavy are One-Handed.<br>
+            <b>Price of Melee Weapons:</b> <box>5C × Property Points</box>
+        </p>
+        <table width="80%">
+            <tr>
+                <td width="15%">
+                    Property
+                </td>
+                <td width="15%">
+                    Property Points
+                </td>
+                <td width="70%">
+                    Description
+                </td>
+            </tr>
+            <tr>
+                <td>Base Damage</td>
+                <td><a href="#damage_and_range_table">See Table</a></td>
+                <td>The Damage Dice of the Weapon.</td>
+            </tr>
+            <tr>
+                <td>Damage Type</td>
+                <td>0 | 1</td>
+                <td>
+                    Choose 2 from: Bludgeoning, Slashing, Piercing<br>
+                    With all 3 options at once, comes higher cost.
+                </td>
+            </tr>
+            <tr>
+                <td>Heavy</td>
+                <td>-1</td>
+                <td>Will be Two-Handed!</td>
+            </tr>
+            <tr>
+                <td>Light</td>
+                <td>0</td>
+                <td>Will be One-Handed!</td>
+            </tr>
+            <tr>
+                <td>Armor-Pen</td>
+                <td>Description</td>
+                <td>
+                    For each Point add 1 Armor-Pen.<br>
+                    This normally does not add to Abilities.
+                </td>
+            </tr>
+            <tr>
+                <td>Versatile</td>
+                <td>0</td>
+                <td>
+                    Gain Benifits for Solo use, this means no other Weapons or Shields.<br>
+                    Solo Wielding gives +10 Max HD, and increases Base Damage to a higher Dice.<br>
+                    The Weapon is Solo Wielded in one or two hands, your choice, flavor!<br>
+                    <b>Light, and Heavy Excluded!</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Reach</td>
+                <td>1 | 2</td>
+                <td>Adds 1 | 2 meters of extra Reach.</td>
+            </tr>
+            <tr>
+                <td>Throw</td>
+                <td>1</td>
+                <td>
+                    Weapon gains 5 × STR^(1/3) Throw Distance, Double for the Long-Range.<br>
+                    Can use Ballistic or Martial Arts Mastery when Throwing Finesse Weapons.<br>
+                    <b>Heavy Weapons Excluded!</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Finesse</td>
+                <td>1</td>
+                <td>
+                    Attacks and Abilities can use AGI in place of STR.<br>
+                    Attacks and Abilities can use Martial Arts in place of Melee Weapon Mastery.<br>
+                    <b>Heavy Weapons Excluded!</b>
+                </td>
+            </tr>
+        </table>
+        <h2 id="ranged_weapons">Ranged Weapons</h2>
+        <hr>
+        <p>
+            Ranged Weapons have Max 8 Property Points.<br>
+            Ranged Weapons are Two-Handed, unless Light, and use AGI instead of STR.<br>
+            <b>Price of Ranged Weapons:</b> <box>5C × Property Points</box>
+        </p>
+        <table width="80%">
+            <tr>
+                <td width="15%">
+                    Property
+                </td>
+                <td width="15%">
+                    Property Points
+                </td>
+                <td width="70%">
+                    Description
+                </td>
+            </tr>
+            <tr>
+                <td>Base Damage</td>
+                <td><a href="#damage_and_range_table">See Table</a></td>
+                <td>The Damage Dice of the Weapon.</td>
+            </tr>
+            <tr>
+                <td>Range</td>
+                <td><a href="#damage_and_range_table">See Table</a></td>
+                <td>Range of the Weapon, depends on Base Damage.</td>
+            </tr>
+            <tr>
+                <td>Damage Type</td>
+                <td>0</td>
+                <td>Either Bludgeoning, Slashing, or Piercing.</td>
+            </tr>
+            <tr>
+                <td>Heavy</td>
+                <td>0</td>
+                <td>Still Two-Handed.</td>
+            </tr>
+            <tr>
+                <td>Light</td>
+                <td>1</td>
+                <td>Will be One-Handed!</td>
+            </tr>
+            <tr>
+                <td>Spread</td>
+                <td>3</td>
+                <td>
+                    The Weapon's Range is Reduced to 1/10, and Long Range isn't used.<br>
+                    Attack-Actions are a 30° (~3 Forward = +2 Width) Flow Cone AOE, and ignore Melee Disadvantage.
+                </td>
+            </tr>
+            <tr>
+                <td>Armor-Pen</td>
+                <td>Description</td>
+                <td>For each Point add 1 Armor-Pen.</td>
+            </tr>
+            <tr>
+                <td>Aim</td>
+                <td>2</td>
+                <td>
+                    A One-Handed weapon that can be used Solo-Wielded, to gain Advantage on <a href="#attack_action">Attack-Actions.</a><br>
+                    <b>Light Ranged Weapons Only.</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Slow-Reload</td>
+                <td>-3</td>
+                <td>
+                    The Weapon uses a Main-Action to Reload.<br>
+                    Only the Attack-Action needs the Weapon Reloaded, Abilities can be used freely.
+                </td>
+            </tr>
+            <tr>
+                <td>Reload</td>
+                <td>-2</td>
+                <td>
+                    The Weapon uses a Bonus-Action to Reload.<br>
+                    Only the Attack-Action needs the Weapon Reloaded, Abilities can be used freely.
+                </td>
+            </tr>
+        </table>
+        <h2 id="shields">Shields</h2>
+        <hr>
+        <p>
+            Shields have Max 6 Property Points.<br>
+            Shields are counted as Melee Weapons, with a Base Damage of 1d4<br>
+            Shields are NOT counted as a Melee Weapon for Dual Wielding.<br>
+            You can only benifit from one Shield at a time.<br>
+            <b>Price of Shields:</b> <box>5C × Property Points</box>
+        </p>
+        <table width="80%">
+            <tr>
+                <td width="15%">
+                    Property
+                </td>
+                <td width="15%">
+                    Property Points
+                </td>
+                <td width="70%">
+                    Description
+                </td>
+            </tr>
+            <tr>
+                <td>Heavy</td>
+                <td>4</td>
+                <td>
+                    When Wielded, it gives 4 <a href="#resistances">Armor VS HP.</a><br>
+                    When taking the Defense-Action, it gives extra 4 Armor VS HP.
+                </td>
+            </tr>
+            <tr>
+                <td>Light</td>
+                <td>2</td>
+                <td>When Wielded, it gives +10 Max HD.</td>
+            </tr>
+            <tr>
+                <td>Fast</td>
+                <td>2</td>
+                <td>
+                    You can take the Defense-Action with a Bonus-Action.<br>
+                    When you use this Property, and Un-Wield the Shield, the Defense-Action is also lost.<br>
+                    <b>Light Shields Only!</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Efficient</td>
+                <td>2</td>
+                <td>
+                    You can take the Defense-Action by using a Main-Action and converting it into a Bonus-Action.<br>
+                    When you use this Property, and Un-Wield the Shield, the Defense-Action is also lost.<br>
+                    <b>Light Shields Only!</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Tower</td>
+                <td>2</td>
+                <td>
+                    The Tower Shield provides <a href="#cover">Cover</a> to others and to yourself in 180° degrees infront of you.<br>
+                    To get the Cover one must use the <a href="#take_cover">Take Cover Action</a>, as normal.<br>
+                    When you use the Defense-Action, you can Take Cover as a Free-Action in that Turn.<br>
+                    When you move, get moved, get the <a href="#conditions">Prone, or Staggered Condition</a> all Cover you provide is gone.<br>
+                    <b>Heavy Shields Only!</b>
+                </td>
+            </tr>
+        </table>
+        <h2 id="armors">Armors</h2>
+        <hr>
+        <p>
+            Armors have Max 6 Property Points.<br>
+            <b>Price of Armors:</b> <box>20C × Property Points × Tier</box>
+        </p>
+        <table width="80%">
+            <tr>
+                <td width="15%">
+                    Property
+                </td>
+                <td width="15%">
+                    Property Points
+                </td>
+                <td width="70%">
+                    Description
+                </td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>See Description</td>
+                <td>
+                    The Weight of the Armor is based on the Total Property Points used.<br>
+                    <b>Light (1-2):</b> Does not have any Negative Effects on HD.<br>
+                    <b>Medium (3-4):</b> HD does not benifit from Acrobatics.<br>
+                    <b>Heavy (5-6):</b> HD does not benifit from Acrobatics and AGI.
+                </td>
+            </tr>
+            <tr>
+                <td>Resistance</td>
+                <td>Variable</td>
+                <td>
+                    For each Property Point gain 2 Resistance Points to allocate.<br>
+                    <b>Resistance Types:</b> Armor, Heat, Cold, Demat, Thunder, Lightning<br>
+                    Max Resistance for any Type is equal to the Total Property Points of the Armor.<br>
+                </td>
+            </tr>
+        </table>
+        <h2 id="damage_and_range_table">Damage and Range Table</h2>
+        <hr>
+        <table width="70%">
+            <tr class="CellBorder">
+                <td style="width:20%">
+                    Damage Die
+                </td>
+                <td style="width:80%">
+                    Property Points / Requirements
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    1d4<br>
+                    20 / 40
+                </td>
+                <td>-1 / Requires Light!</td>
+            </tr>
+            <tr>
+                <td>
+                    1d6<br>
+                    30 / 60
+                </td>
+                <td>1 / Heavy Excluded!</td>
+            </tr>
+            <tr>
+                <td>
+                    1d8<br>
+                    40 / 80
+                </td>
+                <td>3 / Light Excluded!</td>
+            </tr>
+            <tr>
+                <td>
+                    1d10<br>
+                    60 / 120
+                </td>
+                <td>4 / Requires Heavy! (Also reached with Versatile)</td>
+            </tr>
+            <tr>
+                <td>
+                    1d12<br>
+                    80 / 160
+                </td>
+                <td>5 / Requires Heavy!</td>
+            </tr>
+            <tr>
+                <td>
+                    1d20<br>
+                    120 / 240
+                </td>
+                <td>9 / Requires Heavy!</td>
+            </tr>
+        </table>
+
+        <h1 id="entity_types">ENTITY TYPES</h1>
+        <hr>
+        <h2 id="construct">Construct</h2>
+        <hr>
+        <p>
+            Any Entity without a Soul.<br />
+            These Entities also have 0 WILL, 0 EGO, and 0 SP.
+        </p>
+        <h2 id="undead">Undead</h2>
+        <hr>
+        <p>
+            These Entities take Double Damage from Radiant, and Heals from Necrotic.<br />
+            These Entities have the Undying Ability Active at their Max ESS Cost all the time.
+        </p>
+        <h2 id="fiend">Fiend</h2>
+        <hr>
+        <p>
+            These Entities take Double Damage from Radiant.
+        </p>
+        <h2 id="celestial">Celestial</h2>
+        <hr>
+        <p>
+            These Entities take Double Damage from Necrotic, and Heals from Radiant.
+        </p>
+        <h1 id="damage_types">DAMAGE TYPES</h1>
+        <hr>
+        <h2 id="physical_damage">Physical</h2>
+        <hr>
+        <p>
+            A Physical Attack inflicts either Bludgeoning, Slashing, Piercing Damage.<br>
+            If a Damage says Physical, freely chooses specific type.<br>
+            Things with loose physical presence (air, shadow and light Entities, ect...) have 100 Armor.<br>
+            Incorporeal things have 1000 Armor.
+        </p>
+        <h2 id="heat_damage">Heat</h2>
+        <hr>
+        <p>
+            Heat based Attacks use energy in the form of Heat to deal Damage.<br>
+            An Attack made with Heat will remove <b>Soaked</b> from the Target.
+        </p>
+        <h2 id="cold_damage">Cold</h2>
+        <hr>
+        <p>
+            Cold based Attacks sap away energy to deal Damage, at higher levels this energy sap should be understood as
+            more than just heat sap.<br>
+            Attacks made with Cold usually have special interaction with <b>Soaked</b> Targets.
+        </p>
+        <h2 id="bio_damage">Bio</h2>
+        <hr>
+        <p>
+            Bio Damage manifests itself as disturbance in inner workings, at higher levels this disturbance can be more than just biological.<br>
+            Things which are connected to living but aren't (wood, paper, nails, Undead Creature, ect...) have 100 Bio-RES.<br>
+            Non-Biological things (Plastic, Rock, Steel, ect...) have 1000 Bio-RES.
+        </p>
+        <h2 id="demat_damage">Demat</h2>
+        <hr>
+        <p>
+            Demat Damage is Dematerialization and breaking of connections, by Acid, Exotic Matter, or other means.
+        </p>
+        <h2 id="electric_damage">Electric</h2>
+        <hr>
+        <p>
+            Electric Damage is induced by Electric currents, duh!?<br>
+            Attacks made with Electricity deal <b>Max-Damage</b> to <b>Soaked</b>, and <b>Airborne</b> Targets.
+        </p>
+        <h2 id="thunder_damage">Thunder</h2>
+        <hr>
+        <p>
+            Thunder based Attacks will invoke sounds, vibrations, pressure waves to deal it's Damage.<br>
+            Brittle things will usually have some kind of weakness to Thunder, like taking <b>Max-Damage</b>, or Double
+            Damage.
+        </p>
+        <h2 id="psychic_damage">Psychic</h2>
+        <hr>
+        <p>
+            Psychic Damage is about disrupting the Soul.<br>
+            This type of Damage is SP, meaning HP in unaffected, as it goes into SP.
+        </p>
+        <h2 id="radiant_necrotic">Radiant</h2>
+        <hr>
+        <p>
+            Radiant Damage is about overwhelming Body and Soul.<br>
+            This type of Damage is Hybrid, meaning it's both HP and SP Damage.
+        </p>
+        <h2 id="radiant_necrotic">Necrotic</h2>
+        <hr>
+        <p>
+            Necrotic Damage is about rotting Body and Soul.<br>
+            This type of Damage is Hybrid, meaning it's both HP and SP Damage.
+        </p>
+        <h2 id="true">True</h2>
+        <hr>
+        <p>
+            True Damage just is.<br>
+            With 3 Types; regular (HP), SP, and Hybrid (both HP and SP).<br>
+            This type of Damage cannot be reduced by any means less than HyperEntity Powers, or Reset Essence Artifacts.
+        </p>
+        <h1 id="resistances">RESISTANCES</h1>
+        <hr>
+        <p>
+            Resistance means taking less Damage equal to the Resistance Value, each Damage instance, written as [Type]-RES.<br>
+            Resistance can reduce the Damage Taken to 0, but not below 0.<br>
+            <b>Example:</b> Heat-RES, Bio-RES, ect...<br>
+        </p>
+        <p>
+            <b>Armor</b> is Resistance VS Bludgeoning, Slashing, and Piercing.<br>
+            <b>Armor VS All</b> is Resistance towards all Damage Types, but True Damage.<br>
+            <b>Armor VS HP</b> is Resistance towards all Damage which goes into HP, but True Damage.<br>
+            <b>Armor VS SP</b> is Resistance towards all Damage which goes into SP, but True SP Damage.<br>
+            Armor VS HP and Armor VS SP do reduce their respective parts from Radiant and Necrotic.
+        </p>
+        <p>
+            Weaknesses are treated as Negative Resistance, shortened as [Type]-WEAK.<br>
+            When taking Damage, for each point of Damage add +1 Extra Damage up to Max the Weakness's value.<br>
+            Resistance and Weaknesses cancel out at a rate of 1 to 1.<br>
+            <b>Damage Formula for Weakness:</b> <box>Min(Damage + Weakness, 2 × Damage)</box>
+        </p>
+        <p>
+            Absorption is when the Target gets Healed from the "Damage", shortened as [Damage Type]-ABS.<br>
+            When taking Damage, for each point of Damage, turn it into Healing, up to a Max of the Absorption's value.<br>
+            This means, even with Absorption, the Target might take actual Damage at high enough Damage values.<br>
+            Absorption applies before Resistance and Weakness, in case it isn't enought to Absorb all the Damage.
+        </p>
+        <p>
+            Penetration is Resistance Negation, written as [Type]-Pen.<br>
+            Penetration can't reduce Resistance to negative values.<br>
+            If a Meta-Ability, or similar, changes the Damage Type of something, the Penetration Type is also changed.
+        </p>
+        <p>
+            Things with loose physical presence (air, shadow and light Entities, ect...) have 100 Armor.<br>
+            Incorporeal things have 1000 Armor.
+        </p>
+        <p>
+            Things which are connected to living but aren't (wood, paper, nails, Undead Creatures, ect...) have 100 Bio-RES.<br>
+            Non-Biological things (Plastic, Rock, Steel, ect...) have 1000 Bio-RES.
+        </p>
+        <h1 id="combat_annotations">COMBAT ANNOTATIONS</h1>
+        <hr>
+        <h2 id="rest_hp">REST-HP</h2>
+        <hr>
+        <p>
+            REST-HP is spent in Short-Rests to recover HP.<br>
+            REST-HP is restored after a Long-Rest.<br>
+            If an Ability Costs REST-HP, it can also be paid in HP.
+        </p>
+        <h2 id="buffer">BUFFER</h2>
+        <hr>
+        <p>
+            BUFFER, as the name implies, is a buffer for recieving Damage.<br>
+            When taking any kind of Damage, the <b>Post-Mitigation</b> will go into the BUFFER rather than HP or SP.<br>
+            Any excess Damage not stopped by the BUFFER goes past it, into the HP or SP.
+        </p>
+        <p>
+            For Hybrid Damage the BUFFER recieves both HP and SP, effectively Doubling Damage recieved by the BUFFER.<br>
+            The Target chooses the order of Damage which goes into their BUFFER, if the Damage is Hybrid or Multiple Type.<br>
+            <b>Example:</b> Recieving Radiant (Hybrid), the Target chooses that first the SP part goes into the BUFFER.
+        </p>
+        <p>
+            A BUFFER cannot be Healed, normally.<br>
+            BUFFERs cannot Stack, the Target chooses between sources of BUFFER.<br>
+            If Duration isn't written, a BUFFER lasts till End of Next Long-Rest.
+        </p>
+        <h2 id="max_value">Max Value</h2>
+        <hr>
+        <p>
+            If an amount that should be thrown with Dice has Max on it, it will automatically become the largest value it could achieve.<br>
+            Some things might me <b>Minimized</b>, this is the opposite, treat as if you rolled the lowest.<br>
+            Maximalizing and Minimizing To-Hit does NOT change it's CRIT state, only the To-Hit!
+        </p>
+        <h2 id="executing">Executing</h2>
+        <hr>
+        <p>
+            Executing Damage is Damage that will become Max Damage, only if <box>Target HP ≤ Damage</box><br>
+            If Damage is a Type which goes into SP then it Max Damage, only if <box>Target SP ≤ Damage</box><br>
+            If the Damage goes into both HP and SP then if one of the conditions are met the other part is also Maximalized.
+        </p>
+        <h2 id="potency">Potency</h2>
+        <hr>
+        <p>
+            For each point of Potency, an Ability will increase in a Single one of it's Linearly Scaling Ability Stats.<br>
+            Potency will fade away on any still ongoing Ability after a Minute! (20 Rounds)<br>
+            <b>Examples:</b> Damage, Healing, Shielding, SP, HD, BUFFER, REST-HP, ect...<br>
+            <b>Exceptions:</b> Range, Size, Item Tier
+        </p>
+        <p>
+            Spending Potency on Saves will require 2 Potency for each +1 Save Difficulty!
+        </p>
+        <h2 id="aoe">AOE</h2>
+        <hr />
+        <p>
+            AOEs are Attacks which effect an area.<br>
+            Everything within the Area is counted as Target.<br>
+            <b>Examples:</b> Sphere, <b>*Cone</b>, Line, Cylinder, Cube, ect...<br>
+            <b>*Cone</b> is not a real cone, it's a <a target="_blank" href="https://en.wikipedia.org/wiki/Spherical_sector">Sphere Sector</a>, with it's <b>Spread, or Width</b> being the side to side Angle of it.<br>
+            <b>Note:</b> Lines, Cylinders, and Disks are technically the same shape.
+        </p>
+        <p>
+            There are 3 Types of AOEs; Static, Flowing, and Crawling.<br>
+            Static AOEs just Appear, and Ignore any type of Cover.<br>
+            Flowing AOEs have a flow.<br>
+            A Flowing Sphere AOE will usually have a single point which it expands from, for Example: Fireball.<br>
+            A Flowing Line or Cylinder AOE will usually have a single point or plane which it flows from, for Example: Steel Tempest.<br>
+            Crawling AOEs abide by all the Rules of Flowing AOEs, but it can Change Flow Direction to fill it's designated AOE.
+        </p>
+        <p>
+            An AOE's center can be the Center of a Hexa or Square, or optionally even the Corner.<br>
+            It's up to GM's choice.<br>
+            <b>Note:</b> AOEs which start from an Entity, always Start from their middle.
+        </p>
+        <p>
+            When a Flowing AOE Attack is Fully Negated by an Entity, or Tanked by something considered Full Cover, the Flow of the AOE Stops there.<br>
+            <b>Example:</b> A Line or Cylinder Hits a Target, which fully Negates the Attack, Entities behind the Target, in a Line are unaffected.<br>
+            <b>Example:</b> A Cone or Sphere Hits a Target, which fully Negates the Attack, Entities behind the Target, in a (*small) Cone are unaffected.<br>
+            <b>Note:</b> A Crawling AOE will just Crawl around a Target, even if Fully Negated, or even around a Wall if it has enough Range.
+        </p>
+    </main>
+</body>
+
+</html>

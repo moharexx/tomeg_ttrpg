@@ -1,0 +1,410 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=0.35">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../assets/style_main.css">
+    <script src="../assets/script_main.js"></script>
+    <title>Character Assembler</title>
+</head>
+
+<style>
+    input {
+        width: 50%;
+    }
+    .special {
+        width: 6rem;
+    }
+
+    @media only screen and (max-width: 1200px) { /* PHONE */
+        input {
+            width: 100%;
+        }
+        .special {
+            width: 8rem;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div onclick="gear_button_onclick()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
+        <div onclick="go_to('main/main.html')">Main Page</div>
+        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
+        <div onclick="go_to('main/abilities.html')">Abilities</div>
+        <div onclick="go_to('main/extra.html')">Extra</div>
+    </header>
+    <side_menu id="side_menu"></side_menu>
+    <main>
+        <h1 id="character_assembler">CHARACTER ASSEMBLER</h1>
+        <hr>
+        <table width="100%">
+            <tr>
+                <td class="special">Total XP:</td>
+                <td style="width: auto;"><input id="XP_total" type="text" value="100" onchange="refresh_XP()"></td>
+                <td style="width: auto;"><input id="save" type="button" value="Save" onclick="alert('WIP')"></td>
+                <td style="width: auto;"><input id="load" type="button" value="Load" onclick="alert('WIP')"></td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td width="25%">Stat</td>
+                <td width="25%">Ratio</td>
+                <td width="25%">XP Cost</td>
+                <td width="25%">Stat</td>
+            </tr>
+            <tr>
+                <td>STR</td>
+                <td><input id="STR_ratio" type="text" value="0" onchange="refresh_stat('STR', 1)"></td>
+                <td><input id="STR_xp" type="text" value="0" onchange="refresh_stat('STR', 2)"></td>
+                <td><input id="STR_value" type="text" value="0" onchange="refresh_stat('STR', 3)"></td>
+            </tr>
+            <tr>
+                <td>AGI</td>
+                <td><input id="AGI_ratio" type="text" value="0" onchange="refresh_stat('AGI', 1)"></td>
+                <td><input id="AGI_xp" type="text" value="0" onchange="refresh_stat('AGI', 2)"></td>
+                <td><input id="AGI_value" type="text" value="0" onchange="refresh_stat('AGI', 3)"></td>
+            </tr>
+            <tr>
+                <td>VIT</td>
+                <td><input id="VIT_ratio" type="text" value="0" onchange="refresh_stat('VIT', 1)"></td>
+                <td><input id="VIT_xp" type="text" value="0" onchange="refresh_stat('VIT', 2)"></td>
+                <td><input id="VIT_value" type="text" value="0" onchange="refresh_stat('VIT', 3)"></td>
+            </tr>
+            <tr>
+                <td>INT</td>
+                <td><input id="INT_ratio" type="text" value="0" onchange="refresh_stat('INT', 1)"></td>
+                <td><input id="INT_xp" type="text" value="0" onchange="refresh_stat('INT', 2)"></td>
+                <td><input id="INT_value" type="text" value="0" onchange="refresh_stat('INT', 3)"></td>
+            </tr>
+            <tr>
+                <td>WILL</td>
+                <td><input id="WILL_ratio" type="text" value="0" onchange="refresh_stat('WILL', 1)"></td>
+                <td><input id="WILL_xp" type="text" value="0" onchange="refresh_stat('WILL', 2)"></td>
+                <td><input id="WILL_value" type="text" value="0" onchange="refresh_stat('WILL', 3)"></td>
+            </tr>
+            <tr>
+                <td>EGO</td>
+                <td><input id="EGO_ratio" type="text" value="0" onchange="refresh_stat('EGO', 1)"></td>
+                <td><input id="EGO_xp" type="text" value="0" onchange="refresh_stat('EGO', 2)"></td>
+                <td><input id="EGO_value" type="text" value="0" onchange="refresh_stat('EGO', 3)"></td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td width="25%">Masteries</td>
+                <td width="25%">Ratio</td>
+                <td width="25%" id="XPperValue2">XP Cost</td>
+                <td width="25%">Mastery</td>
+            </tr>
+            <tr>
+                <td>Athletics (STR)</td>
+                <td><input id="Athletics_ratio" type="text" value="0" onchange="refresh_mastery('Athletics', 1)"></td>
+                <td><input id="Athletics_xp" type="text" value="0" onchange="refresh_mastery('Athletics', 2)"></td>
+                <td><input id="Athletics_value" type="text" value="0" onchange="refresh_mastery('Athletics', 3)"></td>
+            </tr>
+            <tr>
+                <td>Acrobatics (AGI)</td>
+                <td><input id="Acrobatics_ratio" type="text" value="0" onchange="refresh_mastery('Acrobatics', 1)"></td>
+                <td><input id="Acrobatics_xp" type="text" value="0" onchange="refresh_mastery('Acrobatics', 2)"></td>
+                <td><input id="Acrobatics_value" type="text" value="0" onchange="refresh_mastery('Acrobatics', 3)"></td>
+            </tr>
+            <tr>
+                <td>Stealth (AGI)</td>
+                <td><input id="Stealth_ratio" type="text" value="0" onchange="refresh_mastery('Stealth', 1)"></td>
+                <td><input id="Stealth_xp" type="text" value="0" onchange="refresh_mastery('Stealth', 2)"></td>
+                <td><input id="Stealth_value" type="text" value="0" onchange="refresh_mastery('Stealth', 3)"></td>
+            </tr>
+            <tr>
+                <td>Arcana (INT)</td>
+                <td><input id="Arcana_ratio" type="text" value="0" onchange="refresh_mastery('Arcana', 1)"></td>
+                <td><input id="Arcana_xp" type="text" value="0" onchange="refresh_mastery('Arcana', 2)"></td>
+                <td><input id="Arcana_value" type="text" value="0" onchange="refresh_mastery('Arcana', 3)"></td>
+            </tr>
+            <tr>
+                <td>Science (INT)</td>
+                <td><input id="Science_ratio" type="text" value="0" onchange="refresh_mastery('Science', 1)"></td>
+                <td><input id="Science_xp" type="text" value="0" onchange="refresh_mastery('Science', 2)"></td>
+                <td><input id="Science_value" type="text" value="0" onchange="refresh_mastery('Science', 3)"></td>
+            </tr>
+            <tr>
+                <td>Lore (INT)</td>
+                <td><input id="Lore_ratio" type="text" value="0" onchange="refresh_mastery('Lore', 1)"></td>
+                <td><input id="Lore_xp" type="text" value="0" onchange="refresh_mastery('Lore', 2)"></td>
+                <td><input id="Lore_value" type="text" value="0" onchange="refresh_mastery('Lore', 3)"></td>
+            </tr>
+            <tr>
+                <td>Perception (WILL)</td>
+                <td><input id="Perception_ratio" type="text" value="0" onchange="refresh_mastery('Perception', 1)"></td>
+                <td><input id="Perception_xp" type="text" value="0" onchange="refresh_mastery('Perception', 2)"></td>
+                <td><input id="Perception_value" type="text" value="0" onchange="refresh_mastery('Perception', 3)"></td>
+            </tr>
+            <tr>
+                <td>Intuition (WILL)</td>
+                <td><input id="Intuition_ratio" type="text" value="0" onchange="refresh_mastery('Intuition', 1)"></td>
+                <td><input id="Intuition_xp" type="text" value="0" onchange="refresh_mastery('Intuition', 2)"></td>
+                <td><input id="Intuition_value" type="text" value="0" onchange="refresh_mastery('Intuition', 3)"></td>
+            </tr>
+            <tr>
+                <td>Performance (EGO)</td>
+                <td><input id="Performance_ratio" type="text" value="0" onchange="refresh_mastery('Performance', 1)"></td>
+                <td><input id="Performance_xp" type="text" value="0" onchange="refresh_mastery('Performance', 2)"></td>
+                <td><input id="Performance_value" type="text" value="0" onchange="refresh_mastery('Performance', 3)"></td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td width="25%">Martial-Masteries</td>
+                <td width="25%">Ratio</td>
+                <td width="25%" id="XPperValue3">XP Cost</td>
+                <td width="25%">Mastery</td>
+            </tr>
+            <tr>
+                <td>Melee Weapon (STR | AGI)</td>
+                <td><input id="Melee_ratio" type="text" value="0" onchange="refresh_mastery('Melee', 1)"></td>
+                <td><input id="Melee_xp" type="text" value="0" onchange="refresh_mastery('Melee', 2)"></td>
+                <td><input id="Melee_value" type="text" value="0" onchange="refresh_mastery('Melee', 3)"></td>
+            </tr>
+            <tr>
+                <td>Ballistic (AGI)</td>
+                <td><input id="Ballistic_ratio" type="text" value="0" onchange="refresh_mastery('Ballistic', 1)"></td>
+                <td><input id="Ballistic_xp" type="text" value="0" onchange="refresh_mastery('Ballistic', 2)"></td>
+                <td><input id="Ballistic_value" type="text" value="0" onchange="refresh_mastery('Ballistic', 3)"></td>
+            </tr>
+            <tr>
+                <td>Martial Arts (STR | AGI)</td>
+                <td><input id="Martial_ratio" type="text" value="0" onchange="refresh_mastery('Martial', 1)"></td>
+                <td><input id="Martial_xp" type="text" value="0" onchange="refresh_mastery('Martial', 2)"></td>
+                <td><input id="Martial_value" type="text" value="0" onchange="refresh_mastery('Martial', 3)"></td>
+            </tr>
+        </table>
+                <table width="100%">
+            <tr>
+                <td width="25%">Magic-Masteries</td>
+                <td width="25%">Ratio</td>
+                <td width="25%" id="XPperValue3">XP Cost</td>
+                <td width="25%">Mastery</td>
+            </tr>
+            <tr>
+                <td>Evocation</td>
+                <td><input id="Evocation_ratio" type="text" value="0" onchange="refresh_mastery('Evocation', 1)"></td>
+                <td><input id="Evocation_xp" type="text" value="0" onchange="refresh_mastery('Evocation', 2)"></td>
+                <td><input id="Evocation_value" type="text" value="0" onchange="refresh_mastery('Evocation', 3)"></td>
+            </tr>
+            <tr>
+                <td>Transmutation</td>
+                <td><input id="Transmutation_ratio" type="text" value="0" onchange="refresh_mastery('Transmutation', 1)"></td>
+                <td><input id="Transmutation_xp" type="text" value="0" onchange="refresh_mastery('Transmutation', 2)"></td>
+                <td><input id="Transmutation_value" type="text" value="0" onchange="refresh_mastery('Transmutation', 3)"></td>
+            </tr>
+            <tr>
+                <td>Conjuration</td>
+                <td><input id="Conjuration_ratio" type="text" value="0" onchange="refresh_mastery('Conjuration', 1)"></td>
+                <td><input id="Conjuration_xp" type="text" value="0" onchange="refresh_mastery('Conjuration', 2)"></td>
+                <td><input id="Conjuration_value" type="text" value="0" onchange="refresh_mastery('Conjuration', 3)"></td>
+            </tr>
+            <tr>
+                <td>Enchantment</td>
+                <td><input id="Enchantment_ratio" type="text" value="0" onchange="refresh_mastery('Enchantment', 1)"></td>
+                <td><input id="Enchantment_xp" type="text" value="0" onchange="refresh_mastery('Enchantment', 2)"></td>
+                <td><input id="Enchantment_value" type="text" value="0" onchange="refresh_mastery('Enchantment', 3)"></td>
+            </tr>
+            <tr>
+                <td>Abjuration</td>
+                <td><input id="Abjuration_ratio" type="text" value="0" onchange="refresh_mastery('Abjuration', 1)"></td>
+                <td><input id="Abjuration_xp" type="text" value="0" onchange="refresh_mastery('Abjuration', 2)"></td>
+                <td><input id="Abjuration_value" type="text" value="0" onchange="refresh_mastery('Abjuration', 3)"></td>
+            </tr>
+            <tr>
+                <td>Divination</td>
+                <td><input id="Divination_ratio" type="text" value="0" onchange="refresh_mastery('Divination', 1)"></td>
+                <td><input id="Divination_xp" type="text" value="0" onchange="refresh_mastery('Divination', 2)"></td>
+                <td><input id="Divination_value" type="text" value="0" onchange="refresh_mastery('Divination', 3)"></td>
+            </tr>
+            <tr>
+                <td>Anima</td>
+                <td><input id="Anima_ratio" type="text" value="0" onchange="refresh_mastery('Anima', 1)"></td>
+                <td><input id="Anima_xp" type="text" value="0" onchange="refresh_mastery('Anima', 2)"></td>
+                <td><input id="Anima_value" type="text" value="0" onchange="refresh_mastery('Anima', 3)"></td>
+            </tr>
+        </table>
+        <table width="75%"">
+            <tr>
+                <td width="33.3%"></td>
+                <td width="33.3%">Ratio</td>
+                <td width="33.3%">XP</td>
+            </tr>
+            <tr>
+                <td>Main Stat XP</td>
+                <td id="RATIO_main"></td>
+                <td id="XP_main"></td>
+            </tr>
+            <tr>
+                <td>Mastery XP</td>
+                <td id="RATIO_mastery"></td>
+                <td id="XP_mastery"></td>
+            </tr>
+            <tr>
+                <td>Martial-Mastery XP</td>
+                <td id="RATIO_martial"></td>
+                <td id="XP_martial"></td>
+            </tr>
+            <tr>
+                <td>Magic-Mastery XP</td>
+                <td id="RATIO_magic"></td>
+                <td id="XP_magic"></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td id="RATIO_spent"></td>
+                <td id="XP_spent"></td>
+            </tr>
+            <tr>
+                <td>Left</td>
+                <td id="RATIO_left"></td>
+                <td id="XP_left"></td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+<script>
+    refresh_stat = function(stat, type) {
+        let ratio   = document.getElementById(stat + "_ratio")
+        let xp      = document.getElementById(stat + "_xp")
+        let value   = document.getElementById(stat + "_value")
+        let max     = XP_total.value / 10
+        if (type == 1) {
+            xp.value    = Math.floor(ratio.value * max) * 2
+            value.value = Math.floor(ratio.value * max)
+            refresh_bottom()
+        } else if (type == 2) {
+            xp.value    = Math.floor(xp.value * 0.5) * 2
+            ratio.value = xp.value * 5 / XP_total.value
+            value.value = xp.value * 0.5
+            refresh_bottom()
+        } else if (type == 3) {
+            value.value = Math.floor(value.value)
+            ratio.value = value.value * 10 / XP_total.value
+            xp.value    = value.value * 2
+            refresh_bottom()
+        } else if (type == 4) {
+            xp.value    = 2 * Math.floor(ratio.value * max)
+            value.value = Math.floor(ratio.value * max)
+        }
+    }
+
+    refresh_mastery = function(stat, type) {
+        let ratio   = document.getElementById(stat + "_ratio")
+        let xp      = document.getElementById(stat + "_xp")
+        let value   = document.getElementById(stat + "_value")
+        let max     = XP_total.value / 10
+        if (type == 1) {
+            xp.value    = Math.floor(ratio.value * max) * 0.5
+            value.value = Math.floor(ratio.value * max)
+            refresh_bottom()
+        } else if (type == 2) {
+            xp.value    = Math.floor(xp.value * 2) * 0.5
+            ratio.value = xp.value * 20 / XP_total.value
+            value.value = xp.value * 2
+            refresh_bottom()
+        } else if (type == 3) {
+            value.value = Math.floor(value.value)
+            ratio.value = value.value * 10 / XP_total.value
+            xp.value    = value.value * 0.5
+            refresh_bottom()
+        } else if (type == 4) {
+            xp.value    = 0.5 * Math.floor(ratio.value * max)
+            value.value = Math.floor(ratio.value * max)
+        }
+    }
+
+    refresh_XP = function() {
+        refresh_stat("STR", 4)
+        refresh_stat("AGI", 4)
+        refresh_stat("VIT", 4)
+        refresh_stat("INT", 4)
+        refresh_stat("WILL", 4)
+        refresh_stat("EGO", 4)
+
+        refresh_mastery("Athletics", 4)
+        refresh_mastery("Acrobatics", 4)
+        refresh_mastery("Stealth", 4)
+        refresh_mastery("Arcana", 4)
+        refresh_mastery("Lore", 4)
+        refresh_mastery("Science", 4)
+        refresh_mastery("Perception", 4)
+        refresh_mastery("Intuition", 4)
+        refresh_mastery("Performance", 4)
+
+        refresh_mastery("Melee", 4)
+        refresh_mastery("Ballistic", 4)
+        refresh_mastery("Martial", 4)
+
+        refresh_mastery("Evocation", 4)
+        refresh_mastery("Transmutation", 4)
+        refresh_mastery("Conjuration", 4)
+        refresh_mastery("Enchantment", 4)
+        refresh_mastery("Abjuration", 4)
+        refresh_mastery("Divination", 4)
+        refresh_mastery("Anima", 4)
+        
+        refresh_bottom()
+    }
+
+    refresh_bottom = function() {
+        let xp1 =
+            1*STR_xp.value  +
+            1*AGI_xp.value  +
+            1*VIT_xp.value  +
+            1*INT_xp.value  +
+            1*WILL_xp.value +
+            1*EGO_xp.value
+        
+        XP_main.innerHTML = xp1
+        RATIO_main.innerHTML = Math.round(xp1 / XP_total.value * 1e5) / 1e3 + "%"
+
+        let xp2 =
+            1*Athletics_xp.value    +
+            1*Acrobatics_xp.value   +
+            1*Stealth_xp.value      +
+            1*Arcana_xp.value       +
+            1*Science_xp.value      +
+            1*Lore_xp.value         +
+            1*Perception_xp.value   +
+            1*Intuition_xp.value    +
+            1*Performance_xp.value
+
+        XP_mastery.innerHTML = xp2
+        RATIO_mastery.innerHTML = Math.round(xp2 / XP_total.value * 1e5) / 1e3 + "%"
+
+        let xp3 =
+            1*Melee_xp.value        +
+            1*Ballistic_xp.value    +
+            1*Martial_xp.value
+        
+        XP_martial.innerHTML = xp3
+        RATIO_martial.innerHTML = Math.round(xp3 / XP_total.value * 1e5) / 1e3 + "%"
+
+        let xp4 =
+            1*Evocation_xp.value        +
+            1*Transmutation_xp.value    +
+            1*Conjuration_xp.value      +
+            1*Enchantment_xp.value      +
+            1*Abjuration_xp.value       +
+            1*Divination_xp.value       +
+            1*Anima_xp.value
+
+        XP_magic.innerHTML = xp4
+        RATIO_magic.innerHTML = Math.round(xp4 / XP_total.value * 1e5) / 1e3 + "%"
+
+        XP_spent.innerHTML = xp1 + xp2 + xp3 + xp4
+        RATIO_spent.innerHTML = Math.round((xp1 + xp2 + xp3 + xp4) / XP_total.value * 1e5) / 1e3 + "%"
+        XP_left.innerHTML = XP_total.value - (xp1 + xp2 + xp3 + xp4)
+        RATIO_left.innerHTML = Math.round((1 - ((xp1 + xp2 + xp3 + xp4) / XP_total.value)) * 1e5) / 1e3 + "%"
+    }
+
+    refresh_bottom()
+</script>
+
+</html>

@@ -1,0 +1,303 @@
+<html>
+
+<style>
+
+.Hidden {
+    display: none;
+}
+
+.DiceRollerMain {
+    width: 30%;
+    height: 10%;
+    background-color: wheat;
+    border: 1px solid black;
+}
+.DiceRollerMain input, button, label{
+    display: inline-flex;
+    margin: 1.0%;
+    background-color: antiquewhite;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+.DiceRollerMain input[type="text"][disabled]{
+    color: black;
+}
+.DiceRollerMain button:hover{
+    background-color: rgb(228, 191, 124);
+}
+
+.DiceRollerTop {
+    display: flex;
+    width: 100%;
+    height: 33%;
+}
+.DiceRollerTop input{
+    width: 50%;
+}
+.DiceRollerTop :nth-child(1n){
+    margin: 0% !important;
+    border-width: 0px 1px 1px 0px !important;
+}
+.DiceRollerTop :last-child{
+    border-width: 0px 0px 1px 0px !important;
+}
+.DiceRollerTop button{
+    width: 20%;
+    height: 100%;
+}
+
+.DiceRollerTopSelected {
+    background-color: wheat !important;
+    border: 1px solid black !important;
+    border-bottom: 0px !important;
+}
+.DiceRollerTopSelected:hover{
+    background-color: rgb(228, 191, 124) !important;
+}
+
+.SlectedDiv {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.unslectedDiv {
+    display: none;
+    width: 0%;
+    height: 0%;
+}
+
+.SlectedDiv label {
+    margin: 0.8%;
+    width: 40%;
+    max-height: 33%;
+}
+.SlectedDiv :first-child input {
+    width: 20%;
+    height: 25%;
+}
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../assets/style_main.css">
+    <script src="../assets/script_main.js"></script>
+    <title>Digital Dice Roller</title>
+</head>
+
+<body>
+    <header>
+        <div onclick="gear_button_onclick()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
+        <div onclick="go_to('main/main.html')">Main Page</div>
+        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
+        <div onclick="go_to('main/abilities.html')">Abilities</div>
+        <div onclick="go_to('main/extra.html')">Extra</div>
+    </header>
+    <side_menu id="side_menu"></side_menu>
+    <main>
+    <div class="Content" id="Content">
+        <h1>DIGITAL DICE ROLLER</h1>
+        <hr/>
+        <br/>
+        save button here
+        <br/><br/><hr>
+        <div class="DiceRollerMain" id="1">
+            <div class="DiceRollerTop">
+                <input type="text" name="Name" placeholder="Name">
+                <button class="DiceRollerTopSelected" onclick="SwitchRollerType(this.parentElement.parentElement.id, 1)">d10</button>
+                <button class="" onclick="SwitchRollerType(this.parentElement.parentElement.id, 2)">Damage</button>
+                <button class="" onclick="SwitchRollerType(this.parentElement.parentElement.id, 3)">Stable</button>
+            </div>
+            <div class="SlectedDiv">
+                <div style="display: flex;">
+                    <label></label>
+                    <input type="text" placeholder="Modifier">
+                    <input type="text" placeholder="Bonus">
+                    <input type="text" value="Result" disabled>
+                </div>
+                <div style="display: flex;">
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 1, 'd10')">d10</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 1, 'ADV')">Advantage</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 1, 'DADV')">Disadvantage</button>
+                    <button onclick="CalculateResult(this.parentElement.parentElement.parentElement.id, 1)">Roll</button>
+                    <button>Clear</button>
+                    <button>Log</button>
+                </div>
+            </div>
+            <div class="unslectedDiv">
+                <div style="display: flex;">
+                    <label></label>
+                    <input type="text" name="DamageMultiplier" placeholder="Multiplier" onchange="">
+                    <input type="text" name="DamageBonus" placeholder="Bonus" onchange="">
+                    <input type="text" value="Result" disabled>
+                </div>
+                <div style="display: flex;">
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd4')">d4</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd6')">d6</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd8')">d8</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd10')">d10</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd12')">d12</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd20')">d20</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, '×2')">×2</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, '×3')">×3</button>
+                    <button onclick="CalculateResult(this.parentElement.parentElement.parentElement.id, 2)">Roll</button>
+                    <button>Clear</button>
+                    <button>Log</button>
+                </div>
+            </div>
+            <div class="unslectedDiv">
+                <div style="display: flex;">
+                    <label></label>
+                    <input type="text" name="StableMultiplier" placeholder="Multiplier" onchange="">
+                    <input type="text" name="StableModifier" placeholder="Modifier" onchange="">
+                    <input type="text" value="Result" disabled>
+                </div>
+                <div style="display: flex;">
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 3, 'd10')">d10</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 3, 'ADV')">Advantage</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 3, 'DADV')">Disadvantage</button>
+                    <button onclick="CalculateResult(this.parentElement.parentElement.parentElement.id, 3)">Roll</button>
+                    <button>Clear</button>
+                    <button>Log</button>
+                </div>
+            </div>
+        </div>
+        <button onclick="addDiceRoller()">adasdasdasdasd</button>
+        <div class="Hidden" id="0">
+            <div class="DiceRollerTop">
+                <input type="text" name="Name" placeholder="Name">
+                <button class="DiceRollerTopSelected" onclick="SwitchRollerType(this.parentElement.parentElement.id, 1)">d10</button>
+                <button class="" onclick="SwitchRollerType(this.parentElement.parentElement.id, 2)">Damage</button>
+                <button class="" onclick="SwitchRollerType(this.parentElement.parentElement.id, 3)">Stable</button>
+            </div>
+            <div class="SlectedDiv">
+                <div style="display: flex;">
+                    <label></label>
+                    <input type="text" name="d10Modifier" placeholder="Modifier">
+                    <input type="text" name="d10Bonus" placeholder="Bonus">
+                    <input type="text" value="Result" disabled>
+                </div>
+                <div style="display: flex;">
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 1, 'd10')">d10</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 1, 'ADV')">Advantage</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 1, 'DADV')">Disadvantage</button>
+                    <button onclick="CalculateResult(this.parentElement.parentElement.parentElement.id, 1)">Roll</button>
+                    <button>Clear</button>
+                    <button>Log</button>
+                </div>
+            </div>
+            <div class="unslectedDiv">
+                <div style="display: flex;">
+                    <label></label>
+                    <input type="text" name="DamageMultiplier" placeholder="Multiplier" onchange="">
+                    <input type="text" name="DamageBonus" placeholder="Bonus" onchange="">
+                    <input type="text" value="Result" disabled>
+                </div>
+                <div style="display: flex;">
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd4')">d4</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd6')">d6</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd8')">d8</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd10')">d10</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd12')">d12</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, 'd20')">d20</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, '×2')">×2</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 2, '×3')">×3</button>
+                    <button onclick="CalculateResult(this.parentElement.parentElement.parentElement.id, 2)">Roll</button>
+                    <button>Clear</button>
+                    <button>Log</button>
+                </div>
+            </div>
+            <div class="unslectedDiv">
+                <div style="display: flex;">
+                    <label></label>
+                    <input type="text" name="StableMultiplier" placeholder="Multiplier" onchange="">
+                    <input type="text" name="StableModifier" placeholder="Modifier" onchange="">
+                    <input type="text" value="Result" disabled>
+                </div>
+                <div style="display: flex;">
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 3, 'd10')">d10</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 3, 'ADV')">Advantage</button>
+                    <button onclick="addDice(this.parentElement.parentElement.parentElement.id, 3, 'DADV')">Disadvantage</button>
+                    <button onclick="CalculateResult(this.parentElement.parentElement.parentElement.id, 3)">Roll</button>
+                    <button>Clear</button>
+                    <button>Log</button>
+                </div>
+            </div>
+        </div>
+        <button class="Hidden" id="DiceButton" onclick="this.remove()"></button>
+        
+        
+        
+    </div>
+</body>
+</main>
+
+<script>
+
+var NumOfDiceRollers = 1;
+let CurretRollerType = [0, 1];
+function addDiceRoller() {
+    NumOfDiceRollers += 1;
+    CurretRollerType.push(1);
+    DiceRoller = document.getElementById(0).cloneNode(true);
+    DiceRoller.id = NumOfDiceRollers;
+    DiceRoller.className = "DiceRollerMain";
+    document.getElementById("Content").append(DiceRoller);
+}
+
+function SwitchRollerType(id, index) {
+    if (CurretRollerType[id] != index) {
+        document.getElementById(id).children[0].children[CurretRollerType[id]].className = "";
+        document.getElementById(id).children[0].children[index].className = "DiceRollerTopSelected";
+        document.getElementById(id).children[CurretRollerType[id]].className = "unslectedDiv";
+        document.getElementById(id).children[index].className = "SlectedDiv";
+        CurretRollerType[id] = index;
+    }
+}
+
+function addDice(id, index, die) {
+    DiceButton = document.getElementById("DiceButton").cloneNode(true);
+    DiceButton.className = "";
+    DiceButton.innerHTML = die;
+    document.getElementById(id).children[index].children[0].children[0].appendChild(DiceButton);
+}
+
+function CalculateResult(id, index) {
+    let DiceCount = [];
+    let ADV = false;
+    let DADV = false;
+    let Modifiers = document.getElementById(id).children[1].children[0].children[1].value.split(" ")
+    let Bonus = document.getElementById(id).children[1].children[0].children[2].value.split(" ")
+    let Result = [];
+    
+    
+    if (index == 1) {
+        for (let i = 0; i < document.getElementById(id).children[1].children[0].children[0].getElementsByTagName("*").length; i++) {
+                if (document.getElementById(id).children[1].children[0].children[0].getElementsByTagName("*")[i].textContent == "d10") {DiceCount.push(1);}
+                else if (document.getElementById(id).children[1].children[0].children[0].getElementsByTagName("*")[i].textContent == "ADV") {ADV = true;}
+                else if (document.getElementById(id).children[1].children[0].children[0].getElementsByTagName("*")[i].textContent == "DADV") {DADV = true;}
+            }
+        for (let i = 0; i < Modifiers.length; i++) {
+            if (Bonus[i] === undefined) {Bonus.push(0);}
+        }
+        for (let i = 0; i < Modifiers.length; i++) {
+            Result.push([]);
+            for (let j = 0; j < DiceCount.length; j++) {
+                if (ADV == true) {Result[i].push((Math.floor((Math.random() * 10) + 1) * Math.max(Math.floor(Modifiers[i] * 0.2), 1) + Modifiers[i] * 1 + Bonus[i] * 1) * 2);}
+                else if (DADV == true) {Result[i].push((Math.floor((Math.random() * 10) + 1) * Math.max(Math.floor(Modifiers[i] * 0.2), 1) + Modifiers[i] * 1 + Bonus[i] * 1) * 0.5);}
+                else {Result[i].push(Math.floor((Math.random() * 10) + 1) * Math.max(Math.floor(Modifiers[i] * 0.2), 1) + Modifiers[i] * 1 + Bonus[i] * 1);}
+            }
+        }
+    } else if (index == 2) {
+
+    } else if (index == 3) {
+
+    }
+    document.getElementById(id).children[index].children[0].children[3].value = Result.join("|");
+    
+}
+
+</script>
+
+</html>

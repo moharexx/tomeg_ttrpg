@@ -1,0 +1,265 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=0.35">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../assets/style_main.css">
+    <script src="../assets/script_main.js"></script>
+    <title>Main Page</title>
+</head>
+
+<body>
+    <header>
+        <div onclick="gear_button_onclick()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
+        <div onclick="go_to('main/main.html')">Main Page</div>
+        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
+        <div onclick="go_to('main/abilities.html')">Abilities</div>
+        <div onclick="go_to('main/extra.html')">Extra</div>
+    </header>
+    <side_menu id="side_menu"></side_menu>
+    <main>
+        <h1 id="tömegpokalipszis" style="visibility: hidden; font-size: 0; padding: 0; margin: 0; line-height: 0;">TÖMEGPOKALIPSZIS</h1>
+        <p style="text-align: center; font-size: 120px; font-weight: 900; padding: 60px 0px 0px 0px; margin: 0px 0px 0px 0px;">- 𝔸 -</p>
+        <p style="text-align: center; font-size: 50px; font-weight: 900; padding: 0px 0px 20px 0px; margin: 0px 0px 0px 0px; font-family: 'Times New Roman', Times, serif;">T Ö M E G P O K A L I P S Z I S</p>
+        <hr style="width:80%; padding-top: 3px; padding-bottom: 3px; background-color:black;">
+        <p style="text-align: center; font-size: 25px; font-weight: 900; padding: 20px 0px 100px 0px; margin: 0px 0px 0px 0px; font-family: 'Times New Roman', Times, serif">The TTRPG</p>
+        <p>
+            A tabletop RPG system created for unhinged individuals by schizophrenic individuals.<br>
+            Truly a masterpiece!<br>
+            But before you dive into the content, you will need a few basics to understand some of the content you will
+            find.
+        </p>
+        <p>
+            Lets start with the basic explanation of Dice!<br>
+            Dice are called d#, where # is the amount of sides the dice have.<br>
+            For example d6 is a 6 sided dice, 8d6 is the sum of 8, 6 sided dies' values.<br>
+            But if you see d6 × 8 that is the result of only one d6 multiplied by 8, totally different!
+        </p>
+        <p>
+            Now for a few Mathmatical notations, yipee!<br>
+            If you know programming or math basics then you probably already have most of this knowledge.
+        </p>
+        <table style="width: 80%;">
+            <tr>
+                <td style="width: 25%;">
+                    Notation
+                </td>
+                <td style="width: 75%;">
+                    Definition
+                </td>
+            </tr>
+            <tr>
+                <td>RoundDown(Number)</td>
+                <td>
+                    The Number is rounded down, to the nearest full number.<br>
+                    <b>Note:</b> By default this is used at the end of final results!
+                </td>
+            </tr>
+            <tr>
+                <td>RoundUp(Number)</td>
+                <td>The Number is rounded up, to the nearest full number.</td>
+            </tr>
+            <tr>
+                <td>Min(Number1, Number2, ...)</td>
+                <td>This returns the smallest number from the parameters.</td>
+            </tr>
+            <tr>
+                <td>Max(Number1, Number2, ...)</td>
+                <td>This returns the largest number from the parameters.</td>
+            </tr>
+            <tr>
+                <td>Sum(Collection of numbers)</td>
+                <td>This returns the sum of the numbers. (Adds them up)</td>
+            </tr>
+            <tr>
+                <td>Avg(Collection of numbers)</td>
+                <td>This returns the average of the numbers. (Adds them up, then devide by number of values)</td>
+            </tr>
+            <tr>
+                <td>opt1 | opt2 | opt3 ...</td>
+                <td>Choose from any of the options presented.<br>Some options may be locked in certain cases.</td>
+            </tr>
+            <tr>
+                <td>^(1/3)</td>
+                <td>
+                    To the power of 1/3, or the Cube Root.<br>
+                    Sadly you will be seeing this a lot.
+                </td>
+            </tr>
+        </table>
+        <p>
+            I strongly recommend having at least 1 <b>scientific calculator</b> in a game group.<br>
+            The Paragraphs after this are concerned with world description and lore.<br>
+            If you want to dive into the Mechanics, <a href="mechanics.html">click here!</a>
+        </p>
+        <h1 id="a">A</h1>
+        <hr>
+        <p>
+            <b>A</b> , Supreme Wheel Of <b>Fate</b>, Sooner Than First, Later Than Last, All There Is Under The Sun.<br>
+            Known by many names, existance defined by self, to ask how is science, to ask why is philosophy.
+        </p>
+        <p>
+            The world runs on it's legs, some things happen, some things don't, some call this <b>Fate</b><br>
+            Some have faith of care onto it all, some reason all cold rules, some call this <b>A</b>
+        </p>
+        <p>
+            Others deny all there is, to run from it, running blindly into it.<br>
+            This <b>Word</b> you read is proof of it, as below you, so as above.
+        </p>
+        <h1 id="world">WORLD</h1>
+        <hr>
+        <h2 id="essence">Essence</h2>
+        <hr>
+        <p>
+            Essence, the basis of the Tömegpokalipszis, all there is consists of it, and everything is in relation to it.<br>
+            Essence is the amount of charge of a Meta-Concept, which are like abstract <a href="https://en.wikipedia.org/wiki/Theory_of_forms">Platonic Forms</a> of building concepts.<br>
+            Usually appearing in the form of particles, we call these Essence Particles, or just Essence.<br>
+            Each Particle holds some amount of Essence, so charge(s) of a Meta-Concept, even multiple different types at different intensities at once.<br>
+            While raw Essence and Essence Particles are different, distinction is often unnecessary as only the amount of charge matters.
+        </p>
+        <p>
+            There are infinite unique different Meta-Concepts, but scholars seperated them into <a href="../main/mechanics.html#magic_masteries">7 different main groups.</a><br>
+        </p>
+        <h2 id="magic">Magic</h2>
+        <hr>
+        <p>
+            Magic is what makes the Tömegpokalipszis, reality manipualtion fueled by <b>Essence.</b><br>
+            To use up Essence, one must instruct commands to the universe, and pay up with the charge.<br>
+        </p>
+        <p>
+            First, one must make instructions of what is to happen.<br>
+            The way of making these instructions up determines a style of casting.<br>
+            Scholars split these styles into 3 main groups. Wizardry, Psionics, and Sorcery.
+        </p>
+        <p>
+            Wizardry (INT Casting) is all about precise definitions, like coding, often create the spell well before using it, memorize it, and use later.<br>
+            Psionics (WILL Casting) is like training, the feeling of moving your muscles, it comes from concentration and sensing.<br>
+            Sorcery (EGO Casting) is about your character, your desires, and self expression.
+        </p>
+        <p>
+            Then you pay up with the Essence, either ripping it from around you, or using your stored reserves.<br>
+            The Essence Circutry in your Soul and Body make the Magic happen as the Essence's charge is used up.
+        </p>
+        <p>
+            There are "magics" often not called Magic, like the natural Essence enhance of strong warriors, and such.<br>
+            These also use Essence in the same way, often being Psyonics (WILL Casting), but sometimes else.<br>
+            Some use a hybrid way of casting, where their Magic is a mishmash of different casting styles.
+        </p>
+        <h2 id="souls">Souls</h2>
+        <hr>
+        <p>
+            Souls are <b>Essence Circuitry</b>
+        </p>
+        <h2 id="essence_realm">Essence Realm</h2>
+        <hr>
+        <p>
+            WIP???
+        </p>
+        <h1 id="power_scaling">POWER SCALING</h1>
+        <hr>
+        <p>
+            To give you some ideas about Power Levels, I will present this Table:
+        </p>
+        <table style="width: 80%;">
+            <tr>
+                <td style="width: 20%;">
+                    XP
+                </td>
+                <td style="width: 80%;">
+                    Description
+                </td>
+            </tr>
+            <tr>
+                <td>0-30 XP</td>
+                <td>subliminal...</td>
+            </tr>
+            <tr>
+                <td>30-60 XP</td>
+                <td>The average human child, or smaller beast, pathetic...</td>
+            </tr>
+            <tr>
+                <td>60-80 XP</td>
+                <td>The average human, nothing too crazy...</td>
+            </tr>
+            <tr>
+                <td>100 XP</td>
+                <td>The average beginner adventurer... "Level 1"</td>
+            </tr>
+            <tr>
+                <td>200 XP</td>
+                <td>Peak human, dipping into super-human capabilities.</td>
+            </tr>
+            <tr>
+                <td>500 XP</td>
+                <td>[ WALL LEVEL ]<br>These people are scary.</td>
+            </tr>
+            <tr>
+                <td>2000 XP</td>
+                <td>[ SMALL BUILDING LEVEL ]<br>Don't even talk to these.</td>
+            </tr>
+            <tr>
+                <td>10000 XP</td>
+                <td>[ MEDIUM BUILDING LEVEL ]<br>Don't even look at these.</td>
+            </tr>
+            <tr>
+                <td>2e5 XP</td>
+                <td>[ LARGE BUILDING LEVEL ]<br>Pray if you know they are nearby.</td>
+            </tr>
+            <tr>
+                <td>1e7 XP</td>
+                <td>[ CITY BLOCK LEVEL ]<br>Pray if you know you are in a city with them.</td>
+            </tr>
+            <tr>
+                <td>1e9 XP</td>
+                <td>[ CITY LEVEL ]<br>Pray if you know you are on a continent with them.</td>
+            </tr>
+            <tr>
+                <td>1e12 XP</td>
+                <td>[ MOUNTAIN LEVEL ]<br>Pray if you know you are on a planet with them.</td>
+            </tr>
+            <tr>
+                <td>1e15 XP</td>
+                <td>[ LARGE ISLAND LEVEL ]<br>Pray...</td>
+            </tr>
+            <tr>
+                <td>1e18 XP</td>
+                <td>[ CONTINENT LEVEL ]<br>Why do they keep making characters "this" powerful in anime, yet actually
+                    not even close to being this powerful?</td>
+            </tr>
+            <tr>
+                <td>1e20 XP</td>
+                <td>[ SMALL PLANET LEVEL ]<br>Praying won't do shit...</td>
+            </tr>
+            <tr>
+                <td>1e22 XP</td>
+                <td>[ LARGE PLANET LEVEL ]<br>you are fucked...</td>
+            </tr>
+            <tr>
+                <td>1e24 XP</td>
+                <td>[ STAR LEVEL ]<br>What more to say, truly stellar beings.</td>
+            </tr>
+            <tr>
+                <td>1e60 XP</td>
+                <td>[ GALAXY LEVEL ]<br>Only accounting to size, not actually the number of stars.</td>
+            </tr>
+            <tr>
+                <td>1e80 XP</td>
+                <td>[ UNIVERSE LEVEL ]<br>Once again, according to size.</td>
+            </tr>
+            <tr>
+                <td>1e90 XP</td>
+                <td>Primordials at the start of an Omniverse...</td>
+            </tr>
+            <tr style="font-weight: 900; font-size: 26px;">
+                <td>- 𝔸 -</td>
+                <td>B o u n d l e s s</td>
+            </tr>
+        </table>
+        <p>
+            The average human has about 3-4 in each of their Base Stats, with miscellaneous Masteries.<br>
+            The average human child has about 2 in each of their Base Stats, with fewer miscellaneous Masteries.
+        </p>
+    </main>
+</body>
+
+</html>

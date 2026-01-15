@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=0.35">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../assets/style_main.css">
+    <script src="../assets/script_main.js"></script>
+    <title>Guide to Potions</title>
+</head>
+
+<body>
+    <header>
+        <div onclick="gear_button_onclick()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
+        <div onclick="go_to('main/main.html')">Main Page</div>
+        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
+        <div onclick="go_to('main/abilities.html')">Abilities</div>
+        <div onclick="go_to('main/extra.html')">Extra</div>
+    </header>
+    <side_menu id="side_menu"></side_menu>
+    <main>
+        <!--POTIONS-->
+        <h1 id="potions">POTIONS</h1>
+        <hr>
+        <p>
+            Potions are (often) a Single-Use container of a Spell.<br>
+            Players may get to possess Potions from many sources, from Finding, to Purchasing, or even Creating them.
+        </p>
+        <p>
+            A Potion has an Ability Stored in them. Depending on the Type of Potion the Ability might come out in different ways on usage.<br>
+            A Potions rarity is mainly dependant on the ESS of the Ability stored inside.
+        </p>
+        <p>
+
+        </p>
+        <h2 id="potion_creation">Potion Creation</h2>
+        <hr>
+        <p>
+            
+        </p>
+        <h2 id="drinkable_potions">Drinkable Potions</h2>
+        <hr>
+        <p>
+            The most common Type of Potion.<br>
+            When this Type of Potion is Consumed, the Ability Stored Procs on the Consumer.
+        </p>
+        <p>
+            These Type of Potions can only Store Spell Type Active Abilities.<br>
+            Self, Touch, Ranged Target Select, and Projectile Abilities are Casted directly on the Consumer.<br>
+            Cone and Line Abilities can be used after Drinking the Potion, like a dragon breathing out the Ability.<br>
+            Sphere AOE Abilities are casted directly Centered on the Consumer, with Maximum Damage on the Consumer.
+        </p>
+        <p class="bottomless">Usage Stats:</p>
+        <ul>
+            <li><b>Use Time:</b> Bonus-Action</li>
+        </ul>
+        <p class="bottomless">Creation:</p>
+        <ul>
+            <li>Creation Cost (Bonus-Action): 20 × ESS</li>
+            <li>Creation Cost (Main-Action): 50 × ESS</li>
+            <li>Creation Cost (Main-Action + Bonus-Action): 100 × ESS</li>
+        </ul>
+        <h2 id="splash_potions">Splash Potions</h2>
+        <hr>
+        <p>
+            Also a common Type of Potion.<br>
+            This Potion is Thrown, and the Ability Stored Procs on the Hit Target.<br>
+            The Throw counts as a Throw Attack, and On-Attack Abilities can be put on it.
+        </p>
+        <p>
+            These Type of Potions can only Store Spell Type Active Abilities.<br>
+            If the Ability is a Projectile, the Potion will become the Projectile.<br>
+            Self, Touch, Ranged Target Select, AOE, and Projectile Abilities are Casted directly on the Hit Target.<br>
+            Cone and Line Abilities will be cast in the direction of the Potion's vector.
+        </p>
+        <p class="bottomless">Usage Stats:</p>
+        <ul>
+            <li>Use Time: Main-Action</li>
+            <li>To-Hit: Same as Throwing a Finesse Weapon</li>
+            <li>Range: Same as Throwing a Finesse Weapon</li>
+        </ul>
+        <p class="bottomless">Creation:</p>
+        <ul>
+            <li>Creation Cost (Bonus-Action): 5 × ESS</li>
+            <li>Creation Cost (Main-Action): 15 × ESS</li>
+            <li>Creation Cost (Main-Action + Bonus-Action): 40 × ESS</li>
+            <li>Creation Cost (2 Main-Action): 100 × ESS</li>
+        </ul>
+        <h2 id="weapon_oils">Weapon Oils</h2>
+        <hr>
+        <p>
+            This Type of Potion isn't as common as the rest.<br>
+            This Potion is applied to the Target Weapon or Ammunition.
+        </p>
+        <p>
+            These Type of Potions can only Store Any Type of On-Attack Abilities.<br>
+            The Type of Attack still must obey the Activation Requirement of the Ability.<br>
+            Abilities which consume a kind of Resource cannot be used.<br>
+            When Applied to a Melee Weapon, it will Proc the On-Attack on all Attacks made with the Weapon for a set Duration.<br>
+            When Applied to Ammunition, it will be on it till the Ammunition is used.
+        </p>
+        <p class="bottomless">Usage Stats:</p>
+        <ul>
+            <li>Use Time: Main-Action + Bonus-Action</li>
+            <li>Duration (Melee Weapon): 1 Minute (20 Rounds)</li>
+            <li>Duration (Ammunition): Till Used</li>
+            <li>Ammunition Coated on Use: 2</li>
+        </ul>
+        <p class="bottomless">Creation:</p>
+        <ul>
+            <li>Creation Cost (Bonus-Action): 40 × ESS</li>
+            <li>Creation Cost (Main-Action): 100 × ESS</li>
+        </ul>
+    </main>
+</body>
+
+</html>

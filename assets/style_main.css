@@ -1,0 +1,361 @@
+body {
+    font-family: "Source Code Pro", monospace;
+    margin: 0;
+    background-color: wheat;
+    font-weight: 500;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+}
+
+/* this is magic */
+[id] {
+    scroll-margin-top: 6rem;
+}
+
+/* --------- header --------- */
+
+header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    transform: translateY(-4rem);
+    background-color: #202020;
+    user-select: none;
+}
+header div {
+    width: 100%;
+    height: 3.5rem;
+    border-bottom: #202020 0.5rem solid;
+    color: #f0f0f0;
+    background-color: #404040;
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+header div:hover {
+    width: 150%;
+    color: #ffffff;
+    background-color: #202020;
+    font-size: 3rem;
+}
+
+/* --------- side menu --------- */
+
+.side_menu_button {
+    width: 15%;
+    background-color: #202020;
+    font-size: 3rem;
+}
+.side_menu_button:hover {
+    width: 15%;
+}
+.side_menu_button img {
+    transition: all 0.2s, transform 1s;
+    filter: invert(90%);
+    margin-top: 0.25rem;
+    width: 3.5rem;
+}
+.side_menu_button:hover img {
+    transform: rotateZ(3.14rad);
+    filter: invert(100%);
+}
+
+side_menu {
+    transition: all 0.2s;
+    transform: translate(-18rem, 0);
+    overflow-y: scroll;
+    position: fixed;
+    top: 4rem;
+    height: calc(100% - 6rem);
+    color: #f0f0f0;
+    background-color: #404040;
+    width: 18rem;
+    padding-bottom: 2rem;
+}
+
+side_menu>h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 1.5rem 0 0 0;
+    padding-left: 0.5rem;
+    border: #202020;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+side_menu>h1:hover {
+    color: #ffffff;
+    background-color: #202020;
+    border-left: #202020 1rem solid;
+}
+
+side_menu>h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin: 0;
+    padding-left: 1rem;
+    border: #202020;
+    transition: all 0.1s;
+    cursor: pointer;
+}
+
+side_menu>h2:hover {
+    color: #ffffff;
+    background-color: #202020;
+    border-left: #202020 1rem solid;
+}
+
+.side_menu_active {
+    transform: translate(0, 0);
+}
+
+.main_side_menu_active {
+    width: calc(100% - 20rem);
+    margin-left: 18rem;
+}
+
+/* --------- main --------- */
+
+main {
+    transition: all 0.2s;
+    width: 85%;
+    padding: 1rem;
+    margin-left: calc(7.5% - 1rem);
+    margin-bottom: 6rem;
+    margin-top: 4rem;
+    background-color: floralwhite;
+}
+
+/* --------- h1, h2, p, ul, ol --------- */
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 4rem 0 0 0;
+}
+h1 + hr {
+    margin: 0;
+    width: 100%;
+    border-top: 3px solid black;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 3rem 0 0 0;
+}
+h2 + hr {
+    margin: 0;
+    width: 80%;
+    border-top: 1px solid black;
+}
+p {
+    margin-bottom: 1.6rem;
+    margin-top: 0.4rem;
+}
+ul {
+    margin-bottom: 1.6rem;
+    margin-top: 0.4rem;
+}
+ol {
+    margin-bottom: 1.6rem;
+    margin-top: 0.4rem;
+}
+
+/* --------- a --------- */
+
+a {
+    font-weight: 600;
+} 
+a:hover {
+    font-weight: 700;
+}
+
+/* --------- table --------- */
+
+table, tr, td {
+    border-collapse: collapse;
+}
+
+table {
+    background-color: wheat;
+    border: 1px solid black;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+tr {
+    height: 2rem;
+    font-weight: 500;
+}
+tr:nth-child(even) {
+    background-color: antiquewhite;
+}
+tr:first-child {
+    border: 1px solid black;
+    font-weight: 700;
+}
+
+/* --------- ul, ol, li --------- */
+
+ul {
+    margin-Top: 0px;
+}
+
+/* --------- input, textarea --------- */
+
+input[type=button] {
+    font-family: "Source Code Pro", Unicode;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: wheat;
+    margin: 0.2rem;
+}
+
+input[type=button]:hover {
+    background-color: antiquewhite;
+}
+
+input[type=text] {
+    font-family: "Source Code Pro", Unicode;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+textarea {
+    font-family: "Source Code Pro", Unicode;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgb(250, 250, 250);
+    border: 2px rgb(70, 70, 70) solid;
+    resize: vertical;
+}
+
+textarea:focus {
+    background-color: rgb(255, 255, 255);
+    border: 2px rgb(40, 40, 40) solid;
+    outline:  none;
+}
+
+/* --------- classes, box, collapsible -> collapsed --------- */
+
+.bottomless {
+    margin-bottom: 0px;
+}
+
+box {
+    background-color: wheat;
+    padding: 0px 5px 1px 5px;
+    border: 1px solid;
+}
+
+.collapsible {
+    cursor: pointer;
+}
+
+.collapsible:hover {
+    font-weight: 900;
+}
+
+.collapsed {
+    display: none;
+}
+
+/* --------- responsivity --------- */
+
+@media only screen and (max-width: 1600px) { /* SMALL MONITOR */
+    main {
+        width: calc(100% - 2rem);
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 1200px) { /* PHONE */
+    header div {
+        font-size: 1.8rem;
+        padding-top: 2rem;
+    }
+    main {
+        font-size: 1.4rem;
+    }
+    table {
+        width: 100% !important;
+        font-size: 1.4rem;
+    }
+    p {
+        margin-bottom: 3rem;
+    }
+    ul {
+        margin-bottom: 3rem;
+    }
+    ol {
+        margin-bottom: 3rem;
+    }
+
+
+
+    input[type=button] {
+        font-size: 2rem;
+    }
+    input[type=text] {
+        font-size: 2rem;
+    }
+    textarea {
+        font-size: 2rem;
+    }
+
+
+
+    .side_menu_button {
+        width: 40%;
+        background-color: #202020;
+        font-size: 3rem;
+        padding-top: 0.5rem;
+    }
+    .side_menu_button:hover {
+        width: 40%;
+    }
+    .side_menu_button img {
+        transition: all 0.2s, transform 1s;
+        filter: invert(90%);
+        margin-top: 0rem;
+        width: 5rem;
+    }
+
+    side_menu {
+        transform: translate(-50rem, 0);
+        top: 6rem;
+        height: calc(100% - 8rem);
+        width: 50rem;
+        padding-bottom: 20rem;
+    }
+
+    side_menu>h1 {
+        font-size: 3rem;
+        line-height: 5rem;
+        margin: 2rem 0 0 0;
+        padding-left: 1rem;
+    }
+    side_menu>h1:hover {
+        border-left: #202020 2rem solid;
+    }
+    side_menu>h2 {
+        font-size: 2rem;
+        line-height: 4rem;
+        padding-left: 2rem;
+    }
+    side_menu>h2:hover {
+        border-left: #202020 2rem solid;
+    }
+
+    .main_side_menu_active {
+        width: calc(100% - 2rem);
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+}

@@ -1,0 +1,880 @@
+<html>
+
+<style>
+
+.InputListOdd {
+border-collapse: collapse;
+display: inline-flex;
+}
+.InputListOdd {
+    background-color: wheat;
+    border: 1px solid black;
+}
+.InputListOdd:hover {
+  background-color: rgb(225, 202, 159);
+}
+
+.InputListEven {
+border-collapse: collapse;
+display: inline-flex;
+}
+.InputListEven {
+    background-color: antiquewhite;
+    border: 1px solid black;
+}
+.InputListEven:hover {
+  background-color: rgb(230, 215, 195);
+}
+
+.SelectOdd {
+border-collapse: collapse;
+display: inline-flex;
+}
+.SelectOdd {
+    background-color: wheat;
+    border: 1px solid black;
+}
+.SelectOdd:hover {
+  background-color: rgb(225, 202, 159);
+}
+.SelectOdd :nth-child(Even) {
+  background-color: wheat;
+}
+.SelectOdd :nth-child(Even):hover {
+  background-color: rgb(225, 202, 159);
+}
+.SelectOdd :nth-child(Odd) {
+  background-color: antiquewhite;
+}
+.SelectOdd :nth-child(Odd):hover {
+  background-color: rgb(230, 215, 195);
+}
+
+.SelectEven {
+border-collapse: collapse;
+display: inline-flex;
+}
+.SelectEven {
+    background-color: antiquewhite;
+    border: 1px solid black;
+}
+.SelectEven:hover {
+  background-color: rgb(230, 215, 195);
+}
+.SelectEven :nth-child(Even) {
+  background-color: antiquewhite;
+}
+.SelectEven :nth-child(Even):hover {
+  background-color: rgb(230, 215, 195);
+}
+.SelectEven :nth-child(Odd) {
+  background-color: wheat;
+}
+.SelectEven :nth-child(Odd):hover {
+  background-color: rgb(225, 202, 159);
+}
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../assets/style_main.css">
+    <script src="../assets/script_main.js"></script>
+    <title>Digital Character Sheet</title>
+</head>
+
+<body>
+    <header>
+        <div onclick="gear_button_onclick()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
+        <div onclick="go_to('main/main.html')">Main Page</div>
+        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
+        <div onclick="go_to('main/abilities.html')">Abilities</div>
+        <div onclick="go_to('main/extra.html')">Extra</div>
+    </header>
+    <side_menu id="side_menu"></side_menu>
+    <main>
+    <div class="Content">
+        <h1>DIGITAL CHARACTER SHEET</h1>
+        <hr/>
+        <br/>
+        save button here
+        <br/><br/>
+        <div style="display: flex;">
+            <div style="display: inline-block; width: 10%;">
+                Character Name
+            </div>
+            <div style="display: inline-block; width: 25%;">
+                <input id="CharacterName" type="text"  style="width: 100%;">
+            </div>
+            <div style="display: inline-block; width: 8%;">
+                TotalXP
+            </div>
+            <div style="display: inline-block; width: 25%;">
+                <input id="TotalXP" type="text" style="width: 100%;">
+            </div>
+            <div style="display: inline-block; width: 7%;">
+                Alignment
+            </div>
+            <div style="display: inline-block; width: 25%;">
+                <input id="Alignment" type="text" style="width: 100%;">
+            </div>
+        </div>
+        <div style="display: flex;">
+            <div style="display: inline-block; width: 10%;">
+                Player Name
+            </div>
+            <div style="display: inline-block; width: 25%;">
+                <input id="PlayerName" type="text" style="width: 100%;">
+            </div>
+            <div style="display: inline-block; width: 8%;">
+                UnspentXP
+            </div>
+            <div style="display: inline-block; width: 25%;">
+                <input id="UnspentXP" type="text" style="width: 100%;">
+            </div>
+            <div style="display: inline-block; width: 7%;">
+                Fate
+            </div>
+            <div style="display: inline-block; width: 25%;">
+                <input id="Fate" type="text" style="width: 100%;">
+            </div>
+        </div>
+         <div style="display: flex;">
+            <div style="display: inline-block; width: 30%;">
+                <table width="100%" style="border: none;">
+                    <tr>
+                        <td width="30%">Base Stats</td>
+                        <td width="30%" style="border: 1px solid black;">Modifiers</td>
+                        <td width="30%">^(1/3)</td>
+                        <td width="10%">Roll</td>
+                    </tr>
+                    <tr>
+                        <td>STR <input id="STRStat" type="text" value="0" size="5" onchange="CharacterAssemblerRefresh()"></td>
+                        <td id="STRModifier"></td>
+                        <td id="STRCubeRoot"></td>
+                        <td><button id="STRRoll" class="InputListOdd">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>AGI <input id="AGIStat" type="text" value="0" size="5" onchange="CharacterAssemblerRefresh()"></td>
+                        <td id="AGIModifier"></td>
+                        <td id="AGICubeRoot"></td>
+                        <td><button id="AGIRoll" class="InputListEven">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>VIT <input id="VITStat" type="text" value="0" size="5" onchange="CharacterAssemblerRefresh()"></td>
+                        <td id="VITModifier"></td>
+                        <td id="VITCubeRoot"></td>
+                        <td><button id="VITRoll" class="InputListOdd">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>INT <input id="INTStat" type="text" value="0" size="5" onchange="CharacterAssemblerRefresh()"></td>
+                        <td id="INTModifier"></td>
+                        <td id="INTCubeRoot"></td>
+                        <td><button id="INTRoll" class="InputListEven">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>WILL<input id="WILLStat" type="text" value="0" size="5" onchange="CharacterAssemblerRefresh()"></td>
+                        <td id="WILLModifier"></td>
+                        <td id="WILLCubeRoot"></td>
+                        <td><button id="WILLRoll" class="InputListOdd">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>EGO <input id="EGOStat" type="text" value="0" size="5" onchange="CharacterAssemblerRefresh()"></td>
+                        <td id="EGOModifier"></td>
+                        <td id="EGOCubeRoot"></td>
+                        <td><button id="EGORoll" class="InputListEven">Roll</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="display: inline-block; width: 2%;"></div>
+            <div style="display: inline-block; width: 30%;">
+                <table width="100%">
+                    <tr>
+                        <td width="10%">Resources</td>
+                        <td width="10%">Maximum</td>
+                        <td width="10%">Current</td>
+                        <td width="40%">Input</td>
+                        <td width="40%">Misc</td>
+                    </tr>
+                    <tr>
+                        <td>HP</td>
+                        <td id="MaxHP"></td>
+                        <td id="CurrentHP"></td>
+                        <td><input id="HPInput" type="text" value="0" style="width: 100%;" onchange="CharacterAssemblerRefresh()" /></td>
+                        <td><select list="HPDamageCurrentType" class="SelectOdd" style="width: 100%;">
+                            <option>Slashing</option>
+                            <option>Piercing</option>
+                            <option>Bludgeoning</option>
+                            <option>Heat</option>
+                            <option>Cold</option>
+                            <option>Bio</option>
+                            <option>Demat</option>
+                            <option>Psychic</option>
+                            <option>Electricity</option>
+                            <option>Thunder</option>
+                            <option>Radiant</option>
+                            <option>Necrotic</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>HD</td>
+                        <td id="MaxHD"></td>
+                        <td id="CurrentHD"></td>
+                        <td><input id="HDInput" type="text" value="0" style="width: 100%;" onchange="CharacterAssemblerRefresh()" /></td>
+                    </tr>
+                    <tr>
+                        <td>SP</td>
+                        <td id="MaxSP"></td>
+                        <td id="CurrentSP"></td>
+                        <td><input id="SPInput" type="text" value="0" style="width: 100%;" onchange="CharacterAssemblerRefresh()" /></td>
+                    </tr>
+                    <tr>
+                        <td>GRIT</td>
+                        <td id="MaxGRIT"></td>
+                        <td id="CurrentGRIT"></td>
+                        <td><input id="GRITInput" type="text" value="0" style="width: 100%;" onchange="CharacterAssemblerRefresh()" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>REST-HP</td>
+                        <td id="MaxRESTHP"></td>
+                        <td id="CurrentRESTHP"></td>
+                        <td><input id="RESTHPInput" type="text" value="0" style="width: 100%;" onchange="CharacterAssemblerRefresh()" /></td>
+                    </tr>
+                    <tr>
+                        <td>Proxy</td>
+                        <td id="MaxProxy"></td>
+                        <td id="CurrentProxy"></td>
+                        <td><input id="ProxyInput" type="text" value="0" style="width: 100%;" onchange="CharacterAssemblerRefresh()" /></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="display: inline-block; width: 2%;"></div>
+            <div style="display: inline-block; width: 25%;">
+                <table width="100%">
+                    <tr>
+                        <td width="20%">Resources</td>
+                        <td width="20%">Maximum</td>
+                        <td width="20%">Current</td>
+                        <td width="40%">Input</td>
+                    </tr>
+                    <tr>
+                        <td>MS</td>
+                        <td id="MaxMS"></td>
+                        <td id="CurrentMS"></td>
+                        <td><input id="MSInput" type="text" value="0" style="width: 100%;" onchange="CharacterAssemblerRefresh()" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>INIT</td>
+                        <td id="MaxINIT"></td>
+                        <td id="CurrentINIT"></td>
+                        <td><input id="INITInput" type="text" value="0" style="width: 100%;" onchange="CharacterAssemblerRefresh()" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TEMP-HP</td>
+                        <td><input id="TEMPHPInput" type="text" value="0" style="width: 350%;" onchange="CharacterAssemblerRefresh()" /></td>
+                    </tr>
+                    <tr>
+                        <td>Resistances</td>
+                        <td><input id="ResistancesnInput" type="text" value="0" style="width: 350%;" onchange="CharacterAssemblerRefresh()" /></td>
+                    </tr>
+                    <tr>
+                        <td>Weaknesses</td>
+                        <td><input id="WeaknessesInput" type="text" value="0" style="width: 350%;" onchange="CharacterAssemblerRefresh()" /></td>
+                    </tr>
+                    <tr>
+                        <td>Absorptions</td>
+                        <td><input id="AbsorptionsInput" type="text" value="0" style="width: 350%;" onchange="CharacterAssemblerRefresh()" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br />
+        <div style="display: flex;">
+            <div style="display: inline-block; width: 30%;">
+                <table width="100%">
+                    <tr>
+                        <td width="35%">Masteries</td>
+                        <td width="20%">Value</td>
+                        <td width="20%">Modifier</td>
+                        <td width="10%">Roll</td>
+                    </tr>
+                    <tr>
+                        <td>Athletics (STR)</td>
+                        <td><input id="AthleticsValue" type="text" value="0" style="width: 80%;"
+                                onchange="CharacterAssemblerRefresh()" /></td>
+                        <td id="AthleticsModifier"></td>
+                        <td><button id="AthleticsRoll" class="InputListOdd">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>Acrobatics (AGI)</td>
+                        <td><input id="AcrobaticsValue" type="text" value="0" style="width: 80%;"
+                                onchange="CharacterAssemblerRefresh()" /></td>
+                        <td id="AcrobaticsModifier"></td>
+                        <td><button id="AcrobaticsRoll" class="InputListEven">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>Stealth (AGI)</td>
+                        <td><input id="StealthValue" type="text" value="0" style="width: 80%;"
+                                onchange="CharacterAssemblerRefresh()" /></td>
+                        <td id="StealthModifier"></td>
+                        <td><button id="StealthRoll" class="InputListOdd">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>Arcana (INT)</td>
+                        <td><input id="ArcanaValue" type="text" value="0" style="width: 80%;"
+                                onchange="CharacterAssemblerRefresh()" /></td>
+                        <td id="ArcanaModifier"></td>
+                        <td><button id="ArcanaRoll" class="InputListEven">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>Lore (INT)</td>
+                        <td><input id="LoreValue" type="text" value="0" style="width: 80%;"
+                                onchange="CharacterAssemblerRefresh()" /></td>
+                        <td id="LoreModifier"></td>
+                        <td><button id="LoreRoll" class="InputListOdd">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>Science (INT)</td>
+                        <td><input id="ScienceValue" type="text" value="0" style="width: 80%;"
+                                onchange="CharacterAssemblerRefresh()" /></td>
+                        <td id="ScienceModifier"></td>
+                        <td><button id="ScienceRoll" class="InputListEven">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>Perception (WILL)</td>
+                        <td><input id="PerceptionValue" type="text" value="0" style="width: 80%;"
+                                onchange="CharacterAssemblerRefresh()" /></td>
+                        <td id="PerceptionModifier"></td>
+                        <td><button id="PerceptionRoll" class="InputListOdd">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>Intuition (WILL)</td>
+                        <td><input id="IntuitionValue" type="text" value="0" style="width: 80%;"
+                                onchange="CharacterAssemblerRefresh()" /></td>
+                        <td id="IntuitionModifier"></td>
+                        <td><button id="IntuitionRoll" class="InputListEven">Roll</button></td>
+                    </tr>
+                    <tr>
+                        <td>Performance (EGO)</td>
+                        <td><input id="PerformanceValue" type="text" value="0" style="width: 80%;"
+                                onchange="CharacterAssemblerRefresh()" /></td>
+                        <td id="PerformanceModifier"></td>
+                        <td><button id="PerformanceRoll" class="InputListOdd">Roll</button></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="display: inline-block; width: 2%;"></div>
+            <div style="display: inline-block; width: 40%; bottom: 0%;">
+                <table id="WeaponTable" width="100%">
+                    <tr>
+                        <td width="25%" align="center"><button id="CreateWeapon" class="InputListEven" onclick="WeaponCreation()">Create Weapon</button></td>
+                        <td width="25%" align="center"><button id="EditWeapon" class="InputListEven">Edit Weapon</button></td>
+                        <td width="25%" align="center"><input list="PremadeArmaments" value="" class="InputListEven">
+                            <datalist id="PremadeArmaments">
+                                <option value="Custom">
+                                <option value="Dagger">
+                                <option value="Deluxe Dagger">
+                                <option value="Sickle">
+                                <option value="Deluxe Sickle">
+                                <option value="Tomahawk">
+                                <option value="Deluxe Tomahawk">
+                                <option value="Shortsword">
+                                <option value="Deluxe Shortsword">
+                                <option value="Scimitar">
+                                <option value="Deluxe Scimitar">
+                                <option value="Hand Axe">
+                                <option value="Deluxe Hand Ax">
+                                <option value="Longsword">
+                                <option value="Deluxe Longsword">
+                                <option value="Katana">
+                                <option value="Deluxe Katana">
+                                <option value="Rapier">
+                                <option value="Deluxe Rapier">
+                                <option value="Greatsword">
+                                <option value="Deluxe Greatsword">
+                                <option value="Greataxe">
+                                <option value="Deluxe Greataxe">
+                                <option value="Odachi">
+                                <option value="Deluxe Odachi">
+                                <option value="Bastard Sword">
+                                <option value="Giant Axe">
+                                <option value="Javelin">
+                                <option value="Deluxe Javelin">
+                                <option value="Quarterstaff">
+                                <option value="Deluxe Quarterstaff">
+                                <option value="Spear">
+                                <option value="Deluxe Spear">
+                                <option value="Trident">
+                                <option value="Deluxe Trident">
+                                <option value="Pike">
+                                <option value="Deluxe Pike">
+                                <option value="Halberd">
+                                <option value="Deluxe Halberd">
+                                <option value="Naginata">
+                                <option value="Deluxe Naginata">
+                                <option value="Scythe">
+                                <option value="Deluxe Scythe">
+                                <option value="Lance">
+                                <option value="Deluxe Lance">
+                                <option value="Club">
+                                <option value="Mace">
+                                <option value="Deluxe Mace">
+                                <option value="Throwing Hammer">
+                                <option value="Deluxe Throwing Hammer">
+                                <option value="Warhammer">
+                                <option value="Deluxe Warhammer">
+                                <option value="Morningstar">
+                                <option value="Deluxe Morningstar">
+                                <option value="Maul">
+                                <option value="Deluxe Maul">
+                                <option value="Oversized Hammer">
+                                <option value="Whip">
+                                <option value="Deluxe Whip">
+                                <option value="Brass Knuckles">
+                                <option value="Deluxe Brass Knuckles">
+                                <option value="Shortbow">
+                                <option value="Deluxe Shortbow">
+                                <option value="Longbow">
+                                <option value="Deluxe Longbow">
+                                <option value="Hand Crossbow">
+                                <option value="Deluxe Hand Crossbow">
+                                <option value="Flintlock">
+                                <option value="Deluxe Flintlock">
+                                <option value="Wheellock">
+                                <option value="Deluxe Wheellock">
+                                <option value="Crossbow">
+                                <option value="Deluxe Crossbow">
+                                <option value="Heavy Crossbow">
+                                <option value="Deluxe Heavy Crossbow">
+                                <option value="Musket">
+                                <option value="Deluxe Musket">
+                                <option value="Hand Blunderbuss">
+                                <option value="Deluxe Hand Blunderbuss">
+                                <option value="Heavy Blunderbuss">
+                                <option value="Deluxe Heavy Blunderbuss">
+                                <option value="Blowgun">
+                                <option value="Sling">
+                                <option value="Slingshot">
+                                <option value="Deluxe Slingshot">
+                                <option value="Staff Sling">
+                                <option value="Deluxe Staff Sling">
+                            </datalist></td>
+                        <td width="25%" align="center"><button id="DeleteWeapon" class="InputListEven">Delete Weapon</button></td>
+                    </tr>
+                </table>
+                <table width="100%" style="margin: 0%;">
+                    <tr>
+                        <td width="10%">Name</td>
+                        <td width="10%">Damage</td>
+                        <td width="5%">AP</td>
+                        <td width="20%">Reach/Range</td>
+                        <td width="20%">Properties</td>
+                        <td width="10%">Category</td>
+                        <td width="5%">Roll</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br />
+        <table width="40%">
+            <tr>
+                <td width="30%">Combat-Masteries</td>
+                <td width="10%">Value</td>
+                <td width="5%">Modifier</td>
+                <td width="1%">Roll</td>
+            </tr>
+            <tr>
+                <td>Melee Weapon (STR | DEX)</td>
+                <td><input id="MeleeWeaponValue" type="text" value="0" style="width: 80%;" onchange="CharacterAssemblerRefresh()" /></td>
+                <td id="MeleeWeaponModifier"></td>
+                <td><button id="MeleeWeaponRoll" class="InputListOdd">Roll</button></td>
+            </tr>
+            <tr>
+                <td>Ballistic (DEX)</td>
+                <td><input id="BallisticValue" type="text" value="0" style="width: 80%;" onchange="CharacterAssemblerRefresh()" /></td>
+                <td id="BallisticModifier"></td>
+                <td><button id="BallisticRoll" class="InputListEven">Roll</button></td>
+            </tr>
+            <tr>
+                <td>Martial Arts (STR | DEX)</td>
+                <td><input id="MartialArtsValue" type="text" value="0" style="width: 80%;" onchange="CharacterAssemblerRefresh()" /></td>
+                <td id="MartialArtsModifier"></td>
+                <td><button id="MartialArtsRoll" class="InputListOdd">Roll</button></td>
+            </tr>
+            <tr>
+                <td>Evocation (INT | WILL | DES)</td>
+                <td><input id="EvocationValue" type="text" value="0" style="width: 80%;" onchange="CharacterAssemblerRefresh()" /></td>
+                <td id="EvocationModifier"></td>
+                <td><button id="EvocationRoll" class="InputListEven">Roll</button></td>
+            </tr>
+            <tr>
+                <td>Transmutation (INT | WILL | DES)</td>
+                <td><input id="TransmutationValue" type="text" value="0" style="width: 80%;" onchange="CharacterAssemblerRefresh()" /></td>
+                <td id="TransmutationModifier"></td>
+                <td><button id="TransmutationRoll" class="InputListOdd">Roll</button></td>
+            </tr>
+            <tr>
+                <td>Conjuration (INT | WILL | DES)</td>
+                <td><input id="ConjurationValue" type="text" value="0" style="width: 80%;" onchange="CharacterAssemblerRefresh()" /></td>
+                <td id="ConjurationModifier"></td>
+                <td><button id="ConjurationRoll" class="InputListEven">Roll</button></td>
+            </tr>
+            <tr>
+                <td>Enchantment (INT | WILL | DES)</td>
+                <td><input id="EnchantmentValue" type="text" value="0" style="width: 80%;" onchange="CharacterAssemblerRefresh()" /></td>
+                <td id="EnchantmentModifier"></td>
+                <td><button id="EnchantmentRoll" class="InputListOdd">Roll</button></td>
+            </tr>
+            <tr>
+                <td>Abjuration (INT | WILL | DES)</td>
+                <td><input id="AbjurationValue" type="text" value="0" style="width: 80%;" onchange="CharacterAssemblerRefresh()" /></td>
+                <td id="AbjurationModifier"></td>
+                <td><button id="AbjurationRoll" class="InputListEven">Roll</button></td>
+            </tr>
+            <tr>
+                <td>Divination (INT | WILL | DES)</td>
+                <td><input id="DivinationValue" type="text" value="0" style="width: 80%;" onchange="CharacterAssemblerRefresh()" /></td>
+                <td id="DivinationModifier"></td>
+                <td><button id="DivinationRoll" class="InputListOdd">Roll</button></td>
+            </tr>
+            <tr>
+                <td>Anima (INT | WILL | DES)</td>
+                <td><input id="AnimaValue" type="text" value="0" style="width: 80%;" onchange="CharacterAssemblerRefresh()" /></td>
+                <td id="AnimaModifier"></td>
+                <td><button id="AnimaRoll" class="InputListEven">Roll</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</main>
+
+<script>
+
+    const WeaponMenuType = {
+        None: 0,
+        Creating: 1,
+        Editing: 2,
+        Deleting: 3,
+    }
+
+    class Weapon {
+        Name = ""
+        Tier = 1
+        Melee = true
+        Weight = 0
+        Dice = 4
+        AP = 0
+        Properties = []
+        PropertyPoints = 0
+        constructor() {}
+        RollAttack() {/* if finess chose from Max() */}
+        RollDamage() {}
+    }
+
+    var WeaponTableArray = []
+    var CurrentWeaponMenuType = WeaponMenuType.None
+    const WeaponTable = document.getElementById("WeaponTable")
+
+
+    var WeaponCreation = function() {
+        if (CurrentWeaponMenuType == WeaponMenuType.None) {
+            CurrentWeaponMenuType == WeaponMenuType.Creating
+            var NewWeapon = new Weapon()
+
+            NewWeapon.PropertyPoints = 8
+            const Row1 = WeaponTable.insertRow(1)
+            const Row2 = WeaponTable.insertRow(2)
+            const R1Cell1 = Row1.insertCell(0)
+            const R1Cell2 = Row1.insertCell(1)
+            const R1Cell3 = Row1.insertCell(2)
+            const R1Cell4 = Row1.insertCell(3)
+            const R1Cell5 = Row1.insertCell(4)
+            const R1Cell6 = Row1.insertCell(5)
+            const R2Cell1 = Row2.insertCell(0)
+            const R2Cell2 = Row2.insertCell(1)
+            const R2Cell3 = Row2.insertCell(2)
+            const R2Cell4 = Row2.insertCell(3)
+            const R2Cell5 = Row2.insertCell(4)
+            const R2Cell6 = Row2.insertCell(5)
+
+            var DamageDieArray = [ 4, 6, 8, 10, 12, 20 ]
+
+            function UpdateDamageDieSelect() {
+                R1Cell1.innerHTML = ""
+                var DamageSelect = document.createElement("select")
+                DamageSelect.classList.add("SelectOdd")
+                
+                for (i = 0; i < 6; i++) {
+                    if (i == 0) {
+                        if (NewWeapon.Weight == 0) {}
+                        else {i++}
+                    }
+
+                    value = (NewWeapon.Tier + " × d" + DamageDieArray[i])
+                    index = document.createElement("option")
+                    index.setAttribute("value", value)
+                    value = document.createTextNode(value)
+                    index.appendChild(value)
+                    DamageSelect.appendChild(index)
+                    if (NewWeapon.Weight == 0) {if (i == 1) {break}}
+                    else if (NewWeapon.Weight == 1) {if (i == 2) {break}}
+                }
+
+                DamageSelect.onchange = () => {if (NewWeapon.Melee == false) {UpdateRange()}}
+                R1Cell1.appendChild(DamageSelect)
+            } UpdateDamageDieSelect()
+
+            var ArmorPenArray = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+            function UpdateArmorPen() {
+                R1Cell1.innerHTML = ""
+                var ArmorPenSelect = document.createElement("select")
+                ArmorPenSelect.classList.add("SelectOdd")
+                document.body.appendChild(ArmorPenSelect)
+            
+                function CreateArmorPenSelect(value, index) {
+                    value = (NewWeapon.Tier * value)
+                    index = document.createElement("option")
+                    index.setAttribute("value", value)
+                    value = document.createTextNode(value)
+                    index.appendChild(value)
+                    ArmorPenSelect.appendChild(index)
+                }
+
+                ArmorPenArray.forEach((value, index) => {CreateArmorPenSelect(value, index)})
+                R1Cell2.appendChild(ArmorPenSelect)
+            } UpdateArmorPen()
+
+            function UpdateWeaponType() {
+                R1Cell3.innerHTML = ""
+
+            if (NewWeapon.Melee == true) {
+            var WeaponReachSelect = document.createElement("select")
+            WeaponReachSelect.classList.add("SelectOdd")
+            WeaponReachSelect.setAttribute("id", "WeaponReachSelect")
+            document.body.appendChild(WeaponReachSelect)
+            var WeaponReachArray = [ "Reach 1m", "Reach 2m", "Reach 3m"]
+            WeaponReachArray.forEach(CreateWeaponReachSelect)
+            function CreateWeaponReachSelect(value, index, array) {
+                index = document.createElement("option")
+                index.setAttribute("value", value)
+                value = document.createTextNode(value)
+                index.appendChild(value)
+                document.getElementById("WeaponReachSelect").appendChild(index)
+            }
+            R1Cell3.appendChild(WeaponReachSelect)
+            } else {UpdateRange()}} UpdateWeaponType()
+
+            function UpdateRange() {
+                if (document.getElementById("WeaponDamageDieSelect").selectedIndex == 0) {
+                    R1Cell3.innerHTML = ((20 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m |" + (40 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m")
+                } else if (document.getElementById("WeaponDamageDieSelect").selectedIndex == 1) {
+                    R1Cell3.innerHTML = ((30 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m |" + (60 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m")
+                } else if (document.getElementById("WeaponDamageDieSelect").selectedIndex == 2) {
+                    R1Cell3.innerHTML = ((40 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m |" + (80 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m")
+                } else if (document.getElementById("WeaponDamageDieSelect").selectedIndex == 3) {
+                    R1Cell3.innerHTML = ((60 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m |" + (120 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m")
+                } else if (document.getElementById("WeaponDamageDieSelect").selectedIndex == 4) {
+                    R1Cell3.innerHTML = ((80 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m |" + (160 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m")
+                } else {
+                    R1Cell3.innerHTML = ((120 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m |" + (240 * Math.cbrt(NewWeapon.Tier)).toFixed(2) + "m")
+                }
+            }
+
+            var WeaponWeightCategorySelect = document.createElement("select")
+            WeaponWeightCategorySelect.classList.add("SelectOdd")
+            WeaponWeightCategorySelect.setAttribute("id", "WeaponWeightCategorySelect")
+            document.body.appendChild(WeaponWeightCategorySelect)
+            var WeaponWeightCategoryArray = [ "Light", "Medium", "Heavy"]
+            WeaponWeightCategoryArray.forEach(CreateWeaponWeightCategorySelect)
+            function CreateWeaponWeightCategorySelect(value, index, array) {
+                index = document.createElement("option")
+                index.setAttribute("value", value)
+                value = document.createTextNode(value)
+                index.appendChild(value)
+                document.getElementById("WeaponWeightCategorySelect").appendChild(index)
+            } WeaponWeightCategorySelect.onchange = ()=> {
+
+                if (WeaponWeightCategorySelect.selectedIndex == 0) {
+                    NewWeapon.Weight = 0
+                    UpdateDamageDieSelect()
+                } else if (WeaponWeightCategorySelect.selectedIndex == 1) {
+                    NewWeapon.Weight = 1
+                    UpdateDamageDieSelect()
+                } else if (WeaponWeightCategorySelect.selectedIndex == 2) {
+                    NewWeapon.Weight = 2
+                    UpdateDamageDieSelect()
+                }}
+            R1Cell4.appendChild(WeaponWeightCategorySelect)
+            
+            var WeaponTypeSelect = document.createElement("select")
+            WeaponTypeSelect.classList.add("SelectOdd")
+            WeaponTypeSelect.setAttribute("id", "WeaponTypeSelect")
+            document.body.appendChild(WeaponTypeSelect)
+            var WeaponTypeSelectArray = [ "Melee", "Ballistic"]
+            WeaponTypeSelectArray.forEach(CreateWeaponTypeSelectSelect)
+            function CreateWeaponTypeSelectSelect(value, index, array) {
+                index = document.createElement("option")
+                index.setAttribute("value", value)
+                value = document.createTextNode(value)
+                index.appendChild(value)
+                document.getElementById("WeaponTypeSelect").appendChild(index)
+            }
+            WeaponTypeSelect.onchange = ()=> {
+                if (document.getElementById("WeaponTypeSelect").value == "Melee") {
+                    NewWeapon.Melee = true
+                    UpdateWeaponType()
+                } else {
+                    NewWeapon.Melee = false
+                    UpdateWeaponType()
+                }
+            }
+            R1Cell5.appendChild(WeaponTypeSelect)
+
+            var WeaponTierInput = document.createElement("input")
+            WeaponTierInput.classList.add("InputListEven")
+            WeaponTierInput.value = "Write Tier Here"
+            WeaponTierInput.style = "width: 100%"
+            WeaponTierInput.onchange = ()=> {
+                if  (isNaN(WeaponTierInput.value) == true) {
+                WeaponTierInput.value = "Write a Number here"}
+                else {
+                NewWeapon.Tier = WeaponTierInput.value
+                UpdateCreateWeaponTier()}
+            }
+
+            R2Cell1.appendChild(WeaponTierInput)
+
+            var WeaponDamageTypeSelect = document.createElement("select")
+            WeaponDamageTypeSelect.classList.add("SelectEven")
+            WeaponDamageTypeSelect.setAttribute("id", "WeaponDamageTypes")
+            document.body.appendChild(WeaponDamageTypeSelect)
+            const DamageTypeArray = [ "Slash", "Slash, Pierc", "Slash, Bludgeon", "Pierc", "Pierc, Bludgeon", "Bludgeon", "Slash, Pierc, Bludgeon" ]
+            DamageTypeArray.forEach(CreateDamageTypeSelect)
+            function CreateDamageTypeSelect(value, index, array) {
+                index = document.createElement("option")
+                index.setAttribute("value", value)
+                value = document.createTextNode(value)
+                index.appendChild(value)
+                document.getElementById("WeaponDamageTypes").appendChild(index)
+            }
+            R2Cell2.appendChild(WeaponDamageTypeSelect)
+
+            CreatingWeapon = true
+            }
+            else {
+
+            WeaponTable.deleteRow(1)
+            WeaponTable.deleteRow(1)
+            CreatingWeapon = false
+            }
+            UpdateCreateWeaponTier = function() {
+                UpdateDamageDieSelect()
+
+                function RemoveArmorPenArray(index) {document.getElementById("ArmorPenAmountSelect").remove(index)}
+                ArmorPenArray.forEach(RemoveArmorPenArray)
+                ArmorPenArray.forEach(CreateArmorPenSelect)
+
+                UpdateRange()
+                UpdateDamageDieSelect()
+            }
+    }
+
+    CharacterAssemblerRefresh = function() {
+        STRModifier.innerHTML = Math.floor(STRStat.value * 0.5)
+        STRCubeRoot.innerHTML = Math.cbrt(STRStat.value).toFixed(2)
+        
+        AGIModifier.innerHTML = Math.floor(AGIStat.value * 0.5)
+        AGICubeRoot.innerHTML = Math.cbrt(AGIStat.value).toFixed(2)
+
+        VITModifier.innerHTML = Math.floor(VITStat.value * 0.5)
+        VITCubeRoot.innerHTML = Math.cbrt(VITStat.value).toFixed(2)
+
+        INTModifier.innerHTML = Math.floor(INTStat.value * 0.5)
+        INTCubeRoot.innerHTML = Math.cbrt(INTStat.value).toFixed(2)
+
+        WILLModifier.innerHTML = Math.floor(WILLStat.value * 0.5)
+        WILLCubeRoot.innerHTML = Math.cbrt(WILLStat.value).toFixed(2)
+
+        EGOModifier.innerHTML = Math.floor(EGOStat.value * 0.5)
+        EGOCubeRoot.innerHTML = Math.cbrt(EGOStat.value).toFixed(2)
+
+        MaxHP.innerHTML = STRStat.value * 1 + VITStat.value * 1
+        CurrentHP.innerHTML = MaxHP.innerHTML * 1 + HPInput.value.split(' ').reduce((a, c) => a + c*1, 0)
+        
+        MaxHD.innerHTML = AGIStat.value * 1 + AcrobaticsValue.value * 1 + Math.max(MeleeWeaponValue.value * 1, MartialArtsValue.value * 1)
+        CurrentHD.innerHTML = MaxHD.innerHTML * 1 + HDInput.value.split(' ').reduce((a, c) => a + c*1, 0)
+
+        MaxSP.innerHTML = INTStat.value * 1 + WILLStat.value * 1 + EGOStat.value * 1
+        CurrentSP.innerHTML = MaxSP.innerHTML * 1 + SPInput.value.split(' ').reduce((a, c) => a + c*1, 0)
+
+        MaxGRIT.innerHTML = STRStat.value * 1 + AthleticsValue.value * 1
+        CurrentGRIT.innerHTML = MaxGRIT.innerHTML * 1 + GRITInput.value.split(' ').reduce((a, c) => a + c*1, 0)
+
+        MaxRESTHP.innerHTML = VITStat.value * 4
+        CurrentRESTHP.innerHTML = MaxRESTHP.innerHTML * 1 + RESTHPInput.value.split(' ').reduce((a, c) => a + c*1, 0)
+
+        MaxProxy.innerHTML = MaxSP.innerHTML
+        CurrentProxy.innerHTML = MaxProxy.innerHTML * 1 + ProxyInput.value.split(' ').reduce((a, c) => a + c*1, 0)
+
+        MaxMS.innerHTML = 2 * Math.cbrt(Math.max(STRStat.value, AGIStat.value)).toFixed(2)
+        CurrentMS.innerHTML = MaxMS.innerHTML * 1 + MSInput.value.split(' ').reduce((a, c) => a + c*1, 0)
+        
+        MaxINIT.innerHTML = (AGIStat.value * 1 + Math.max(PerceptionValue.value, IntuitionValue.value)) * 0.5
+        CurrentINIT.innerHTML = MaxINIT.innerHTML * 1 + INITInput.value.split(' ').reduce((a, c) => a + c*1, 0)
+
+        TEMPHPInput.innerHTML = 0
+
+        ResistancesnInput.innerHTML = 0
+
+        WeaknessesInput.innerHTML = 0
+
+        AbsorptionsInput.innerHTML = 0
+
+        AthleticsModifier.innerHTML = Math.floor(AthleticsValue.value * 0.5 + STRStat.value * 0.5)
+
+        AcrobaticsModifier.innerHTML = Math.floor(AcrobaticsValue.value * 0.5 + AGIStat.value * 0.5)
+
+        StealthModifier.innerHTML = Math.floor(StealthValue.value * 0.5 + AGIStat.value * 0.5)
+
+        ArcanaModifier.innerHTML = Math.floor(ArcanaValue.value * 0.5 + INTStat.value * 0.5)
+
+        LoreModifier.innerHTML = Math.floor(LoreValue.value * 0.5 + INTStat.value * 0.5)
+
+        ScienceModifier.innerHTML = Math.floor(ScienceValue.value * 0.5 + INTStat.value * 0.5)
+
+        PerceptionModifier.innerHTML = Math.floor(PerceptionValue.value * 0.5 + WILLStat.value * 0.5)
+
+        IntuitionModifier.innerHTML = Math.floor(IntuitionValue.value * 0.5 + WILLStat.value * 0.5)
+
+        PerformanceModifier.innerHTML = Math.floor(PerformanceValue.value * 0.5 + EGOStat.value * 0.5)
+
+        MeleeWeaponModifier.innerHTML = Math.floor(MeleeWeaponValue.value * 0.5 + Math.max(STRStat.value, AGIStat.value) * 0.5)
+
+        BallisticModifier.innerHTML = Math.floor(BallisticValue.value * 0.5 + AGIStat.value * 0.5)
+
+        MartialArtsModifier.innerHTML = Math.floor(MartialArtsValue.value * 0.5 + Math.max(STRStat.value, AGIStat.value) * 0.5)
+
+        EvocationModifier.innerHTML = Math.floor(EvocationValue.value * 0.5 + Math.max(INTStat.value, WILLStat.value, EGOStat.value) * 0.5)
+
+        TransmutationModifier.innerHTML = Math.floor(TransmutationValue.value * 0.5 + Math.max(INTStat.value, WILLStat.value, EGOStat.value) * 0.5)
+
+        ConjurationModifier.innerHTML = Math.floor(ConjurationValue.value * 0.5 + Math.max(INTStat.value, WILLStat.value, EGOStat.value) * 0.5)
+
+        EnchantmentModifier.innerHTML = Math.floor(EnchantmentValue.value * 0.5 + Math.max(INTStat.value, WILLStat.value, EGOStat.value) * 0.5)
+
+        AbjurationModifier.innerHTML = Math.floor(AbjurationValue.value * 0.5 + Math.max(INTStat.value, WILLStat.value, EGOStat.value) * 0.5)
+
+        DivinationModifier.innerHTML = Math.floor(DivinationValue.value * 0.5 + Math.max(INTStat.value, WILLStat.value, EGOStat.value) * 0.5)
+
+        AnimaModifier.innerHTML = Math.floor(AnimaValue.value * 0.1 + Math.max(INTStat.value, WILLStat.value, EGOStat.value) * 0.5)
+    }
+
+    CharacterAssemblerRefresh()
+</script>
+
+</html>

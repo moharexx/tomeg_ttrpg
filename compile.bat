@@ -1,0 +1,1 @@
+node compiler/compiler.js

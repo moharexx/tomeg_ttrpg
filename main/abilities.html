@@ -1,0 +1,278 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=0.35">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../assets/style_main.css">
+    <script src="../assets/script_main.js"></script>
+    <title>Abilities</title>
+</head>
+
+<body>
+    <header>
+        <div onclick="gear_button_onclick()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
+        <div onclick="go_to('main/main.html')">Main Page</div>
+        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
+        <div onclick="go_to('main/abilities.html')">Abilities</div>
+        <div onclick="go_to('main/extra.html')">Extra</div>
+    </header>
+    <side_menu id="side_menu"></side_menu>
+    <main>
+        <h1 id="abilities">ABILITIES</h1>
+        <hr>
+        <p>
+            Abilities are special things Entities can do, which require to be Unlocked.<br>
+            Abilities canonically have an Essence Cost, we don't keep track of it as a Resource, assume you always have enough Essence.<br>
+            When listing the Stats (like Damage) of Abilities you will see ESS, this is the Essence Cost, which scales with your Total XP.<br>
+            <b>Maximum ESS Of Abilities:</b> <box>Total XP / 100</box>
+        </p>
+        <p>
+            <b>Casting Stat</b> will be used to calculate the Stats of a lot of Spell Type Abilities, shortened to <b>CS.</b><br>
+            CS is equal to: <box>INT | WILL | EGO</box><br>
+        </p>
+        <p class="bottomless"><b>Basic Assumptions:</b></p>
+        <ul>
+            <li>Spell Ability To-Hit Modifier: <box>CS / 2</box></li>
+            <li>Skill Ability To-Hit Modifier: <box>Same as Attack with the used Weapon (Includes Natural Weapons)</box></li>
+            <li>Touch Abilities have the same Reach as your Natural Melee Weapons.</li>
+            <li>Touch Abilities have the same To-Hit as a <b>Natural Melee Weapon</b>, but can be the same a Spell's when it's a Spell.</li>
+        </ul>
+        <p>
+            Unlocking an Ability canonically makes you able to do more than the simple combat description of the Ability.<br>
+            Like with a fire ability you also gain some control over fire itself, moving, reshaping, coloring, bending, ect...<br>
+            These uses are called "tricks", these are less combat realated uses.<br>
+            <b>Example:</b> With Fire Bolt you can conjure a small flame above your palm.
+        </p>
+        <h2 id="ability_categories">Ability Categories</h2>
+        <hr>
+        <p class="bottomless"><b>Active Abilities:</b></p>
+        <ul>
+            <li>These Abilities are your usual ones, often coming out instantly when used.</li>
+            <li>You can count Free-Action Active Abilities with a Duration as basically a Passive.</li>
+        </ul>
+        <p class="bottomless"><b>On-Attack Abilities:</b></p>
+        <ul>
+            <li>These Abilities can only be used on an Attack or Save, to enhance it in some way.</li>
+            <li>On-Attack Abilities must be commited to before the Attack.</li>
+            <li>By default if the Attack or Save is an AOE, the On-Attack will Target ONLY ONE chosen Hit Target!</li>
+            <li>When an On-Attack and the Parent Attack both do the same Damage Type, count it as a singular Damage Instance.</li>
+            <li>If there are <b>Offspring Attacks,</b> they do carry on all On-Attack Abilities.</li>
+            <li>The Offspring Attack does NOT carry on the On-Attack which caused itself.</li>
+        </ul>
+        <p class="bottomless"><b>Reactive Abilities:</b></p>
+        <ul>
+            <li>These Abilities can only be used when an Activation Condition is met.</li>
+            <li>These can be used outside of the caster's Turn.</li>
+            <li>When more Entities want to use Reactions at the same time, they do in Descending INIT Order.</li>
+            <li>Reacting before an Attack, with a Reaction without Specific Trigger can only be if your <box>4 × INIT</box> is higher than <b>Attack's To-Hit.</b></li>
+            <li>Unaware Targets cannot make <b>Reactions</b>, unless their <box>2 × INIT</box> is at least <b>Attack's To-Hit</b> or <box>2 × Save's Difficulty</box></li>
+        </ul>
+        <p class="bottomless"><b>Stance Abilities:</b></p>
+        <ul>
+            <li>These Abilities, when used put you in a Stance, there are things which can Break or Trigger a Stance.</li>
+            <li><b>Attack-Action, Defense-Action, Shoving, and Grappling</b> Count as Abilities when Breaking Stances!</li>
+            <li>Triggering a Stance also Breaks it.</li>
+            <li>You can only be in one Stance at a time.</li>
+            <li>You can Break your own Stance as a Free-Action.</li>
+            <li>Using On-Attack Abilities do not Break the Stance.</li>
+            <li>Stacking Stances are stackable by casting the Stance multiple times before Triggering.</li>
+        </ul>
+        <p class="bottomless"><b>Meta Abilities:</b></p>
+        <ul>
+            <li>These Abilities are used when using a different Ability.</li>
+            <li>These Modify the Ability in some ways.</li>
+        </ul>
+        <p class="bottomless"><b>Passive Abilities:</b></p>
+        <ul>
+            <li>These Abilities are always active, unless the requirements are lost.</li>
+            <li>Passives tagged with <b>Auto</b> will apply automatically if the Requirements are met.</li>
+        </ul>
+        <h2 id="Proxy">Proxy</h2>
+        <hr>
+        <p>
+            Entites have a Special Stat called Proxy, this is Equal to their <box>Max SP</box><br>
+            For some Abilities Proxy determines the Maximum Amount of Entites the Caster can Control.<br>
+            If the Caster reaches <box>0 SP</box> it loses all Control.
+        </p>
+        <h1 id="spell_memorization">Spell Memorization</h1>
+        <hr>
+        <p>
+            For <box>5 XP</box> Memorization of <b>Spell Type Abilities</b> can be Unlocked.<br>
+            You gain Memory Slots equal to <box>INT + Arcana</box>, and each Spell takes up Slots equal to <box>it's Unlock XP Cost.</box><br>
+            When a Spell is Memorized it can be regularly Cast, but cannot be modified with Meta-Abilities, and <b>CS</b> will always be <b>INT.</b><br>
+            If an Ability has <b>Unlocks</b>, those can be Memorized for Extra Memory Slots equal to the <box>Unlock's XP Cost.</box><br>
+            Meta-Abilities Abilities cannot be Memorized, but Passive Abilities can.
+        </p>
+        <p>
+            Memorization takes <box>4 / (INT + Arcana)</box> Hours for each Memory Slot being overwritten.<br>
+            Memorization is done with studying a written down Spell for said time.<br>
+            If the Memorization process is interrupted it can be resumed later.
+        </p>
+        <p>
+            As for finding Written down Spells it is mostly up to the GM, but there are a few suggestions here.<br>
+            Written Spells can be found in many forms, from books to scrolls, to even identified magical things such as wands, staffs, rods, magic circles, ect...<br>
+            When found in Scrolls or other magical items, to Memorize them, there is an Arcana Check with a high Difficulty, due to the need to decompile it's content.
+        </p>
+        <p>
+            A written Spell's Market Price is <box>Unlock XP Cost × 10</box>, and may not be on sale, especially higher level Spells.<br>
+            When a Spell has <b>Unlocks</b>, those have their own Market Price, it's Cost scaling with Unlock XP the same as Spells.<br>
+            If a Spell by default comes with Free Unlock(s), the Written down form will also contain them without additional Costs, or Memory Slots required.<br>
+            A Player Character may also write down or copy a Spell they have, this takes <box>100 × Unlock XP Cost / (INT + Arcana)</box> Hours.
+        </p>
+        <h1 id="ability_wishing">Ability Wishing</h1>
+        <hr>
+        <p>
+            At <b>500 Total XP</b> you can Unlock the Ability Wishing Feature for <box>20 XP</box><br>
+            If the Ability's Unlock XP Cost is equal or less than your EGO, you can Wish that Ability.<br>
+            A Wished Ability's <b>CS</b> will be equal to <b>EGO,</b> and treated as an <b>Innate Type Ability</b> even if it's originally a Skill or Spell.<br>
+            Wishing an Ability has the same Cast Time as using the Ability, and Meta-Abilities effect the Casting Time as normal.<br>
+            Wishing can use any Meta-Abilities, even ones not known by the Caster.<br>
+            The GM may allow Wishes that are not normally replicable by an Ability.
+        </p>
+        <p class="bottomless"><b>Ability Wishing:</b></p>
+        <ul>
+            <li>You have a Pool of Wishes, each Wish takes 1 from this Pool.</li>
+            <li>The Pool's Size is <box>log(Total XP)</box> and Replenishes after a Long-Rest.</li>
+            <li>If you have more than 10000 Total XP, you can make Wishes at Half ESS without Spending from the Pool.</li>
+            <li>You can Spend <b>1 Fate</b> to make a Wish, and not Spend from the Pool.</li>
+        </ul>
+        <h1 id="search">SEARCH</h1>
+        <hr>
+        <p>
+            Searching works by typing in text in each of the 4 different textareas.<br>
+            The search engine will look and try to match with all the 4 different categories. (Name, Type, Reqs, Tags)<br>
+            You can write in multiple lines to each category to narrow the search results.
+        </p>
+        <table width="100%">
+            <tr>
+                <td width="25%">Name Search</td>
+                <td width="25%">Type Search</td>
+                <td width="25%">Reqs Search</td>
+                <td width="25%">Tags Search</td>
+            </tr>
+            <tr>
+                <td><textarea id="NameSearch" rows="4" style="width: 90%;"></textarea></td>
+                <td><textarea id="TypeSearch" rows="4" style="width: 90%;"></textarea></td>
+                <td><textarea id="ReqsSearch" rows="4" style="width: 90%;"></textarea></td>
+                <td><textarea id="TagsSearch" rows="4" style="width: 90%;"></textarea></td>
+            </tr>
+        </table>
+        <input type="button" value="Search" onclick="Search()" />
+        <h2 id="active_abilities">Active Abilities</h2>
+        <hr>
+        <table id="table_active" width="100%">
+        </table>
+        <h2 id="on_attack_abilities">On-Attack Abilities</h2>
+        <hr>
+        <table width="100%" id="table_onattack">
+        </table>
+        <h2 id="reactive_abilities">Reactive Abilities</h2>
+        <hr>
+        <table width="100%" id="table_reactive">
+        </table>
+        <h2 id="stance_abilities">Stance Abilities</h2>
+        <hr>
+        <table width="100%" id="table_stance">
+        </table>
+        <h2 id="meta_abilities">Meta Abilities</h2>
+        <hr>
+        <table width="100%" id="table_meta">
+        </table>
+        <h2 id="passive_abilities">Passive Abilities</h2>
+        <hr>
+        <table width="100%" id="table_passive">
+        </table>
+    </main>
+</body>
+
+<script>
+    abilities = {}
+    //---------------------------------------------------------------------
+    FirstCell = `<tr>
+                <td width="20%">
+                    Name
+                </td>
+                <td width="10%">
+                    Type
+                </td>
+                <td width="40%">
+                    Reqs                                                
+                </td>
+                <td width="30%">
+                    Tags
+                </td>
+            </tr>`
+    AbilityToText = function(input) {
+        output = '<tr><td><a href="'
+        output += input.link
+        output += '">'
+        output += input.name
+        output += '</a></td><td>'
+        output += input.type
+        output += '</td><td>'
+        output += input.reqs
+        output += '</td><td>'
+        output += input.tags
+        output += '</td></tr>'
+        return output
+    }
+    SearchCategory = function(ElementHTML, category) {
+        result = FirstCell
+        category.forEach(v => {
+            debounce_name = true
+            debounce_type = true
+            debounce_reqs = true
+            debounce_tags = true
+            NameArray = NameSearch.value.split("\n")
+            TypeArray = TypeSearch.value.split("\n")
+            ReqsArray = ReqsSearch.value.split("\n")
+            TagsArray = TagsSearch.value.split("\n")
+            for (i = 0; i < NameArray.length; i++) {
+                if (NameArray[i].trim() != "" && !v.name.toLowerCase().includes(NameArray[i].trim().toLowerCase())) debounce_name = false
+            }
+            for (i = 0; i < TypeArray.length; i++) {
+                if (TypeArray[i].trim() != "" && !v.type.toLowerCase().includes(TypeArray[i].trim().toLowerCase())) debounce_type = false
+            }
+            for (i = 0; i < ReqsArray.length; i++) {
+                if (ReqsArray[i].trim() != "" && !v.reqs.toLowerCase().includes(ReqsArray[i].trim().toLowerCase())) debounce_reqs = false
+            }
+            for (i = 0; i < TagsArray.length; i++) {
+                if (TagsArray[i].trim() != "" && !v.tags.toLowerCase().includes(TagsArray[i].trim().toLowerCase())) debounce_tags = false
+            }
+            if (debounce_name && debounce_type && debounce_reqs && debounce_tags) {
+                result += AbilityToText(v)
+            }
+        })
+        ElementHTML.innerHTML = result
+    }
+    Search = function() {
+        SearchCategory(table_active, abilities.active)
+        SearchCategory(table_onattack, abilities.on_attack)
+        SearchCategory(table_reactive, abilities.reactive)
+        SearchCategory(table_stance, abilities.stance)
+        SearchCategory(table_meta, abilities.meta)
+        SearchCategory(table_passive, abilities.passive)
+    }
+    //---------------------------------------------------------------------
+    fetch("./../assets/abilities_raw.json").then((response) => {
+        response.text().then((text) => {
+            abilities = JSON.parse(text)
+            Search()
+        })
+    })
+</script>
+
+<script>
+    // the funni
+    /*
+    a={};b=`<tr><td width="20%">Name</td><td width="10%">Type</td><td width="40%">Reqs</td><td width="30%">Tags</td></tr>`
+    c=`</td><td>`;f=(i)=>`<tr><td><a href="${i.link}">${i.name}</a>${c+i.type+c+i.reqs+c+i.tags}</td></tr>`;g=(n,m)=>{
+    x=b;m.forEach(v=>{k=true;j=(y,t)=>{y=y.value.split("\n");for(i=0;i<y.length;i++)if(y[i].trim()!=""&&!v[t].toLowerCase().
+    includes(y[i].trim().toLowerCase()))k=false};j(NameSearch,"name");j(TypeSearch,"type");j(ReqsSearch,"reqs");j(TagsSearch,"tags")
+    if(k)x+=f(v)});n.innerHTML=x};Search=()=>{g(table_active,a.active);g(table_onattack,a.on_attack)
+    g(table_reactive,a.reactive);g(table_stance,a.stance);g(table_meta,a.meta);g(table_passive,a.passive)}
+    fetch("./../assets/abilities_raw.json").then((r)=>{r.text().then((t)=>{a=JSON.parse(t);Search()})})
+    */
+</script>
+
+</html>

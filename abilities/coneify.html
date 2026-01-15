@@ -1,0 +1,11 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=0.35">
+<link rel="icon" type="image/x-icon" href="../assets/icon.png">
+<link rel="stylesheet" href="../assets/style_main.css">
+<script src="../assets/script_main.js"></script>
+<title>Coneify (Shape WIP)</title>
+</head>
+<main><h1>Coneify (Shape WIP)</h1><hr><p class="bottomless"><b>Requirements:</b></p><ul><li>500 Total XP</li></ul><p class="bottomless"><b>Unlock Cost:</b></p><ul><li>50 XP</li></ul><p class="bottomless"><b>Tags:</b></p><ul><li>AOE +</li><li>AOE -</li></ul><h2>Description</h2><hr><p>You Change an <b>AOE</b> into a <b>Cone AOE</b>, the new Cone AOE will retain it's <b>Flow Type.</b><br>Depending on the <b>AOE</b> you Change into a Cone, the <b>Cone Length</b> will Differ.<br>The Cone's Spread is <box>90° (1 Forward = +2 Width)</box><br>The Cone starts out from the Caster.<br></p><p class="bottomless"><b>AOE to Cone Length Table:</b></p><ul><li>Sphere -> Cone Length = 2 × Radius</li><li>Line -> Cone Length = Length / 10</li><li>Cylinder | Disk -> Cone Length = Height / 5 | 2 × Radius</li><li>Cube -> Cone Length = Side Length</li></ul><p>You can Change a Cone's <b>Spread</b>, the Cone's <b>Length</b> will be Multiplied by some amount for each <b>Jump</b><br>Increasing the Spread counts as -1 Jump, and Decreasing the Spread counts as +1 Jump, Jumps can be a Negative Value.<br>You can cut off from the Start of the Cone, and bring it's start closer to the Caster by the same amount, effectively Truncating the Cone into a Frustum.<br>You can <b>Flip</b> the Cone, to where it starts wide and shrinks into a point at the end.<br></p><p class="bottomless">Cone Length and Spread Table:</p><ul><li><box>30° (~3 Forward = +2 Width)</box></li><li><box>60° (~2 Forward = +2 Width)</box></li><li><box>90° (~1 Forward = +2 Width)</box></li><li><box>120° (~1 Forward = +3 Width)</box></li><li><box>180° (Half Sphere)</box></li><li>Overridden 30° -> 180° Length Multiplier: 0.1</li></ul><h2>Stats</h2><hr><table width="100%"><tr><td width=30%">Ability Stat</td><td width=70%">Value</td></tr><tr><td width=30%">Type</td><td width=70%">Any</td></tr><tr><td width=30%">Cone Length Multiplier</td><td width=70%">1 + (0.25 × Jumps)</td></tr></table></main>
+</body>
+</html>
