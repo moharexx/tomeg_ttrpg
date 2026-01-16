@@ -6,13 +6,13 @@ module.exports = {
         "(Advantage)",
     ],
     reqs_short: [
-        "AGI | Perception",
-    ],
-    reqs_full: [
         "10 AGI | 10 Perception",
     ],
+    reqs_full: [
+        "<b>Skill:</b> 10 AGI | 10 Perception",
+    ],
     tags: [
-        "Offense",
+        "Offense, Cooldown",
         "Variable Damage",
         "Free-Action",
     ],
@@ -20,13 +20,7 @@ module.exports = {
     description: [
         {
             type: "p",
-            content: "If Parent Attack was with Advantage, add Bonus On-Hit Damage of the same Type.",
-        },
-        {
-            type: "dots",
-            content: [
-                "This Ability can only be used once per Turn.",
-            ],
+            content: `If Parent Attack was with Advantage, add Bonus On-Hit Damage of the same Type.`,
         },
     ],
     stats: [
@@ -37,7 +31,8 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Free-Action"],
-                ["Requirement", "Advantage"],
+                ["Trigger", "Advantage"],
+                ["Cooldown", "Can use Next Round"],
                 ["Bonus On-Hit Damage", "4 × ESS"],
             ],
         },

@@ -5,10 +5,10 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "Melee Weapon | Martial Arts",
+        "0 Melee Weapon | 10 Martial Arts",
     ],
     reqs_full: [
-        "10 Melee Weapon | 10 Martial Arts",
+        "<b>Skill:</b> 10 Melee Weapon | 10 Martial Arts",
     ],
     tags: [
         "Defense",
@@ -20,8 +20,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When using this Ability, you are put in Parry Stance.",
-                "While in Parry Stance, the next Attack Ignores your HD, and Hits you.",
+                "When using this Ability, you are put in <b>Parry Stance.</b>",
+                "While in <b>Parry Stance</b>, the next Attack Ignores your HD, and Hits you.",
             ],
         },
         {
@@ -51,7 +51,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                "<b>Note:</b> This Ability can CRIT for 3× Parry Strength, throw your d10 pls",
+                "<b>Note:</b> This Ability can CRIT for 2× Parry Strength, throw your d10 pls",
             ],
         },
     ],

@@ -72,6 +72,16 @@ module.exports = {
         {
             type: "list",
             content: [
+                `<b>Armor Imbument:</b>`,
+                `List of Damage Types: <box>Radiant, Necrotic</box>`,
+                `List of Side Effects:`,
+                `Costs an Extra Bonus-Action to use any Ability with the <b>Weapon Damage Tag</b>, including Attack-Actions.`,
+                `The Weapon Losses <box>4 × ESS</box> Penetration, the Weapon must have at least <box>4 × ESS</box> Armor-Pen or this CANNOT be chosen!`,
+            ],
+        },
+        {
+            type: "list",
+            content: [
                 `<b>COMBO:</b>`,
                 `When you use <a href="../main/mechanics.html#switch_weapon" target="_blank">Switch Weapon</a> as a Bonus-Action, you can Cast This Abilty as a Free-Action.`,
                 `Using this Ability you can Target All Weapons currently Wielded by You.`,
