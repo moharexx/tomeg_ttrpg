@@ -29,6 +29,14 @@ module.exports = {
             ],
         },
         {
+            type: "list",
+            content: [
+                "<b>Potency Boost:</b>",
+                `For each 1 points of <a href="../main/mechanics.html#potency" target="_blank">Potency</a> you can add +1 Damage to a Single Orbs.`,
+                `For each <box>3 × ESS</box> points of <b>Potency</b> you add +1 Orbs.`,
+            ],
+        },
+        {
             type: "p",
             content: [
                 "The Stance Breaks when: <box>Using Abilities, HD Decrease, Taking Damage</box>",
