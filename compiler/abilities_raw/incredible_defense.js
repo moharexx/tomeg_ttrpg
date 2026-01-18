@@ -22,6 +22,7 @@ module.exports = {
             content: [
                 `You Spend either <b>GRIT</b> or <b>HD</b> to use the <a href="../main/mechanics.html#defense_action" target="_blank">Defense-Action</a> as a <b>Bonus-Action.</b>`,
                 `For the purposes of Abilites, Shields, and other Actions, treat as if you used the <b>Defense-Action</b> as a <b>Main-Action.</b>`,
+                `When using this Ability, even after Un-Wield Your Shield, You still gain the full benefits of the <a href="../main/mechanics.html#defense_action" target="_blank">Defense-Action</a>.`,
                 `The <b>ESS</b> you Cast this Ability at is <box>Total XP / 100</box>, and if somehow it's less, the Ability Fails.`,
             ],
         },

@@ -22,6 +22,7 @@ module.exports = {
             content: [
                 `You spend either <b>GRIT</b> or <b>HD</b> to use <a href="../main/mechanics.html#switch_weapon" target="_blank">Switch-Weapon</a> or <a href="../main/mechanics.html#interact" target="_blank">Interact-Action</a> as a <b>Free-Action.</b>`,
                 `For the purposes of Abilites and other Actions treat as if you used the <b>Switch-Action</b> or <b>Interact-Action</b> as a <b>Main-Action.</b>`,
+                `When using this Ability, even after Un-Wield Your Shield, You still gain the full benefits of the <a href="../main/mechanics.html#defense_action" target="_blank">Defense-Action</a>.`,
                 `The <b>ESS</b> you Cast this Ability at is <box>Total XP / 100</box>, and if somehow it's less, the Ability Fails.`,
             ]
         },

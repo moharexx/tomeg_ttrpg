@@ -5,14 +5,14 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Enchantment | Abjuration",
+        "10 CS, (5 Abjuration | 10 Enchantment | 20 Divination)",
     ],
     reqs_full: [
-        "(10 INT | 20 WILL | 50 EGO), (10 Abjuration | 20 Enchantment)",
+        "<b>Spell:</b> 10 CS, (5 Abjuration | 10 Enchantment | 20 Divination)",
     ],
     tags: [
         "Defense",
-        "Negation",
+        "Ranged, Targeting, Negation",
         "Bonus-Action",
     ],
     unlock_cost: 5,
@@ -20,7 +20,16 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When the Ability is used, the Targeted Entity's Saving Throw will have a Finalized Bonus.",
+                "When the Ability is used, the Pinpointed Entity's Saving Throw will have a Bonus.",
+                "This Ability can be used after determiming if the Save is a Fail or not.",
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                "<b>Potency Boost:</b>",
+                `For each 2 points of <a href="../main/mechanics.html#potency" target="_blank">Potency</a> you can add +1 to the Save Bonus.`,
+                `For each <box>3 × ESS</box> points of <b>Potency</b> you can Target an additional Entity.`,
             ],
         },
         {
@@ -40,7 +49,7 @@ module.exports = {
                 ["Cast Time", "Bonus-Action"],
                 ["Activation Requirement", "Sense a Target Making a Save"],
                 ["Range", "10 × CS^(1/3)"],
-                ["Save Finalized Bonus", "4 × ESS"],
+                ["Save Bonus", "4 × ESS"],
             ],
         },
     ],

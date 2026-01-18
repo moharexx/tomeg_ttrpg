@@ -21,6 +21,15 @@ module.exports = {
             type: "p",
             content: [
                 "Spend <b>REST-HP</b> to give Your <b>VIT Save</b> a small Bonus.",
+                "This Ability can be used after determiming if the Save is a Fail or not.",
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                "<b>Potency Boost:</b>",
+                `For each 2 points of <a href="../main/mechanics.html#potency" target="_blank">Potency</a> you can add +1 to Save Bonus.`,
+                `This does not have additional <b>REST-HP</b> Cost.`,
             ],
         },
     ],
