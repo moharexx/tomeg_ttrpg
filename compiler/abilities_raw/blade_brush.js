@@ -15,7 +15,7 @@ module.exports = {
         "Weapon Damage, Flow Cone AOE",
         "Main-Action",
     ],
-    unlock_cost: 10,
+    unlock_cost: 5,
     description: [
         {
             type: "p",
