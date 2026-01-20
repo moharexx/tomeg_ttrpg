@@ -38,19 +38,20 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Damage Type Change</b> (Main-Action | 2 Fate):`,
+                `<b>Damage Type Change</b> (Main-Action | 1 Fate):`,
                 `Electricity`,
                 `Radiant`,
                 `Necrotic`,
-                `Healing | Shielding | BUFFER`,
+                `Healing | BUFFER`,
             ],
         },
         {
             type: "list",
             content: [
                 `<b>Special:</b>`,
-                `The Ability or Attack adds the <b>Soaked Effect</b>. (Bonus-Action | 1 Fate)`,
-                `The Ability or Attack has <a href="../main/mechanics.html#executing" target="_blank">Executing</a>. (Main-Action + Bonus | 3 Fate)`,
+                `Effect: You add an <a href="../main/mechanics.html#effects" target="_blank">Effect</a> to the Ability or Attack, this <b>Effect</b> does nothing on it's own, it's for Entity Interactions.. (Bonus-Action | 1 Fate)`,
+                `Executing: The Ability or Attack has <a href="../main/mechanics.html#executing" target="_blank">Executing</a>. (Main-Action + Bonus-Action | 2 Fate)`,
+                `Perfection: The Ability or Attack is <a href="../main/mechanics.html#maximized_and_minimized_values" target="_blank">Maximized</a>. (3 Fate)`,
             ],
         },
     ],
@@ -61,8 +62,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Type", "Spell"],
-                ["(AOE, Range, ESS) Multiplier", "(Cast Time Jumps) + 1"],
+                ["Type", "Any"],
             ],
         },
     ],

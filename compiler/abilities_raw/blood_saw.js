@@ -15,7 +15,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Physical Damage, Flow Rectangle AOE, Executing",
+        "Melee, Flow Rectangle AOE, Physical Damage, Executing",
         "Main-Action, REST-HP",
     ],
     unlock_cost: 10,
@@ -23,23 +23,24 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you Create a Saw out of your Blood.",
-                "This is a Flow Rectangle AOE Melee Attack, the AOE Flows down it's Width, from one edge to the other.",
+                `When used, you Create a Saw out of your Blood.`,
+                `This is a Flow Rectangle AOE Melee Attack, the AOE Flows down it's Width, from one edge to the other.`,
                 `This Ability has <a href="../main/mechanics.html#executing" target="_blank">Executing.</a>`,
             ],
         },
         {
             type: "dots",
             content: [
-                "You place down this AOE to where it's center is at max <box>ESS^(1/3)</box> meters away from you.",
-                "If the Attack's Damage is reduced to 0, the Rectangle's AOE Stops at that Target.",
+                `You place down this AOE to where it's center is at max <box>ESS^(1/3)</box> meters away from you.`,
+                `If the Attack's Damage is reduced to 0, the Rectangle's AOE Stops at that Target.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Soaked Effect:</b>",
+                `<b>Soaked Effect:</b>`,
                 `On a Hit, the Target gets Soaked with "water".`,
+                `This Effect Ends after the Entity uses a <b>Main-Action + Bonus-Action</b> to remove it.`,
             ],
         },
         {

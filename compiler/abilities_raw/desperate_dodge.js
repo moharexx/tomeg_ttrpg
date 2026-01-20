@@ -1,6 +1,6 @@
 module.exports = {
     name: "Desperate Dodge",
-    category: "active",
+    category: "reactive",
     type: [
         "Innate",
         "Spell",
@@ -15,7 +15,7 @@ module.exports = {
     ],
     tags: [
         "Defense, Cooldown",
-        "Self, True Damage, Projectile",
+        "Self, True Damage",
         "Free-Action",
     ],
     unlock_cost: 20,
@@ -23,7 +23,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you Damage yourself to Dodge an Attack, by gaining Bonus HD against the Attack.",
+                `When used, you Damage yourself to dodge an Attack.`,
+                `You gain HD which you can instantly spend from to dodge the Attack.`,
             ],
         },
     ],
@@ -37,7 +38,7 @@ module.exports = {
                 ["Cast Time", "Free-Action"],
                 ["Trigger", "Get Attacked"],
                 ["Cooldown", "Short-Rest"],
-                ["Bonus HD", "12 × ESS"],
+                ["HD Gain", "12 × ESS"],
                 ["Self Damage", "(5 × ESS) True"],
             ],
         },

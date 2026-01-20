@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense, Unlock",
-        "Ranged, Targeting, Bio Damage, VIT Save",
+        "Ranged, Bio Damage, VIT Save, Effect",
         "Main-Action",
     ],
     unlock_cost: 5,
@@ -37,6 +37,7 @@ module.exports = {
                 `<b>Deadly</b> (5 XP):`,
                 `<b>Poison Effect:</b>`,
                 `The Ability will do <box>(1d8 × ESS) Bio</box> <a href="../main/mechanics.html#executing" target="_blank">Executing</a> Damage, at the Start of Caster's Next Turn.`,
+                `At Cast, you can add a <b>Bonus-Action</b> to the <b>Cast Time</b> to make the Damage into <box>1d12 × ESS</box> Executing.`,
                 `This Effect Ends after Dealing Damage.`,
             ]
         },
@@ -47,15 +48,16 @@ module.exports = {
                 `<b>Poison Effect:</b>`,
                 `The Ability will do <box>(1d8 × ESS) Bio</box> Damage, at the Start of Caster's Next Turn.`,
                 `At Cast, you can add a <b>Bonus-Action</b> to the <b>Cast Time</b> to Target an additional Target.`,
-                `If the Target gets 0 or less HP from this Effect, you can Re-Cast this Ability as a <b>Bonus-Action</b>.`,
+                `If the Target gets to 0 or less HP from this Effect, you can Re-Cast this Ability as a <b>Bonus-Action Reaction</b>.`,
+                `Getting Entities to 0 or less HP with less <box>Total XP</box> than <box>10 × ESS</box> will not Activate the above mentioned benefit.`,
                 `This Effect Ends after Dealing Damage.`,
             ]
         },
         {
             type: "list",
             content: [
-                "<b>Potency Boost:</b>",
-                `For each <box>3 × ESS</box> points of <a href="../main/mechanics.html#potency" target="_blank">Potency</a> you can Target an additional Entity.`,
+                `<b><a href="../main/mechanics.html#potency target="_blank">Potency<a> Boost:</b>`,
+                `For each <box>3 × ESS</box> points of Potency you can Target an additional Entity.`,
             ],
         },
     ],

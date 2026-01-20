@@ -19,18 +19,20 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You Increase the Potency of a Parent Ability, but Decrease it's AOE Size.",
-                "To put this on an Ability, the Ability must have an AOE.",
-                "AOE Types: Line, Cone, Spehere, Cylinder, Circle, etc...",
+                `You Increase the Potency of a Parent Ability, but Decrease it's AOE Size.`,
+                `To put this on an Ability, the Ability must have an AOE.`,
+                `AOE Types: Line, Cone, Spehere, Cylinder, Circle, etc...`,
             ],
         },
         {
-            type: "list",
+            type: "table",
+            full_width: "40%",
+            width: ["40%", "60%"],
             content: [
-                "<b>AOE Division to Potency Table:</b>",
-                "/2 Size -> +2 Potency",
-                "/4 Size -> +4 Potency",
-                "/8 Size -> +6 Potency",
+                ["AOE Divisor", "Potency Bonus"],
+                ["2", "2 × ESS"],
+                ["4", "4 × ESS"],
+                ["8", "6 × ESS"],
             ],
         },
 

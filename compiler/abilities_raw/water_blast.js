@@ -5,14 +5,14 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Evocation | Transmutation | Conjuration",
+        "5 CS, (5 Conjuration | 10 Transmutation | 20 Evocation)",
     ],
     reqs_full: [
-        "(5 INT | 5 WILL | 5 EGO), (5 Conjuration | 10 Transmutation | 20 Evocation)",
+        "<b>Spell:</b> 5 CS, (5 Conjuration | 10 Transmutation | 20 Evocation)",
     ],
     tags: [
         "Offense",
-        "Physical Damage, Projectile",
+        "Ranged, Physical Damage, Effect",
         "Main-Action",
     ],
     unlock_cost: 5,
@@ -20,23 +20,24 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, fire a Single Target Projectile made of water.",
+                `When used, fire a Single Target Projectile made of water.`,
+            ],
+        },
+        {
+            type: `list`,
+            content: [
+                `<b>Underwater Jet:</b>`,
+                `When the Projectile goes into the Water it will turn into an Underwater Jet.`,
+                `While in this Underwater form, each meter traveled will count as half a meter for it's range.`,
+                `When it exits the Water, the Jet turns back into the Projectile and continues traveling.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Underwater Jet:</b>",
-                "When the Projectile goes into the Water it will turn into an Underwater Jet.",
-                "While in this Underwater form, each meter traveled will count as half a meter for it's range.",
-                "When it exits the Water, the Jet turns back into the Projectile and continues traveling.",
-            ],
-        },
-        {
-            type: "list",
-            content: [
-                "<b>Soaked Effect:</b>",
-                "On Dealing Damage, the Target gets Soaked with water.",
+                `<b>Soaked Effect:</b>`,
+                `On Dealing Damage, the Target gets Soaked with water.`,
+                `This Effect Ends after the Entity uses a <b>Main-Action + Bonus-Action</b> to remove it.`,
             ],
         },
     ],

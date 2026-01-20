@@ -15,7 +15,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Physical Damage, Flow Line AOE, Executing",
+        "Ranged, Flow Line AOE, Physical Damage, Executing",
         "Main-Action, REST-HP",
     ],
     unlock_cost: 10,
@@ -33,6 +33,7 @@ module.exports = {
             content: [
                 "<b>Soaked Effect:</b>",
                 `On a Hit, the Target gets Soaked with "water".`,
+                `This Effect Ends after the Entity uses a <b>Main-Action + Bonus-Action</b> to remove it.`,
             ],
         },
     ],

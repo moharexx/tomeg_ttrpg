@@ -6,12 +6,12 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Melee Weapon | Ballistic | Martial Arts",
-        "Evocation | Conjuration | Enchantment",
+        "20 Martial Arts",
+        "10 CS, (10 Conjuration | 20 Enchantment | 50 Evocation)",
     ],
     reqs_full: [
-        "20 Martial Arts",
-        "(10 INT | 10 WILL | 10 EGO), (10 Conjuration | 20 Enchantment | 50 Evocation)",
+        "<b>Skill:</b> 20 Martial Arts",
+        "<b>Spell:</b> 10 CS, (10 Conjuration | 20 Enchantment | 50 Evocation)",
     ],
     tags: [
         "Offense",
@@ -23,17 +23,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When you use this Ability, you throw a Water Bolas, which can trip the Target Entity.",
-                `On Hit, the target must Succeed a STR Save or Gain the <a href="../main/mechanics.html#conditions">Prone Condition.</a>`,
-                "The STR Save can be repeated using a Main-Action.",
-                "The Prone Condition can only be ended by succeeding a <box>STR Save</box> or by reducing the <box>Bolas HP</box> to 0.",
-                "While the Bolas is on an Entity, The Entity takes Damage at the Start of the Casters Turn.",
+                `When you use this Ability, you throw a Water Bolas, which can trip the Target Entity.`,
+                `On Hit, the target must Succeed a <b>STR Save</b> or Gain the <a href="../main/mechanics.html#conditions">Prone Condition.</a>`,
+                `The STR Save can be repeated using a <b>Main-Action</b>.`,
+                `The Prone Condition can only be ended by succeeding a <box>STR Save</box> or by reducing the <box>Bolas HP</box> to 0.`,
+                `While the Bolas is on an Entity, The Entity takes Damage at the Start of the Casters Turn.`,
             ],
         },
         {
             type: "dots",
             content: [
-                "The Bolas Takes Double Damage from Heat Damage, and Heals from Cold Damage.",
+                `The Bolas Takes Double Damage from Heat Damage, and Heals from Cold Damage.`,
             ],
         },
     ],
