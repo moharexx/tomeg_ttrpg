@@ -5,43 +5,43 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Evocation | Transmutation | Conjuration",
+        "10 CS, (5 Transmutation | 10 Conjuration | 20 Evocation)",
     ],
     reqs_full: [
-        "(10 INT | 10 WILL | 10 DES), (5 Transmutation | 10 Conjuration | 20 Evocation)",
+        "<b>Spell:</b> 10 CS, (5 Transmutation | 10 Conjuration | 20 Evocation)",
     ],
     tags: [
         "Utility",
-        "Flow Sphere AOE, Crowd Control",
-        "Main-Action / Main-Action",
+        "Ranged, Flow Sphere AOE, STR Save, Crowd Control",
+        "Main-Action / Continuous",
     ],
     unlock_cost: 10,
     description: [
         {
             type: "p",
             content: [
-                "Within Range, choose a Sphere in which wind swirls and whirls with intensity.",
-                "When using this Ability, you are put in Monsoon Stance.",
-                "When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>STR Save</b> or get Forcefully Moved.",
-                "Each time you decide if the Ability Pulls to it's center or Pushes from it's center.",
-                "If the Ability Pulls, the AOE Flows from the Radius's Edge inwards.",
-                "If the Ability Pushes, the AOE Flows from it's point of Origin outwards.",
+                `Within Range, choose a Sphere in which wind swirls and whirls with intensity.`,
+                `When using this Ability, you are put in Monsoon Stance.`,
+                `When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>STR Save</b> or get Forcefully Moved.`,
+                `Each time you decide if the Ability Pulls to it's center or Pushes from it's center.`,
+                `If the Ability Pulls, the AOE Flows from the Radius's Edge inwards.`,
+                `If the Ability Pushes, the AOE Flows from it's point of Origin outwards.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>On Stance Trigger:</b>",
-                "You can Double it's </b>Pull and Push Distance</b>",
-                "This Stance Trigger can be done Before the Targets Make their Saves.",
-                "This can be done only once on this Ability.",
-                "This Stance does NOT Break when you Trigger it.",
+                `<b>On Stance Trigger:</b>`,
+                `as a <b>Main-Action</b>, you can Double it's </b>Pull and Push Distance</b>`,
+                `This Stance Trigger can be done Before the Targets Make their Saves.`,
+                `This can be done only once on this Ability.`,
+                `This Stance does NOT Break when you Trigger it.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Stance Breaks only when entering another Stance.",
+                `The Stance Breaks only when entering another Stance.`,
             ],
         },
     ],
@@ -53,7 +53,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["Stance Trigger", "Main-Action"],
+                ["Stance Trigger", "Continuous"],
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["STR Save", "14 × ESS"],

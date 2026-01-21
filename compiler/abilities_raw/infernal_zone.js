@@ -5,39 +5,38 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "5 Evocation | 10 Transmutation | 20 Conjuration",
+        "10 CS, (5 Evocation | 10 Transmutation | 20 Conjuration)",
     ],
     reqs_full: [
-        "<b>Spell:</b> (10 INT | 10 WILL | 10 DES), (5 Evocation | 10 Transmutation | 20 Conjuration)",
+        "<b>Spell:</b> 10 CS, (5 Evocation | 10 Transmutation | 20 Conjuration)",
     ],
     tags: [
         "Offense",
-        "Heat Damage, Static Sphere AOE",
-        "Main-Action / Main-Action",
+        "Ranged, Static Sphere AOE, Heat Damage, VIT Save",
+        "Main-Action / Continuous",
     ],
     unlock_cost: 10,
     description: [
         {
             type: "p",
             content: [
-                "Within Range, in a choosen Sphere the temperature increases, fire and smoke starts to appear, on objects and in the air.",
-                "When using this Ability, you are put in Infernal Zone Stance.",
-                "When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.",
+                `Within Range, in a choosen Sphere the temperature increases, fire and smoke starts to appear, on objects and in the air.`,
+                `When using this Ability, you are put in <b>Infernal Zone Stance</b>.`,
+                `When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>On Stance Trigger:</b>",
-                "You can increase <b>VIT Save</b> to <box>12 × ESS</box>",
-                "This can be done only once on this Ability.",
-                "This Stance does NOT Break when you Trigger it.",
+                `<b>On Stance Trigger:</b>`,
+                `As a <b>Main-Action</b>, you can increase <b>VIT Save</b> to <box>12 × ESS</box>`,
+                `This can be done only once on this Ability.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Stance Breaks only when entering another Stance.",
+                `The Stance Breaks only when entering another Stance.`,
             ],
         },
     ],
@@ -49,11 +48,11 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["Stance Trigger", "Main-Action"],
+                ["Stance Trigger", "Continuous"],
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["VIT Save", "8 × ESS"],
-                ["Damage", "(3d6 × ESS) Heat"],
+                ["Damage", "(2d8 × ESS) Heat"],
             ],
         },
     ],

@@ -6,10 +6,10 @@ module.exports = {
         "(Any)",
     ],
     reqs_short: [
-        "10 Perception",
+        "10 Slight | 10 Perception",
     ],
     reqs_full: [
-        "<b>Skill:</b> 10 Perception",
+        "<b>Skill:</b> 10 Slight | 10 Perception",
     ],
     tags: [
         "Offense",
