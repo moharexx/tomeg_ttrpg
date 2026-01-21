@@ -15,6 +15,7 @@ body {
 /* --------- header --------- */
 
 header {
+    z-index: 999;
     position: fixed;
     display: flex;
     width: 100%;
@@ -43,6 +44,17 @@ header div:hover {
 }
 
 /* --------- side menu --------- */
+
+side_orb {
+    position: fixed;
+    width: 6rem;
+    height: 6rem;
+    left: -6rem;
+    border-radius: 50%;
+    background-color: #404040;
+    cursor: pointer;
+    transition: left 0.2s;
+}
 
 .side_menu_button {
     width: 15%;
