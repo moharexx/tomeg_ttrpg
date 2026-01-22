@@ -3,6 +3,10 @@ let body = null
 let header = null
 let main = null
 let side_menu = null
+let side_orb = null
+
+let side_bar_toggle = false
+let side_orb_toggle = false
 
 window.onload = function () {
     head = document.getElementsByTagName("head")[0]
@@ -10,6 +14,20 @@ window.onload = function () {
     header = document.getElementsByTagName("header")[0]
     main = document.getElementsByTagName("main")[0]
     side_menu = document.getElementById("side_menu")
+    side_orb = document.getElementById("side_orb")
+
+    document.addEventListener("mousemove", (event) => {
+        if (event.x <= 100 && side_bar_toggle == false) {
+            if (side_bar_toggle == false) {
+                side_orb_toggle = true
+                side_orb.style.left = "-2rem"
+            }
+            side_orb.style.top = "calc(" + event.y + "px - 3rem)"
+        } else {
+            side_orb_toggle = false
+            side_orb.style.left = "-6rem"
+        }
+    })
 
     for (const child of main.children) {
         if (child.tagName == "H1") {
@@ -44,17 +62,22 @@ window.onload = function () {
     }
 }
 
-let side_bar_toggle = false
-let gear_button_onclick = function () {
-    if (side_bar_toggle == false) {
-        side_bar_toggle = true
-        side_menu.classList.add("side_menu_active")
-        main.classList.add("main_side_menu_active")
-    } else {
-        side_bar_toggle = false
-        side_menu.classList.remove("side_menu_active")
-        main.classList.remove("main_side_menu_active")
-    }
+let side_bar_on = function () {
+    side_bar_toggle = true
+    side_menu.classList.add("side_menu_active")
+    main.classList.add("main_side_menu_active")
+}
+let side_bar_off = function () {
+    side_bar_toggle = false
+    side_menu.classList.remove("side_menu_active")
+    main.classList.remove("main_side_menu_active")
+}
+let side_bar_func = function (val) {
+    if (val == true || val == false) {
+        if (val == true && side_bar_toggle == false) side_bar_on()
+        else if (val == false && side_bar_toggle == true) side_bar_off()
+    } else if (side_bar_toggle == false) side_bar_on()
+    else side_bar_off()
 }
 
 let go_to = function (page) {

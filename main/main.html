@@ -10,14 +10,15 @@
 
 <body>
     <header>
-        <div onclick="gear_button_onclick()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
+        <div onclick="side_bar_func()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
         <div onclick="go_to('main/main.html')">Main Page</div>
         <div onclick="go_to('main/mechanics.html')">Mechanics</div>
         <div onclick="go_to('main/abilities.html')">Abilities</div>
         <div onclick="go_to('main/extra.html')">Extra</div>
     </header>
+    <side_orb id="side_orb" onclick="side_bar_func(true)"></side_orb>
     <side_menu id="side_menu"></side_menu>
-    <main>
+    <main onclick="side_bar_func(false)">
         <h1 id="tömegpokalipszis" style="visibility: hidden; font-size: 0; padding: 0; margin: 0; line-height: 0;">TÖMEGPOKALIPSZIS</h1>
         <p style="text-align: center; font-size: 120px; font-weight: 900; padding: 60px 0px 0px 0px; margin: 0px 0px 0px 0px;">- 𝔸 -</p>
         <p style="text-align: center; font-size: 50px; font-weight: 900; padding: 0px 0px 20px 0px; margin: 0px 0px 0px 0px; font-family: 'Times New Roman', Times, serif;">T Ö M E G P O K A L I P S Z I S</p>
