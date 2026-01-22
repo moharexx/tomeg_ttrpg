@@ -13,7 +13,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Psychic  Damage",
+        "Psychic Damage",
         "Main-Action",
     ],
     unlock_cost: 10,
@@ -22,8 +22,8 @@ module.exports = {
             type: "p",
             content: [
                 "You imbue your Melee Attack with Ghostly Energy.",
-                "On a Hit you deal additional <box>(1d6 × ESS) Psychic</box> Damage and become Transparent until the End of Your Next Turn.",
-                "While being Transparent, Perception based on Sense cannot Pinpoint the You, unless Passive Perception is at least <box>10 × ESS</box>",
+                "On a Hit you deal additional <box>(1d8 × ESS) Psychic</box> Damage and become Transparent until the End of Your Next Turn.",
+                "While being Transparent, you cannot be Pinpoint by any Sense, unless Perception Check is at least <box>10 × ESS</box>",
             ],
         },
     ],
@@ -36,7 +36,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Special Condition", "Melee"],
-                ["Damage", "(1d6 × ESS) Psychic "],
+                ["Damage", "(1d8 × ESS) Psychic "],
             ],
         },
     ],

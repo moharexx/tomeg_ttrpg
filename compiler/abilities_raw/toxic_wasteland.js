@@ -51,7 +51,7 @@ module.exports = {
                 ["Stance Trigger", "Continuous"],
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
-                ["VIT Save", "8 × ESS"],
+                ["VIT Save", "10 × ESS"],
                 ["Damage", "(2d6 × ESS) Bio"],
             ],
         },

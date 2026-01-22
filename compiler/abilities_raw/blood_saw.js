@@ -61,7 +61,7 @@ module.exports = {
                 ["Ability Cost", "(10 REST-HP) × ESS"],
                 ["Rectangle Length and Height", "ESS^(1/3)"],
                 ["Rectangle Width", "3 × ESS^(1/3)"],
-                ["Damage", "(2d8 × ESS) Physical"],
+                ["Damage", "(2d6 × ESS) Physical"],
             ],
         },
     ],

@@ -21,7 +21,7 @@ module.exports = {
             type: "p",
             content: [
                 `When using this Ability, you make a Melee Attacks against a Target.`,
-                `If the Target gets 0 or less HP from this Attack, the Target must make a <b>VIT Save</b> of <box>10 × ESS</box> or get the <a href="../main/mechanics.html#conditions" target="_blank">Unconscious Condition</a>.`,
+                `If the Target gets 0 or less HP from this Attack, the Target must make a <b>VIT Save</b> of <box>14 × ESS</box> or get the <a href="../main/mechanics.html#conditions" target="_blank">Unconscious Condition</a>.`,
                 `The Unconscious Condition lasts until the End of a <a href="../main/mechanics.html#resting" target="_blank">Short-Rest</a>.`,
                 `This Ability has <a href="../main/mechanics.html#executing" target="_blank">Executing.</a>`,
             ],
@@ -36,6 +36,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action + Bonus-Action"],
                 ["Ability Cost", "5 GRIT × ESS"],
+                ["VIT Save", "14 × ESS"],
                 ["Damage", "(1d12 × ESS) Weapon Damage"],
             ],
         },

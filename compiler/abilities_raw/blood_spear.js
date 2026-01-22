@@ -23,15 +23,15 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, fire a Spear made of Blood, in a straight Line.",
-                "This is a Flow Line AOE Ranged Attack, flowing out from the Caster.",
+                `When used, fire a Spear made of Blood, in a straight Line.`,
+                `This is a Flow Line AOE Ranged Attack, flowing out from the Caster.`,
                 `This Ability has <a href="../main/mechanics.html#executing" target="_blank">Executing.</a>`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Soaked Effect:</b>",
+                `<b>Soaked Effect:</b>`,
                 `On a Hit, the Target gets Soaked with "water".`,
                 `This Effect Ends after the Entity uses a <b>Main-Action + Bonus-Action</b> to remove it.`,
             ],
@@ -48,7 +48,7 @@ module.exports = {
                 ["Ability Cost", "(10 REST-HP) × ESS"],
                 ["Line Length", "6 × (STR | CS)^(1/3)"],
                 ["Line Width", "(STR | CS)^(1/3) / 2"],
-                ["Damage", "(2d8 × ESS) Physical"],
+                ["Damage", "(2d6 × ESS) Physical"],
             ],
         },
     ],

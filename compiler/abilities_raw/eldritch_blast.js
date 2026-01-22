@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense, Unlock",
-        "Demat Damage, Projectile",
+        "Ranged, Demat Damage, Projectile",
         "Main-Action",
     ],
     unlock_cost: 10,
@@ -43,7 +43,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                "<b>Piercing Blast</b> (50 Abjuration, 10 XP):",
+                "<b>Piercing Blast</b> (20 Abjuration, 5 XP):",
                 "The Spell has <box>(10 × ESS) Demat-Pen</box>",
                 "This makes this spells Cast Time bigger by a Bonus-Action.",
             ],
