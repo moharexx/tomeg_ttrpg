@@ -35,12 +35,12 @@
             20 (4 × 2 + 12)
         </p>
         <p>
-            <box><span style="color: green;">(<span style="color: red;">(d10 Base Value × <span style="color: blue;">Max(1, Modifier / 5)</span>)</span> + Modifier + Bonus)</span> × (Advantage|Disadvantage) + Finalized Bonus</box>
+            <box><span style="color: green;">(<span style="color: red;">(d10 Base Value × <span style="color: blue;">Max(1, Modifier / 5)</span>)</span> + Modifier + Bonus)</span> × (Advantage|Disadvantage)</box>
         </p>
         <h2 id="criticals">Criticals</h2>
         <hr>
         <p>
-            There is a Stat called CRIT Range, by default this is equal to 1.<br>
+            There is a Stat called <b>CRIT Range</b>, by default this is equal to 1.<br>
             When Rolling a d10 Check, if the Natural Value is atleast <box>11 - CRIT Range</box> then the Check is a CRIT.<br>
             <b>A CRIT Results in:</b> 2× Damage, 2× Healing, 2× Shielding, 2× BUFFER<br>
         </p>
@@ -426,7 +426,7 @@
         <ul>
             <li><a href="./../assets/character_sheet.pdf" target="_blank">Character Sheet</a></li>
             <li><a href="./../extra/character_assembler.html" target="_blank">Character Assembler</a></li>
-            <li><a href="./../assets/mob_sheet.pdf" target="_blank">Mob Sheet</a></li>
+            <li><a href="./../assets/mob_sheet.pdf" target="_blank">Mob Sheet (WIP)</a></li>
         </ul>
         <h2 id="experience">Experience</h2>
         <hr>
@@ -718,10 +718,10 @@
             </p>
             <p>
                 By default the Attack-Action costs a <b>Main-Action.</b><br>
-                It costs a <b>Bonus-Action</b> if the Weapon is Light, or you're <a href="#wielding">Dual Wielding.</a><br>
+                It costs a <b>Bonus-Action</b> if the Weapon is Light, or if you're <a href="#wielding">Dual Wielding.</a><br>
             </p>
             <p>
-                The Modifier of this Attack is equal to the used Mastery's <b>Modifier.</b><br>
+                The Modifier of this Attack is equal to the used <a href="#martial_masteries">Martial Mastery's Modifier</a>.<br>
                 For Melee Weapons use Melee Weapon Mastery, and for Ranged Weapons use Ballistic Mastery.<br>
                 Weapons with the Throw Property still use Melee Weapon Mastery when thrown.<br>
                 Natural Weapons can use Martial Arts Mastery in place of the relevant Mastery.<br>
@@ -732,14 +732,14 @@
             </p>
             <p>
                 Arms and legs count as One-Handed, Light, Natural Melee Weapons, with 1d4 Base Damage.<br>
-                The Tier of your Natural Weapons are <box>Total XP / 100</box>
+                The <b>Tier</b> of your Natural Weapons are <box>Total XP / 100</box>
             </p>
             <p>
                 When Dual Wielding you can choose to Attack with the same Weapon multiple times, rather than alternating.<br>
-                When Dual Wielding your Natural Weapons can be considered as Weapons, but Shields cannot!
+                For Dual Wielding your Natural Weapons can be considered as a Weapon! But Shields cannot!
             </p>
             <p>
-                The Attack-Action Counts as a Skill Type Ability, with the <b>Offense</b> and <b>Weapon Damage</b> Tags.<br>
+                The Attack-Action counts as a <b>Skill Type Ability</b>, with the <b>Offense</b> and <b>Weapon Damage</b> Tags.<br>
                 Attack-Action is Casted at ESS equal to the Weapon's Tier for the purpose of Abilities.
             </p>
         </div>
@@ -757,7 +757,7 @@
                 <li>Make AGI Saves with Advantage.</li>
             </ul>
             <p>
-                The Defense-Action Counts as a Skill Type Ability, with the <b>Defense</b> and <b>Negation</b> Tags.
+                The Defense-Action counts as a <b>Skill Type Ability</b>, with the <b>Defense</b> and <b>Negation</b> Tags.
             </p>
         </div>
         <h2 id="take_cover" class="collapsible">Take Cover</h2>
@@ -802,7 +802,7 @@
                 When taking Damage you make a STR Save VS Damage Taken, on a Fail you Fail Climbing as usual.
             </p>
             <p>
-                The Surface must be in Natural Melee Weapon Reach.<br>
+                The Surface must be in Natural Melee Reach.<br>
                 Movement not from the Move-Action Stops the Climb.<br>
                 If you have Staggered, Dazed, or Stunned, then make the Climb Check with <b>Disadvantage.</b><br>
                 The <a href="../abilities/olympic_athlete.html">Olympic Athlete</a> Ability enhances your Climbing abilities.
@@ -919,7 +919,7 @@
                 The Target may Attempt the Save again as a Bonus-Action.
             </p>
             <p>
-                Grapple Counts as a Skill Type Ability, with the <b>Offense</b> and <b>Crowd Control</b> Tag.<br>
+                Grapple counts as a <b>Skill Type Ability</b>, with the <b>Offense</b> and <b>Crowd Control</b> Tag.<br>
                 Grapple is Casted at ESS equal to <box>Modifier / 10</box>, to a Min of 1, for the purpose of Abilities.
             </p>
         </div>
@@ -933,7 +933,7 @@
                 <b>Max Knock Back Distance:</b> <box>STR^(1/3)</box>
             </p>
             <p>
-                Shove Counts as a Skill Type Ability, with the <b>Offense</b> and <b>Crowd Control</b> Tag.<br>
+                Shove counts as a <b>Skill Type Ability</b>, with the <b>Offense</b> and <b>Crowd Control</b> Tag.<br>
                 Shove is Casted at ESS equal to <box>Modifier / 10</box>, to a Min of 1, for the purpose of Abilities.
             </p>
         </div>
@@ -1977,19 +1977,19 @@
             BUFFERs cannot Stack, the Target chooses between sources of BUFFER.<br>
             If Duration isn't written, a BUFFER lasts till End of Next Long-Rest.
         </p>
-        <h2 id="max_value">Max Value</h2>
+        <h2 id="maximized_and_minimized_values">Maximized And Minimized Values</h2>
         <hr>
         <p>
-            If an amount that should be thrown with Dice has Max on it, it will automatically become the largest value it could achieve.<br>
+            If an amount that should be thrown with Dice is <b>Maximized</b>, then treat it as if it rolled the highest value it could have.<br>
             Some things might me <b>Minimized</b>, this is the opposite, treat as if you rolled the lowest.<br>
-            Maximalizing and Minimizing To-Hit does NOT change it's CRIT state, only the To-Hit!
+            Maximizing and Minimizing To-Hit does NOT change its CRIT state, only the To-Hit!
         </p>
         <h2 id="executing">Executing</h2>
         <hr>
         <p>
-            Executing Damage is Damage that will become Max Damage, only if <box>Target HP ≤ Damage</box><br>
-            If Damage is a Type which goes into SP then it Max Damage, only if <box>Target SP ≤ Damage</box><br>
-            If the Damage goes into both HP and SP then if one of the conditions are met the other part is also Maximalized.
+            Executing Damage is Damage which is Maximized, but only if <box>Target HP ≤ Damage</box><br>
+            If the Damage is SP, then <box>Target SP ≤ Damage</box><br>
+            If the Damage is Hybrid (HP and SP), then if one of the conditions are met the other part is also Maximized.
         </p>
         <h2 id="potency">Potency</h2>
         <hr>
