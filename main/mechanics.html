@@ -139,7 +139,7 @@
         </table>
         <p>
             0 STR will stop all bodily movement, even internal, the Entity is <a href="#conditions">Paralyzed</a>.<br>
-            At 0 STR an Entity which needs air or blood flow will begin <a href="#underwater_rules">Suffocating</a>.
+            If an Entity needs air or blood flow it will begin <a href="#underwater_rules">Suffocating</a>.
         </p>
         <p>
             0 AGI means the Entity is <a href="#conditions">Paralyzed</a>.
@@ -521,8 +521,7 @@
             After a Minute (20 Rounds) of not Spending HD, it's gained back.<br>
         </p>
         <p>
-            If Maximum HD of an Entity increases, it's Current HD does NOT increase with it.<br>
-            If the Maximum HD decreases below Current HD, the Current HD decreases with it.
+            An increase in Maximum HD does NOT effect Current HD!<br>
         </p>
         <h2 id="soul_points">Soul-Points</h2>
         <hr>
@@ -669,7 +668,7 @@
         <div class="collapsed">
             <p>
                 As a <b>Free-Action</b> an Entity can Start Sprinting.<br>
-                When doing so it will be count as Sprinting till the Start of it's Next Turn.<br>
+                When doing so it will be count as Sprinting till the Start of its Next Turn.<br>
                 Using the Move-Action while Sprinting covers Double the distance.<br>
                 Attacks are made with <b>Advantage</b> against Sprinting Targets.
             </p>
@@ -736,7 +735,7 @@
             </p>
             <p>
                 When Dual Wielding you can choose to Attack with the same Weapon multiple times, rather than alternating.<br>
-                For Dual Wielding your Natural Weapons can be considered as a Weapon! But Shields cannot!
+                For Dual Wielding your Natural Weapons can be considered as Weapons!
             </p>
             <p>
                 The Attack-Action counts as a <b>Skill Type Ability</b>, with the <b>Offense</b> and <b>Weapon Damage</b> Tags.<br>
@@ -986,7 +985,7 @@
                 If you Fail a Non-Passive Recall Knowledge Check, you cannot repeat it until a Long-Rest.
             </p>
             <p>
-                <b>Example:</b> You know you will be fighting a Cosmic Monolith soon, so you try to remember what it does, it's weaknesses, and strengths.<br>
+                <b>Example:</b> You know you will be fighting a Cosmic Monolith soon, so you try to remember what it does, its weaknesses, and strengths.<br>
                 It has Difficulties of Arcana 15, Science 50, Lore 10. You roll a 4, after calculations that's a 18 in Arcana, 12 in Science, and 9 in Lore.<br>
                 You get to know everything the Arcana part of the check gives, like how they work, that it has a forcefield, but weak to water.<br>
                 You cannot repeat the Recall Knowledge to know about Cosmic Monolith's again, until you Long-Rest, but could to Prismatic Monoliths.<br>
@@ -1193,8 +1192,8 @@
             </p>
             <p>
                 <b>Example:</b> You enter the Parry Stance, you use a Passive Feint as a Free-Action to hide that you're in a Stance.<br>
-                The bandit, with it's Passive Scan cannot determine that you're in a Stance, but so happens to use Scan Entity on you.<br>
-                The Checks result is equal to your Passive Feint, he determines that you're in a Stance, and it's Parry.
+                The bandit, with its Passive Scan cannot determine that you're in a Stance, but so happens to use Scan Entity on you.<br>
+                The Checks result is equal to your Passive Feint, he determines that you're in Parry Stance.
             </p>
         </div>
         <h2 id="intimidate" class="collapsible">Intimidate</h2>
@@ -1279,16 +1278,15 @@
                 Each Entity has 2 Wielding Slots, even if they have more limbs.<br>
                 One-Handed Weapons and Shields take 1 Wielding Slot.<br>
                 Two-Handed and Solo-Wielded Weapons take 2 Wielding Slots.<br>
-                Natural Weapons must also be Wielded, and thus take up a Wielding Slot to be used.<br>
-                Some Magical Items only apply their effects when Wielded.<br>
+                To use a Natural Weapon (like your fists), it must be Wielded first, like any other Weapon.<br>
                 Free limbs can still Hold things which can be used without Active Wielding, like Potions and Scrolls.<br>
-                When taking the <a href="#switch_weapon">Switch Weapon Action</a> you can change what you are Wielding and Holding.
+                When taking the <a href="#switch_action">Switch-Action</a> you can change what you are Wielding and Holding.
             </p>
             <p>
                 Dual Wielding is when you're Wielding 2 Weapons.<br>
                 The <a href="#attack_action">Attack-Action</a> becomes a <b>Bonus-Action</b> when Dual Wielding.<br>
                 When Dual Wielding you can choose to Attack with the same Weapon multiple times, rather than alternating.<br>
-                For Dual Wielding your Natural Weapons can be considered as Weapons, but Shields cannot.
+                For Dual Wielding your Natural Weapons can be considered as Weapons!
             </p>
         </div>
         <h2 id="effects" class="collapsible">Effects</h2>
@@ -1662,9 +1660,8 @@
         <hr>
         <p>
             Shields have Max 6 Property Points.<br>
-            Shields are counted as Melee Weapons, with a Base Damage of 1d4<br>
-            Shields are NOT counted as a Melee Weapon for Dual Wielding.<br>
             You can only benifit from one Shield at a time.<br>
+            When using the <a href="#defense-action">Defense-Action</a> with a Shield, and the Shield gets Un-Wielded, you lose the Defense-Action.<br>
             <b>Price of Shields:</b> <box>5C × Property Points</box>
         </p>
         <table width="80%">
@@ -1697,7 +1694,6 @@
                 <td>2</td>
                 <td>
                     You can take the Defense-Action with a Bonus-Action.<br>
-                    When you use this Property, and Un-Wield the Shield, the Defense-Action is also lost.<br>
                     <b>Light Shields Only!</b>
                 </td>
             </tr>
@@ -1706,7 +1702,6 @@
                 <td>2</td>
                 <td>
                     You can take the Defense-Action by using a Main-Action and converting it into a Bonus-Action.<br>
-                    When you use this Property, and Un-Wield the Shield, the Defense-Action is also lost.<br>
                     <b>Light Shields Only!</b>
                 </td>
             </tr>
@@ -1858,15 +1853,14 @@
         <h2 id="cold_damage">Cold</h2>
         <hr>
         <p>
-            Cold based Attacks sap away energy to deal Damage, at higher levels this energy sap should be understood as
-            more than just heat sap.<br>
-            Attacks made with Cold usually have special interaction with <b>Soaked</b> Targets.
+            Cold based Attacks sap away energy (usually in the form of heat) to deal Damage.<br>
+            Attacks made with Cold often have special interaction to <b>Soaked</b> Targets.
         </p>
         <h2 id="bio_damage">Bio</h2>
         <hr>
         <p>
-            Bio Damage manifests itself as disturbance in inner workings, at higher levels this disturbance can be more than just biological.<br>
-            Things which are connected to living but aren't (wood, paper, nails, Undead Creature, ect...) have 100 Bio-RES.<br>
+            Bio Damage manifests itself as disturbance of inner workings, at higher levels this disturbance can be more than just biological.<br>
+            Things which are connected to living but aren't (wood, paper, nails, Undead Creatures, ect...) have 100 Bio-RES.<br>
             Non-Biological things (Plastic, Rock, Steel, ect...) have 1000 Bio-RES.
         </p>
         <h2 id="demat_damage">Demat</h2>
@@ -1883,7 +1877,7 @@
         <h2 id="thunder_damage">Thunder</h2>
         <hr>
         <p>
-            Thunder based Attacks will invoke sounds, vibrations, pressure waves to deal it's Damage.<br>
+            Thunder based Attacks will invoke sounds, vibrations, pressure waves to deal its Damage.<br>
             Brittle things will usually have some kind of weakness to Thunder, like taking <b>Max-Damage</b>, or Double
             Damage.
         </p>
@@ -1994,7 +1988,7 @@
         <h2 id="potency">Potency</h2>
         <hr>
         <p>
-            For each point of Potency, an Ability will increase in a Single one of it's Linearly Scaling Ability Stats.<br>
+            For each point of Potency, an Ability will increase in a Single one of its Linearly Scaling Ability Stats.<br>
             Potency will fade away on any still ongoing Ability after a Minute! (20 Rounds)<br>
             <b>Examples:</b> Damage, Healing, Shielding, SP, HD, BUFFER, REST-HP, ect...<br>
             <b>Exceptions:</b> Range, Size, Item Tier
@@ -2008,7 +2002,7 @@
             AOEs are Attacks which effect an area.<br>
             Everything within the Area is counted as Target.<br>
             <b>Examples:</b> Sphere, <b>*Cone</b>, Line, Cylinder, Cube, ect...<br>
-            <b>*Cone</b> is not a real cone, it's a <a target="_blank" href="https://en.wikipedia.org/wiki/Spherical_sector">Sphere Sector</a>, with it's <b>Spread, or Width</b> being the side to side Angle of it.<br>
+            <b>*Cone</b> is not a real cone, it's a <a target="_blank" href="https://en.wikipedia.org/wiki/Spherical_sector">Sphere Sector</a>, with its <b>Spread, or Width</b> being the side to side Angle of it.<br>
             <b>Note:</b> Lines, Cylinders, and Disks are technically the same shape.
         </p>
         <p>
@@ -2017,11 +2011,11 @@
             Flowing AOEs have a flow.<br>
             A Flowing Sphere AOE will usually have a single point which it expands from, for Example: Fireball.<br>
             A Flowing Line or Cylinder AOE will usually have a single point or plane which it flows from, for Example: Steel Tempest.<br>
-            Crawling AOEs abide by all the Rules of Flowing AOEs, but it can Change Flow Direction to fill it's designated AOE.
+            Crawling AOEs abide by all the Rules of Flowing AOEs, but it can Change Flow Direction to fill its designated AOE.
         </p>
         <p>
             An AOE's center can be the Center of a Hexa or Square, or optionally even the Corner.<br>
-            It's up to GM's choice.<br>
+            It's up to the GM's choice.<br>
             <b>Note:</b> AOEs which start from an Entity, always Start from their middle.
         </p>
         <p>
