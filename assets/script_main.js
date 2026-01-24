@@ -17,7 +17,7 @@ window.onload = function () {
     side_orb = document.getElementById("side_orb")
 
     document.addEventListener("mousemove", (event) => {
-        if (event.x <= 100 && side_bar_toggle == false) {
+        if (event.x <= 100 && side_bar_toggle == false && document.body.clientWidth > 1600) {
             if (side_bar_toggle == false) {
                 side_orb_toggle = true
                 side_orb.style.left = "-2rem"
