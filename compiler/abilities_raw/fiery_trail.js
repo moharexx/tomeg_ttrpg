@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Fiery Trail",
+    name: "Fiery Trail (unfinished)",
     category: "on_attack",
     type: [
         "Skill",

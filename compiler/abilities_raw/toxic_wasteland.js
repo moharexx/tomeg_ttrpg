@@ -20,7 +20,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Within Range, in a choosen Sphere secrade light starts to emanate.`,
+                `Within Range, in a choosen Sphere noxious gas appear which rots Entities.`,
                 `When using this Ability, you are put in <b>Toxic Wasteland Stance</b>.`,
                 `When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
             ],

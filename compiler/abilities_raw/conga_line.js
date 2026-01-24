@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Conga Line",
+    name: "Conga Line (unfinished)",
     category: "stance",
     type: [
         "Spell",
