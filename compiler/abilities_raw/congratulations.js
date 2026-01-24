@@ -5,13 +5,13 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "5 Enchantment | 10 Anima | 20 Evocation",
+        "10 CS, (5 Enchantment | 10 Anima | 20 Evocation)",
     ],
     reqs_full: [
-        "<b>Spell:</b> (50 INT | 20 WILL | 10 EGO), (5 Enchantment | 10 Anima | 20 Evocation)",
+        "<b>Spell:</b> 10 CS, (5 Enchantment | 10 Anima | 20 Evocation)",
     ],
     tags: [
-        "Utility",
+        "Utility, Cooldown",
         "Targeting, Buff",
         "Main-Action | Bonus-Action",
     ],
@@ -20,14 +20,15 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You cheer on, with your inspiration, your Pinpointed Target gains an extra action.",
-                "When used, the Target will gain the Action you used to Cast this Spell on their Next Turn.",
+                `You cheer on, with your inspiration, your Pinpointed Target gains an extra action.`,
+                `When used, the Target will gain the Action you used to Cast this Spell on their Next Turn.`,
+                `You can NOT Target Yourself with this Ability.`,
             ],
         },
         {
             type: "dots",
             content: [
-                "If the Target has more that <box>200 × ESS Total XP</box> this Ability Fails.",
+                `If the Target has more that <box>200 × ESS Total XP</box> this Ability Fails.`,
                 `Each point of <a href="../main/mechanics.html#potency">Potency</a> adds <box>+50 Total XP</box> to the Threshold above.`,
             ]
         },

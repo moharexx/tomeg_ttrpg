@@ -5,14 +5,14 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "5 Enchantment | 10 Anima | 20 Evocation",
+        "10 CS, (5 Enchantment | 10 Anima | 20 Evocation)",
     ],
     reqs_full: [
-        "<b>Spell:</b> (10 INT | 10 WILL | 10 EGO), (5 Enchantment | 10 Anima | 20 Evocation)",
+        "<b>Spell:</b> 10 CS, (5 Enchantment | 10 Anima | 20 Evocation)",
     ],
     tags: [
         "Utility",
-        "Buff, Targeting",
+        "Ranged, Buff",
         "Main-Action / Continuous",
     ],
     unlock_cost: 10,
@@ -20,29 +20,29 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you are put in <b>Bless Stance.</b>",
-                "When Entering <b>Bless Stance</b>, you have a Pool of Blessing, and choose One Type of Blessing to give to the Targets.",
-                "At Cast you Bless Sensed Targets, but Spend no more than <box>3 × ESS</box> from the Pool on a single Target.",
+                `When used, you are put in <b>Bless Stance</b>.`,
+                `When Entering <b>Bless Stance</b>, you have a Pool of Blessing, and choose One Type of Blessing to give to the Targets.`,
+                `At Cast you Bless Sensed Targets, but Spend no more than <box>2 × ESS</box> from the Pool on a single Target.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Blessing of Mastery:</b>",
-                "For each Point of Blessing the Target has a Bonus of 1 for Attacks and Mastery-Checks.",
+                `<b>Blessing of Mastery:</b>`,
+                `For each Point of Blessing the Target has a Bonus of 2 on Attacks and Mastery-Checks.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Blessing of Power:</b>",
-                "For each Point of Blessing all Damage Instances from the Target are Increased by 1.",
+                `<b>Blessing of Power:</b>`,
+                `For each Point of Blessing all Damage Instances from the Target are Increased by 1.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Stance Breaks when: <box>Moving | HD Decrease</box>",
+                `The Stance Breaks when: <box>Moving, HD Decrease</box>`,
             ],
         },
     ],
@@ -57,7 +57,7 @@ module.exports = {
                 ["Stance Trigger", "None"],
                 ["Range", "10 × CS^(1/3)"],
                 ["Bless Pool", "6 × ESS"],
-                ["Max Blessing to Target", "3 × ESS"],
+                ["Max Blessing to Target", "2 × ESS"],
             ],
         },
     ],
