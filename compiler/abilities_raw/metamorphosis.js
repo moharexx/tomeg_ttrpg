@@ -14,7 +14,7 @@ module.exports = {
         "Change +",
         "Action Cost + | Fate Cost +",
     ],
-    unlock_cost: 0,
+    unlock_cost: 200,
     description: [
         {
             type: "p",
