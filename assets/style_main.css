@@ -347,13 +347,6 @@ box {
         width: 5rem;
     }
 
-    side_menu {
-        transform: translate(-50rem, 0);
-        top: 6rem;
-        height: calc(100% - 8rem);
-        width: 50rem;
-    }
-
     side_menu>h1 {
         font-size: 3rem;
         line-height: 5rem;
