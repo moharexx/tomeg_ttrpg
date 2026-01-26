@@ -52,9 +52,9 @@ header div:hover {
 
 side_orb {
     position: fixed;
-    width: 6rem;
-    height: 6rem;
-    left: -6rem;
+    width: 5rem;
+    height: 5rem;
+    left: -5rem;
     border-radius: 50%;
     background-color: #404040;
     cursor: pointer;
@@ -82,14 +82,14 @@ side_orb {
 
 side_menu {
     transition: all 0.2s;
-    transform: translate(-18rem, 0);
+    transform: translate(-24rem, 0);
     overflow-y: scroll;
     position: fixed;
     top: 4rem;
     height: calc(100% - 6rem);
     color: #f0f0f0;
     background-color: #404040;
-    width: 18rem;
+    width: 24rem;
     padding-bottom: 2rem;
 }
 
@@ -127,13 +127,8 @@ side_menu>h2:hover {
     border-left: #202020 1rem solid;
 }
 
-.side_menu_active {
+side_menu.side_menu_active {
     transform: translate(0, 0);
-}
-
-.main_side_menu_active {
-    width: calc(100% - 20rem);
-    margin-left: 18rem;
 }
 
 /* --------- main --------- */
@@ -227,7 +222,7 @@ ul {
 /* --------- input, textarea --------- */
 
 input[type=button] {
-    font-family: "Source Code Pro", Unicode;
+    font-family: "Source Code Pro";
     font-size: 1.2rem;
     font-weight: 700;
     background-color: wheat;
@@ -239,13 +234,13 @@ input[type=button]:hover {
 }
 
 input[type=text] {
-    font-family: "Source Code Pro", Unicode;
+    font-family: "Source Code Pro";
     font-size: 1rem;
     font-weight: 600;
 }
 
 textarea {
-    font-family: "Source Code Pro", Unicode;
+    font-family: "Source Code Pro";
     font-size: 1rem;
     font-weight: 600;
     background-color: rgb(250, 250, 250);
@@ -287,8 +282,8 @@ box {
 
 @media only screen and (max-width: 1600px) { /* SMALL MONITOR */
     main {
-        width: calc(100% - 2rem);
-        margin-left: 0;
+        width: calc(100% - 2rem - 60px);
+        margin-left: 60px;
     }
 }
 
@@ -298,6 +293,8 @@ box {
         padding-top: 2rem;
     }
     main {
+        width: calc(100% - 2rem);
+        margin-left: 0;
         font-size: 1.4rem;
     }
     h1 {
@@ -355,7 +352,6 @@ box {
         top: 6rem;
         height: calc(100% - 8rem);
         width: 50rem;
-        padding-bottom: 20rem;
     }
 
     side_menu>h1 {
@@ -374,11 +370,5 @@ box {
     }
     side_menu>h2:hover {
         border-left: #202020 2rem solid;
-    }
-
-    .main_side_menu_active {
-        width: calc(100% - 2rem);
-        margin-left: 0rem;
-        margin-right: 0rem;
     }
 }

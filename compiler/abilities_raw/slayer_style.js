@@ -5,14 +5,14 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "STR, WILL",
+        "20 STR, 20 WILL",
     ],
     reqs_full: [
-        "20 STR, 20 WILL",
+        "<b>Skill:</b> 20 STR, 20 WILL",
     ],
     tags: [
         "Offense, Style",
-        "Variable Damage",
+        "Melee, Ranged",
     ],
     unlock_cost: 20,
     description: [
@@ -20,10 +20,8 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Entering And Leaving the Fighting Style:</b>`,
-                `As a Free-Action, you can commit to Entering the Fighting Style.`,
-                `This means at the Start of Your Next Turn you will Enter the Fighting Style.`,
-                `As a Free-Action, you can commit to Leaving the Fighting Style.`,
-                `This means at the Start of Your Next Turn you will Leave the Fighting Style.`,
+                `Once per Turn, as a Free-Action, you can commit to <box>Entering | Leaving</box> this Fighting Style.`,
+                `This means you <box>Enter | Leave</box> the Fighting Style at the Start of Your Next Turn.`,
             ],
         },
         {

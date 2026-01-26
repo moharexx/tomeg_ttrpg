@@ -17,15 +17,15 @@ window.onload = function () {
     side_orb = document.getElementById("side_orb")
 
     document.addEventListener("mousemove", (event) => {
-        if (event.x <= 100 && side_bar_toggle == false && document.body.clientWidth > 1600) {
+        if (event.x <= 60 && side_bar_toggle == false && document.body.clientWidth > 1200) {
             if (side_bar_toggle == false) {
                 side_orb_toggle = true
-                side_orb.style.left = "-2rem"
+                side_orb.style.left = "-2.5rem"
             }
-            side_orb.style.top = "calc(" + event.y + "px - 3rem)"
+            side_orb.style.top = "calc(" + event.y + "px - 2.5rem)"
         } else {
             side_orb_toggle = false
-            side_orb.style.left = "-6rem"
+            side_orb.style.left = "-5rem"
         }
     })
 
@@ -65,12 +65,10 @@ window.onload = function () {
 let side_bar_on = function () {
     side_bar_toggle = true
     side_menu.classList.add("side_menu_active")
-    main.classList.add("main_side_menu_active")
 }
 let side_bar_off = function () {
     side_bar_toggle = false
     side_menu.classList.remove("side_menu_active")
-    main.classList.remove("main_side_menu_active")
 }
 let side_bar_func = function (val) {
     if (val == true || val == false) {

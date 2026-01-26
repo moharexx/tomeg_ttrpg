@@ -247,14 +247,6 @@
             If SP reaches 0, then the Entity's <b>Soul Saves are Halved</b>, and it's PROXY is treated as being 0.<br>
             When SP goes below <box>-(Max SP)</box> then the Entity's Soul is Destroyed.
         </p>
-        <p>
-            A Soul without a Body has 0 STR, 0 VIT, 0 AGI<br>
-            A Soul without a Body takes 2 × SP Damage.<br>
-            A Soul without a Body has 1/10 Effective ESS on Abilities.<br>
-            A Soul without a Body only use Spell Type Abilities.<br>
-            Bodyless Soul Max HD: Max SP<br>
-            Bodyless Soul MS: SP^(1/3)
-        </p>
 
         <!--MASTERIES-->
         <h1 id="masteries">MASTERIES</h1>
@@ -521,7 +513,7 @@
             After a Minute (20 Rounds) of not Spending HD, it's gained back.<br>
         </p>
         <p>
-            An increase in Maximum HD does NOT effect Current HD!<br>
+            An increase in Maximum HD does NOT affect Current HD!<br>
         </p>
         <h2 id="soul_points">Soul-Points</h2>
         <hr>
@@ -1429,6 +1421,18 @@
                 ???
             </p>
         </div>
+        <h2 id="souls" class="collapsible">Souls (WIP)</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                A Soul doesn't have HP, and thus cannot be harmed by HP damage.<br>
+                A Soul without a Body takes 2 × SP Damage.<br>
+                A Soul without a Body has 1/10 Effective ESS on all Abilities.<br>
+                A Soul without a Body can only use Spell Type Abilities.<br>
+                Soul Max HD: Max SP<br>
+                Soul MS: <box>2 × CS^(1/3)</box>
+            </p>
+        </div>
         <h2 id="death" class="collapsible">Death</h2>
         <hr>
         <div class="collapsed">
@@ -1497,7 +1501,7 @@
             Melee Weapons which are not Heavy are One-Handed.<br>
             <b>Price of Melee Weapons:</b> <box>5C × Property Points</box>
         </p>
-        <table width="80%">
+        <table width="90%">
             <tr>
                 <td width="15%">
                     Property
@@ -1581,7 +1585,7 @@
             Ranged Weapons are Two-Handed, unless Light, and use AGI instead of STR.<br>
             <b>Price of Ranged Weapons:</b> <box>5C × Property Points</box>
         </p>
-        <table width="80%">
+        <table width="90%">
             <tr>
                 <td width="15%">
                     Property
@@ -1664,7 +1668,7 @@
             When using the <a href="#defense-action">Defense-Action</a> with a Shield, and the Shield gets Un-Wielded, you lose the Defense-Action.<br>
             <b>Price of Shields:</b> <box>5C × Property Points</box>
         </p>
-        <table width="80%">
+        <table width="90%">
             <tr>
                 <td width="15%">
                     Property
@@ -1723,7 +1727,7 @@
             Armors have Max 6 Property Points.<br>
             <b>Price of Armors:</b> <box>20C × Property Points × Tier</box>
         </p>
-        <table width="80%">
+        <table width="90%">
             <tr>
                 <td width="15%">
                     Property
@@ -1810,30 +1814,6 @@
             </tr>
         </table>
 
-        <h1 id="entity_types">ENTITY TYPES</h1>
-        <hr>
-        <h2 id="construct">Construct</h2>
-        <hr>
-        <p>
-            Any Entity without a Soul.<br />
-            These Entities also have 0 WILL, 0 EGO, and 0 SP.
-        </p>
-        <h2 id="undead">Undead</h2>
-        <hr>
-        <p>
-            These Entities take Double Damage from Radiant, and Heals from Necrotic.<br />
-            These Entities have the Undying Ability Active at their Max ESS Cost all the time.
-        </p>
-        <h2 id="fiend">Fiend</h2>
-        <hr>
-        <p>
-            These Entities take Double Damage from Radiant.
-        </p>
-        <h2 id="celestial">Celestial</h2>
-        <hr>
-        <p>
-            These Entities take Double Damage from Necrotic, and Heals from Radiant.
-        </p>
         <h1 id="damage_types">DAMAGE TYPES</h1>
         <hr>
         <h2 id="physical_damage">Physical</h2>

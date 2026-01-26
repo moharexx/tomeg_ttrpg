@@ -5,10 +5,10 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "(Melee Weapon | Martial Arts), Acrobatics",
+        "(10 Melee Weapon | 10 Martial Arts), 10 Acrobatics",
     ],
     reqs_full: [
-        "(10 Melee Weapon | 10 Martial Arts), 10 Acrobatics",
+        "<b>Skill:</b> (10 Melee Weapon | 10 Martial Arts), 10 Acrobatics",
     ],
     tags: [
         "Offense, Defense, Utility, Style",
@@ -19,34 +19,17 @@ module.exports = {
         {
             type: "list",
             content: [
-                "<b>Entering And Leaving the Fighting Style:</b>",
-                "As a Free-Action, you can commit to Entering the Fighting Style.",
-                "This means at the Start of Your Next Turn you will Enter the Fighting Style.",
-                "As a Free-Action, you can commit to Leaving the Fighting Style.",
-                "This means at the Start of Your Next Turn you will Leave the Fighting Style.",
+                `<b>Entering And Leaving the Fighting Style:</b>`,
+                `Once per Turn, as a Free-Action, you can commit to <box>Entering | Leaving</box> this Fighting Style.`,
+                `This means you <box>Enter | Leave</box> the Fighting Style at the Start of Your Next Turn.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Spinning Style Pros:</b>",
-                "You gain +1 Bonus-Action.",
-            ],
-        },
-        {
-            type: "list",
-            content: [
-                "<b>Spinning Style Cons:</b>",
-                "All Main-Actions are Converted to Bonus-Actions.",
-            ],
-        },
-        {
-            type: "list",
-            content: [
-                "<b>Breaking Spinning Style:</b>",
-                "Each Round you must use an Action which you have used in the Round Before. (Movement-Action, Attack-Action, Specific Ability, ect...)",
-                "If the Round Ends and you have not used an Action which you have in the Round Before, the Fightning Style Breaks.",
-                `This means you Leave Spinning Style, and gain the <a href="../main/mechanics.html#conditions">Staggered Condition</a> till the End of Your Next Turn.`,
+                `<b>Spinning Style:</b>`,
+                `Rather than having a Main-Action and Bonus-Action, you have 3 Bonus-Actions.`,
+                `If something would make you lose a Main-Action, you lose a Bonus-Action instead.`,
             ],
         },
     ],
