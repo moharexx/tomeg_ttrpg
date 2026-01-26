@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Demat Damage, Projectile",
+        "Ranged, Demat Damage, Pen",
         "Main-Action",
     ],
     unlock_cost: 10,
@@ -34,7 +34,7 @@ module.exports = {
                 ["Cast Time", "Main-Action"],
                 ["Range", "10 / 20 × CS^(1/3)"],
                 ["Damage", "(2d6 × ESS) Demat"],
-                ["Demat-Pen", "6 × ESS"],
+                ["Demat-Pen", "10 × ESS"],
             ],
         },
     ],

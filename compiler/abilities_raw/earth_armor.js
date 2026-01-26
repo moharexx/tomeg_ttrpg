@@ -22,7 +22,7 @@ module.exports = {
             content: [
                 "When used, Cover yourself with Enhanced Earth, which Protects from Physical Attacks.",
                 "Unwilling Entities cannot be Targeted.",
-                "While the Armor is on, MS is Halved, but gain <box>(6 × ESS) Armor</box>, this protects from Physical Damage. (Slashing, Piercing, Bludgeoning)",
+                "While the Armor is on, MS is Halved, but gain <box>(6 × ESS) Armor VS HP</box>",
             ],
         },
         {
@@ -49,7 +49,7 @@ module.exports = {
                 ["Cast Time", "Main-Action"],
                 ["Range", "Touch"],
                 ["Duration", "1 Minute (20 Round)"],
-                ["Armor", "6 × ESS"],
+                ["Armor VS HP", "6 × ESS"],
                 ["Break Threshold", "20 × ESS"],
                 ["MS Divisor", "2"],
             ],
