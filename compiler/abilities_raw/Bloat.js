@@ -19,18 +19,20 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You Increase the AOE Size of a Parent Ability, but Decrease it's Effective ESS, and CS.",
-                "This is a Size Increase in all dimensions, so 2× Size is 8× Volume in 3 dimensions.",
-                "For the Purpose of Calculating the Size of the Ability use the ESS and CS values before applying this Meta-Ability.",
+                `You Increase the AOE Size of a Parent Ability, but Decrease it's Effective ESS, and CS.`,
+                `This is a Size Increase in all dimensions, so 2× Size is 8× Volume in 3 dimensions.`,
+                `For the Purpose of Calculating the Size of the Ability use the ESS and CS values before applying this Meta-Ability.`,
             ],
         },
         {
-            type: "list",
+            type: "table",
+            full_width: "40%",
+            width: ["40%", "60%"],
             content: [
-                "<b>AOE Size Multiplier to ESS and CS Division Table:</b>",
-                "×2 Size -> /2 ESS and CS",
-                "×3 Size -> /5 ESS and CS",
-                "×4 Size -> /10 ESS and CS",
+                ["Size Multiplier", "ESS and CS Divisor"],
+                ["2", "2"],
+                ["3", "3"],
+                ["4", "4"],
             ],
         },
         {
