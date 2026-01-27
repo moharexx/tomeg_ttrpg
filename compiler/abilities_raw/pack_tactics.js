@@ -12,16 +12,17 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Self, Parent Damage, Negation",
+        "Self, Variable Damage",
         "Bonus-Action / Continuous",
     ],
-    unlock_cost: 20,
+    unlock_cost: 5,
     description: [
         {
             type: "p",
             content: [
                 `When using this Ability, you are put in <b>Pack Tactics Stance</b>.`,
-                `While in <b>Pack Tactics Stance</b> for every other ally Entity in <b>Pack Tactics Stance</b>, you gain Bonus <box># × 1 × ESS</box> Damage on any initial Damage.`,
+                `While in <b>Pack Tactics Stance</b> every other ally in Range who is also in <b>Pack Tactics</b> gets an On-Hit Damage Bonus of <box>ESS</box>`,
+                `The Damage Bonus you can get is Capped at <box>4 × ESS</box>`,
             ],
         },
         {
@@ -38,10 +39,10 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Main-Action + Bonus-Action"],
+                ["Cast Time", "Bonus-Action"],
                 ["Stance Trigger", "None"],
-                ["Tactics Ragne", "5 × ESS^(1/3)"],
-                ["Bonus Damage", "(# × 1 × ESS) Parent"],
+                ["Tactics Range", "5 × ESS^(1/3)"],
+                ["Damage Bonus", "ESS"],
             ],
         },
     ],
