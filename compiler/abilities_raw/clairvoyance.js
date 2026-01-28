@@ -22,7 +22,13 @@ module.exports = {
             content: [
                 `Choose a Point, you create an invisible incorporeal Sensing object at that Point.`,
                 `Clairvoyance has the same Senses as you do.`,
-                `Clairvoyance can be Pinpointed with a Successful <b>Scan Area (Intuition | Perception)</b> of <box>CS</box>`,
+                `Clairvoyance can be Sensed and Pinpointed by Entities which can Sense Essence.`,
+                `With an <b>Intuition Check</b> of <box>10 × ESS</box> Targets will know that someone is watching.`,
+            ]
+        },
+        {
+            type: "p",
+            content: [
                 `As a Bonus-Action you can Move the Clairvoyance <box>4 × ESS^(1/3) meters</box>`,
                 `As a Bonus-Action you can refresh the Duration of Clairvoyance.`,
             ]
@@ -31,7 +37,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Distant Clairvoyance</b> (10 XP):`,
-                `Cast Clairvoyance for 1 Minute (20 Rounds) to increase the Spawn Range to <box>2000 × ESS^(1/3)</box>`,
+                `Cast Clairvoyance for 1 Minute (20 Rounds) to increase the Spawn Range to <box>1000 × ESS^(1/3)</box>`,
                 `When you Cast it this way you can specify a vague description to where Clairvoyance should Spawn.`,
                 `<b>Example:</b> "I want to see a busy street!" -> Spawns in a highly populated street.`,
                 `When there is nothing matching your description, Clairvoyance Fails.`,

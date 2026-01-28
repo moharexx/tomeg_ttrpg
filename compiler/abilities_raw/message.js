@@ -49,17 +49,17 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Channel</b> (10 Enchantment, 5 XP):`,
-                `Rather than sending a Message, you can send a Channel Invite, if accepted the Target joins a 2 way Channel.`,
+                `Along with the Message, you can also send a Channel Invite, if accepted the Target joins a Channel.`,
                 `The Channel's Duration is <box>1 Minute (20 Rounds)</box>, but can be refreshed using a <b>Bonus-Action.</b>`,
-                `Both parties can send Messages to each other through the Channel, even if one doesn't have Message Unlocked.`,
-                `Lifetime, Speed, and Size of Messages are determined by the Channel Caster's Stats, and it's Speed is <box>10×</box>`,
+                `All parties can send Messages to each other through the Channel, even if one doesn't have Message Unlocked.`,
+                `Lifetime, Speed, and Size of Messages are determined by the Channel Caster's Stats, and its Speed is <box>10×</box>`,
                 `Leaving the Channel is a Free-Action.`,
             ]
         },
         {
             type: "list",
             content: [
-                "<b>Unencoded Meaning</b> (20 Anima, 5 XP):",
+                "<b>Unencoded Meaning</b> (10 Anima, 5 XP):",
                 "The Target understand the Message as you meant it, this breaks any language barrier.",
                 "This also applies for <b>Network Packets</b>, you don't need to know the Network Protocols, if it exists you can use them.",
             ]
@@ -74,7 +74,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
                 ["Message Lifetime", "1 Minute (20 Rounds)"],
-                ["Message Speed", "10 × ESS^(1/3) m/s | 30 × ESS^(1/3) m/Round"],
+                ["Message Speed", "20 × ESS^(1/3) m/s | 60 × ESS^(1/3) m/Round"],
                 ["Message Size", "CS Words | 32 × CS bits"],
             ],
         },

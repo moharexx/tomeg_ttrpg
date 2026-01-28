@@ -38,11 +38,11 @@ module.exports = {
             type: "list",
             content: [
                 `<b>COMBO:</b>`,
-                `You can use this On-Attack on Dash Type Abilities, like <a href="flash_strike.html" target="_blank">Flash Strike</a>.`,
+                `You can use this On-Attack on Dashing Abilities, like <a href="flash_strike.html" target="_blank">Flash Strike</a>.`,
                 `When you do so, you make Illumina's Dash either before, or inbetween, or after the Parent Ability's Dash.`,
                 `When you choose inbetween, you split the Parent Ability's Dash in two, to inject Illuina's Dash inbetween.`,
                 `At every break point you can choose a new Direction for the continuation of the Dash.`,
-                `<b>Note:</b> Bonus Damage still applies to a Hit Target, but with <a href="../main/abilities.html#on_attack" target="_blank">On-Attacks' AOE rules</a>, only to 1 Target!`,
+                `<b>Note:</b> Bonus Damage still applies to a Hit Target, but with <a href="../main/abilities.html#ability_categories" target="_blank">On-Attacks' AOE rules</a>, only to 1 Target!`,
             ],
         },
     ],
