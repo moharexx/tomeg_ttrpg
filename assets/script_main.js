@@ -14,33 +14,40 @@ window.onload = function () {
     header = document.getElementsByTagName("header")[0]
     main = document.getElementsByTagName("main")[0]
     side_menu = document.getElementById("side_menu")
-    side_orb = document.getElementById("side_orb")
 
-    document.addEventListener("mousemove", (event) => {
-        if (event.x <= 60 && side_bar_toggle == false && document.body.clientWidth > 1200) {
-            if (side_bar_toggle == false) {
-                side_orb_toggle = true
-                side_orb.style.left = "-2.5rem"
-            }
-            side_orb.style.top = "calc(" + event.y + "px - 2.5rem)"
-        } else {
-            side_orb_toggle = false
-            side_orb.style.left = "-5rem"
-        }
-    })
+    if (side_menu) {
+        side_orb = document.getElementById("side_orb")
 
-    for (const child of main.children) {
-        if (child.tagName == "H1") {
-            if (child.getAttribute("id") == null) {
-                side_menu.innerHTML = side_menu.innerHTML + `<h1 onclick="window.location='#'">ERROR: MISSING ID</h1>`
+        document.addEventListener("mousemove", (event) => {
+            if (event.x <= 60 && side_bar_toggle == false && document.body.clientWidth > 1200) {
+                if (side_bar_toggle == false) {
+                    side_orb_toggle = true
+                    side_orb.style.left = "-2.5rem"
+                }
+                side_orb.style.top = "calc(" + event.y + "px - 2.5rem)"
             } else {
-                side_menu.innerHTML = side_menu.innerHTML + `<h1 onclick="window.location='#` + child.getAttribute("id") + `'">` + child.innerHTML + `</h1>`
+                side_orb_toggle = false
+                side_orb.style.left = "-5rem"
             }
-        } else if (child.tagName == "H2") {
-            if (child.getAttribute("id") == null) {
-                side_menu.innerHTML = side_menu.innerHTML + `<h2 onclick="window.location='#'">■ ERROR: MISSING ID</h2>`
-            } else {
-                side_menu.innerHTML = side_menu.innerHTML + `<h2 onclick="window.location='#` + child.getAttribute("id") + `'">■ ` + child.innerHTML + `</h2>`
+        })
+
+        for (const child of main.children) {
+            if (child.tagName == "H1") {
+                if (child.getAttribute("id") == null) {
+                    side_menu.innerHTML = side_menu.innerHTML + `<h1 onclick="window.location='#'">ERROR: MISSING ID</h1>`
+                } else if (child.getAttribute("data-sidemenu")) {
+                    side_menu.innerHTML = side_menu.innerHTML + `<h1 onclick="window.location='#` + child.getAttribute("id") + `'">` + child.getAttribute("data-sidemenu") + `</h1>`
+                } else {
+                    side_menu.innerHTML = side_menu.innerHTML + `<h1 onclick="window.location='#` + child.getAttribute("id") + `'">` + child.innerHTML + `</h1>`
+                }
+            } else if (child.tagName == "H2") {
+                if (child.getAttribute("id") == null) {
+                    side_menu.innerHTML = side_menu.innerHTML + `<h2 onclick="window.location='#'">■ ERROR: MISSING ID</h2>`
+                } else if (child.getAttribute("data-sidemenu")) {
+                    side_menu.innerHTML = side_menu.innerHTML + `<h2 onclick="window.location='#` + child.getAttribute("id") + `'">■ ` + child.getAttribute("data-sidemenu") + `</h2>`
+                } else {
+                    side_menu.innerHTML = side_menu.innerHTML + `<h2 onclick="window.location='#` + child.getAttribute("id") + `'">■ ` + child.innerHTML + `</h2>`
+                }
             }
         }
     }

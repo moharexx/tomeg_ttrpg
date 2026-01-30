@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Action Surge (WIP)",
+    name: "Action Surge",
     category: "active",
     type: [
         "Innate",
@@ -11,8 +11,8 @@ module.exports = {
         "<b>Innate:</b> 10 INIT",
     ],
     tags: [
-        "Offense, Defense, Utility, Cooldown",
-        "Self, Buff, Debuff, Action Economy",
+        "Utility, Cooldown",
+        "Self, Mobility, Action Economy",
         "Free-Action",
     ],
     unlock_cost: 10,
@@ -20,8 +20,15 @@ module.exports = {
         {
             type: "p",
             content: [
-                "Your horizon expands, everything around you slows.",
-                "You gain a Main-Action, but at Your Next Turn you gain no Actions.",
+                `Your horizon expands, everything around you slows.`,
+                `You gain <box>2 × ESS^(1/3)</box> bonus MS till the Start of your Next Round.`,
+                `You can also use the Move-Action once as a Free-Action for the Duration.`,
+            ],
+        },
+        {
+            type: "p",
+            content: [
+                `When you use this Ability you lose 1 Bonus-Action from your Next Turn.`,
             ],
         },
     ],
@@ -34,7 +41,8 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Free-Action"],
                 ["Cooldown", "Short-Rest"],
-                ["Range", "Self"]
+                ["Range", "Self"],
+                ["Bonus MS", "2 × ESS^(1/3)"],
             ],
         },
     ],

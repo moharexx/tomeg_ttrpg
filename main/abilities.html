@@ -152,128 +152,121 @@
                 <td width="25%">Tags Search</td>
             </tr>
             <tr>
-                <td><textarea id="NameSearch" rows="4" style="width: 90%;"></textarea></td>
-                <td><textarea id="TypeSearch" rows="4" style="width: 90%;"></textarea></td>
-                <td><textarea id="ReqsSearch" rows="4" style="width: 90%;"></textarea></td>
-                <td><textarea id="TagsSearch" rows="4" style="width: 90%;"></textarea></td>
+                <td><textarea id="NameSearch" rows="4" style="width: 90%;" onkeyup="search()"></textarea></td>
+                <td><textarea id="TypeSearch" rows="4" style="width: 90%;" onkeyup="search()"></textarea></td>
+                <td><textarea id="ReqsSearch" rows="4" style="width: 90%;" onkeyup="search()"></textarea></td>
+                <td><textarea id="TagsSearch" rows="4" style="width: 90%;" onkeyup="search()"></textarea></td>
             </tr>
         </table>
-        <input type="button" value="Search" onclick="Search()" />
-        <h2 id="active_abilities">Active Abilities</h2>
+        <h2 id="active_abilities" data-sidemenu="Active Abilities">Active Abilities (LOADING)</h2>
         <hr>
-        <table id="table_active" width="100%">
-        </table>
-        <h2 id="on_attack_abilities">On-Attack Abilities</h2>
+        <table id="table_active" width="100%"></table>
+        <h2 id="on_attack_abilities" data-sidemenu="On-Attack Abilities">On-Attack Abilities (LOADING)</h2>
         <hr>
-        <table width="100%" id="table_onattack">
-        </table>
-        <h2 id="reactive_abilities">Reactive Abilities</h2>
+        <table width="100%" id="table_onattack"></table>
+        <h2 id="reactive_abilities" data-sidemenu="Reactive Abilities">Reactive Abilities (LOADING)</h2>
         <hr>
-        <table width="100%" id="table_reactive">
-        </table>
-        <h2 id="stance_abilities">Stance Abilities</h2>
+        <table width="100%" id="table_reactive"></table>
+        <h2 id="stance_abilities" data-sidemenu="Stance Abilities">Stance Abilities (LOADING)</h2>
         <hr>
-        <table width="100%" id="table_stance">
-        </table>
-        <h2 id="meta_abilities">Meta Abilities</h2>
+        <table width="100%" id="table_stance"></table>
+        <h2 id="meta_abilities" data-sidemenu="Meta Abilities">Meta Abilities (LOADING)</h2>
         <hr>
-        <table width="100%" id="table_meta">
-        </table>
-        <h2 id="passive_abilities">Passive Abilities</h2>
+        <table width="100%" id="table_meta"></table>
+        <h2 id="passive_abilities" data-sidemenu="Passive Abilities">Passive Abilities (LOADING)</h2>
         <hr>
-        <table width="100%" id="table_passive">
-        </table>
+        <table width="100%" id="table_passive"></table>
     </main>
 </body>
 
 <script>
-    abilities = {}
+    let abilities = {}
+    let first_cell = `<tr><td width="20%">Name</td><td width="10%">Type</td><td width="40%">Reqs</td><td width="30%">Tags</td></tr>`
     //---------------------------------------------------------------------
-    FirstCell = `<tr>
-                <td width="20%">
-                    Name
-                </td>
-                <td width="10%">
-                    Type
-                </td>
-                <td width="40%">
-                    Reqs                                                
-                </td>
-                <td width="30%">
-                    Tags
-                </td>
-            </tr>`
-    AbilityToText = function(input) {
-        output = '<tr><td><a href="'
-        output += input.link
-        output += '">'
-        output += input.name
-        output += '</a></td><td>'
-        output += input.type
-        output += '</td><td>'
-        output += input.reqs
-        output += '</td><td>'
-        output += input.tags
-        output += '</td></tr>'
-        return output
-    }
-    SearchCategory = function(ElementHTML, category) {
-        result = FirstCell
-        category.forEach(v => {
-            debounce_name = true
-            debounce_type = true
-            debounce_reqs = true
-            debounce_tags = true
-            NameArray = NameSearch.value.split("\n")
-            TypeArray = TypeSearch.value.split("\n")
-            ReqsArray = ReqsSearch.value.split("\n")
-            TagsArray = TagsSearch.value.split("\n")
-            for (i = 0; i < NameArray.length; i++) {
-                if (NameArray[i].trim() != "" && !v.name.toLowerCase().includes(NameArray[i].trim().toLowerCase())) debounce_name = false
+    search = function() {
+        let f1 = (v) => {
+            let arr = v.value.split("\n")
+            for (let i = 0; i < arr.length; i++) arr[i] = arr[i].trim().toLowerCase()
+            return arr
+        }
+        let f2 = (curr, arr, debounce) => {
+            if (!debounce) return false
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == "") continue
+                if (!curr.includes(arr[i])) return false
             }
-            for (i = 0; i < TypeArray.length; i++) {
-                if (TypeArray[i].trim() != "" && !v.type.toLowerCase().includes(TypeArray[i].trim().toLowerCase())) debounce_type = false
-            }
-            for (i = 0; i < ReqsArray.length; i++) {
-                if (ReqsArray[i].trim() != "" && !v.reqs.toLowerCase().includes(ReqsArray[i].trim().toLowerCase())) debounce_reqs = false
-            }
-            for (i = 0; i < TagsArray.length; i++) {
-                if (TagsArray[i].trim() != "" && !v.tags.toLowerCase().includes(TagsArray[i].trim().toLowerCase())) debounce_tags = false
-            }
-            if (debounce_name && debounce_type && debounce_reqs && debounce_tags) {
-                result += AbilityToText(v)
-            }
-        })
-        ElementHTML.innerHTML = result
-    }
-    Search = function() {
-        SearchCategory(table_active, abilities.active)
-        SearchCategory(table_onattack, abilities.on_attack)
-        SearchCategory(table_reactive, abilities.reactive)
-        SearchCategory(table_stance, abilities.stance)
-        SearchCategory(table_meta, abilities.meta)
-        SearchCategory(table_passive, abilities.passive)
+            return true
+        }
+        for (var k in abilities) {
+            let category = abilities[k]
+            let NameArray = f1(NameSearch)
+            let TypeArray = f1(TypeSearch)
+            let ReqsArray = f1(ReqsSearch)
+            let TagsArray = f1(TagsSearch)
+            let count = 0
+            category.list.forEach(v => {
+                let debounce = true
+                debounce = f2(v.name.toLowerCase(), NameArray, debounce)
+                debounce = f2(v.type.toLowerCase(), TypeArray, debounce)
+                debounce = f2(v.reqs.toLowerCase(), ReqsArray, debounce)
+                debounce = f2(v.tags.toLowerCase(), TagsArray, debounce)
+                if (debounce) {
+                    v.row_object.style.display = ""
+                    count++
+                } else v.row_object.style.display = "none"
+            })
+            if (count == 0) {category.table_object.style.display = "none"} else {category.table_object.style.display = ""}
+            category.title_object.innerHTML = category.title + " (" + count + " / " + category.list.length + ")"
+        }
     }
     //---------------------------------------------------------------------
     fetch("./../assets/abilities_raw.json").then((response) => {
         response.text().then((text) => {
             abilities = JSON.parse(text)
-            Search()
+            for (var k in abilities) abilities[k] = {list : abilities[k]}
+
+            abilities.active.title_object = document.getElementById("active_abilities")
+            abilities.active.table_object = document.getElementById("table_active")
+
+            abilities.on_attack.title_object = document.getElementById("on_attack_abilities")
+            abilities.on_attack.table_object = document.getElementById("table_onattack")
+
+            abilities.reactive.title_object = document.getElementById("reactive_abilities")
+            abilities.reactive.table_object = document.getElementById("table_reactive")
+
+            abilities.stance.title_object = document.getElementById("stance_abilities")
+            abilities.stance.table_object = document.getElementById("table_stance")
+            
+            abilities.meta.title_object = document.getElementById("meta_abilities")
+            abilities.meta.table_object = document.getElementById("table_meta")
+            
+            abilities.passive.title_object = document.getElementById("passive_abilities")
+            abilities.passive.table_object = document.getElementById("table_passive")
+
+            for (var k in abilities) {
+                abilities[k].title = abilities[k].title_object.getAttribute("data-sidemenu")
+                abilities[k].table_object.innerHTML = first_cell
+                abilities[k].list.forEach(v => {
+                    v.row_object = document.createElement("tr")
+                    v.row_object.innerHTML = [
+                        '<tr><td><a href="./../abilities/',
+                        v.link,
+                        '.html">',
+                        v.name,
+                        '</a></td><td>',
+                        v.type.replaceAll("@", "<br>"),
+                        '</td><td>',
+                        v.reqs.replaceAll("@", "<br>"),
+                        '</td><td>',
+                        v.tags.replaceAll("@", "<br>"),
+                        '</td></tr>',
+                    ].join("")
+                    abilities[k].table_object.appendChild(v.row_object)
+                })
+            }
+            search()
         })
     })
-</script>
-
-<script>
-    // the funni
-    /*
-    a={};b=`<tr><td width="20%">Name</td><td width="10%">Type</td><td width="40%">Reqs</td><td width="30%">Tags</td></tr>`
-    c=`</td><td>`;f=(i)=>`<tr><td><a href="${i.link}">${i.name}</a>${c+i.type+c+i.reqs+c+i.tags}</td></tr>`;g=(n,m)=>{
-    x=b;m.forEach(v=>{k=true;j=(y,t)=>{y=y.value.split("\n");for(i=0;i<y.length;i++)if(y[i].trim()!=""&&!v[t].toLowerCase().
-    includes(y[i].trim().toLowerCase()))k=false};j(NameSearch,"name");j(TypeSearch,"type");j(ReqsSearch,"reqs");j(TagsSearch,"tags")
-    if(k)x+=f(v)});n.innerHTML=x};Search=()=>{g(table_active,a.active);g(table_onattack,a.on_attack)
-    g(table_reactive,a.reactive);g(table_stance,a.stance);g(table_meta,a.meta);g(table_passive,a.passive)}
-    fetch("./../assets/abilities_raw.json").then((r)=>{r.text().then((t)=>{a=JSON.parse(t);Search()})})
-    */
 </script>
 
 </html>
