@@ -5,10 +5,10 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "Athletics",
+        "10 Athletics",
     ],
     reqs_full: [
-        "10 Athletics",
+        "<b>Skill:</b> 10 Athletics",
     ],
     tags: [
         "Utility",
@@ -19,8 +19,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                "From Swimming and Climbing you have no Movement Penalties.",
-                "Additionally when Swimming or Climbing you need not make a d10 Check, assume you Rolled a 10.",
+                `From Swimming and Climbing you have no Movement Penalties.`,
+                `Negates the Disadvantage for Melee Attacks made underwater. (Or in any liquid...)`,
+                `Additionally when Swimming or Climbing you need not make a d10 Check, assume you Rolled a 10.`,
             ],
         },
     ],

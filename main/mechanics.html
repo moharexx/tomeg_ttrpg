@@ -1360,16 +1360,17 @@
         <div class="collapsed">
             <p class="bottomless"><b>While you are submerged in water (or another liquid):</b></p>
             <ul>
-                <li>Attacks are made with a Disadvantage.</li>
-                <li>Ranged Attacks don't have their Long-Range.</li>
-                <li>For Heat and Cold Based Flow and Crawl AOEs, every meter counts as double for their flow. (Will be Half as big.)</li>
+                <li>Melee Attacks are made with Disadvantage, this can be negated with <a href="../abilities/olympic_athlete.html">Olympic Athlete</a> or <a href="../abilities/aquatic.html">Aquatic</a>.</li>
+                <li><b>Physical, Heat, Cold, and Demat</b> based Attacks are made with Disadvantage.</li>
+                <li><b>Physical, Heat, Cold, and Demat</b> based Ranges are Havled.</li>
+                <li>For <b>Heat, Cold, and Demat</b> based Flow and Crawl AOEs, every meter counts as double for their flow. (Will be Half as big.)</li>
             </ul>
             <p>
-                Entites which ned to breath but cannot will begin to deplete their air.<br>
+                Entites which need to breath but cannot will begin to deplete their air.<br>
                 An Entity has <box>5 × VIT Rounds of Air (15 × VIT Seconds of Air)</box>, at 0 they begin to Suffocate.<br>
                 When an Entity gets Damaged it loses 5 Rounds (15 Seconds) of Air.<br>
                 While Suffocating, at the End of Each of Your Turns you take <box>5 × (Rounds Spent Suffocating) Bio Damage</box><br>
-                Suffocation Damage has 100 Bio-Pen.
+                Suffocation Damage has 1000 Bio-Pen.
             </p>
         </div>
         <h2 id="senses" class="collapsible">Senses</h2>
@@ -1503,8 +1504,8 @@
         <h2 id="melee_weapons">Melee Weapons</h2>
         <hr>
         <p>
-            Melee Weapons have Max 8 Property Points.<br>
-            Melee Weapons which are not Heavy are One-Handed.<br>
+            Melee Weapons have Max 8 Property Points, and uses STR for its Main Stat.<br>
+            When choosing Properties, one must be the Weight Class; <box>Light | Medium | Heavy</box><br>
             <b>Price of Melee Weapons:</b> <box>5C × Property Points</box>
         </p>
         <table width="90%">
@@ -1533,37 +1534,35 @@
                 </td>
             </tr>
             <tr>
-                <td>Heavy</td>
-                <td>-1</td>
-                <td>Will be Two-Handed!</td>
-            </tr>
-            <tr>
                 <td>Light</td>
                 <td>0</td>
-                <td>Will be One-Handed!</td>
+                <td>Uses 1 Wielding Slot, and makes the <a href="#attack_action">Attack-Action</a> with a Bonus-Action.</td>
             </tr>
             <tr>
-                <td>Armor-Pen</td>
-                <td>Description</td>
+                <td>Medium</td>
+                <td>0</td>
                 <td>
-                    For each Point add 1 Armor-Pen.<br>
-                    This normally does not add to Abilities.
+                    Can use 1 or 2 Wielding Slots.<br>
+                    When using 2 Wielding Slots, gain +10 Max HD, and increases Base Damage to a higher Dice.
                 </td>
             </tr>
             <tr>
-                <td>Versatile</td>
-                <td>0</td>
+                <td>Heavy</td>
+                <td>-1</td>
+                <td>Uses 2 Wielding Slots.</td>
+            </tr>
+            <tr>
+                <td>Armor-Pen</td>
+                <td>Variable</td>
                 <td>
-                    Gain Benifits for Solo use, this means no other Weapons or Shields.<br>
-                    Solo Wielding gives +10 Max HD, and increases Base Damage to a higher Dice.<br>
-                    The Weapon is Solo Wielded in one or two hands, your choice, flavor!<br>
-                    <b>Light, and Heavy Excluded!</b>
+                    For each Point add 1 Armor-Pen.<br>
+                    <b>Note:</b> This normally doesn't apply to Abilities!
                 </td>
             </tr>
             <tr>
                 <td>Reach</td>
                 <td>1 | 2</td>
-                <td>Adds 1 | 2 meters of extra Reach.</td>
+                <td>Adds <box>1 | 2</box> meters of extra Reach.</td>
             </tr>
             <tr>
                 <td>Throw</td>
@@ -1587,8 +1586,8 @@
         <h2 id="ranged_weapons">Ranged Weapons</h2>
         <hr>
         <p>
-            Ranged Weapons have Max 8 Property Points.<br>
-            Ranged Weapons are Two-Handed, unless Light, and use AGI instead of STR.<br>
+            Ranged Weapons have Max 8 Property Points, and uses AGI for its Main Stat.<br>
+            When choosing Properties, one must be the Weight Class; <box>Light | Medium | Heavy</box><br>
             <b>Price of Ranged Weapons:</b> <box>5C × Property Points</box>
         </p>
         <table width="90%">
@@ -1619,14 +1618,19 @@
                 <td>Either Bludgeoning, Slashing, or Piercing.</td>
             </tr>
             <tr>
-                <td>Heavy</td>
-                <td>0</td>
-                <td>Still Two-Handed.</td>
-            </tr>
-            <tr>
                 <td>Light</td>
                 <td>1</td>
-                <td>Will be One-Handed!</td>
+                <td>Uses 1 Wielding Slot, and makes the <a href="#attack_action">Attack-Action</a> with a Bonus-Action.</td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>0</td>
+                <td>Uses 2 Wielding Slot.</td>
+            </tr>
+            <tr>
+                <td>Heavy</td>
+                <td>0</td>
+                <td>Uses 2 Wielding Slot.</td>
             </tr>
             <tr>
                 <td>Spread</td>
@@ -1638,15 +1642,18 @@
             </tr>
             <tr>
                 <td>Armor-Pen</td>
-                <td>Description</td>
-                <td>For each Point add 1 Armor-Pen.</td>
+                <td>Variable</td>
+                <td>
+                    For each Point add 1 Armor-Pen.<br>
+                    <b>Note:</b> This normally doesn't apply to Abilities!
+                </td>
             </tr>
             <tr>
                 <td>Aim</td>
                 <td>2</td>
                 <td>
-                    A One-Handed weapon that can be used Solo-Wielded, to gain Advantage on <a href="#attack_action">Attack-Actions.</a><br>
-                    <b>Light Ranged Weapons Only.</b>
+                    Can use 2 Wielding Slots to gain Advantage on <a href="#attack_action">Attack-Actions</a>.<br>
+                    <b>Light Ranged Weapons Only!</b>
                 </td>
             </tr>
             <tr>
@@ -1669,7 +1676,7 @@
         <h2 id="shields">Shields</h2>
         <hr>
         <p>
-            Shields have Max 6 Property Points.<br>
+            Shields have Max 6 Property Points, and have only 2 Weight Classes; <box>Light | Heavy </box><br>
             You can only benifit from one Shield at a time.<br>
             When using the <a href="#defense-action">Defense-Action</a> with a Shield, and the Shield gets Un-Wielded, you lose the Defense-Action.<br>
             <b>Price of Shields:</b> <box>5C × Property Points</box>
@@ -1690,7 +1697,7 @@
                 <td>Heavy</td>
                 <td>4</td>
                 <td>
-                    When Wielded, it gives 4 <a href="#resistances">Armor VS HP.</a><br>
+                    When Wielded, it gives 4 <a href="#resistances">Armor VS HP</a>.<br>
                     When taking the Defense-Action, it gives extra 4 Armor VS HP.
                 </td>
             </tr>
@@ -1719,10 +1726,10 @@
                 <td>Tower</td>
                 <td>2</td>
                 <td>
-                    The Tower Shield provides <a href="#cover">Cover</a> to others and to yourself in 180° degrees infront of you.<br>
+                    Can provide <a href="#cover">Cover</a> to others and to yourself in 180° degrees.<br>
                     To get the Cover one must use the <a href="#take_cover">Take Cover Action</a>, as normal.<br>
-                    When you use the Defense-Action, you can Take Cover as a Free-Action in that Turn.<br>
-                    When you move, get moved, get the <a href="#conditions">Prone, or Staggered Condition</a> all Cover you provide is gone.<br>
+                    When you use the <a href="#defense_action">Defense-Action</a>, you can <b>Take Cover</b> as a Free-Action in that Turn.<br>
+                    The Cover you provide is gone when you: move, get moved, get <a href="#conditions">Prone or Staggered</a>.<br>
                     <b>Heavy Shields Only!</b>
                 </td>
             </tr>
@@ -1731,7 +1738,7 @@
         <hr>
         <p>
             Armors have Max 6 Property Points.<br>
-            <b>Price of Armors:</b> <box>20C × Property Points × Tier</box>
+            <b>Price of Armors:</b> <box>10C × Property Points × Tier</box>
         </p>
         <table width="90%">
             <tr>
@@ -1746,13 +1753,13 @@
                 </td>
             </tr>
             <tr>
-                <td>Weight</td>
+                <td>Weight Class</td>
                 <td>See Description</td>
                 <td>
                     The Weight of the Armor is based on the Total Property Points used.<br>
-                    <b>Light (1-2):</b> Does not have any Negative Effects on HD.<br>
-                    <b>Medium (3-4):</b> HD does not benifit from Acrobatics.<br>
-                    <b>Heavy (5-6):</b> HD does not benifit from Acrobatics and AGI.
+                    <b>Light (1-2):</b> Doesn't have any Negative Effects on HD.<br>
+                    <b>Medium (3-4):</b> HD doesn't benefit from Acrobatics.<br>
+                    <b>Heavy (5-6):</b> HD doesn't benefit from Acrobatics and AGI.
                 </td>
             </tr>
             <tr>
@@ -1760,7 +1767,7 @@
                 <td>Variable</td>
                 <td>
                     For each Property Point gain 2 Resistance Points to allocate.<br>
-                    <b>Resistance Types:</b> Armor, Heat, Cold, Demat, Thunder, Lightning<br>
+                    <b>Resistance Types:</b> Armor, Heat, Cold, Bio, Demat, Thunder, Electric<br>
                     Max Resistance for any Type is equal to the Total Property Points of the Armor.<br>
                 </td>
             </tr>
@@ -1788,21 +1795,24 @@
                     1d6<br>
                     30 / 60
                 </td>
-                <td>1 / Heavy Excluded!</td>
+                <td>1 / Requires Light or Medium!</td>
             </tr>
             <tr>
                 <td>
                     1d8<br>
                     40 / 80
                 </td>
-                <td>3 / Light Excluded!</td>
+                <td>3 / Requires Medium or Heavy!</td>
             </tr>
             <tr>
                 <td>
                     1d10<br>
                     60 / 120
                 </td>
-                <td>4 / Requires Heavy! (Also reached with Versatile)</td>
+                <td>
+                    4 / Requires Heavy!<br>
+                    <b>Note:</b> Also reachable by using 2 Wielding Slots on Medium Melee Weapons.
+                </td>
             </tr>
             <tr>
                 <td>
@@ -1854,18 +1864,18 @@
         <p>
             Demat Damage is Dematerialization and breaking of connections, by Acid, Exotic Matter, or other means.
         </p>
-        <h2 id="electric_damage">Electric</h2>
-        <hr>
-        <p>
-            Electric Damage is induced by Electric currents, duh!?<br>
-            Attacks made with Electricity deal <b>Max-Damage</b> to <b>Soaked</b>, and <b>Airborne</b> Targets.
-        </p>
         <h2 id="thunder_damage">Thunder</h2>
         <hr>
         <p>
             Thunder based Attacks will invoke sounds, vibrations, pressure waves to deal its Damage.<br>
             Brittle things will usually have some kind of weakness to Thunder, like taking <b>Max-Damage</b>, or Double
             Damage.
+        </p>
+        <h2 id="electric_damage">Electric</h2>
+        <hr>
+        <p>
+            Electric Damage is induced by Electric currents, duh!?<br>
+            Attacks made with Electricity deal <b>Max-Damage</b> to <b>Soaked</b>, and <b>Airborne</b> Targets.
         </p>
         <h2 id="psychic_damage">Psychic</h2>
         <hr>
