@@ -12,15 +12,15 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Ranged, Flow Sphear AOE, Heat, Thunder Damage",
-        "Main-Action / Main-Action",
+        "Ranged, Flow Sphear AOE, Heat+Thunder Damage",
+        "Main-Action + Bonus-Action / Main-Action + Bonus-Action",
     ],
     unlock_cost: 50,
     description: [
         {
             type: "p",
             content: [
-                `When using this Ability, you are put in <b>Bakuretsu!</b>.`,
+                `When using this Ability, you are put in <b>Bakuretsu! Stance</b>.`,
                 `The Point of the Explosion is visible and obvious to anyone nearby.`,
                 `While in this Stance, your Rolled INIT for the purpose of Turn Order is 0.`,
                 `MAX Stack: <box>4</box>`,
@@ -29,12 +29,12 @@ module.exports = {
         {
             type: "p",
             content: [
-                "The Stance Breaks when: <box>Using Abilities, Moving, HD Decrease, Taking Damage</box>",
+                `The Stance Breaks when: <box>Using Abilities, Moving, HD Decrease, Taking Damage</box>`,
             ],
         },
         {
             type: "p",
-            content: "Damage per Stacks:",
+            content: `Damage per Stacks:`,
         },
         {
             type: "table",
@@ -55,9 +55,9 @@ module.exports = {
             content: [
                 ["Shockwave", "Value"],
                 ["Stacks 1 Damage", "(1 × ESS) Thunder"],
-                ["Stacks 1 Damage", "(2 × ESS) Thunder"],
-                ["Stacks 1 Damage", "(3 × ESS) Thunder"],
-                ["Stacks 1 Damage", "(4 × ESS) Thunder"],
+                ["Stacks 2 Damage", "(2 × ESS) Thunder"],
+                ["Stacks 3 Damage", "(3 × ESS) Thunder"],
+                ["Stacks 4 Damage", "(4 × ESS) Thunder"],
             ],
         },
     ],
