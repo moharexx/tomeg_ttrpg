@@ -22,19 +22,15 @@
         <h1 id="extra_content">EXTRA CONTENT</h1>
         <hr>
         <p>
-            This page contains a lot of additional content revolving on playing the game.
+            This page contains a lot of additional content about the game, beyond the base rules.<br>
+            <b style="color: red; text-decoration: underline;">Disclamer:</b> Much of the content found here is unfinished!
         </p>
         <h1 id="search">SEARCH</h1>
         <hr>
         <p>
-            Searching works by typing in text in each of the 4 different textareas.<br>
-            The search engine will look and try to match with all the 4 different categories. (Name, Summary, Tags)<br>
-            If any of the categories do not let the ability pass it will not be displayed.<br>
-            You can write in multiple lines to widen the search and let it pass if there is a match with any of the
-            lines.
-        </p>
-        <p>
-            <b>Note:</b> An empty line matches with ALL text!
+            Searching works by typing in text in each of the 3 different textareas.<br>
+            The search engine will look and try to match with all the 3 different categories. (Name, Summary, Tags)<br>
+            You can write multiple lines to each category to narrow the search results.
         </p>
         <table width="100%">
             <tr>
@@ -43,82 +39,83 @@
                 <td width="33%">Tags Search</td>
             </tr>
             <tr>
-                <td><textarea id="NameSearch" rows="4" style="width: 90%;"></textarea></td>
-                <td><textarea id="TypeSearch" rows="4" style="width: 90%;"></textarea></td>
-                <td><textarea id="TagsSearch" rows="4" style="width: 90%;"></textarea></td>
+                <td><textarea id="NameSearch" rows="4" style="width: 90%;" onkeyup="search()"></textarea></td>
+                <td><textarea id="SummarySearch" rows="4" style="width: 90%;" onkeyup="search()"></textarea></td>
+                <td><textarea id="TagsSearch" rows="4" style="width: 90%;" onkeyup="search()"></textarea></td>
             </tr>
         </table>
-        <input type="button" value="Search" onclick="Search()" />
-        <h2 id="extra_content_table">Extra Content Table</h2>
+        <h2 id="table_of_contents" data-sidemenu="Table of Contents">Table of Contents</h2>
         <hr>
-        <table id="table_extra" width="100%">
-        </table>
+        <table id="table_extra" width="100%"></table>
     </main>
 </body>
 
 <script>
-    extra_raw = `[{"link":"../extra/premade_armaments.html", "name":"Premade Armaments", "summary":"Simple premade Armaments for new Players.", "tags":"Help<br>Items, Armaments"},
-        {"link":"../extra/items_and_costs.html", "name":"Items and Costs", "summary":"Hey kiddo, want to buy drugs?", "tags":"Help<br>Items"},
-        {"link":"../extra/curios.html", "name":"Curios", "summary":"Quirky items which do things!!", "tags":"Base Rule<br>Magical Items"},
-        {"link":"../extra/consumable_items.html", "name":"Consumable Items", "summary":"Scrolls, potions, bombs. You want it?<br>It's yours my friend, as long as you have enough C.", "tags":"Base Rule<br>Magical Items, Consumable Items, Potions, Scrolls"},
-        {"link":"../extra/character_assembler.html", "name":"Character Assembler", "summary":"Make stat allocation a breeze!", "tags":"Help<br>Character Creation"},
-        {"link":"../extra/digital_character_sheet.html", "name":"Digital Character Sheet", "summary":"1v1 me bruv!", "tags":"Help<br>Character Managment"},
-        {"link":"../extra/guide_to_potions.html", "name":"Guide to Potions (TO BE MERGED)", "summary":"Everything to know about potions or something...", "tags":"Base Rule<br>Magical Items, Consumable Items, Item Creation, Potions"}]`
-    extra = JSON.parse(extra_raw)
+    let extra_raw = `[{"link":"premade_armaments", "name":"Premade Armaments", "summary":"Simple premade Armaments for new Players.", "tags":"Help@Items, Armaments"},
+        {"link":"items_and_costs", "name":"Items and Costs (WIP)", "summary":"Hey kiddo, want to buy drugs?", "tags":"Help@Items"},
+        {"link":"curios.html", "name":"Curios", "summary":"Quirky items which do things!!", "tags":"Base Rule@Magical Items"},
+        {"link":"consumable_items", "name":"Consumable Items", "summary":"Scrolls, potions, bombs. You want it?@It's yours my friend, as long as you have enough C.", "tags":"Base Rule<br>Magical Items, Consumable Items, Potions, Scrolls"},
+        {"link":"character_assembler", "name":"Character Assembler (WIP)", "summary":"Make stat allocation a breeze!", "tags":"Help@Character Creation"},
+        {"link":"digital_character_sheet", "name":"Digital Character Sheet (WIP)", "summary":"1v1 me bruv!", "tags":"Help@Character Managment"},
+        {"link":"guide_to_potions", "name":"Guide to Potions (TO BE MERGED)", "summary":"Everything to know about potions or something...", "tags":"Base Rule@Magical Items, Consumable Items, Item Creation, Potions"}]`
+    let extra = {}
+    let first_cell = `<tr><td width="25%">Name</td><td width="40%">Summary</td><td width="35%">Tags</td></tr>`
     //---------------------------------------------------------------------
-    FirstCell = `<tr>
-                <td width="25%">
-                    Name
-                </td>
-                <td width="40%">
-                    Summary
-                </td>
-                <td width="35%">
-                    Tags
-                </td>
-            </tr>`
-    AbilityToText = function(input) {
-        output = '<tr><td><a href="'
-        output += input.link
-        output += '">'
-        output += input.name
-        output += '</a></td><td>'
-        output += input.summary
-        output += '</td><td>'
-        output += input.tags
-        output += '</td></tr>'
-        return output
-    }
-    SearchCategory = function(ElementHTML, category) {
-        result = FirstCell
-        console.log(extra)
-        category.forEach(v => {
-            debounce_name = false
-            debounce_type = false
-            debounce_tags = false
-            NameArray = NameSearch.value.split("\n")
-            TypeArray = TypeSearch.value.split("\n")
-            TagsArray = TagsSearch.value.split("\n")
-            for (i = 0; i < NameArray.length; i++) {
-                if (v.name.toLowerCase().includes(NameArray[i].toLowerCase())) debounce_name = true
+    search = function(ElementHTML, category) {
+        let f1 = (v) => {
+            let arr = v.value.split("\n")
+            for (let i = 0; i < arr.length; i++) arr[i] = arr[i].trim().toLowerCase()
+            return arr
+        }
+        let f2 = (curr, arr, debounce) => {
+            if (!debounce) return false
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == "") continue
+                if (!curr.includes(arr[i])) return false
             }
-            for (i = 0; i < TypeArray.length; i++) {
-                if (v.summary.toLowerCase().includes(TypeArray[i].toLowerCase())) debounce_type = true
-            }
-            for (i = 0; i < TagsArray.length; i++) {
-                if (v.tags.toLowerCase().includes(TagsArray[i].toLowerCase())) debounce_tags = true
-            }
-            if (debounce_name && debounce_type && debounce_tags) {
-                result += AbilityToText(v)
-            }
+            return true
+        }
+        let NameArray = f1(NameSearch)
+        let SummaryArray = f1(SummarySearch)
+        let TagsArray = f1(TagsSearch)
+        let count = 0
+        extra.list.forEach(v => {
+            let debounce = true
+            debounce = f2(v.name.toLowerCase(), NameArray, debounce)
+            debounce = f2(v.summary.toLowerCase(), SummaryArray, debounce)
+            debounce = f2(v.tags.toLowerCase(), TagsArray, debounce)
+            if (debounce) {
+                v.row_object.style.display = ""
+                if (count % 2 == 0) v.row_object.style["background-color"] = "antiquewhite"
+                    else v.row_object.style["background-color"] = "wheat"
+                count++
+            } else v.row_object.style.display = "none"
         })
-        ElementHTML.innerHTML = result
-    }
-    Search = function() {
-        SearchCategory(table_extra, extra)
+        if (count == 0) {extra.table_object.style.display = "none"} else {extra.table_object.style.display = ""}
+        extra.title_object.innerHTML = extra.title + " (" + count + " / " + extra.list.length + ")"
     }
     //---------------------------------------------------------------------
-    Search()
+    extra.list = JSON.parse(extra_raw)
+    extra.title_object = document.getElementById("table_of_contents")
+    extra.table_object = document.getElementById("table_extra")
+    extra.title = extra.title_object.getAttribute("data-sidemenu")
+    extra.table_object.innerHTML = first_cell
+    extra.list.forEach(v => {
+        v.row_object = document.createElement("tr")
+        v.row_object.innerHTML = [
+            '<tr><td><a href="./../extra/',
+            v.link,
+            '.html">',
+            v.name,
+            '</a></td><td>',
+            v.summary.replaceAll("@", "<br>"),
+            '</td><td>',
+            v.tags.replaceAll("@", "<br>"),
+            '</td></tr>',
+        ].join("")
+        extra.table_object.appendChild(v.row_object)
+    })
+    search()
 </script>
 
 </html>

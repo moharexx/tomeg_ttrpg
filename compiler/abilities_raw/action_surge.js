@@ -21,7 +21,7 @@ module.exports = {
             type: "p",
             content: [
                 `Your horizon expands, everything around you slows.`,
-                `You gain <box>2 × ESS^(1/3)</box> bonus MS till the Start of your Next Round.`,
+                `You gain <box>2 × ESS^(1/3)</box> bonus MS till the Start of your Next Turn.`,
                 `You can also use the Move-Action once as a Free-Action for the Duration.`,
             ],
         },
@@ -42,6 +42,7 @@ module.exports = {
                 ["Cast Time", "Free-Action"],
                 ["Cooldown", "Short-Rest"],
                 ["Range", "Self"],
+                ["Duration", "Till the Start of your Next Turn"],
                 ["Bonus MS", "2 × ESS^(1/3)"],
             ],
         },

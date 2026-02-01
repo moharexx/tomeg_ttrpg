@@ -123,9 +123,9 @@
         <h1 id="ability_wishing">Ability Wishing</h1>
         <hr>
         <p>
-            At <b>500 Total XP</b> you can Unlock the Ability Wishing Feature for <box>20 XP</box><br>
-            If the Ability's Unlock XP Cost is equal or less than your EGO, you can Wish that Ability.<br>
-            A Wished Ability's <b>CS</b> will be equal to <b>EGO,</b> and treated as an <b>Innate Type Ability</b> even if it's originally a Skill or Spell.<br>
+            At <b>50 EGO</b> you can Unlock the Ability Wishing Feature for <box>20 XP</box><br>
+            If your EGO is at least the Ability's Unlock XP Cost, you can Wish that Ability.<br>
+            A Wished Ability's <b>CS</b> will be equal to <b>EGO</b>, and treated as an <b>Innate Type Ability</b> even if it's originally a Skill or Spell.<br>
             Wishing an Ability has the same Cast Time as using the Ability, and Meta-Abilities effect the Casting Time as normal.<br>
             Wishing can use any Meta-Abilities, even ones not known by the Caster.<br>
             The GM may allow Wishes that are not normally replicable by an Ability.
@@ -142,7 +142,8 @@
         <p>
             Searching works by typing in text in each of the 4 different textareas.<br>
             The search engine will look and try to match with all the 4 different categories. (Name, Type, Reqs, Tags)<br>
-            You can write in multiple lines to each category to narrow the search results.
+            You can write multiple lines to each category to narrow the search results.<br>
+            <b style="color: red; text-decoration: underline;">Disclamer:</b> Many Abilities are old and depricated, and may contain errors or be unintelligible!
         </p>
         <table width="100%">
             <tr>
@@ -212,6 +213,8 @@
                 debounce = f2(v.tags.toLowerCase(), TagsArray, debounce)
                 if (debounce) {
                     v.row_object.style.display = ""
+                    if (count % 2 == 0) v.row_object.style["background-color"] = "antiquewhite"
+                        else v.row_object.style["background-color"] = "wheat"
                     count++
                 } else v.row_object.style.display = "none"
             })

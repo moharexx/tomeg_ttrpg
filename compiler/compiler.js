@@ -90,7 +90,6 @@ fs.readdirSync(__dirname + "/abilities_raw").forEach(v => {
     fs.writeFileSync(__dirname + "/../abilities/" + v.split(".")[0] + ".html", page_start + content.name + page_segment2 + page_content + page_end)
     search_object = {
         name: content.name,
-        //link: "./../abilities/" + v.split(".")[0] + ".html",
         link: v.split(".")[0],
         type: "",
         reqs: "",
