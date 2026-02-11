@@ -21,17 +21,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You imbue your Melee Attack with the force of wind.",
-                "On-Hit the Target makes a <b>STR Save</b> of <box>14 × ESS</box>, or get Knocked Back.",
-                "The Knockback Direction can be anything.",
-                "If the Knockbacked Entity Hits a Solid Surface, it takes Physical Damage.",
+                `You imbue your Melee Attack with the force of wind.`,
+                `On-Hit the Target makes a <b>STR Save</b> of <box>14 × ESS</box>, or get Knocked Back.`,
+                `The Knockback Direction can be anything.`,
+                `If the Knockbacked Entity Hits a Solid Surface, it takes Physical Damage.`,
             ],
         },
         {
             type: "p",
             content: [
-                "When this Ability CRITs, not only it's Damage is Doubled, but it's Knockback as well.",
-                "Yes, you can Target Yourself, but it doesn't count as Forced Movement when you do so.",
+                `When this Ability CRITs, not only its Damage is Doubled, but its Knockback Distance as well.`,
+                `Yes, you can Target Yourself, but it doesn't count as Forced Movement when you do so.`,
             ],
         },
     ],

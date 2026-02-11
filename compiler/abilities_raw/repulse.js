@@ -20,17 +20,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, fire a Single Target Projectile of Force.",
-                "A Hit Target must make a <b>STR Save</b> or be Knocked back.",
-                "If the Knockbacked Entity Hits a Solid Surface, it takes Physical Damage.",
-                "The Knockback's Direction is the same as the Projectile's Travel Direction.",
+                `When used, fire a Single Target Projectile of Force.`,
+                `A Hit Target must make a <b>STR Save</b> or be Knocked back.`,
+                `If the Knockbacked Entity Hits a Solid Surface, it takes Physical Damage.`,
+                `The Knockback's Direction is the same as the Projectile's Travel Direction.`,
             ],
         },
         {
             type: "p",
             content: [
-                "When this Ability CRITs, not only it's Damage is Doubled, but it's Knockback Distance as well.",
-                "Yes, you can Target Yourself, but it doesn't count as Forced Movement when you do so.",
+                `When this Ability CRITs, not only its Damage is Doubled, but its Knockback Distance as well.`,
+                `Yes, you can Target Yourself, but it doesn't count as Forced Movement when you do so.`,
             ],
         },
     ],

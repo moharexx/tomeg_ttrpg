@@ -20,17 +20,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, fire a Single Target Ray made of pure force.",
-                "A Hit Target gets Knockedbacked on a Faild <b>STR Save</b> of <box>14 × ESS</box>",
-                "A Target Knocked to a solid surface takes Physical Damage, exact type determined by the Surface.",
-                "The Knockback's Direction is the same as the Ray's Travel Direction.",
+                `When used, fire a Single Target Ray made of pure force.`,
+                `A Hit Target gets Knockedback on a Failed <b>STR Save</b> of <box>14 × ESS</box>`,
+                `A Target Knocked to a solid surface takes Physical Damage, exact type determined by the Surface.`,
+                `The Knockback's Direction is the same as the Ray's Travel Direction.`,
             ],
         },
         {
             type: "p",
             content: [
-                "When this Ability CRITs, not only it's Damage is Doubled, but it's Knockback Distance as well.",
-                "Yes, you can Target Yourself, but it doesn't count as Forced Movement when you do so.",
+                `When this Ability CRITs, not only its Damage is Doubled, but its Knockback Distance as well.`,
+                `Yes, you can Target Yourself, but it doesn't count as Forced Movement when you do so.`,
             ],
         },
     ],
