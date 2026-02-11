@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../assets/style_main.css">
+    <script src="../assets/script_main.js"></script>
+    <title>Digital Dice Roller</title>
+</head>
+
+<style>
+    .dice_roller {
+        width: calc(100% - 1rem);
+        background-color: wheat;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+</style>
+
+<body>
+    <header>
+        <div onclick="side_bar_func()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
+        <div onclick="go_to('main/main.html')">Main Page</div>
+        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
+        <div onclick="go_to('main/abilities.html')">Abilities</div>
+        <div onclick="go_to('main/extra.html')">Extra</div>
+    </header>
+    <side_orb id="side_orb" onclick="side_bar_func(true)"></side_orb>
+    <side_menu id="side_menu"></side_menu>
+    <main id="main" onclick="side_bar_func(false)">
+        <h1 id="moharexxian_evaluator">MOHAREXXIAN EVALUATOR</h1>
+        <hr>
+        <input type="button" value="Add Dice Roller" onclick="new DiceRoller()">
+        <hr>
+    </main>
+
+    <div id="dice_roller_base" class="dice_roller" style="display: none;">
+        <input name="text_name" type="text" value="" placeholder="Name">
+        <input name="text_expr" type="text" value="" placeholder="Expression">
+        <input name="text_result" type="text" value="" placeholder="Result">
+        <input name="button_expr" type="button" value="EVALUATE">
+        <input name="button_delete" type="button" value="DELETE">
+    </div>
+
+</body>
+
+<script>
+
+let eval_express = function(raw, args) {
+    let expr = raw.replaceAll("×", "*")
+    expr = expr.replaceAll("÷", "/")
+    expr = expr.replaceAll(",", ".")
+    expr = expr.replaceAll("D", "d")
+    expr = expr.replaceAll("E+", "e")
+    expr = expr.replaceAll("e+", "e")
+    expr = expr.replaceAll("E", "e")
+
+    let error = null
+    let arr = []
+    let curr = ""
+    for (let i = 0; i < expr.length; i++) {
+        let char = expr.charAt(i)
+        if ("0123456789.".includes(char)) {
+            curr += char
+        } else {
+            if (curr) arr.push(1 * curr)
+            curr = ""
+            arr.push(char)
+        }
+    }
+    if (curr) arr.push(1 * curr)
+    arr = arr.filter((a) => typeof a == "number" || a.replace(/\s/g,'') != "")
+    for (let i = 0; i < arr.length; i++) if (typeof arr[i] == "number" && (typeof arr[i-1] == "number" || arr[i-1] == ")")) arr.splice(i, 0, "*")
+    for (let i = 0; i < arr.length; i++) if (arr[i] == "(" && typeof arr[i-1] == "number") arr.splice(i, 0, "*")
+    for (let i = 0; i < arr.length; i++) if ("ed*/".includes(arr[i]) && arr[i-1] != ")" && typeof arr[i-1] != "number") arr.splice(i, 0, 1)
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == "+" && arr[i-1] == "-") {arr.splice(i-1, 2, "-"); i--;}
+        else if (arr[i] == "-" && arr[i-1] == "-") {arr.splice(i-1, 2, "+"); i--;}
+        else if ("+-".includes(arr[i]) && arr[i-1] == "+") {arr.splice(i-1, 2, arr[i]); i--;}
+    }
+    for (let i = 0; i < arr.length; i++) if ("+-".includes(arr[i]) && arr[i-1] != ")" && typeof arr[i-1] != "number") arr.splice(i, 2, "(", 0, arr[i], arr[i+1])
+
+    let operand_weight = {"(": 0, ")": 0, "+": 1, "-": 1, "*": 2, "/": 2, "^": 3, "d": 4, "e": 5}
+    let arr_final = []
+    let arr_op = []
+    while (arr.length > 0) {
+        let curr = arr.pop()
+        if (typeof curr == "number") {
+            arr_final.push(curr)
+        } else if (curr == ")") {
+            arr_op.push(curr)
+        } else if (curr == "(") {
+            while (arr_op[arr_op.length - 1] != ")" && arr_op.length != 0) arr_final.push(arr_op.pop())
+            arr_op.pop()
+        } else if (arr_op.length == 0 || operand_weight[curr] >= operand_weight[arr_op[arr_op.length - 1]]) {
+            arr_op.push(curr)
+        } else {
+            while (arr_op[arr_op.length - 1] != ")" && arr_op.length != 0) arr_final.push(arr_op.pop())
+            arr_op.push(curr)
+        }
+    }
+    while (arr_op.length != 0) arr_final.push(arr_op.pop())
+
+    let f1 = function(arr) {
+        let val = arr.pop()
+        if (typeof val == "number") return val
+        if (val == "+") return f1(arr) + f1(arr)
+        if (val == "-") return f1(arr) - f1(arr)
+        if (val == "*") return f1(arr) * f1(arr)
+        if (val == "/") return f1(arr) / f1(arr)
+        if (val == "^") return Math.pow(f1(arr), f1(arr))
+        if (val == "e") return f1(arr) * Math.pow(10, f1(arr))
+        if (val == "d") {
+            let dice_to_roll = f1(arr)
+            let dice_size = f1(arr)
+            if (dice_to_roll > 1e6) {
+                error = "Too many dice!"
+                return 0
+            }
+            let curr = 0
+            for (let i = 0; i < dice_to_roll; i++) curr += Math.floor(Math.random() * dice_size) + 1
+            return curr
+        }
+    }
+    let final = f1(arr_final)
+    if (error) return error
+    return final
+}
+
+class DiceRoller {
+    static list = []
+    static html_base = document.getElementById("dice_roller_base")
+    static html_parent = document.getElementById("dice_roller_base")
+
+    id = 0
+    html_obj = DiceRoller.html_base.cloneNode(true)
+
+    constructor() {
+        this.id = DiceRoller.list.length
+        DiceRoller.list.push(this)
+
+        this.html_obj.id = ""
+        this.html_obj.style.display = ""
+        document.getElementById("main").appendChild(this.html_obj)
+
+        this.html_obj.children.button_expr.onclick = ()=>{this.html_obj.children.text_result.value = eval_express(this.html_obj.children.text_expr.value)}
+        this.html_obj.children.button_delete.onclick = ()=>{this.destroy()}
+    }
+
+    destroy() {
+        this.html_obj.remove()
+        DiceRoller.list[this.id] = null
+        for (let i = this.id + 1; i < DiceRoller.list.length; i++) DiceRoller.list[i].id--
+        DiceRoller.list = DiceRoller.list.filter(a => a)
+    }
+}
+
+new DiceRoller()
+
+</script>
+
+</html>

@@ -205,12 +205,15 @@ tr {
     height: 2rem;
     font-weight: 500;
 }
-tr:nth-child(even) {
-    background-color: antiquewhite;
-}
 tr:first-child {
     border: 1px solid black;
     font-weight: 700;
+}
+tr:nth-child(even) {
+    background-color: antiquewhite;
+}
+tr:nth-child(odd) box {
+    background-color: antiquewhite;
 }
 
 /* --------- ul, ol, li --------- */

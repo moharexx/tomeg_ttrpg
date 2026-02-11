@@ -25,7 +25,7 @@
             Abilities are special things Entities can do, which require to be Unlocked.<br>
             Abilities canonically have an Essence Cost, we don't keep track of it as a Resource, assume you always have enough Essence.<br>
             When listing the Stats (like Damage) of Abilities you will see ESS, this is the Essence Cost, which scales with your Total XP.<br>
-            <b>Maximum ESS Of Abilities:</b> <box>Total XP / 100</box>
+            <b>Maximum ESS Of Abilities:</b> <box>Total XP / 100</box> (Rounded down, and at least 1!)
         </p>
         <p>
             <b>Casting Stat</b> will be used to calculate the Stats of a lot of Spell Type Abilities, shortened to <b>CS.</b><br>
@@ -143,7 +143,7 @@
             Searching works by typing in text in each of the 4 different textareas.<br>
             The search engine will look and try to match with all the 4 different categories. (Name, Type, Reqs, Tags)<br>
             You can write multiple lines to each category to narrow the search results.<br>
-            <b style="color: red; text-decoration: underline;">Disclamer:</b> Many Abilities are old and depricated, and may contain errors or be unintelligible!
+            <b style="color: red; text-decoration: underline;">Disclamer:</b> Many Abilities are old and deprecated, and may contain errors or be unintelligible!
         </p>
         <table width="100%">
             <tr>
@@ -183,21 +183,17 @@
 <script>
     let abilities = {}
     let first_cell = `<tr><td width="20%">Name</td><td width="10%">Type</td><td width="40%">Reqs</td><td width="30%">Tags</td></tr>`
+    let f1 = v => v.value.split("\n").map(a => a.trim().toLowerCase())
+    let f2 = (curr, arr, debounce) => {
+        if (!debounce) return false
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == "") continue
+            if (!curr.includes(arr[i])) return false
+        }
+        return true
+    }
     //---------------------------------------------------------------------
     search = function() {
-        let f1 = (v) => {
-            let arr = v.value.split("\n")
-            for (let i = 0; i < arr.length; i++) arr[i] = arr[i].trim().toLowerCase()
-            return arr
-        }
-        let f2 = (curr, arr, debounce) => {
-            if (!debounce) return false
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i] == "") continue
-                if (!curr.includes(arr[i])) return false
-            }
-            return true
-        }
         for (var k in abilities) {
             let category = abilities[k]
             let NameArray = f1(NameSearch)
@@ -212,10 +208,10 @@
                 debounce = f2(v.reqs.toLowerCase(), ReqsArray, debounce)
                 debounce = f2(v.tags.toLowerCase(), TagsArray, debounce)
                 if (debounce) {
-                    v.row_object.style.display = ""
-                    if (count % 2 == 0) v.row_object.style["background-color"] = "antiquewhite"
-                        else v.row_object.style["background-color"] = "wheat"
                     count++
+                    v.row_object.style.display = ""
+                    if (count % 2 == 1) v.row_object.style["background-color"] = "antiquewhite"
+                        else v.row_object.style["background-color"] = "wheat"
                 } else v.row_object.style.display = "none"
             })
             if (count == 0) {category.table_object.style.display = "none"} else {category.table_object.style.display = ""}

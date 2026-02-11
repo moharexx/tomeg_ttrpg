@@ -51,30 +51,28 @@
 </body>
 
 <script>
-    let extra_raw = `[{"link":"premade_armaments", "name":"Premade Armaments", "summary":"Simple premade Armaments for new Players.", "tags":"Help@Items, Armaments"},
+    let extra_raw = `[{"link":"premade_armaments", "name":"Premade Armaments", "summary":"Simple premade weapons and armor for new players.", "tags":"Help@Items, Armaments"},
         {"link":"items_and_costs", "name":"Items and Costs (WIP)", "summary":"Hey kiddo, want to buy drugs?", "tags":"Help@Items"},
-        {"link":"curios.html", "name":"Curios", "summary":"Quirky items which do things!!", "tags":"Base Rule@Magical Items"},
+        {"link":"curios", "name":"Curios", "summary":"Quirky items which do things!!", "tags":"Base Rule@Magical Items"},
         {"link":"consumable_items", "name":"Consumable Items", "summary":"Scrolls, potions, bombs. You want it?@It's yours my friend, as long as you have enough C.", "tags":"Base Rule<br>Magical Items, Consumable Items, Potions, Scrolls"},
         {"link":"character_assembler", "name":"Character Assembler (WIP)", "summary":"Make stat allocation a breeze!", "tags":"Help@Character Creation"},
         {"link":"digital_character_sheet", "name":"Digital Character Sheet (WIP)", "summary":"1v1 me bruv!", "tags":"Help@Character Managment"},
+        {"link":"digital_dice_roller", "name":"Digital Dice Roller (WIP)", "summary":"Make premade dice rollers for any purpose!", "tags":"Help@Dice Rolling?"},
+        {"link":"moharexx_dice_test", "name":"moharexx's Expression Evaluator (WIP)", "summary":"This guy LOVES reinventing the wheel!@(supports nd#, n is dice amount, # is side)", "tags":"Help@Dice Rolling?"},
         {"link":"guide_to_potions", "name":"Guide to Potions (TO BE MERGED)", "summary":"Everything to know about potions or something...", "tags":"Base Rule@Magical Items, Consumable Items, Item Creation, Potions"}]`
     let extra = {}
     let first_cell = `<tr><td width="25%">Name</td><td width="40%">Summary</td><td width="35%">Tags</td></tr>`
+    let f1 = v => v.value.split("\n").map(a => a.trim().toLowerCase())
+    let f2 = (curr, arr, debounce) => {
+        if (!debounce) return false
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == "") continue
+            if (!curr.includes(arr[i])) return false
+        }
+        return true
+    }
     //---------------------------------------------------------------------
     search = function(ElementHTML, category) {
-        let f1 = (v) => {
-            let arr = v.value.split("\n")
-            for (let i = 0; i < arr.length; i++) arr[i] = arr[i].trim().toLowerCase()
-            return arr
-        }
-        let f2 = (curr, arr, debounce) => {
-            if (!debounce) return false
-            for (let i = 0; i < arr.length; i++) {
-                if (arr[i] == "") continue
-                if (!curr.includes(arr[i])) return false
-            }
-            return true
-        }
         let NameArray = f1(NameSearch)
         let SummaryArray = f1(SummarySearch)
         let TagsArray = f1(TagsSearch)

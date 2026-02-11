@@ -5,14 +5,14 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "Athletics",
+        "10 Athletics",
     ],
     reqs_full: [
-        "10 Athletics",
+        "<b>Skill:</b> 10 Athletics",
     ],
     tags: [
         "Offense",
-        "Variable Damage, Mobility",
+        "Melee, Weapon Damage, Mobility",
         "Main-Action + Bonus-Action",
     ],
     unlock_cost: 5,
@@ -20,16 +20,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You Rush to a Target in a Straight Line, and make a <box>Melee Attack-Action | Grapple | Shove</box> against it.",
-                "If you are <b>Sprinting</b>, Double the Rush Distance.",
+                `You Rush in a Straight Line, and make an <box>Melee Attack-Action | Grapple | Shove</box> against a Target.`,
+                `If you are <b>Sprinting</b>, Double the Rush Distance.`,
+                `Rush's Movement cannot curve.`,
             ]
-        },
-        {
-            type: "dots",
-            content: [
-                "When Rushing to a Target, the Target must end up inside your Melee Reach",
-                "Rush's Movement cannot curve.",
-            ],
         },
     ],
     stats: [

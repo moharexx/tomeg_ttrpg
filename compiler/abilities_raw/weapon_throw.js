@@ -5,14 +5,14 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "Melee Weapon | Ballistic | Martial Arts",
+        "5 Melee Weapon | 10 Martial Arts | 20 Ballistic",
     ],
     reqs_full: [
-        "5 Melee Weapon | 50 Ballistic | 10 Martial Arts",
+        "<b>Skill:</b> 5 Melee Weapon | 10 Martial Arts | 20 Ballistic",
     ],
     tags: [
         "Offense",
-        "Variable Damage, Projectile, AOE",
+        "Ranged, Flow AOE, Weapon Damage",
         "Main-Action",
     ],
     unlock_cost: 10,
@@ -33,7 +33,7 @@ module.exports = {
             type: "list",
             content: [
                 "<b>Boulder Throw</b> (50 STR | Any Earth Spell):",
-                "If you are not Dual-Wielding, you can grab a portion of the sorrounding terrain to use as the Projectile.",
+                "If you have a free Wielding Slot, you can grab a portion of the sorrounding terrain to use as the Projectile.",
                 "The Object can be: <box>Light | Medium | Heavy</box>",
             ],
         },
