@@ -6,16 +6,16 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Martial Arts",
-        "Evocation | Transmutation | Enchantment",
+        "10 Martial Arts",
+        "20 Evocation | 50 Transmutation | 200 Enchantment",
     ],
     reqs_full: [
-        "10 Martial Arts",
-        "(20 INT | 20 WILL | 20 EGO), (20 Evocation | 50 Transmutation | 200 Enchantment)",
+        "<b>Skill:</b> 10 Martial Arts",
+        "<b>Spell:</b> 20 CS, (20 Evocation | 50 Transmutation | 200 Enchantment)",
     ],
     tags: [
         "Offense",
-        "Physical Damage, Touch",
+        "Touch, Physical Damage, Crowd Control",
         "Main-Action",
     ],
     unlock_cost: 10,
@@ -23,16 +23,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, Touch a Target Entity and Knock it away.",
-                "If the Hit Target Entity fails the STR Save, it gets Knocked away.",
-                "If the Target Entity Hits a Solid Surface, it takes Physical Damage.",
+                `When used, Touch an Entity and Knock it away.`,
+                `If the Hit Entity fails a <b>STR Save</b> of <box>14 × ESS</box>, they get Knocked away.`,
+                `The Knockback Direction can be anything.`,
+                `If the Knockbacked Entity Hits a Solid Surface, it takes Physical Damage.`,
             ],
         },
         {
             type: "dots",
             content: [
-                "Entities cannot be knocked into the Surface they are standing on.",
-                "The Physical Damage Type depends on the Hit surface.",
+                `When this Ability CRITs, not only its Damage is Doubled, but its Knockback Distance as well.`,
+                `Yes, you can Target Yourself, but it doesn't count as Forced Movement when you do so.`,
             ],
         },
     ],
@@ -44,10 +45,10 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["STR Save", "10 × ESS"],
                 ["Range", "Touch"],
+                ["STR Save", "12 × ESS"],
                 ["Knockback", "6 × ESS^(1/3)"],
-                ["Damage From Surface Impact", "3d4 Physical"],
+                ["Damage From Surface", "(3d4 × ESS) Physical"],
             ],
         },
     ],

@@ -44,7 +44,7 @@ module.exports = {
                 ["Cast Time", "Main-Action"],
                 ["Range", "2 × CS^(1/3)"],
                 ["STR Save", "14 × ESS"],
-                ["Knockback", "5 × ESS^(1/3)"],
+                ["Knockback", "6 × ESS^(1/3)"],
                 ["Damage From Surface", "(2d4 × ESS) Physical"],
             ],
         },

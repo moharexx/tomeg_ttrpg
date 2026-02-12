@@ -32,7 +32,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Reach Multiplier", "STR^(1/3)"],
+                ["Reach Multiplier", "ESS^(1/3)"],
             ],
         },
     ],
