@@ -21,7 +21,7 @@ module.exports = {
             type: "p",
             content: [
                 `When using this Ability, you are put in <b>Garen Spin Stance</b>.`,
-                `While in <b>Garen Spin Stance</b>, you make a Melee Weapon Attack against Entities inside your Reach.`,
+                `While in <b>Garen Spin Stance</b>, once on your turns you can make a Melee Weapon Attack, against Entities inside your Reach.`,
                 `The Casters <b>MS</b> is also halved while in this Stance.`,
             ],
         },
@@ -29,8 +29,6 @@ module.exports = {
             type: "p",
             content: [
                 `The Ability Flows out from the Caster.`,
-                `This Ability has the same <b>Armor-Pen</b> as the Wielded Weapon it is used with.`,
-                `This Ability has the same <b>Armor-Pen</b> as the Wielded Weapon it is used with.`,
                 `This Ability has the same <b>Armor-Pen</b> as the Wielded Weapon it is used with.`,
             ],
         },

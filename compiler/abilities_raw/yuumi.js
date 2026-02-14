@@ -21,18 +21,19 @@ module.exports = {
             type: "p",
             content: [
                 `When using this Ability, you are put in <b>Yuumi! Stance</b>.`,
-                `When Entering <b>Yuumi! Stance</b> you attach your self to a Sensed Entity on a Failed Soul Save of <box>6 × ESS</box>`,
+                `When Entering <b>Yuumi! Stance</b> you attach yourself to a Sensed Entity on a Failed <b>Soul Save</b> of <box>6 × ESS</box>`,
                 `When attaching to an Entity you choose a point within <box>CS^(1/3)</box> Radius around the target to be at.`,
                 `You always stay at that relative position around the Target.`,
-                `You move along with them, and can choose a new position within the Radius.`,
+                `You move along with them, and when they move you can choose a new position within the Radius.`,
                 `You can also choose a new position with a <b>Bonus-Action</b>.`,
+                `You and the Target can choose to not Target each other with AOE Abilites.`,
                 `An Entity that Failed the Save can repeat it as a <b>Bonus-Action</b>.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Stance Breaks only when entering any other Stance.",
+                `The Stance Breaks only when entering any other Stance.`,
             ],
         },
     ],
