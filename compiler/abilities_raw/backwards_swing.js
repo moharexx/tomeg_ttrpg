@@ -20,17 +20,19 @@ module.exports = {
         {
             type: "p",
             content: [
-                `When using this Ability, you make a <b>Melee Attack-Action</b> with <b>Disadvantage.</b>`,
+                `When using this Ability, you make a <b>Melee <a href="../main/mechanics.html#attack_action" target="_blank">Attack-Action</a></b> with <b>Disadvantage</b>.`,
             ],
         },
         {
             type: "list",
             content: [
                 `<b>Forwards Swing</b> (50 INIT, 10 XP):`,
-                `When you make a <b>Melee Attack-Action</b> as a Reaction or Stance Trigger, you can use <b>Forwards Swing</b>.`,
-                `<b>Forwards Swing</b> is just like <b>Backwards Swing</b> bit with a <box>1 Minute (20 Round)</box> Cooldown.`,
-                `<b>Forwards Swing</b> does NOT Break Stances with the <box>Using Abilities</box> Stance Break.`,
-                `<b>Example of Abilities that can have Forwards Swing:</b> <a href="../abilities/retaliate.html" target="_blank"Retaliate</a>, <a href="../abilities/haymaker.html" target="_blank"Haymaker</a>, <a href="../abilities/opportunity_attack.html" target="_blank"Opportunity Attack</a>, <a href="../abilities/riposte.html" target="_blank"Riposte</a>.`,
+                `As part of some Abilities you make a <b>Melee Attack-Action</b>, when doing so you can Forward Swing it.`,
+                `A Forward Swinged Attack's Action Cost is reduced, but gains <b>Disadvantage</b>.`,
+                `From Main-Action to Bonus-Action, or from Bonus-Action to Free-Action.`,
+                `Using <b>Forwards Swing</b> doesn't count as an Ability for Breaking Stances.`,
+                `<b>Forwards Swing</b> has a <box>1 Minute (20 Round)</box> Cooldown.`,
+                `<b>Example of Abilities that can be Forwards Swinged:</b> <a href="retaliate.html" target="_blank">Retaliate</a>, <a href="haymaker.html" target="_blank">Haymaker</a>, <a href="opportunity_attack.html" target="_blank">Opportunity Attack</a>, <a href="riposte.html" target="_blank">Riposte</a>.`,
             ]
         },
     ],

@@ -19,8 +19,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You can pseudo Fly by jumping midair.`,
-                `You can do all movement things while not on the ground, and do the Move-Action and every other Movement in any direction, ignoring gravity.`,
+                `You can pseudo Fly by jumping midair, allowing you to use any movement midair.`,
+                `You can do the <b>Move-Action</b> and any other Movement in any direction.`,
                 `You can choose to not Fall, remaining in the air.`,
             ],
         },

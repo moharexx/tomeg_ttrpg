@@ -20,17 +20,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You can Expend GRIT To Jump High up in the air.`,
+                `You can Spend GRIT to Highjump great distances.`,
                 `You cannot use this Ability while <a href="../main/mechanics.html#conditions">Airborne.</a>`,
                 `When you use T-Highjump you can choose to not Fall after the Turn you used it in.`,
-                `The Jump can only go opposite to the surface you are standing on.`,
+                `The Jump can only go opposite to the surface you're standing on.`,
             ],
         },
         {
             type: "list",
             content: [
-                `<b>Arial T-Jump</b> (<a href="../abilities/geppo.html">Geppo</a>):`,
-                `With Geppo you can Highjump while Airborne.`,
+                `<b>T-Jump Maneuvers</b> (Any Flight Ability):`,
+                `You can T-Highjump while Airborne, and the Ability's Movement can curve.`,
             ],
         },
     ],
