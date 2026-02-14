@@ -19,8 +19,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You Increase the AOE Size of a Parent Ability, but Decrease it's Effective ESS, and CS.`,
-                `This is a Size Increase in all dimensions, so 2× Size is 8× Volume in 3 dimensions.`,
+                `You Increase the AOE Size of a Parent Ability, but Decrease its Effective ESS, and CS.`,
                 `For the Purpose of Calculating the Size of the Ability use the ESS and CS values before applying this Meta-Ability.`,
             ],
         },
