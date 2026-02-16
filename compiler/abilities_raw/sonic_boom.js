@@ -5,10 +5,10 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "10 Evocation | 20 Transmutation | 50 Transmutation",
+        "10 Evocation | 20 Transmutation | 50 Enchantment",
     ],
     reqs_full: [
-        "<b>Spell:</b> 20 CS, (10 Evocation | 20 Transmutation | 50 Transmutation)",
+        "<b>Spell:</b> 20 CS, (10 Evocation | 20 Transmutation | 50 Enchantment)",
     ],
     tags: [
         "Offense",
