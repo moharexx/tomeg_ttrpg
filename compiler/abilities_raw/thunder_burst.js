@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Thunder Fist",
+    name: "Thunder Burst",
     category: "active",
     type: [
         "Spell",
@@ -20,7 +20,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `When used, cracks the air and Creates a Thunder explosion.`,
+                `When used, cracks the air and creates a Thunder explosion.`,
             ],
         },
     ],
@@ -34,7 +34,7 @@ module.exports = {
                 ["Cast Time", "Main-Action"],
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "2 × ESS^(1/3)"],
-                ["Damage", "(1d8 × ESS) Thunder"],
+                ["Damage", "(1d10 × ESS) Thunder"],
             ],
         },
     ],

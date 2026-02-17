@@ -12,21 +12,16 @@ module.exports = {
     ],
     tags: [
         "Utility",
-        "Spellcasting, Soul Save",
+        "Buff, Soul Save",
     ],
     unlock_cost: 5,
     description: [
         {
             type: "p",
             content: [
-                "When Casting Spell Type Abilities, you can treat your CS to be <box>(INT + WILL + EGO) up to a Maximum of (Total XP / 10)</box>",
-                "When using the Memorization and wishing feature you still must use only the specified Stat written.",
-            ],
-        },
-        {
-            type: "p",
-            content: [
-                "When making a <b>Soul Save</b>, you can treat the Modifier to be <box>((INT + WILL + EGO) / 2) up to a Maximum of (Total XP / 20)</box>"
+                `Your <b>CS</b> can be <box>INT + WILL + EGO</box>, Capped at <box>Total XP / 10</box>`,
+                `Your <b>Soul Save Modifier</b> can be <box>(INT + WILL + EGO) / 2</box>, Capped at <box>Total XP / 20</box>`,
+                `When using the Memorization and Wishing feature you must still only use the specified Stat written!`,
             ],
         },
     ],

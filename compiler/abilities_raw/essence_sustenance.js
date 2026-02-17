@@ -19,15 +19,14 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You can live without food, water, and air.",
-                "If for some reason you are in an environment where there is no Essence, you do not gain this benefit.",
+                `You can live without food, water, air and sleep.`,
             ],
         },
         {
             type: "list",
             content: [
                 "<b>Divine Body</b> (50 VIT | 50 Anima):",
-                "You can live without Sleep, and do not need to release any material from your body (piss, shit, sweat, breath, ect...)",
+                "You don't need to release any material from your body. (waste, sweat, skin oil, ect...)",
             ],
         },
     ],

@@ -23,15 +23,15 @@ module.exports = {
                 "You give a protective halo to a chosen Entity, if your Target falls, the halo brings them back.",
                 "When used, the Target Entity will be effected by this spell until the Start of Your Next Turn.",
                 "Healing from this Spell can put the Soul back in the body, and thus Revive the Target.",
-                `On a Successful Revival, or save from the <a href="../main/mechanics.html#conditions" target="_blank">Dying Condition,</a> the Target is also saved from the <a href="../main/mechanics.html#conditions" target="_blank">Prone Condition.</a>`,
+                `On a Successful Revival, or save from the <a href="../main/mechanics.html#conditions" target="_blank">Dying Condition</a>, the Target is also saved from the <a href="../main/mechanics.html#conditions" target="_blank">Prone Condition</a>.`,
             ],
         },
         {
             type: "list",
             content: [
                 "<b>Halo Triggers:</b>",
-                "Your Target gets Reduced from Over 0 HP, to 0 or Less HP: Target recieves normal amount of Healing.",
-                "Your Target gets Reduced to Negative Max HP, and Dies: Double the Healing.",
+                "<b>Target gets Reduced from Over 0 HP, to 0 or Less HP:</b> Target recieves normal amount of Healing.",
+                "<b>Target gets Reduced below Negative Max HP, and Dies:</b> Double the Healing.",
             ],
         },
         {

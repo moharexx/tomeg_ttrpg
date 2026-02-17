@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Defense",
-        "Effective-HP",
+        "Negation",
     ],
     unlock_cost: 20,
     description: [
@@ -21,7 +21,7 @@ module.exports = {
             content: [
                 "Be Immune to the Dying Condition.",
                 "The rule about the Soul leaving a too damaged Body still applies, if your HP gets too into the Negatives you still Die.",
-                "Some Entites might have this Passive without actually Unlocking it in the regular way, mostly Undead, Constructs, and alike.",
+                "Some Entites might have this Passive without actually buying it with XP, like Undead, some Constructs, ect...",
             ],
         },
     ],

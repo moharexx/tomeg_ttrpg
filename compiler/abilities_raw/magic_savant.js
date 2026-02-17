@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Utility",
-        "Mastery, Buff",
+        "Buff, Mastery",
     ],
     unlock_cost: 5,
     description: [
@@ -30,7 +30,7 @@ module.exports = {
             content: [
                 `<b>Reinforced Body:</b>`,
                 `Your Base Max HP increases by <box>(Conjuration | Enchantment | Abjuration) / 2</box>`,
-                `The new Max HP is capped at <box>Total XP / 5</box>`,
+                `The new Max HP is Capped at <box>Total XP / 5</box>`,
             ],
         },
         {
@@ -45,8 +45,8 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Reflex Surge:</b>`,
-                `Your Base Max HD increases by <box>(Evocation | Transmutation | Divination)</box>`,
-                `The new Max HD cap depends on Armor Weight Class; Light <box>3 × (Total XP / 10)</box>, Medium <box>2 × (Total XP / 10)</box>, Heavy <box>(Total XP / 10)</box>`,
+                `Your Base Max HD increases by <box>Evocation | Transmutation | Divination</box>`,
+                `The new Max HD Cap depends on Armor Weight Class; Light <box>3 × (Total XP / 10)</box>, Medium <box>2 × (Total XP / 10)</box>, Heavy <box>Total XP / 10</box>`,
             ],
         },
                 {
@@ -54,7 +54,7 @@ module.exports = {
             content: [
                 `<b>Precognition:</b>`,
                 `Your Base INIT increases by <box>(Evocation | Divination | Anima) / 2</box>`,
-                `The new INIT is capped at <box>Total XP / 10</box>`,
+                `The new INIT is Capped at <box>Total XP / 10</box>`,
             ],
         },
         {
@@ -62,7 +62,7 @@ module.exports = {
             content: [
                 `<b>Swift Movement:</b>`,
                 `Your Base MS increases by <box>(Evocation | Transmutation | Enchantment)^(1/3)</box>`,
-                `The new MS is capped at <box>2 × (Total XP / 10)^(1/3)</box>`,
+                `The new MS is Capped at <box>2 × (Total XP / 10)^(1/3)</box>`,
             ],
         },
         {
@@ -70,7 +70,7 @@ module.exports = {
             content: [
                 `<b>Fortified Firewall:</b>`,
                 `One of your Save's Modifier increases by <box>(Abjuration | Divination | Anima) / 2</box>`,
-                `The new Modifier is capped at <box>Total XP / 20</box>`,
+                `The new Modifier is Capped at <box>Total XP / 20</box>`,
             ],
         },
         {
@@ -78,7 +78,7 @@ module.exports = {
             content: [
                 `<b>Life Reserve:</b>`,
                 `Your Base REST-HP increases by<box>(Transmutation | Conjuration | Enchantment) × 2</box>`,
-                `The new REST-HP is capped at <box>4 × (Total XP / 10)</box>`,
+                `The new REST-HP is Capped at <box>4 × (Total XP / 10)</box>`,
             ],
         },
     ],

@@ -245,7 +245,7 @@
         </p>
         <p>
             If SP reaches 0, then the Entity's <b>Soul Saves are Halved</b>, and it's PROXY is treated as being 0.<br>
-            When SP goes below <box>-(Max SP)</box> then the Entity's Soul is Destroyed.
+            When SP goes below <box>-(Max SP)</box>, the Entity's Soul is destroyed.
         </p>
 
         <!--MASTERIES-->
@@ -502,7 +502,7 @@
         </p>
         <p>
             When HP reaches 0 you gain the <a href="#conditions">Dying Condition.</a><br>
-            When HP goes below <box>- Max HP</box> then your <a href="#death">Soul leaves your Body.</a>
+            When HP goes below <box>- Max HP</box>, your <a href="#death">Soul leaves your Body.</a>
         </p>
         <h2 id="hit_difficulty">Hit-Difficulty</h2>
         <hr>
@@ -524,7 +524,7 @@
         </p>
         <p>
             When SP reaches 0, all of your Soul <a href="#saves">Saves</a> are <b>Halved</b>, this is <b>NOT Disadvantage!</b><br>
-            When SP goes below <box>- Max SP</box> then the Soul is destroyed. (You are very dead...)
+            When SP goes below <box>- Max SP</box>, the Soul is destroyed. (You are very dead...)
         </p>
         <h2 id="attacks">Attacks</h2>
         <hr>
@@ -558,7 +558,7 @@
             <li>Soul Save Modifier: <box>(INT | WILL | EGO) Modifier</box></li>
         </ul>
         <p>
-            By default making a Save is a <b>Non-Action!</b> (Unless stated otherwise.)
+            By default making a Save is a <b>Non-Action!</b> (Unless stated otherwise)
         </p>
         <h2 id="conditions">Conditions</h2>
         <hr>
@@ -625,7 +625,7 @@
         <ul>
             <li>Lose 1 Main-Action.</li>
             <li>Falls Prone, and cannot End the Prone Condition.</li>
-            <li>Fall Unconscious after <box>(VIT / 5)</box> Rounds.</li>
+            <li>Fall Unconscious after <box>VIT / 5</box> Rounds.</li>
             <li>The Unconscious Condition Lasts until the end of a <a href="../main/mechanics.html#resting" target="_blank">Short-Rest</a>.</li>
         </ul>
 
@@ -1363,7 +1363,7 @@
                 <li>Melee Attacks are made with Disadvantage, this can be negated with <a href="../abilities/olympic_athlete.html">Olympic Athlete</a> or <a href="../abilities/aquatic.html">Aquatic</a>.</li>
                 <li><b>Physical, Heat, Cold, and Demat</b> based Attacks are made with Disadvantage.</li>
                 <li><b>Physical, Heat, Cold, and Demat</b> based Ranges are Havled.</li>
-                <li>For <b>Heat, Cold, and Demat</b> based Flow and Crawl AOEs, every meter counts as double for their flow. (Will be Half as big.)</li>
+                <li>For <b>Heat, Cold, and Demat</b> based Flow and Crawl AOEs, every meter counts as double for their flow. (Will be Half as big)</li>
             </ul>
             <p>
                 Entites which need to breath but cannot will begin to deplete their air.<br>
@@ -1445,7 +1445,7 @@
         <div class="collapsed">
             <p>
                 When an Entity's <b>HP</b> gets to 0, they gain the <a href="#conditions">Dying Condition.</a><br>
-                An Entity with the Dying Condition falls Unconscious after <box>(VIT / 5)</box> Rounds.<br>
+                An Entity with the Dying Condition falls Unconscious after <box>VIT / 5</box> Rounds.<br>
                 If the Entity remains peacefully in Dying Condition for an hour (1200 Rounds), and has enough REST-HP to spend, it recovers to 1 HP.<br>
                 Otherwise it dies fr fr.
             </p>
@@ -1462,44 +1462,46 @@
         </div>
 
         <!--ITEMS-->
-        <h1 id="basic_weaponry">BASIC WEAPONRY</h1>
+        <h1 id="armaments">ARMAMENTS</h1>
         <hr>
+        <p>
+            Armaments are your Weapons, Shields, and Armor.<br>
+            Every Armament has an amount of <b>Property Points</b>, these are allocated for its Stats.<br>
+            Each type of Armament also has a different maximum of these Property Points to allocate.
+        </p>
         <p class="bottomless">
-            Max Property Points of an Item is dependant on Type.<br>
-            When Wielding Weapons, or a Shield, an Entity must be able to use it.<br>
-            To use it, the Entity must have <box>Weapon's Property Points</box> of Mastery in the Appropriate Mastery.
+            When Wielding Weapons, or a Shield, an Entity must have the skill to use it.<br>
+            This requires the Armament's <box>Property Points</box> in the appropriate Mastery.
         </p>
         <ul>
             <li>Melee Weapon Mastery for Melee Weapons or Shields</li>
             <li>Ballistic Mastery for Ranged Weapons</li>
         </ul>
         <p>
-            If Weapon requirements are not met, all Attacks and Abilities with the weapon are at a Disadvantage.<br>
-            If Shield requirements are not met, then the Shield has no effect.
+            If Weapon requirements aren't met, all Attacks and Abilities with the weapon are made with Disadvantage.<br>
+            If Shield requirements aren't met, the Shield has no effect.
         </p>
         <h2 id="tier_level">Tier Level</h2>
         <hr>
         <p>
-            Items have a Tier Level. This is most commonly a Magical boost.<br>
-            This Tier Level effects a lot of Stats of Items.<br>
-            Tier Level 1 being Normal. Tier Level 2 being better (By magical enhancements or other means).
+            Items have a Tier Level, Tier Levels effects a lot of Stats of the Item.<br>
+            Tier Level 1 being Normal, and Tier Level 2 being better (By magic or other means).
         </p>
         <p class="bottomless">Tier Levels increase the Stats of Armaments:</p>
         <ul>
-            <li>Base Damage Dice, Armor, Armor-Pen, and HD Gain are Multiplied by: <box>Tier Level</box></li>
+            <li>Base Damage, Armor, Armor-Pen, and HD are Multiplied by: <box>Tier Level</box></li>
             <li>Range of Ranged Weapons are Multiplied by: <box>(Tier Level)^(1/3)</box></li>
         </ul>
-        <p class="bottomless"><b>Tier 1 Basic Item Pricing:</b></p>
+        <p class="bottomless"><b>Item Pricing:</b></p>
         <ul>
             <li><b>Melee Weapons:</b> 5C × Property Points</li>
             <li><b>Ranged Weapons:</b> 5C × Property Points</li>
             <li><b>Shields:</b> 5C × Property Points</li>
             <li><b>Armors:</b> 20C × Property Points</li>
+            <li><b>Tiered Up Armaments:</b> <box>150C × Tier</box> for Channeling, and <box>300C × Tier</box> for Full.</li>
         </ul>
         <p>
-            When calculating price of Items with less than 1 Property Point, treat them as having 1 Property Point.<br>
-            Pricing of Magical Items depends on the Magical Effect, and is up to GM's interpretation.<br>
-            Market Price for simple Tiered Up Magical Items is <box>400C × Tier</box>
+            For more about Tiered Up Armaments, visit the <a href="../extra/curios.html" target="_blank">Curios</a> Page.
         </p>
         <h2 id="melee_weapons">Melee Weapons</h2>
         <hr>
@@ -1677,7 +1679,7 @@
         <hr>
         <p>
             Shields have Max 6 Property Points, and have only 2 Weight Classes; <box>Light | Heavy </box><br>
-            You can only benifit from one Shield at a time.<br>
+            You can only benefit from one Shield at a time.<br>
             When using the <a href="#defense-action">Defense-Action</a> with a Shield, and the Shield gets Un-Wielded, you lose the Defense-Action.<br>
             <b>Price of Shields:</b> <box>5C × Property Points</box>
         </p>
@@ -1910,28 +1912,28 @@
             <b>Example:</b> Heat-RES, Bio-RES, ect...<br>
         </p>
         <p>
-            <b>Armor</b> is Resistance VS Bludgeoning, Slashing, and Piercing.<br>
-            <b>Armor VS All</b> is Resistance towards all Damage Types, but True Damage.<br>
-            <b>Armor VS HP</b> is Resistance towards all Damage which goes into HP, but True Damage.<br>
-            <b>Armor VS SP</b> is Resistance towards all Damage which goes into SP, but True SP Damage.<br>
-            Armor VS HP and Armor VS SP do reduce their respective parts from Radiant and Necrotic.
+            <b>Armor</b> is Resistance against Physical. (Bludgeoning, Slashing, and Piercing)<br>
+            <b>Armor VS All</b> is Resistance against all Damage Types, but True Damage.<br>
+            <b>Armor VS HP</b> is Resistance against all Damage which goes into HP, but True Damage.<br>
+            <b>Armor VS SP</b> is Resistance against all Damage which goes into SP, but True SP Damage.<br>
+            Armor VS HP and Armor VS SP reduce their respective parts from Radiant and Necrotic.
         </p>
         <p>
             Weaknesses are treated as Negative Resistance, shortened as [Type]-WEAK.<br>
-            When taking Damage, for each point of Damage add +1 Extra Damage up to Max the Weakness's value.<br>
-            Resistance and Weaknesses cancel out at a rate of 1 to 1.<br>
-            <b>Damage Formula for Weakness:</b> <box>Min(Damage + Weakness, 2 × Damage)</box>
+            When taking Damage, for each point of Damage add +1 Extra Damage, capped by the Weakness's value.<br>
+            Resistance and Weakness cancel out at a rate of 1 to 1.<br>
+            <b>Damage Formula for Weakness:</b> <box>Min(<span style="color: red;">Damage + Weakness</span>, <span style="color: blue;">2 × Damage</span>)</box>
         </p>
         <p>
-            Absorption is when the Target gets Healed from the "Damage", shortened as [Damage Type]-ABS.<br>
-            When taking Damage, for each point of Damage, turn it into Healing, up to a Max of the Absorption's value.<br>
-            This means, even with Absorption, the Target might take actual Damage at high enough Damage values.<br>
+            Absorption is when the Target gets Healed from the Damage, shortened as [Damage Type]-ABS.<br>
+            When taking Damage, for each point of Damage, turn it into Healing, capped by the Absorption's value.<br>
+            This means, even with Absorption, the Target might take actual Damage with a strong enough Hit.<br>
             Absorption applies before Resistance and Weakness, in case it isn't enought to Absorb all the Damage.
         </p>
         <p>
             Penetration is Resistance Negation, written as [Type]-Pen.<br>
             Penetration can't reduce Resistance to negative values.<br>
-            If a Meta-Ability, or similar, changes the Damage Type of something, the Penetration Type is also changed.
+            If an Ability, Meta-Ability, or something else changes the Damage Type of something, its Penetration Type is also changed.
         </p>
         <p>
             Things with loose physical presence (air, shadow and light Entities, ect...) have 100 Armor.<br>
@@ -1963,9 +1965,9 @@
             <b>Example:</b> Recieving Radiant (Hybrid), the Target chooses that first the SP part goes into the BUFFER.
         </p>
         <p>
-            A BUFFER cannot be Healed, normally.<br>
+            A BUFFER cannot be Healed. (Exceptions may exist)<br>
             BUFFERs cannot Stack, the Target chooses between sources of BUFFER.<br>
-            If Duration isn't written, a BUFFER lasts till End of Next Long-Rest.
+            If Duration isn't written, a BUFFER lasts till the End of the next Long-Rest.
         </p>
         <h2 id="maximize_and_minimize">Maximize and Minimize</h2>
         <hr>
@@ -1993,7 +1995,7 @@
             Spending Potency on Saves will require 2 Potency for each +1 Save Difficulty!
         </p>
         <h2 id="aoe">AOE</h2>
-        <hr />
+        <hr>
         <p>
             AOEs are Attacks which effect an area.<br>
             Everything within the Area is counted as Target.<br>
