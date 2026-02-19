@@ -162,12 +162,7 @@
         <hr>
         <p>
             Each Entity has a few additional stats.<br>
-            Note that Entity Features can override some of these calculations.
-        </p>
-        <p>
-            For Stats classified as a Resource these values indicate the Maximum the Entity can have under normal
-            conditions.<br>
-            Resources are used and regenerated, like Health.
+            Note that there are Features which can override some of these calculations.
         </p>
         <p class="bottomless"><b>Stat Types:</b></p>
         <ul>
@@ -318,8 +313,8 @@
         <hr>
         <p>
             Martial-Masteries are for increasing Martial related Stats, and Unlocking Skill Type Abilities.<br>
-            The Maximum of any Martial-Mastery is the same as it's associated Base Stat.<br>
-            <b>Martial Mastery d10 Check Modifier:</b> <box>(Base Stat + Martial Mastery) / 4</box>
+            Each Magic-Mastery is Capped by its Base Stat.<br>
+            <b>Martial-Mastery d10 Check Modifier:</b> <box>(Base Stat + Martial Mastery) / 4</box>
         </p>
         <table width="45%">
             <tr>
@@ -348,7 +343,7 @@
         <p>
             Magic-Masteries are for Unlocking Spell Type Abilities.<br>
             These Magic-Masteries are Divided into 7 Groups, each governing a collection of Meta-Concepts.<br>
-            The Maximum of any Magic-Mastery is the same as it's associated Base Stat.<br>
+            Each Magic-Mastery is Capped by its Base Stat.<br>
             Magic Mastery d10 Check Modifier: <box>Magic Mastery</box>
         </p>
         <table width="65%">
@@ -412,7 +407,7 @@
         </p>
         <p>
             Note that this is just a "Level 1" template.<br>
-            XP can be more or less depending on Game Master.
+            The GM can choose to start the players off with more or less XP and Currency.
         </p>
         <p class="bottomless"><b>Resources:</b></p>
         <ul>
@@ -423,15 +418,15 @@
         <h2 id="experience">Experience</h2>
         <hr>
         <p>
-            Each Player Character has a Total XP, and a Stored XP.<br>
-            To gain XP, Players must perform actions, like combat encounters, quests, ect...<br>
-            XP is usually given in a batch at the end of a game session, split among the players.<br>
-            Note that Encounters can be defeated NOT only by killing them.
+            Each Player Character has a Total XP, and Unspent XP.<br>
+            To gain XP, Players must perform actions, like encounters, quests, roleplay, ect...<br>
+            XP is usually given in a batch at the end of a game session, split amongst the players.<br>
         </p>
         <p>
             To increase a Base Stat by 1 you must spend 2 XP<br>
             To increase a Mastery by 1 you must spend 0.5 XP<br>
-            Maximum of any one Base Stat: <box>Total XP / 10</box>
+            Your Base Stats are Capped at; <box>Total XP / 10</box>, so you can't go super into 1 Stat.<br>
+            Note that Masteries are also Capped by Base Stats.
         </p>
         <h2 id="fate">Fate</h2>
         <hr>
@@ -439,7 +434,7 @@
             Player Characters are guided by <b>A</b>, Fated for greatness.<br>
             When a Player does something cool, smart, completes an objective, or plays their character well, the GM may reward them a Fate Point.<br>
             All Fate Effects are <b>Non-Actions</b>, and can be applied after Rolls!<br>
-            After Character Creation a Player starts with 1 Fate, and the Maximum they can have is 3 at a time.
+            After Character Creation a Player starts with 1 Fate, and the most they can have is 3 at a time.
         </p>
         <p class="bottomless"><b>Spending Fate:</b></p>
         <ul>
@@ -1084,33 +1079,70 @@
                 </tr>
             </table>
         </div>
+        <h2 id="hack_action" class="collapsible">Hack Device (WIP)</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                You can Hack into electronic and magical Devices, and networks.<br>
+                This is usually a Science and/or Arcana Check. (Depends if electronic or magical, when both it's a Multi-Check)<br>
+                To attempt and maintain Hack Device, you must somehow access the Device.<br>
+                <b>Examples of access:</b> Physical access, network connection, magic, ect...<br>
+                Inside a Device <a href="#scan">Scan</a> and <a href="#stealth">Stealth</a> become Science and/or Arcana Checks.<br>
+            </p>
+            <p class="bottomless"><b>Probe</b> (Main-Action):</p>
+            <ul>
+                <li><b>Difficulty:</b> <box>Network or Device Security Rating</box></li>
+                <li>On a Success you infiltrate the Network or Device, but without any privileges.</li>
+                <li>In this mode you can do Scan, Stealth, and basic communication.</li>
+            </ul>
+            <p class="bottomless"><b>Admin Mode</b> (Main-Action + Bonus-Action):</p>
+            <ul>
+                <li><b>Difficulty:</b> <box>2 × Device's Security Rating</box></li>
+                <li>On a Success you infiltrate the Device and gain full Admin privileges.</li>
+                <li>On a Fail anyone who is monitoring the Device will know someone tried to Hack it.</li>
+            </ul>
+            <p class="bottomless"><b>Create Backdoor</b> (Bonus-Action):</p>
+            <ul>
+                <li>This requires you to be in Admin Mode.</li>
+                <li>You create a Backdoor which can be used to always Succeed future Admin Mode Hacks in just a <b>Bonus-Action</b>.</li>
+                <li>This is Hidden, but a Scan can find it, with a Difficulty of this Action's Check.</li>
+                <li>A found Backdoor can be removed with a <b>Free-Action</b>.</li>
+            </ul>
+            <p>
+                <b>Note:</b> Devices have <b>Proto-Souls</b>, and can be effected by mind altering Spells, such as <a href="../abilities/command_entity.html" target="_blank">Command Entity</a>.<br>
+                A Security Rating higher than the Spell's Save nullifies the Spell, otherwise it Rolls a Soul Save.
+            </p>
+            <p>
+                <a href="#devices">Click here for more information about Devices.</a> (UNFINISHED)
+            </p>
+        </div>
         <h2 id="scan" class="collapsible">Scan</h2>
         <hr>
         <div class="collapsed">
             <p>
                 You can do the Scan Action to reveal information otherwise hidden.<br>
-                This is usually a Perception and/or Intuition Check.<br>
+                This is a <b>Bonus-Action</b>, and is usually a Perception and/or Intuition Check. (Science and/or Arcana for Devices)<br>
                 You can make Passive Scan Actions as a Free-Action.
             </p>
-            <p class="bottomless"><b>Scan Area</b> (Bonus-Action):</p>
+            <p class="bottomless"><b>Scan Area:</b></p>
             <ul>
                 <li>Perception and Intuition <a href="#multi_check">Multi-Check</a> against an Area.</li>
-                <li><b>Difficulty:</b> <box>Targets' rolled Stealth</box></li>
+                <li><b>Difficulty:</b> <box>Targets' Stealth Checks</box></li>
                 <li>On the Perception part's Success hidden Targets' position are revealed to you.</li>
                 <li>On the Intuition part's Success hidden Targets' presence, but not position, and potentional dangers are revealed to you.</li>
             </ul>
-            <p class="bottomless"><b>Scan Motive</b> (Bonus-Action):</p>
+            <p class="bottomless"><b>Scan Motive:</b></p>
             <ul>
                 <li>Intuition Check against a Target.</li>
                 <li><b>Difficulty:</b> <box>Target's Performance Check</box></li>
                 <li>On a Success you reveal the Target's motives, like friendliness, hostility, if they <a href="#speak">lie</a>, ect...</li>
             </ul>
-            <p class="bottomless"><b>Scan Entity</b> (Main-Action):</p>
+            <p class="bottomless"><b>Scan Entity:</b></p>
             <ul>
                 <li>(Perception | Intuition) Check against a Pinpointed Target.</li>
-                <li><b>Difficulty:</b> <box>Target Total XP / 10</box></li>
+                <li><b>Difficulty:</b> <box>Target's Total XP / 10</box></li>
                 <li>On a Success you know the Target's Stats, Masteries, Resources, Resistances, ect... But NOT Abilities.</li>
-                <li>As part of the Scan-Entity Action you can also make a <a href="#recall_knowledge">Recall Knowledge</a> on the same Target.</li>
+                <li>As part of Scan-Entity you can also make a <a href="#recall_knowledge">Recall Knowledge</a> on the same Target.</li>
             </ul>
         </div>
         <h2 id="sense_nature" class="collapsible">Sense Nature</h2>

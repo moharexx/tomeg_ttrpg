@@ -18,7 +18,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                "Before using an Ability, you can set it's Maximum Values and Remove select Effects.",
+                "Before using an Ability, you can set its Maximum Values and Remove select Effects.",
             ],
         },
         {

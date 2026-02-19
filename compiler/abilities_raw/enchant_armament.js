@@ -156,6 +156,7 @@ module.exports = {
             content: [
                 `<b>Potency Boost:</b>`,
                 `For each point of <a href="../main/mechanics.html#potency" target="_blank">Potency</a> you can have +1 EP.`,
+                `When multiple Items are Targeted, rather than all receiving +EP, you have to spread out the +EP between Items.`,
                 `<b>Note:</b> Potency Effects fade after <box>1 Minute (20 Rounds)</box>, even if the Ability would last longer!`,
             ],
         },

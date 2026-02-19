@@ -5,14 +5,14 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Evocation | Transmutation | Conjuration",
+        "5 Conjuration | 10 Transmutation | 20 Evocation",
     ],
     reqs_full: [
-        "(10 INT | 10 WILL | 10 EGO), (5 Conjuration | 10 Transmutation | 20 Evocation)",
+        "<b>Spell:</b> 10 CS, (5 Conjuration | 10 Transmutation | 20 Evocation)",
     ],
     tags: [
         "Offense",
-        "Physical Damage, Projectile",
+        "Ranged, Physical Damage",
         "Main-Action + Bonus-Action",
     ],
     unlock_cost: 10,

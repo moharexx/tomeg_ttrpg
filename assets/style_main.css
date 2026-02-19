@@ -131,7 +131,7 @@ side_menu.side_menu_active {
     transform: translate(0, 0);
 }
 
-/* --------- main --------- */
+/* --------- main, h1, h2, p, ul, ol, table, a --------- */
 
 main {
     transition: all 0.2s;
@@ -143,14 +143,11 @@ main {
     background-color: floralwhite;
 }
 
-/* --------- h1, h2, p, ul, ol, table --------- */
-
 h1 {
     font-size: 2.5rem;
     font-weight: 700;
     margin: 4rem 0 0 0;
-}
-h1 + hr {
+} h1 + hr {
     margin: 0;
     width: 100%;
     border-top: 3px solid #000000;
@@ -160,8 +157,7 @@ h2 {
     font-size: 1.5rem;
     font-weight: 600;
     margin: 3rem 0 0 0;
-}
-h2 + hr {
+} h2 + hr {
     margin: 0;
     width: 80%;
     border-top: 1px solid #000000;
@@ -171,18 +167,13 @@ p, ul, ol, table {
     margin-top: 0.4rem;
     margin-bottom: 1.6rem;
     line-height: 140%;
-}
-
-ul, ol {
+} ul, ol {
     margin-top: 0;
 }
 
-/* --------- a --------- */
-
 a {
     font-weight: 600;
-} 
-a:hover {
+} a:hover {
     font-weight: 700;
 }
 
@@ -296,33 +287,16 @@ box {
     h2 {
         font-size: 2.2rem;
     }
+    input[type=button], input[type=text], textarea {
+        font-size: 2rem;
+    }
     table {
         width: 100% !important;
         font-size: 1.4rem;
     }
-    p {
+    p, ul, ol {
         margin-bottom: 3rem;
     }
-    ul {
-        margin-bottom: 3rem;
-    }
-    ol {
-        margin-bottom: 3rem;
-    }
-
-
-
-    input[type=button] {
-        font-size: 2rem;
-    }
-    input[type=text] {
-        font-size: 2rem;
-    }
-    textarea {
-        font-size: 2rem;
-    }
-
-
 
     .side_menu_button {
         width: 40%;

@@ -21,7 +21,7 @@ module.exports = {
             content: [
                 `When your SP gets below <box>- Max SP</box>, rather than your Soul instantly shattering, it goes into a safe state.`,
                 `While in this state you are <b>Unconscious</b>, and taking a <b>Long-Rest</b>.`,
-                `If you gain back enough SP to be at least at <box>- Max SP</box>, this state Ends, and you gain back consciousness.`,
+                `If you gain back enough SP to be at least at <box>-(Max SP)</box>, this state Ends, and you gain back consciousness.`,
             ],
         },
         {

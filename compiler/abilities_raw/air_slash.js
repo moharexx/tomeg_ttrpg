@@ -20,15 +20,15 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When using this Ability, you fire a Projectile made of Air with a swing.",
-                "When using this Ability, choose between Variants.",
+                `When using this Ability, you fire a Projectile made of Air with a swing.`,
             ],
         },
         {
-            type: "dots",
+            type: "p",
             content: [
-                "Focus Slash is a Ranged Projectile Attack.",
-                "Burst Slash is a Ranged Projectile Attack which explodes into a Flow Sphere AOE from it's center.",
+                `When using this Ability, choose between Variants.`,
+                `Focus Slash is a Ranged Projectile Attack.`,
+                `Burst Slash is a Ranged Projectile Attack which explodes into a Flow Sphere AOE from its center.`,
             ],
         },
         {
