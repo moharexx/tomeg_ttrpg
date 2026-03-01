@@ -37,7 +37,7 @@ module.exports = {
                 ["Activation Requirement", "Entity Gets Attacked In Range"],
                 ["Cooldown", "1 Minute (20 Rounds)"],
                 ["Range", "MS × 2"],
-                ["Displacement", "STR^(1/3)"],
+                ["Displacement", "(STR | AGI)^(1/3)"],
             ],
         },
     ],

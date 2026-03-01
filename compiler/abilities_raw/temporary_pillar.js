@@ -55,7 +55,7 @@ module.exports = {
                 ["Line Length", "4 × ESS^(1/3)"],
                 ["Line Width", "ESS^(1/3)"],
                 ["STR Save", "6 × ESS"],
-                ["Pillar HP per Cubic Meter", "5"],
+                ["Pillar HP", "20 × ESS"],
                 ["Pillar Weight", "40 × ESS Kg"],
             ],
         },

@@ -8,7 +8,7 @@ module.exports = {
         "Athletics | Martial Arts",
     ],
     reqs_full: [
-        "<b>Skill:<b> 10 Athletics | 10 Martial Arts",
+        "<b>Skill:</b> 10 Athletics | 10 Martial Arts",
     ],
     tags: [
         "Offense",
