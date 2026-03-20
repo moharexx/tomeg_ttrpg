@@ -1,0 +1,263 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../assets/style_main.css">
+    <script src="../assets/script_main.js"></script>
+    <title>Vehicles</title>
+</head>
+
+<body>
+    <header>
+        <div onclick="side_bar_func()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
+        <div onclick="go_to('main/main.html')">Main Page</div>
+        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
+        <div onclick="go_to('main/abilities.html')">Abilities</div>
+        <div onclick="go_to('main/extra.html')">Extra</div>
+    </header>
+    <side_orb id="side_orb" onclick="side_bar_func(true)"></side_orb>
+    <side_menu id="side_menu"></side_menu>
+    <main onclick="side_bar_func(false)">
+        <!--VEHICLES-->
+        <h1 id="vehicle_rules">Vehicles Rules</h1>
+        <hr>
+        <p>
+            WIP
+        </p>
+        <h1 id="premade_vehicles">Premade Vehicles</h1>
+        <hr>
+        <p>
+            Ever wanted to have a Car? A Tank? Maybe a Plane, or even a Mech? How about getting a whole Spaceship!<br>
+            Well... it's work in progress...
+        </p>
+        <h1 id="custom_vehicles">Custom Vehicles</h1>
+        <hr>
+        <p>
+            Create customized Vehicles, with Attachments and Weapons for them.<br>
+            The Premade Vehicles section uses these rules for its listing of Vehicles.
+        </p>
+        <h2 id="hulls">Hulls</h2>
+        <hr>
+        <p>
+            This is the base of the Vehicle, this section encompasses its size, weight, speed, and Movement Type(s).<br>
+            Hulls have a Tier Level, like many things, this is a general quality indicator, and the main scaling factor for the Hull's stats.<br>
+            A Hull has a Weight Class, and a Type of Movement, these determine its Stats.<br>
+            There are also Augments the Hull can have, like Arms.<br>
+        </p>
+        <p>
+            Base Market Price of Hulls: <box>100 × Tier</box><br>
+            Hulls also have <box>5 × Tier</box> Armor VS HP.<br>
+            In the table below; Weight, Size, HP, STR, and Attachments Slots scale with <b>Tier Level</b>.
+        </p>
+        <table width="100%">
+            <tr>
+                <td width="14%">
+                    Weight Class
+                </td>
+                <td width="14%">
+                    Weight
+                </td>
+                <td width="14%">
+                    Size
+                </td>
+                <td width="14%">
+                    HP
+                </td>
+                <td width="14%">
+                    MS Mult
+                </td>
+                <td width="14%">
+                    STR
+                </td>
+                <td width="15%">
+                    Attachments Slots
+                </td>
+            </tr>
+            <tr>
+                <td>Light</td>
+                <td>25Kg</td>
+                <td>0.25m<sup>3</sup></td>
+                <td>15</td>
+                <td>2×</td>
+                <td>5</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>50Kg</td>
+                <td>0.5m<sup>3</sup></td>
+                <td>25</td>
+                <td>1.5×</td>
+                <td>10</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Heavy</td>
+                <td>100Kg</td>
+                <td>1m<sup>3</sup></td>
+                <td>40</td>
+                <td>1×</td>
+                <td>20</td>
+                <td>12</td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Movement Type
+                </td>
+                <td width="85%">
+                    Stats and Description (Hull Tier = HT)
+                </td>
+            </tr>
+            <tr>
+                <td>Wheels</td>
+                <td>
+                    Spinning thing spin and vehicle move, wow! This includes tank tracks.<br>
+                    <b>Move Speed:</b> <box>10 × HT^(1/3)</box><br>
+                    <b>AGI (Light/Medium/Heavy)</b> <box>8 × HT</box>/<box>4 × HT</box>/<box>2 × HT</box><br>
+                    <b>Maximum Cargo Weight:</b> <box>30Kg × Vehicle STR</box>
+                </td>
+            </tr>
+            <tr>
+                <td>Legs</td>
+                <td>
+                    Legs are cool! Mechs are cool! This Type of Movement, unlike all others, can move twice per Round.<br>
+                    Legs also allow Jumping and don't impose a Penalty on Abilities which scale with <b>MS</b>.<br>
+                    <b>Move Speed:</b> <box>4 × HT^(1/3)</box><br>
+                    <b>AGI (Light/Medium/Heavy)</b> <box>10 × HT</box>/<box>6 × HT</box>/<box>2 × HT</box><br>
+                    <b>Maximum Cargo Weight:</b> <box>20Kg × Vehicle STR</box>
+                </td>
+            </tr>
+            <tr>
+                <td>Areal</td>
+                <td>
+                    For planes and spaceships.<br>
+                    <b>Move Speed:</b> <box>20 × HT^(1/3)</box><br>
+                    <b>AGI (Light/Medium/Heavy)</b> <box>10 × HT</box>/<box>5 × HT</box>/<box>2 × HT</box><br>
+                    <b>Maximum Cargo Weight:</b> <box>10Kg × Vehicle STR</box>
+                </td>
+            </tr>
+            <tr>
+                <td>Naval</td>
+                <td>
+                    For ships and submarines.<br>
+                    <b>Move Speed:</b> <box>8 × HT^(1/3)</box><br>
+                    <b>AGI (Light/Medium/Heavy)</b> <box>4 × HT</box>/<box>2 × HT</box>/<box>1 × HT</box><br>
+                    <b>Maximum Cargo Weight:</b> <box>50Kg × Vehicle STR</box>
+                </td>
+            </tr>
+        </table>
+        <table width="100%">
+            <tr>
+                <td width="15%">
+                    Augments
+                </td>
+                <td width="15%">
+                    Market Price
+                </td>
+                <td width="70%">
+                    Description (Hull Tier = HT)
+                </td>
+            </tr>
+            <tr>
+                <td>Air Locks</td>
+                <td>20 × HT</td>
+                <td>With this every door and room can be airtight, probably a good idea underwater and in space.</td>
+            </tr>
+            <tr>
+                <td>Arm</td>
+                <td>40 × HT</td>
+                <td>
+                    Arms are cool! This can be bought multiple times.<br>
+                    Adds a Wielding Slot to the Vehicle, at the cost of <box>2 × HT</box> Attachment Points.<br>
+                    If a Pilot wants to use a Wielding Slot of a Vehicle, they must use their own Wielding Slot to do so.<br>
+                    This Wielding Slot can only be used for basic Actions, like the Attack-Action, Shove, Grapple, Interact, ect...
+                </td>
+            </tr>
+            <tr>
+                <td>Pilot Synchronizer</td>
+                <td>60 × HT</td>
+                <td>
+                    The dreams of a mech pilot. This can be bought multiple times.<br>
+                    Adds a special Pilot seat, which requires an <a href="../main/mechanics.html#interact_action" target="_blank">Interact-Action</a> <b>(Bonus-Action)</b> to Attune to.<br>
+                    <p class="bottomless"><b>While Attuned to:</b></p>
+                    <ul>
+                        <li>The Vehicle benefits from the Pilot's Acrobatics and Martial Masteries, Capped by the Vehicle's STR and AGI.</li>
+                        <li>The Pilot can use any of their own Abilities as the Vehicle's.</li>
+                        <li>For Abilities, the Pilot can use the Vehicle's STR, AGI and MS for scaling, but must still use their own ESS.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <p>
+            I.G. Weapons, I.G. Curios, and even people count as Cargo Weight!<br>
+            <b>Note:</b> The Hull's shape and look is mostly just flavor, let the players be creative.
+        </p>
+        <h2 id="industrial_grade_weapons">Industrial Grade Weapons</h2>
+        <hr>
+        <p>
+            Industrial Grade (I.G.) Weapons are Weapons too big to be used personally, and must be Mounted to something or Wielded by a Vehicle.<br>
+            These are mostly like regular Weapons, and have <b>8 Property Points</b>, but there are some differences.<br>
+            Using when not Mounted or not Wielded by a Vehicle gives Disadvantage, unless STR is at least <box>30 × Tier</box>
+        </p>
+        <table width="50%">
+            <tr>
+                <td width="60%">
+                    Industrial Grade Weapon
+                </td>
+                <td width="40%">
+                    Stat
+                </td>
+            </tr>
+            <tr>
+                <td>Market Price</td>
+                <td>100 × Tier</td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>10Kg × Tier</td>
+            </tr>
+        </table>
+        <p>
+            There are 2 Types of Industrial Grade Weapons; Mounted and Wieldable.<br>
+            These Types also interact differently with Melee and Ranged.
+        </p>
+        <p class="bottomless"><b>I.G. Weapon Types:</b></p>
+        <ul>
+            <li><b>Mounted:</b> These must be Mounted to a Vehicle or Terrain, Taking <box>2 × Tier</box> <b>Attachment Points</b> from a Vehicle.</li>
+            <li><b>Wieldable:</b> These will require to be Wielded by a Vehicle to be used.</li>
+        </ul>
+        <p class="bottomless"><b>Melee I.G. Weapons:</b></p>
+        <ul>
+            <li>When Mounted; replace the Attack made on Vehicle Collisions.</li>
+            <li>When Wieldable; it can be a Shield, with 6 Property Points.</li>
+        </ul>
+        <p class="bottomless"><b>Ranged I.G. Weapons:</b></p>
+        <ul>
+            <li>When Mounted; Range is Double that of regular Ranged Weapons.</li>
+            <li>When Mounted; the Weapon can only shoot once per Round, or Twice if it's a Light Weapon.</li>
+            <li>The <b>Aim Property</b> can only be used on <b>Wieldable Types</b>.</li>
+        </ul>
+        <h2 id="industrial_grade_curios">Industrial Grade Curios</h2>
+        <hr>
+        <p>
+            Industrial Grade (I.G.) Curios are Special Curios too big to be used personally, and must be Mounted to a Vehicle or Terrain.<br>
+            WIP
+        </p>
+        <h2 id="modifications">Modifications</h2>
+        <hr>
+        <p>
+            Hulls, I.G. Weapons and I.G. Curios can have a few special modifications.<br>
+        </p>
+        <p class="bottomless"><b>Miniaturization:</b></p>
+        <ul>
+            <li>Sometimes you don't want your Vehicle to be too big, but you still want that potency and quality.</li>
+            <li>With this the select Hull, I.G. Weapon, or I.G. Curio can be much smaller and lighter.</li>
+            <li>For <box>3× Market Price</box> the Weight and Size of the Part is reducible to if it was only <b>Tier 1</b>.</li>
+        </ul>
+    </main>
+</body>
+
+</html>

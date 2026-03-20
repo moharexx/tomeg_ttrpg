@@ -12,8 +12,8 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Physical Damage, Projectile, Crowd Control",
-        "Main-Action + Bonus-Action, GRIT, SP",
+        "Ranged, Demat Damage",
+        "Main-Action + Bonus-Action, GRIT",
     ],
     unlock_cost: 10,
     description: [

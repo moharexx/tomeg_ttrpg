@@ -5,10 +5,10 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "WILL",
+        "10 WILL",
     ],
     reqs_full: [
-        "10 WILL",
+        "<b>Innate:</b> 10 WILL",
     ],
     tags: [
         "Offense, Defense",

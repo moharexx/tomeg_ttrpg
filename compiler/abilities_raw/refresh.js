@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Cooldown -",
-        "Resource Cost +",
+        "SP -",
     ],
     unlock_cost: 10,
     description: [

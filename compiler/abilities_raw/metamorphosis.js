@@ -2,7 +2,7 @@ module.exports = {
     name: "Metamorphosis",
     category: "meta",
     type: [
-        "Spell",
+        "Any",
     ],
     reqs_short: [
         "2000 Total XP",

@@ -19,7 +19,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Melee Weapon and Martial Arts Modifiers can be <box>(Melee Weapon + Matrial Arts) / 2</box>, Capped at <box>Total XP / 10</box>`,
+                `Melee Weapon and Martial Arts Modifiers can be <box>(Melee Weapon + Matrial Arts) / 2</box>, Capped at <box>Total XP / 20</box>`,
                 `For Attacks and Abilities with <b>Finesse</b> Weapons, their Main Stat can be </box>STR + AGI</box>, Capped at <box>Total XP / 10</box>`,
             ],
         },

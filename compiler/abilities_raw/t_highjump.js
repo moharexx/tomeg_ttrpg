@@ -11,8 +11,8 @@ module.exports = {
         "10 Athletics",
     ],
     tags: [
+        "Utility",
         "Mobility",
-        "Movement",
         "Main-Action, GRIT",
     ],
     unlock_cost: 5,
@@ -21,9 +21,9 @@ module.exports = {
             type: "p",
             content: [
                 `You can Spend GRIT to Highjump great distances.`,
-                `You cannot use this Ability while <a href="../main/mechanics.html#conditions">Airborne.</a>`,
+                `You cannot use this Ability while <a href="../main/mechanics.html#conditions">Airborne</a>.`,
                 `When you use T-Highjump you can choose to not Fall after the Turn you used it in.`,
-                `The Jump can only go opposite to the surface you're standing on.`,
+                `This movement can go sideways, it doesn't necessarily need to be upwards.`,
             ],
         },
         {
@@ -43,7 +43,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Ability Cost", "5 GRIT × ESS"],
-                ["Max Jump Hight", "12 × ESS^(1/3)"],
+                ["Max Jump Height", "12 × ESS^(1/3)"],
             ],
         },
     ],

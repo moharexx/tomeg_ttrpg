@@ -1079,7 +1079,7 @@
                 </tr>
             </table>
         </div>
-        <h2 id="hack_action" class="collapsible">Hack Device (WIP)</h2>
+        <h2 id="hack_device" class="collapsible">Hack Device (WIP)</h2>
         <hr>
         <div class="collapsed">
             <p>
@@ -1101,16 +1101,15 @@
                 <li>On a Success you infiltrate the Device and gain full Admin privileges.</li>
                 <li>On a Fail anyone who is monitoring the Device will know someone tried to Hack it.</li>
             </ul>
-            <p class="bottomless"><b>Create Backdoor</b> (Bonus-Action):</p>
+            <p class="bottomless"><b>Backdoor</b> (Bonus-Action):</p>
             <ul>
                 <li>This requires you to be in Admin Mode.</li>
-                <li>You create a Backdoor which can be used to always Succeed future Admin Mode Hacks in just a <b>Bonus-Action</b>.</li>
+                <li>You create a Backdoor which can be used to always Succeed future Admin Mode Hacks with just a <b>Bonus-Action</b>.</li>
                 <li>This is Hidden, but a Scan can find it, with a Difficulty of this Action's Check.</li>
-                <li>A found Backdoor can be removed with a <b>Free-Action</b>.</li>
+                <li>Someone in Admin Mode can remove all known Backdoors using a <b>Bonus-Action</b>.</li>
             </ul>
             <p>
                 <b>Note:</b> Devices have <b>Proto-Souls</b>, and can be effected by mind altering Spells, such as <a href="../abilities/command_entity.html" target="_blank">Command Entity</a>.<br>
-                A Security Rating higher than the Spell's Save nullifies the Spell, otherwise it Rolls a Soul Save.
             </p>
             <p>
                 <a href="#devices">Click here for more information about Devices.</a> (UNFINISHED)
@@ -1460,12 +1459,44 @@
                 ???
             </p>
         </div>
+        <h2 id="devices" class="collapsible">Devices (WIP)</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                Devices are things which are capable of some special Actions, and may have Data on them.<br>
+                Many things are considered Devices, from Electronics to Magical Items, Computers to <a href="../extra/curios.html" target="_blank">Curios</a>.<br>
+                There are 3 Modes of interaction with a Device;
+            </p>
+            <p class="bottomless"><b>Spy Mode:</b></p>
+            <ul>
+                <li>Spy Mode cannot be used to interact with any of the Device's own Actions.</li>
+                <li>In Spy Mode you can only aquire information, and communicate with others in the Device.</li>
+                <li><b>Example:</b> You connect to a computer, but cannot write or execute any files, only read and somehow communicate through the Device.</li>
+            </ul>
+            <p class="bottomless"><b>User Mode:</b></p>
+            <ul>
+                <li>The default Mode of interaction with a Device.</li>
+                <li>There can be many kinds of User Modes, specified by the Device's Protocols.</li>
+                <li><b>Example:</b> You log into a computer, but there are password protected files and actions.</li>
+            </ul>
+            <p class="bottomless"><b>Admin Mode:</b></p>
+            <ul>
+                <li>This Mode can do anything the Device is capable of.</li>
+                <li>Security measures like an Anit-Virus are always in Admin Mode.</li>
+                <li>WIP</li>
+            </ul>
+            <p>
+                Usually a Device has some kind of basic User Mode, like the <b>Ability Type Curio</b>; While Attuned you can use the Ability.<br>
+                But this doesn't allow access to inner workings, and information about the Device, for this the User must somehow get into Spy or Admin Mode.<br>
+                use <a href="#hack_device">Hack Device</a>, idk (WIP)
+            </p>
+        </div>
         <h2 id="souls" class="collapsible">Souls (WIP)</h2>
         <hr>
         <div class="collapsed">
             <p>
                 A Soul doesn't have HP, and thus cannot be harmed by HP damage.<br>
-                A Soul without a Body takes 2 × SP Damage.<br>
+                A Soul without a Body takes 2× SP Damage.<br>
                 A Soul without a Body has 1/10 Effective ESS on all Abilities.<br>
                 A Soul without a Body can only use Spell Type Abilities.<br>
                 Soul Max HD: Max SP<br>
@@ -1497,21 +1528,8 @@
         <h1 id="armaments">ARMAMENTS</h1>
         <hr>
         <p>
-            Armaments are your Weapons, Shields, and Armor.<br>
-            Every Armament has an amount of <b>Property Points</b>, these are allocated for its Stats.<br>
-            Each type of Armament also has a different maximum of these Property Points to allocate.
-        </p>
-        <p class="bottomless">
-            When Wielding Weapons, or a Shield, an Entity must have the skill to use it.<br>
-            This requires the Armament's <box>Property Points</box> in the appropriate Mastery.
-        </p>
-        <ul>
-            <li>Melee Weapon Mastery for Melee Weapons or Shields</li>
-            <li>Ballistic Mastery for Ranged Weapons</li>
-        </ul>
-        <p>
-            If Weapon requirements aren't met, all Attacks and Abilities with the weapon are made with Disadvantage.<br>
-            If Shield requirements aren't met, the Shield has no effect.
+            Armaments are your Weapons, Shields, and Armors.<br>
+            Every Armament has an amount of <b>Property Points</b>, these are allocated for its Stats and Properties.<br>
         </p>
         <h2 id="tier_level">Tier Level</h2>
         <hr>
