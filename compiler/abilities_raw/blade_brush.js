@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Weapon Damage, Flow Cone AOE",
+        "Melee, Flow Cone AOE, Weapon Damage",
         "Main-Action",
     ],
     unlock_cost: 5,
@@ -20,17 +20,15 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When you use this Ability, you sweep your Melee Weapon, and make an Attack in a Cone.",
-                "This is a Cone AOE Melee Attack.",
-                "The Cone's starts out from your center.",
+                `When you use this Ability, you sweep your Melee Weapon, and make an Attack in a Cone.`,
+                `The AOE Flows from one edge to the other, like left to right.`,
             ],
         },
         {
             type: "dots",
             content: [
-                "This Attack Retains Armor-Pen and all Special Properties the Parent Weapon does on a Regular Attack-Action.",
-                "The AOE Flows from one edge to the other, like left to right.",
-                "If the Attack's Damage is reduced to 0, the Cone's AOE Stops at that Target.",
+                `This Ability has different Damage value based on the Weapon's Weight.`,
+                `This Attack Retains Parent Weapon's Armor-Pen.`,
             ],
         },
         {
@@ -50,9 +48,9 @@ module.exports = {
                 ["Cast Time", "Main-Action"],
                 ["Cone Length", "Reach + 1"],
                 ["Cone Spread", "120° (~1 Forward = +3 Width)"],
-                ["Damage when using Light Weapon", "(1d6 × ESS) Weapon Damage Type"],
-                ["Damage when using Medium Weapon", "(1d8 × ESS) Weapon Damage Type"],
-                ["Damage when using Heavy Weapon", "(1d10 × ESS) Weapon Damage Type"],
+                ["Damage Of Weapon's Type (Light)", "1d6 × ESS"],
+                ["Damage Of Weapon's Type (Medium)", "1d8 × ESS"],
+                ["Damage Of Weapon's Type (Heavy)", "1d10 × ESS"],
             ],
         },
     ],

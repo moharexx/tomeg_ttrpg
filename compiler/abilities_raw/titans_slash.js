@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Flash Strike",
+    name: "Titan's Slash",
     category: "stance",
     type: [
         "Skill",
@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Melee, Flow Line AOE, Weapon Damage, Mobility",
+        "Melee, Flow Cone AOE, Weapon Damage",
         "Main-Action / Main-Action",
     ],
     unlock_cost: 20,
@@ -20,10 +20,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                `When using this Ability, you are put in <b>Flash Strike Stance</b>.`,
+                `When using this Ability, you are put in <b>Titans Slash Stance</b>.`,
                 `On your Next Turn you can Trigger the <b>Stance</b>.`,
-                `On Trigger you flash in a Flow Line AOE Melee Attack, you are the Flow of the AOE.`,
-                `If the Abilites Damage is Fully Negated you stop midway.`,
+                `On Trigger you make an AOE Melee Attack, Hit Entities take Damage.`,
+                `The AOE Flows from one side edge to the other, like left to right.`,
             ],
         },
         {
@@ -42,8 +42,9 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Stance Trigger", "Main-Action at Your Next Turn"],
-                ["Line Length", "2 × MS"],
-                ["Damage Of Weapon's Type", "2d12 × ESS"],
+                ["Cone Length", "3 × STR^(1/3)"],
+                ["Cone Spread", "180° (half-circle)"],
+                ["Damage Of Weapon's Type", "1d12 × ESS"],
             ],
         },
     ],

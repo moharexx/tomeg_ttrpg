@@ -12,8 +12,8 @@ module.exports = {
     ],
     tags: [
         "Utility, Unlock, Philosophy",
-        "PROXY, Everything Under The Sun",
-        "Main-Action",
+        "Everything Under The Sun",
+        "Main-Action, PROXY",
     ],
     unlock_cost: 5,
     description: [

@@ -80,7 +80,7 @@ module.exports = {
                 `<b>COMBO:</b>`,
                 `This Ability can be used as a <b>Main-Action</b> to Target up to 3 Items instead of 1.`,
                 `When multiple Items are Targeted, the Enchants can be different.`,
-                `When you use <a href="../main/mechanics.html#switch_action" target="_blank">Switch_action</a> as a <b>Bonus-Action</b>, you can Cast this Abilty as a <b>Free-Action</b> on one Wielded Item.`,
+                `When you use <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a> as a <b>Bonus-Action</b>, you can Cast this Abilty as a <b>Free-Action</b> on one Wielded Item.`,
                 `When you Cast <a href="battle_aura.html">Battle Aura</a>, you can Cast this Abilty as a <b>Free-Action</b> on it.`,
                 `When you Cast <a href="enchant_armament.html">Enchant Armament</a>, you can Cast this Abilty as a <b>Free-Action</b> on one of the same Armaments.`,
             ],

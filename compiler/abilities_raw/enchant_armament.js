@@ -84,7 +84,7 @@ module.exports = {
             content: [
                 `<b>Piercing</b> (Wielding) <box>Unlock: 5 XP</box>:`,
                 `Gain <box>EP</box> extra Penetration on each Damage Instance.`,
-                `<box><b>EP Cap:</b> 4 × ESS</box>`,
+                `<box><b>EP Cap:</b> 2 × ESS</box>`,
             ],
         },
         {
@@ -92,7 +92,7 @@ module.exports = {
             content: [
                 `<b>Accuracy</b> (Wielding) <box>Unlock: 5 XP</box>:`,
                 `Gain a To-Hit Bonus of <box>EP</box> on all Attacks.`,
-                `<box><b>EP Cap:</b> 4 × ESS</box>`,
+                `<box><b>EP Cap:</b> 2 × ESS</box>`,
             ],
         },
         {
@@ -103,7 +103,7 @@ module.exports = {
                 `A Melee Weapon's Reach Increases by <box>ESS^(1/3)</box> per Level.`,
                 `A Ranged Weapon's Range Increases by <box>(20 / 40) × ESS^(1/3)</box> per Level.`,
                 `<box><b>EP Cost Per Level:</b> ESS</box>`,
-                `<box><b>Level Cap:</b> 3</box>`,
+                `<box><b>Level Cap:</b> 2</box>`,
             ],
         },
         {
@@ -111,7 +111,7 @@ module.exports = {
             content: [
                 `<b>Agile</b> (Wielding | Armor) <box>Unlock: 5 XP</box>:`,
                 `Increase Max HD by: <box>5 × EP</box>`,
-                `<box><b>EP Cap:</b> 4 × ESS</box>`,
+                `<box><b>EP Cap:</b> 3 × ESS</box>`,
             ],
         },
         {
@@ -119,7 +119,7 @@ module.exports = {
             content: [
                 `<b>Dodging</b> (Wielding | Armor) <box>Unlock: 5 XP</box>:`,
                 `Incoming Attacks' Finalized To-Hit is reduced by <box>EP</box>`,
-                `<box><b>EP Cap:</b> 4 × ESS</box>`,
+                `<box><b>EP Cap:</b> 3 × ESS</box>`,
             ],
         },
         {
@@ -146,7 +146,7 @@ module.exports = {
                 `<b>COMBO:</b>`,
                 `This Ability can be used as a <b>Main-Action</b> to Target up to 3 Items instead of 1.`,
                 `When multiple Items are Targeted, the Enchants can be different.`,
-                `When you use <a href="../main/mechanics.html#switch_action" target="_blank">Switch_action</a> as a <b>Bonus-Action</b>, you can Cast this Abilty as a <b>Free-Action</b> on one Wielded Item.`,
+                `When you use <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a> as a <b>Bonus-Action</b>, you can Cast this Abilty as a <b>Free-Action</b> on one Wielded Item.`,
                 `When you Cast <a href="battle_aura.html">Battle Aura</a>, you can Cast this Abilty as a <b>Free-Action</b> on it.`,
                 `When you Cast <a href="imbue_armament.html">Imbue Armament</a>, you can Cast this Abilty as a <b>Free-Action</b> on one of the same Armaments.`,
             ],

@@ -12,15 +12,18 @@ module.exports = {
     ],
     tags: [
         "Offense, Defense, Utility",
-        "Proxy",
-        "Main-Action + Bonus-Action",
+        "Ranged, Minon",
+        "Main-Action + Bonus-Action, PROXY",
     ],
     unlock_cost: 20,
     description: [
         {
             type: "p",
             content: [
-                `When used, a Target corpse in Range gets Animated as an Undead.`,
+                `When used, a Target corpse(s) in Range gets Animated as an Undead.`,
+                `Spend up to <box>10 × ESS</box> PROXY Points to Animated Undead.`,
+                `The amount of <b>PROXY Points</b> you can spend on an Undead is Limited by the <b>PROXY Cap</b>.`,
+                `Undead have Tiers based on the multiple of <b>PROXY Spent</b> in <b>PROXY Cost</b>, <box>Tier = PROXY Spent / PROXY Cost</box>.`,
                 `The Undead has <a href="undying.html" target="_blank">Undying</a>, <a href="essence_sustenance.html" target="_blank">Essence Sustenance</a>, and <b>Dark Vision</b>.`,
                 `The Undeads have <box>(6 × ESS) Radiant Weakness</box>`,
             ],
@@ -53,7 +56,7 @@ module.exports = {
             full_width: "60%",
             width: ["30%", "70%"],
             content: [
-                ["Zombie Type", "Stats (Multiply by ESS)"],
+                ["Zombie Type", "Stats (Multiply by Tier)"],
                 ["STR", "10"],
                 ["AGI", "2"],
                 ["VIT", "10"],
@@ -64,6 +67,8 @@ module.exports = {
                 ["Masteries", "10 Melee Weapon"],
                 ["Melee To-Hit Modifier", "5"],
                 ["Ranged To-Hit Modifier", "1"],
+                ["Tier", "PROXY Spent / 10"],
+                ["PROXY Cap", "10 × ESS"],
             ],
         },
         {
@@ -71,7 +76,7 @@ module.exports = {
             full_width: "60%",
             width: ["30%", "70%"],
             content: [
-                ["Skeleton Type", "Stats (Multiply by ESS)"],
+                ["Skeleton Type", "Stats (Multiply by Tier)"],
                 ["STR", "4"],
                 ["AGI", "10"],
                 ["VIT", "4"],
@@ -81,6 +86,8 @@ module.exports = {
                 ["Extra Stats", "8 HP, 30 HD, 8 SP"],
                 ["Masteries", "10 Melee Weapon, 10 Ballistic, 10 Acrobatics"],
                 ["To-Hit Modifier", "5"],
+                ["Tier", "PROXY Spent / 10"],
+                ["PROXY Cap", "10 × ESS"],
             ],
         },
     ],
@@ -93,7 +100,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action + Bonus-Action"],
                 ["Range", "CS^(1/3)"],
-                ["Proxy per Undead", "10 × ESS"],
+                ["PROXY Points", "10 × ESS"],
             ],
         },
     ],

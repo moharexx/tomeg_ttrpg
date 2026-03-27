@@ -22,7 +22,7 @@ module.exports = {
             content: [
                 `Force your opponent to kneal, then with a single strike, pull all the blood out from their body and split them in half.`,
                 `When using this Ability, you make a Melee Attacks against a Target.`,
-                `On a Hit, the Target must make a <b>VIT Save</b> of <box>14 × ESS</box> or take <box></box> <a href="../main/mechanics.html#executing" target="_blank">Executing</a> Bio Damage with <box>10 × ESS</box> Bio-Pen.`,
+                `On a Hit, the Target must make a <b>VIT Save</b> of <box>14 × ESS</box> or take <box></box> <a href="../main/mechanics.html#executing" target="_blank">Executing</a> Bio Damage with <box>5 × ESS</box> Bio-Pen.`,
             ],
         },
         {
@@ -42,7 +42,7 @@ module.exports = {
                 ["Cast Time", "Main-Action + Bonus-Action"],
                 ["VIT Save", "14 × ESS"],
                 ["Damage", "(1d12 × ESS) Bio"],
-                ["Bio-Pen", "10 × ESS"],
+                ["Bio-Pen", "5 × ESS"],
             ],
         },
     ],
