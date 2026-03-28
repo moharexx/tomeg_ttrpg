@@ -24,7 +24,7 @@ module.exports = {
                 "When Entering or Stacking this stance, you gain 3 Orbs.",
                 "While in Magic Missile Stance, Your MS is Halved.",
                 "On Stance Trigger you shoot out the Orbs.",
-                "Each Orb is it's own Attack, but Roll only a single d10 Check for all of them, still Roll Damage seperately.",
+                "Each Orb is it's own Attack, but Roll only a single d10 Check for all of them, still Roll Damage separately.",
                 "MAX Orb Count: <box>12</box>",
             ],
         },

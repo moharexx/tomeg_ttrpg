@@ -5,28 +5,40 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "Athletics | Martial Arts",
+        "5 Athletics | 5 Martial Arts",
     ],
     reqs_full: [
-        "<b>Skill:</b> 10 Athletics | 10 Martial Arts",
+        "<b>Skill:</b> 5 Athletics | 5 Martial Arts",
     ],
     tags: [
-        "Offense",
-        "Self, Crowd Control",
-        "Main-Action / Continuous",
+        "Offense, Defense",
+        "Self",
+        "Bonus-Action / Continuous",
     ],
     unlock_cost: 5,
     description: [
         {
             type: "p",
             content: [
-                `When using this Ability, you are put in <b>Master Brawler Stance.</b>`,
-                `While in <b>Master Brawler Stance</b>, you have 1 Free Wielding Slot which can be used only to Grapple a Target.`,
-                `While in <b>Master Brawler Stance</b>, you can use <a href="../mechanics/grapple.html">Grapple</a> or <a href="../mechanics/shove.html">Shove</a> as a <b>Main-Action</b> to gain a Bonus <box>4 × ESS</box> to the Save Difficulty.`,
-                `While in <b>Master Brawler Stance</b>, you can <b>Shove</b> a Target as A Free-Action, which will end the <b>Grapple</b> on the Target.`,
-                `While in <b>Master Brawler Stance</b>, when you <b>Grapple</b> or <b>Shove</b> a Target, you can deal <box>2 × ESS</box> Physical Damage with <box>10 × ESS</box> Armor-Pen.`,
-                `Already Grappled Target can take this Damage, on a Failed <b>STR Save</b> of <box>Athletics Modifier</box>`,
-                `A Target can only take Damage from this <b>Stance</b> once on a Turn.`,
+                `When using this Ability, you are put in <b>Master Brawler Stance</b>.`,
+                `While in <b>Master Brawler Stance</b>, you gain access to 2 new Actions and 1 Free Wielding Slot which can only be used to Grapple a Target.`,
+                `If a Target Fails a <b>Grapple</b> or <b>Shove STR Save</b>, you can deal <box>2 × ESS</box> Physical Damage with <box>10 × ESS</box> Armor-Pen.`,
+                `Already Grappled Target can take this Damage, on a Failed <b>STR Save</b> of <box>Athletics Modifier</box> at The Start of Your Turns.`,
+                `A Target can only take this Damage once on a Turn.`,
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                `<b>Restrain</b> (Main-Action):`,
+                `You can <a href="../mechanics/grapple.html">Grapple</a> or <a href="../mechanics/shove.html">Shove</a> with a Bonus <box>4 × ESS</box> Save Difficulty.`,
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                `<b>Into The Dirt</b> (Free-Action):`,
+                `You can <b>Shove</b> a Target Grappled by You, which will end the <b>Grapple</b> on the Target.`,
             ],
         },
         {
@@ -43,9 +55,9 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Main-Action"],
+                ["Cast Time", "Bonus-Action"],
                 ["Stance Trigger", "None"],
-                ["Damage", "2 × ESS"],
+                ["Physical Damage", "2 × ESS"],
                 ["Armor-Pen", "10 × ESS"],
             ],
         },

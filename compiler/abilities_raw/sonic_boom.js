@@ -2,7 +2,7 @@ module.exports = {
     name: "Sonic Boom",
     category: "stance",
     type: [
-        "Skill",
+        "Spell",
     ],
     reqs_short: [
         "10 Evocation | 20 Transmutation | 50 Enchantment",
@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Ranged, Flow Sphear AOE, Thunder Damage",
+        "Ranged, Flow Sphear AOE, VIT Save, Thunder Damage",
         "Main-Action + Bonus-Action / Main-Action",
     ],
     unlock_cost: 20,
@@ -43,7 +43,7 @@ module.exports = {
                 ["Range", "20 × CS^(1/3)"],
                 ["VIT Save", "12 × ESS"],
                 ["Blast Radius", "2 × CS^(1/3)"],
-                ["Damage", "(2d10 × ESS) Thunder"],
+                ["Thunder Damage", "2d10 × ESS"],
             ],
         },
     ],

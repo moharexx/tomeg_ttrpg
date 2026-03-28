@@ -84,7 +84,7 @@ module.exports = {
             content: [
                 `<b>Piercing</b> (Wielding) <box>Unlock: 5 XP</box>:`,
                 `Gain <box>EP</box> extra Penetration on each Damage Instance.`,
-                `<box><b>EP Cap:</b> 2 × ESS</box>`,
+                `<box><b>EP Cap:</b> 3 × ESS</box>`,
             ],
         },
         {
@@ -92,7 +92,7 @@ module.exports = {
             content: [
                 `<b>Accuracy</b> (Wielding) <box>Unlock: 5 XP</box>:`,
                 `Gain a To-Hit Bonus of <box>EP</box> on all Attacks.`,
-                `<box><b>EP Cap:</b> 2 × ESS</box>`,
+                `<box><b>EP Cap:</b> 3 × ESS</box>`,
             ],
         },
         {
@@ -103,7 +103,7 @@ module.exports = {
                 `A Melee Weapon's Reach Increases by <box>ESS^(1/3)</box> per Level.`,
                 `A Ranged Weapon's Range Increases by <box>(20 / 40) × ESS^(1/3)</box> per Level.`,
                 `<box><b>EP Cost Per Level:</b> ESS</box>`,
-                `<box><b>Level Cap:</b> 2</box>`,
+                `<box><b>Level Cap:</b> 3</box>`,
             ],
         },
         {
