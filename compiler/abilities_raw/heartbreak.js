@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Heartburn",
+    name: "Heartbreak",
     category: "active",
     type: [
         "Spell",
@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Ranged, VIT Save, Heat Damage, Debuff",
+        "Ranged, VIT Save, Physical Damage, Debuff",
         "Main-Action + Bonus-Action",
     ],
     unlock_cost: 20,
@@ -21,9 +21,8 @@ module.exports = {
             type: "p",
             content: [
                 `When using this Ability, you burn a Pinpointed Entity away from the inside.`,
-                `The Target must make a <b>VIT Save</b> of <box>12 × ESS</box> or take <box>1d12 × ESS</box> Heat Damage and Support Reductions.`,
-                `The Damage of this Ablity is repeated at the Start of Casters Next Turn.`,
-                `All Healing and BUFFERs the Target recieve is Reduced by <box>6 × ESS</box> until the Damage is repeated.`,
+                `The Target must make a <b>VIT Save</b> of <box>12 × ESS</box> or take <box>2d6 × ESS</box> Physical Damage.`,
+                `On a Failed Save the Target also takes the <a href="../main/mechanics.html#conditions">Dazed Condition</a> till the End of their Next Turn.`,
             ],
         },
     ],
@@ -37,8 +36,7 @@ module.exports = {
                 ["Cast Time", "Main-Action + Bonus-Action"],
                 ["Range", "20 × CS^(1/3)"],
                 ["VIT Save", "12 × ESS"],
-                ["Heat Damage", "1d12 × ESS"],
-                ["Support Reductions", "6 × ESS"],
+                ["Physical Damage", "2d6 × ESS"],
             ],
         },
     ],
