@@ -274,9 +274,9 @@
                 <td>Balancing, Dodging, Gymnastics, Stunts</td>
             </tr>
             <tr>
-                <td>Slight</td>
+                <td>Sleight</td>
                 <td>AGI</td>
-                <td>Hiding, Moving Sliently, Slight of Hand, Lockpicking</td>
+                <td>Hiding, Moving Sliently, Sleight of Hand, Lockpicking</td>
             </tr>
             <tr>
                 <td>Arcana</td>
@@ -944,7 +944,7 @@
         <div class="collapsed">
             <p>
                 As a <b>Bonus-Action</b> you can do the Stealth Action.<br>
-                This is a Slight Check.<br>
+                This is a Sleight Check.<br>
                 You can make a Passive Stealth Action as a Free-Action.
             </p>
             <p>
@@ -953,7 +953,7 @@
                 Sometimes you cannot hide against a Sense, like standing in broad sight, or having an item on you emit sound.<br>
             </p>
             <p>
-                <a href="#scan">Scan Area</a> with Difficulty equal to your Slight Check reveals you.<br>
+                <a href="#scan">Scan Area</a> with Difficulty equal to your Sleight Check reveals you.<br>
             </p>
             <p>
                 When you move, or get moved, you must make another Stealth Action to maintain Stealth.<br>
@@ -1300,15 +1300,15 @@
             <p>
                 Each Entity has 2 Wielding Slots, even if they have more limbs.<br>
                 One-Handed Weapons and Shields take 1 Wielding Slot.<br>
-                Two-Handed and Solo-Wielded Weapons take 2 Wielding Slots.<br>
+                Some Weapons (Heavy, or optionally Medium) take 2 Wielding Slots.<br>
                 To use a Natural Weapon (like your fists), it must be Wielded first, like any other Weapon.<br>
                 Free limbs can still Hold things which can be used without Active Wielding, like Potions and Scrolls.<br>
                 When taking the <a href="#switch_action">Switch-Action</a> you can change what you are Wielding and Holding.
             </p>
             <p>
-                Dual Wielding is when you're Wielding 2 Weapons.<br>
-                The <a href="#attack_action">Attack-Action</a> becomes a <b>Bonus-Action</b> when Dual Wielding.<br>
-                When Dual Wielding you can choose to Attack with the same Weapon multiple times, rather than alternating.<br>
+                Dual Wielding is when you're Wielding 2 Weapons. (Shield doesn't count!)<br>
+                Dual Wielding makes the <a href="#attack_action">Attack-Action</a> into a <b>Bonus-Action</b>.<br>
+                Attacks you don't need to alternate between Weapons, you can use the same Weapon in succession.<br>
                 For Dual Wielding your Natural Weapons can be considered as Weapons!
             </p>
         </div>
@@ -1331,6 +1331,10 @@
                 <li>Heat &lt-> Cold, Soaked</li>
                 <li>Light &lt-> Darkness</li>
             </ul>
+            <p>
+                <b>List of common Effects:</b><br>
+                Soaked, Heat, Cold, Light, Darkness, Charm, Terror
+            </p>
         </div>
         <h2 id="lighting" class="collapsible">Lighting</h2>
         <hr>
@@ -1495,13 +1499,81 @@
         <hr>
         <div class="collapsed">
             <p>
-                A Soul doesn't have HP, and thus cannot be harmed by HP damage.<br>
-                A Soul without a Body takes 2× SP Damage.<br>
-                A Soul without a Body has 1/10 Effective ESS on all Abilities.<br>
-                A Soul without a Body can only use Spell Type Abilities.<br>
-                Soul Max HD: Max SP<br>
-                Soul MS: <box>2 × CS^(1/3)</box>
+                Souls are what <b>represent YOU</b> and your agency in the world.<br>
+                The Soul can inhabit 2 different types of Vessels, the Physical, and the Avatar.
             </p>
+            <p>
+                The Physical Vessel is the one everyone is familiar with, what you would call your body.
+            </p>
+            <p>
+                The other type of Vessel is the Avatar, this is the "spiritual" or "digital" version of a body.<br>
+                By default, the Avatar can only be Sensed by <a target="_blank" href="../abilities/sense_essence.html">Sensing Essence</a>, but they can choose to manifest.<br>
+                While manifesting they can be sensed in the physical too.
+            </p>
+            <p class="bottomless"><b>Soul without Vessel:</b></p>
+            <ul>
+                <li>Doesn't have HP, and thus cannot be harmed by HP damage.</li>
+                <li>Takes 2× SP Damage, has 1/10 Effective ESS, and cannot use Skill Type Abilities.</li>
+                <li>Soul Saves are <b>Halved!</b></li>
+                <li><b>Soul Max HD:</b> <box>Max SP</box></li>
+                <li><b>Soul MS:</b> <box>2 × CS^(1/3)</box></li>
+            </ul>
+            <p class="bottomless"><b>Notes:</b></p>
+            <ul>
+                <li>Most <a href="#effects">Effects</a> and <a href="#conditions">Conditions</a> are on the Vessel, but some are on the Soul.</li>
+                <li>The Charm and Terror Effect, aswell as any Condition caused by a Soul Save are on the Soul.</li>
+                <li>Stances are tracked on the Soul, meaning if you leave a Vessel with a Stance, you retain the Stance.</li>
+                <li>A BUFFER either goes on the Soul, or the Vessel, but not both. Caster's choice.</li>
+            </ul>
+        </div>
+        <h2 id="essence_realm" class="collapsible">Essence Realms (WIP)</h2>
+        <hr>
+        <div class="collapsed">
+            <p>
+                The cosmology of the Omniverse is in layers, each built on the one "below" it.<br>
+                This TTRPG's mechanics will seperate this into 4 Layers, for a deeper understanding of the lore <a href="main.html#essence_realm" target="_blank">read the Main Page</a>.
+            </p>
+            <p>
+                The Physical, the material world, everyone is familiar with it.
+            </p>
+            <p>
+                The <b>Border</b> is the first non-physical layer, where ghosts and apparitions live.<br>
+                The Border can only be sensed by an Avatar's Senses, or by <a target="_blank" href="../abilities/sense_essence.html">Sensing Essence</a>, no physical senses, like regular eyes, work.
+            </p>
+            <p>
+                The Astral is the second non-physical layer, where space and distances get weird.<br>
+                Every point of space in the Border has a point to it in the Astral, but not vice versa, this makes the Astral "bigger".<br>
+                Despite being "bigger", the points of "space" representing the Border (and Physical) are "closer", and thus easier to travel.<br>
+                When things interact with eachother in the Astral, the "distance" is normalized, thus 2× speed is still 2× for encounters, ect...<br>
+                The vast majority of non-physical structures, like the "inside" of computers, dreams, ect... are located here.
+            </p>
+            <p>
+                Deep Astral is something i dont want to talk about yet, bruh! (WIP)
+            </p>
+            <p class="bottomless"><b>Physical and Border interaction:</b></p>
+            <ul>
+                <li>Space is 1 to 1, no funky shenanigans.</li>
+                <li>Interactions can pass through, resulting in: <box><b>Halved</b> HP Damage, STR Saves, and VIT Saves</box></li>
+            </ul>
+            <p class="bottomless"><b>Border and Astral interaction:</b></p>
+            <ul>
+                <li>Every point of space in the Border has a point to it in the Astral, but not vice versa.</li>
+                <li>When wanting to reach a point in the Border (or Physical), from the Astral, multiply your effective Ranges (including speed) by <box>10 × ESS^(1/3)</box></li>
+                <li>
+                    When Abilities pass through, their <b>ESS</b> and <b>CS</b> are <b>Halved</b> on everything which isn't Range and Information (Bit, Bytes or Words).<br>
+                    <b>Note:</b> This division applies per layer cross, meaning 2 layer crosses are Halved twice!
+                </li>
+            </ul>
+            <p class="bottomless"><b>Astral and Deep Astral interaction:</b></p>
+            <ul>
+                <li>The same type of interaction as Border and Astral.</li>
+                <li>Deep Astral to Astral; multiply your Ranges (including speed) by <box>10 × ESS^(1/3)</box></li>
+                <li>
+                    This means <box>100 × ESS^(2/3)</box> when trying to reach a point in the Border (or Physical).<br>
+                    <b>Note:</b> This turns <box>ESS^(1/3)</box> scalings into <box>100 × ESS</box> scaling.
+                </li>
+                <li>When Abilities pass through, their <b>ESS</b> and <b>CS</b> are <b>Halved</b> on everything which isn't Range and Information.</li>
+            </ul>
         </div>
         <h2 id="death" class="collapsible">Death</h2>
         <hr>
@@ -1547,7 +1619,7 @@
             <li><b>Melee Weapons:</b> 5C × Property Points</li>
             <li><b>Ranged Weapons:</b> 5C × Property Points</li>
             <li><b>Shields:</b> 5C × Property Points</li>
-            <li><b>Armors:</b> 20C × Property Points</li>
+            <li><b>Armors:</b> 10C × Property Points</li>
             <li><b>Tiered Up Armaments:</b> <box>150C × Tier</box> for Channeling, and <box>300C × Tier</box> for Full.</li>
         </ul>
         <p>
