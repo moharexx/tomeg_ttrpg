@@ -19,10 +19,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                "Your Soul is conscious, even without a body.",
+                `Your Soul is conscious, even without a body.`,
                 `This means you have Actions even when you are "Dead".`,
-                "The base rule of 1 Minute for when your Soul naturally floats away after Death is removed.",
-                "If <b>SP</b> goes below <box>-Max SP</box>, the Soul is Destroyed!",
+                `The base rule of 1 Minute for when your Soul naturally floats away after Death is removed.`,
+                `The Soul can still get destroyed if <b>SP</b> goes below <box>-Max SP</box>`,
             ],
         },
         {

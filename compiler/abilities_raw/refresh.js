@@ -19,8 +19,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You use SP to ignore the Cooldown of an Ability.",
-                "When you use Refresh, an already present Cooldown does not update or go away.",
+                `You use SP to ignore the Cooldown of an Ability.`,
+                `You can use Refresh in 2 different ways; Ignore an already present Cooldown, or use the Ability without putting it on Cooldown.`,
+                `When you choose to ignore a Cooldown, the Cooldown doesn't actually go away!`,
             ],
         },
         {

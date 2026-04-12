@@ -29,6 +29,7 @@ module.exports = {
             content: [
                 `<b>Blade Barrage</b> (Main-Action):`,
                 `You can make 3 <a href="../main/mechanics.html#attack_action" target="_blank">Attack-Actions</a> against 3 different Targets.`,
+                `Even if the Attack-Action is somehow AOE, it still doesn't Target the same Entity more than once.`,
                 `Roll only a single d10 Check for all of them, still Roll Damage separately.`,
                 `You can also use a single <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a> after or before any of these Attacks.`,
                 `This counts as a Skill Type Ability with the Offense Tag.`,
@@ -38,7 +39,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Blade Block</b> (Bonus-Action):`,
-                `You can the <a href="../mechanics/defense_Action.html">Defense-Action</a>.`,
+                `You use the <a href="../mechanics/defense_Action.html">Defense-Action</a>.`,
                 `This counts as a Skill Type Ability with the Defense Tag.`,
             ],
         },

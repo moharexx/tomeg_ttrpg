@@ -8,11 +8,11 @@ module.exports = {
         "5 Divination | 10 Anima | 20 Transmutation",
     ],
     reqs_full: [
-        "<b>Spell:</b>(10 INT | 20 WILL | 50 EGO), (5 Divination | 10 Anima | 20 Transmutation)",
+        "<b>Spell:</b> 10 CS, (5 Divination | 10 Anima | 20 Transmutation)",
     ],
     tags: [
         "Utility",
-        "Communication, Targeting",
+        "Information",
     ],
     unlock_cost: 5,
     description: [
@@ -23,6 +23,13 @@ module.exports = {
                 `With a Successful <b>Soul Save</b> of <box>10 × ESS</box> the Target can block Communications for up to <box>1 Minute (20 Rounds)</box>`,
                 `Your Target knows who they are Communicating to, unless you use a <a href="../main/mechanics.html#feint" target="_blank">Feint Action.</a>`,
                 `The Target can attempt a <a href="../main/mechanics.html#scan" target="_blank">Scan (Arcana or Intuition)</a> Check against the <b>Feint.</b>`,
+            ],
+        },
+        {
+            type: "p",
+            content: [
+                `You can also interact with <a href="../main/mechanics.html#devices" target="_blank">Devices</a> you can Sense within Range.`,
+                `Allowing you Connection (if the Device allows), and/or the use of <a href="../main/mechanics.html#hack_device" target="_blank">Hack Device</a>.`,
             ],
         },
     ],

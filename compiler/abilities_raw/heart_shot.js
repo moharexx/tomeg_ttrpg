@@ -22,7 +22,7 @@ module.exports = {
             type: "p",
             content: [
                 `When you use a Ranged Attack, you can use this Ability to make it pierce shielding and reduce defenses.`,
-                `Each point of Damage the Parent does agains't BUFFERs or Shielding Abilities counts as 2 points of Damage.`,
+                `Each point of Damage the Parent does against BUFFERs and Shielding counts as 2 points of Damage.`,
                 `If the Attack Deals Damage, all Healing, Shielding, and BUFFERs the Target recieve is Reduced by <box>4 × ESS</box> until the End of their Next Turn.`,
             ],
         },
@@ -35,6 +35,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
+                ["Requirement", "Ranged"],
                 ["Reductions", "4 × ESS"],
             ],
         },

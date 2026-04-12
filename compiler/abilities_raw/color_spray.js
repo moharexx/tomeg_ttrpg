@@ -8,11 +8,11 @@ module.exports = {
         "5 Conjuration | 10 Enchantment | 20 Divination",
     ],
     reqs_full: [
-        "<b>Spell:</b> (5 INT | 5 WILL | 5 EGO), (5 Conjuration | 10 Enchantment | 20 Divination)",
+        "<b>Spell:</b> 5 CS, (5 Conjuration | 10 Enchantment | 20 Divination)",
     ],
     tags: [
         "Offense",
-        "VIT Save, Flow Cone AOE, Debuff",
+        "Melee, Flow Cone AOE, VIT Save, Debuff",
         "Main-Action",
     ],
     unlock_cost: 5,
@@ -20,17 +20,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, spray a Cone of Blinding lights, or colorful spray material, or whatever the Caster desires.",
-                "This is a Flow Cone AOE Ranged Save, flowing out from the Caster.",
-                "Targets mush Succeed a <b>VIT Save</b> or get the <b>Blinded Effect.</b>",
+                "When used, spray a Cone of dazzling lights, or colorful spray material, or whatever the Caster desires.",
+                "This is a Melee Flow Cone AOE, flowing out from the Caster.",
+                "Targets must Succeed a <b>VIT Save</b> or get the <b>Dazzled Effect</b>.",
             ]
         },
         {
             type: "list",
             content: [
-                "<b>Blinded Effect:</b>",
-                "The Target's Sight based Perception is disabled.",
-                "The Target is Blinded until the End of it's Next Turn.",
+                "<b>Dazzled Effect:</b>",
+                "The Target cannot Pinpoint with any of their Senses.",
+                "This lasts till the End of the Target's Next Turn.",
             ],
         },
     ],

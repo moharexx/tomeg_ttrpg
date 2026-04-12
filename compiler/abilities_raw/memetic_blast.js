@@ -8,11 +8,11 @@ module.exports = {
         "5 Divination | 10 Anima | 20 Enchantment",
     ],
     reqs_full: [
-        "(5 INT | 5 WILL | 10 EGO), (5 Divination | 10 Anima | 20 Enchantment)",
+        "<b>Spell:</b> 5 CS, (5 Divination | 10 Anima | 20 Enchantment)",
     ],
     tags: [
         "Offense",
-        "Ranged, Psychic Damage",
+        "Ranged, Psychic Damage, Information",
         "Main-Action",
     ],
     unlock_cost: 5,
@@ -37,7 +37,7 @@ module.exports = {
                 ["Cast Time", "Main-Action"],
                 ["Range", "10 / 20 × CS^(1/3)"],
                 ["Damage", "(2d8 × ESS) Psychic"],
-                ["Message Size", "10 × CS Words | 320 × CS bits"],
+                ["Message Size", "10 × CS Words | 512 × CS bits"],
             ],
         },
     ],

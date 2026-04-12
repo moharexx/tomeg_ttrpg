@@ -36,7 +36,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
-                ["Special Condition", "Melee"],
+                ["Requirement", "Melee"],
                 ["True Damage", "8 × ESS"],
             ],
         },

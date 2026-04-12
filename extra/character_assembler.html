@@ -42,7 +42,7 @@
         <table width="100%">
             <tr>
                 <td class="special">Total XP:</td>
-                <td style="width: auto;"><input id="XP_total" type="text" value="100" onchange="refresh_XP()"></td>
+                <td style="width: auto;"><input id="XP_total" type="text" value="100"></td>
                 <td style="width: auto;"><input id="save" type="button" value="Save" onclick="alert('WIP')"></td>
                 <td style="width: auto;"><input id="load" type="button" value="Load" onclick="alert('WIP')"></td>
             </tr>
@@ -50,52 +50,52 @@
         <table width="100%">
             <tr>
                 <td width="22%">Stat</td>
-                <td width="22">Ratio</td>
+                <td width="22%">Ratio</td>
                 <td width="22%">XP Cost</td>
                 <td width="22%">Stat</td>
                 <td width="12%">Locked To</td>
             </tr>
-            <tr>
+            <tr id="stat_str">
                 <td>STR</td>
-                <td><input id="STR_ratio" type="text" value="0" onchange="refresh_stat('STR', 1)"></td>
-                <td><input id="STR_xp" type="text" value="0" onchange="refresh_stat('STR', 2)"></td>
-                <td><input id="STR_value" type="text" value="0" onchange="refresh_stat('STR', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(0)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="stat_agi">
                 <td>AGI</td>
-                <td><input id="AGI_ratio" type="text" value="0" onchange="refresh_stat('AGI', 1)"></td>
-                <td><input id="AGI_xp" type="text" value="0" onchange="refresh_stat('AGI', 2)"></td>
-                <td><input id="AGI_value" type="text" value="0" onchange="refresh_stat('AGI', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(1)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="stat_vit">
                 <td>VIT</td>
-                <td><input id="VIT_ratio" type="text" value="0" onchange="refresh_stat('VIT', 1)"></td>
-                <td><input id="VIT_xp" type="text" value="0" onchange="refresh_stat('VIT', 2)"></td>
-                <td><input id="VIT_value" type="text" value="0" onchange="refresh_stat('VIT', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(2)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="stat_int">
                 <td>INT</td>
-                <td><input id="INT_ratio" type="text" value="0" onchange="refresh_stat('INT', 1)"></td>
-                <td><input id="INT_xp" type="text" value="0" onchange="refresh_stat('INT', 2)"></td>
-                <td><input id="INT_value" type="text" value="0" onchange="refresh_stat('INT', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(3)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="stat_will">
                 <td>WILL</td>
-                <td><input id="WILL_ratio" type="text" value="0" onchange="refresh_stat('WILL', 1)"></td>
-                <td><input id="WILL_xp" type="text" value="0" onchange="refresh_stat('WILL', 2)"></td>
-                <td><input id="WILL_value" type="text" value="0" onchange="refresh_stat('WILL', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(4)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="stat_ego">
                 <td>EGO</td>
-                <td><input id="EGO_ratio" type="text" value="0" onchange="refresh_stat('EGO', 1)"></td>
-                <td><input id="EGO_xp" type="text" value="0" onchange="refresh_stat('EGO', 2)"></td>
-                <td><input id="EGO_value" type="text" value="0" onchange="refresh_stat('EGO', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(5)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
         </table>
         <table width="100%">
@@ -106,98 +106,98 @@
                 <td width="22%">Mastery</td>
                 <td width="12%">Locked To</td>
             </tr>
-            <tr>
+            <tr id="mastery_athletics">
                 <td>Athletics (STR)</td>
-                <td><input id="Athletics_ratio" type="text" value="0" onchange="refresh_mastery('Athletics', 1)"></td>
-                <td><input id="Athletics_xp" type="text" value="0" onchange="refresh_mastery('Athletics', 2)"></td>
-                <td><input id="Athletics_value" type="text" value="0" onchange="refresh_mastery('Athletics', 3)"></td>
-               <td><input name="lock" type="button" value="Ratio" onclick="lock(6)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_acrobatics">
                 <td>Acrobatics (AGI)</td>
-                <td><input id="Acrobatics_ratio" type="text" value="0" onchange="refresh_mastery('Acrobatics', 1)"></td>
-                <td><input id="Acrobatics_xp" type="text" value="0" onchange="refresh_mastery('Acrobatics', 2)"></td>
-                <td><input id="Acrobatics_value" type="text" value="0" onchange="refresh_mastery('Acrobatics', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(7)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_sleight">
                 <td>Sleight (AGI)</td>
-                <td><input id="Sleight_ratio" type="text" value="0" onchange="refresh_mastery('Sleight', 1)"></td>
-                <td><input id="Sleight_xp" type="text" value="0" onchange="refresh_mastery('Sleight', 2)"></td>
-                <td><input id="Sleight_value" type="text" value="0" onchange="refresh_mastery('Sleight', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(8)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_arcana">
                 <td>Arcana (INT)</td>
-                <td><input id="Arcana_ratio" type="text" value="0" onchange="refresh_mastery('Arcana', 1)"></td>
-                <td><input id="Arcana_xp" type="text" value="0" onchange="refresh_mastery('Arcana', 2)"></td>
-                <td><input id="Arcana_value" type="text" value="0" onchange="refresh_mastery('Arcana', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(9)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_science">
                 <td>Science (INT)</td>
-                <td><input id="Science_ratio" type="text" value="0" onchange="refresh_mastery('Science', 1)"></td>
-                <td><input id="Science_xp" type="text" value="0" onchange="refresh_mastery('Science', 2)"></td>
-                <td><input id="Science_value" type="text" value="0" onchange="refresh_mastery('Science', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(10)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_lore">
                 <td>Lore (INT)</td>
-                <td><input id="Lore_ratio" type="text" value="0" onchange="refresh_mastery('Lore', 1)"></td>
-                <td><input id="Lore_xp" type="text" value="0" onchange="refresh_mastery('Lore', 2)"></td>
-                <td><input id="Lore_value" type="text" value="0" onchange="refresh_mastery('Lore', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(11)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_perception">
                 <td>Perception (WILL)</td>
-                <td><input id="Perception_ratio" type="text" value="0" onchange="refresh_mastery('Perception', 1)"></td>
-                <td><input id="Perception_xp" type="text" value="0" onchange="refresh_mastery('Perception', 2)"></td>
-                <td><input id="Perception_value" type="text" value="0" onchange="refresh_mastery('Perception', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(12)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_intuition">
                 <td>Intuition (WILL)</td>
-                <td><input id="Intuition_ratio" type="text" value="0" onchange="refresh_mastery('Intuition', 1)"></td>
-                <td><input id="Intuition_xp" type="text" value="0" onchange="refresh_mastery('Intuition', 2)"></td>
-                <td><input id="Intuition_value" type="text" value="0" onchange="refresh_mastery('Intuition', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(13)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_performance">
                 <td>Performance (EGO)</td>
-                <td><input id="Performance_ratio" type="text" value="0" onchange="refresh_mastery('Performance', 1)"></td>
-                <td><input id="Performance_xp" type="text" value="0" onchange="refresh_mastery('Performance', 2)"></td>
-                <td><input id="Performance_value" type="text" value="0" onchange="refresh_mastery('Performance', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(14)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
         </table>
         <table width="100%">
             <tr>
                 <td width="22%">Martial-Masteries</td>
                 <td width="22%">Ratio</td>
-                <td width="22%" id="XPperValue3">XP Cost</td>
+                <td width="22%">XP Cost</td>
                 <td width="22%">Mastery</td>
                 <td width="12%">Locked To</td>
             </tr>
-            <tr>
+            <tr id="mastery_melee">
                 <td>Melee Weapon (STR | AGI)</td>
-                <td><input id="Melee_ratio" type="text" value="0" onchange="refresh_mastery('Melee', 1)"></td>
-                <td><input id="Melee_xp" type="text" value="0" onchange="refresh_mastery('Melee', 2)"></td>
-                <td><input id="Melee_value" type="text" value="0" onchange="refresh_mastery('Melee', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(15)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_ballistic">
                 <td>Ballistic (AGI)</td>
-                <td><input id="Ballistic_ratio" type="text" value="0" onchange="refresh_mastery('Ballistic', 1)"></td>
-                <td><input id="Ballistic_xp" type="text" value="0" onchange="refresh_mastery('Ballistic', 2)"></td>
-                <td><input id="Ballistic_value" type="text" value="0" onchange="refresh_mastery('Ballistic', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(16)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_martial">
                 <td>Martial Arts (STR | AGI)</td>
-                <td><input id="Martial_ratio" type="text" value="0" onchange="refresh_mastery('Martial', 1)"></td>
-                <td><input id="Martial_xp" type="text" value="0" onchange="refresh_mastery('Martial', 2)"></td>
-                <td><input id="Martial_value" type="text" value="0" onchange="refresh_mastery('Martial', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(17)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
         </table>
                 <table width="100%">
@@ -208,61 +208,60 @@
                 <td width="22%">Mastery</td>
                 <td width="12%">Locked To</td>
             </tr>
-            <tr>
+            <tr id="mastery_evocation">
                 <td>Evocation</td>
-                <td><input id="Evocation_ratio" type="text" value="0" onchange="refresh_mastery('Evocation', 1)"></td>
-                <td><input id="Evocation_xp" type="text" value="0" onchange="refresh_mastery('Evocation', 2)"></td>
-                <td><input id="Evocation_value" type="text" value="0" onchange="refresh_mastery('Evocation', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(18)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_transmutation">
                 <td>Transmutation</td>
-                <td><input id="Transmutation_ratio" type="text" value="0" onchange="refresh_mastery('Transmutation', 1)"></td>
-                <td><input id="Transmutation_xp" type="text" value="0" onchange="refresh_mastery('Transmutation', 2)"></td>
-                <td><input id="Transmutation_value" type="text" value="0" onchange="refresh_mastery('Transmutation', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(19)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_conjuration">
                 <td>Conjuration</td>
-                <td><input id="Conjuration_ratio" type="text" value="0" onchange="refresh_mastery('Conjuration', 1)"></td>
-                <td><input id="Conjuration_xp" type="text" value="0" onchange="refresh_mastery('Conjuration', 2)"></td>
-                <td><input id="Conjuration_value" type="text" value="0" onchange="refresh_mastery('Conjuration', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(20)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_enchantment">
                 <td>Enchantment</td>
-                <td><input id="Enchantment_ratio" type="text" value="0" onchange="refresh_mastery('Enchantment', 1)"></td>
-                <td><input id="Enchantment_xp" type="text" value="0" onchange="refresh_mastery('Enchantment', 2)"></td>
-                <td><input id="Enchantment_value" type="text" value="0" onchange="refresh_mastery('Enchantment', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(21)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_abjuration">
                 <td>Abjuration</td>
-                <td><input id="Abjuration_ratio" type="text" value="0" onchange="refresh_mastery('Abjuration', 1)"></td>
-                <td><input id="Abjuration_xp" type="text" value="0" onchange="refresh_mastery('Abjuration', 2)"></td>
-                <td><input id="Abjuration_value" type="text" value="0" onchange="refresh_mastery('Abjuration', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(22)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_divination">
                 <td>Divination</td>
-                <td><input id="Divination_ratio" type="text" value="0" onchange="refresh_mastery('Divination', 1)"></td>
-                <td><input id="Divination_xp" type="text" value="0" onchange="refresh_mastery('Divination', 2)"></td>
-                <td><input id="Divination_value" type="text" value="0" onchange="refresh_mastery('Divination', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(23)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
-            <tr>
+            <tr id="mastery_anima">
                 <td>Anima</td>
-                <td><input id="Anima_ratio" type="text" value="0" onchange="refresh_mastery('Anima', 1)"></td>
-                <td><input id="Anima_xp" type="text" value="0" onchange="refresh_mastery('Anima', 2)"></td>
-                <td><input id="Anima_value" type="text" value="0" onchange="refresh_mastery('Anima', 3)"></td>
-                <td><input name="lock" type="button" value="Ratio" onclick="lock(24)"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="text" value="0"></td>
+                <td><input type="button" value="Ratio"></td>
             </tr>
         </table>
         <table width="100%">
             <tr>
-                <td width="20%">XP Spent On Abiliteis</td>
-                <td width="40%">Ratio <input type="text"></td>
-                <td width="40%">XP <input type="text"></td>
+                <td width="22%">XP Spent On Abilities</td>
+                <td width="78%"><input type="text"></td>
             </tr>
         </table>
         <table width="75%">
@@ -306,149 +305,85 @@
 </body>
 
 <script>
-    let lockedArr = []
-    const locks = document.getElementsByName("lock");
-    lock = function(id) {
-        if (lockedArr[id] == true) {lockedArr[id] = false; locks[id].value = "Ratio";}
-        else {lockedArr[id] = true; locks[id].value = "Value";}
-    }
+    let totalxp_obj = document.getElementById("XP_total")
 
-    refresh_stat = function(stat, type) {
-        let ratio   = document.getElementById(stat + "_ratio")
-        let xp      = document.getElementById(stat + "_xp")
-        let value   = document.getElementById(stat + "_value")
-        let max     = XP_total.value / 10
-        if (type == 1) {
-            xp.value    = Math.floor(ratio.value * max) * 2
-            value.value = Math.floor(ratio.value * max)
-            refresh_bottom()
-        } else if (type == 2) {
-            xp.value    = Math.floor(xp.value * 0.5) * 2
-            ratio.value = xp.value * 5 / XP_total.value
-            value.value = xp.value * 0.5
-            refresh_bottom()
-        } else if (type == 3) {
-            value.value = Math.floor(value.value)
-            ratio.value = value.value * 10 / XP_total.value
-            xp.value    = value.value * 2
-            refresh_bottom()
-        } else if (type == 4) {
-            xp.value    = 2 * Math.floor(ratio.value * max)
-            value.value = Math.floor(ratio.value * max)
+    class Stat {
+        ratio_obj;
+        xp_obj;
+        value_obj;
+        lock_obj;
+
+        constructor(id, coefficient) {
+            let objects = document.getElementById(id).children
+            this.ratio_obj = objects[1].firstChild
+            this.xp_obj = objects[2].firstChild
+            this.value_obj = objects[3].firstChild
+            this.lock_obj = objects[4].firstChild
+            
+            totalxp_obj.addEventListener("change", () => {
+                console.log("TOTAL XP CHANGED")
+                if (this.lock_obj.value == "Ratio") {
+                    this.xp_obj.value = Math.floor(totalxp_obj.value * this.ratio_obj.value * 0.1) * coefficient
+                    this.value_obj.value = Math.floor(totalxp_obj.value * this.ratio_obj.value * 0.1)
+                } else {
+                    this.ratio_obj.value = this.value_obj.value / totalxp_obj.value * 10
+                }
+            })
+            this.ratio_obj.onchange = () => {
+                let v = Number(this.ratio_obj.value)
+                this.xp_obj.value = Math.floor(totalxp_obj.value * v * 0.1) * coefficient
+                this.value_obj.value = Math.floor(totalxp_obj.value * v * 0.1)
+            }
+            this.xp_obj.onchange = () => {
+                let v = Math.floor(Number(this.xp_obj.value) / coefficient) * coefficient
+                this.ratio_obj.value = v / totalxp_obj.value * 10 / coefficient
+                this.xp_obj.value = v
+                this.value_obj.value = v / coefficient
+            }
+            this.value_obj.onchange = () => {
+                let v = Math.floor(Number(this.value_obj.value))
+                this.ratio_obj.value = v / totalxp_obj.value * 10
+                this.xp_obj.value = v * coefficient
+                this.value_obj.value = v
+            }
+            this.lock_obj.onclick = () => {
+                if (this.lock_obj.value == "Ratio") {
+                    this.lock_obj.value = "Value"
+                } else {
+                    this.lock_obj.value = "Ratio"
+                }
+            }
         }
     }
 
-    refresh_mastery = function(stat, type) {
-        let ratio   = document.getElementById(stat + "_ratio")
-        let xp      = document.getElementById(stat + "_xp")
-        let value   = document.getElementById(stat + "_value")
-        let max     = XP_total.value / 10
-        if (type == 1) {
-            xp.value    = Math.floor(ratio.value * max) * 0.5
-            value.value = Math.floor(ratio.value * max)
-            refresh_bottom()
-        } else if (type == 2) {
-            xp.value    = Math.floor(xp.value * 2) * 0.5
-            ratio.value = xp.value * 20 / XP_total.value
-            value.value = xp.value * 2
-            refresh_bottom()
-        } else if (type == 3) {
-            value.value = Math.floor(value.value)
-            ratio.value = value.value * 10 / XP_total.value
-            xp.value    = value.value * 0.5
-            refresh_bottom()
-        } else if (type == 4) {
-            xp.value    = 0.5 * Math.floor(ratio.value * max)
-            value.value = Math.floor(ratio.value * max)
-        }
-    }
+    new Stat("stat_str", 2)
+    new Stat("stat_agi", 2)
+    new Stat("stat_vit", 2)
+    new Stat("stat_int", 2)
+    new Stat("stat_will", 2)
+    new Stat("stat_ego", 2)
 
-    refresh_XP = function() {
-        refresh_stat("STR", 4)
-        refresh_stat("AGI", 4)
-        refresh_stat("VIT", 4)
-        refresh_stat("INT", 4)
-        refresh_stat("WILL", 4)
-        refresh_stat("EGO", 4)
+    new Stat("mastery_athletics", 0.5)
+    new Stat("mastery_acrobatics", 0.5)
+    new Stat("mastery_sleight", 0.5)
+    new Stat("mastery_arcana", 0.5)
+    new Stat("mastery_science", 0.5)
+    new Stat("mastery_lore", 0.5)
+    new Stat("mastery_perception", 0.5)
+    new Stat("mastery_intuition", 0.5)
+    new Stat("mastery_performance", 0.5)
 
-        refresh_mastery("Athletics", 4)
-        refresh_mastery("Acrobatics", 4)
-        refresh_mastery("Sleight", 4)
-        refresh_mastery("Arcana", 4)
-        refresh_mastery("Lore", 4)
-        refresh_mastery("Science", 4)
-        refresh_mastery("Perception", 4)
-        refresh_mastery("Intuition", 4)
-        refresh_mastery("Performance", 4)
+    new Stat("mastery_melee", 0.5)
+    new Stat("mastery_ballistic", 0.5)
+    new Stat("mastery_martial", 0.5)
 
-        refresh_mastery("Melee", 4)
-        refresh_mastery("Ballistic", 4)
-        refresh_mastery("Martial", 4)
-
-        refresh_mastery("Evocation", 4)
-        refresh_mastery("Transmutation", 4)
-        refresh_mastery("Conjuration", 4)
-        refresh_mastery("Enchantment", 4)
-        refresh_mastery("Abjuration", 4)
-        refresh_mastery("Divination", 4)
-        refresh_mastery("Anima", 4)
-        
-        refresh_bottom()
-    }
-
-    refresh_bottom = function() {
-        let xp1 =
-            1*STR_xp.value  +
-            1*AGI_xp.value  +
-            1*VIT_xp.value  +
-            1*INT_xp.value  +
-            1*WILL_xp.value +
-            1*EGO_xp.value
-        
-        XP_main.innerHTML = xp1
-        RATIO_main.innerHTML = Math.round(xp1 / XP_total.value * 1e5) / 1e3 + "%"
-
-        let xp2 =
-            1*Athletics_xp.value    +
-            1*Acrobatics_xp.value   +
-            1*Sleight_xp.value      +
-            1*Arcana_xp.value       +
-            1*Science_xp.value      +
-            1*Lore_xp.value         +
-            1*Perception_xp.value   +
-            1*Intuition_xp.value    +
-            1*Performance_xp.value
-
-        XP_mastery.innerHTML = xp2
-        RATIO_mastery.innerHTML = Math.round(xp2 / XP_total.value * 1e5) / 1e3 + "%"
-
-        let xp3 =
-            1*Melee_xp.value        +
-            1*Ballistic_xp.value    +
-            1*Martial_xp.value
-        
-        XP_martial.innerHTML = xp3
-        RATIO_martial.innerHTML = Math.round(xp3 / XP_total.value * 1e5) / 1e3 + "%"
-
-        let xp4 =
-            1*Evocation_xp.value        +
-            1*Transmutation_xp.value    +
-            1*Conjuration_xp.value      +
-            1*Enchantment_xp.value      +
-            1*Abjuration_xp.value       +
-            1*Divination_xp.value       +
-            1*Anima_xp.value
-
-        XP_magic.innerHTML = xp4
-        RATIO_magic.innerHTML = Math.round(xp4 / XP_total.value * 1e5) / 1e3 + "%"
-
-        XP_spent.innerHTML = xp1 + xp2 + xp3 + xp4
-        RATIO_spent.innerHTML = Math.round((xp1 + xp2 + xp3 + xp4) / XP_total.value * 1e5) / 1e3 + "%"
-        XP_left.innerHTML = XP_total.value - (xp1 + xp2 + xp3 + xp4)
-        RATIO_left.innerHTML = Math.round((1 - ((xp1 + xp2 + xp3 + xp4) / XP_total.value)) * 1e5) / 1e3 + "%"
-    }
-
-    refresh_bottom()
+    new Stat("mastery_evocation", 0.5)
+    new Stat("mastery_transmutation", 0.5)
+    new Stat("mastery_conjuration", 0.5)
+    new Stat("mastery_enchantment", 0.5)
+    new Stat("mastery_abjuration", 0.5)
+    new Stat("mastery_divination", 0.5)
+    new Stat("mastery_anima", 0.5)
 </script>
 
 </html>

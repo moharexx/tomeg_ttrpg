@@ -27,10 +27,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When using this Ability, you are put in <b>Hollow Purple Stance.</b>",
-                "The Next Turn you can Trigger the <b>Hollow Purple Slash.</b>",
-                "You shoot out a large sphere of exotic matter, dematerializing everything in it's path.",
-                "This is a Projectile, Targeting everything in it's path, acting like a Flow Line AOE Attack with a Width.",
+                "When using this Ability, you are put in <b>Hollow Purple Stance</b>.",
+                "The Next Turn you can Trigger the <b>Hollow Purple Stance</b>.",
+                "You shoot out a large sphere of exotic matter, dematerializing everything in its path.",
+                "This is a Projectile, Targeting everything in its path, acting like a Flow Line AOE Attack with a Width.",
             ],
         },
         {
@@ -52,7 +52,7 @@ module.exports = {
                 ["Range", "20 × CS^(1/3)"],
                 ["Width", "CS^(1/3)"],
                 ["Damage", "(2d8 × ESS) Demat"],
-                ["Demat-Pen", "6 × ESS"],
+                ["Demat-Pen", "10 × ESS"],
             ],
         },
     ],

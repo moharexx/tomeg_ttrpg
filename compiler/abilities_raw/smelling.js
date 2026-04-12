@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Smelling(WIP)",
+    name: "Smelling",
     category: "passive",
     type: [
         "Innate",
@@ -19,29 +19,30 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You can <b>Sense</b> with Smelling within <box>5 × Perception Modifier^(1/3)</box> meters.",
+                `You can <b>Sense</b> with Smelling within <box>5 × Perception Modifier^(1/3)</box> meters.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Clear Smelling</b> (10 XP):",
-                "You can <b>Pinpoint</b> with Smelling within <box>5 × Perception Modifier^(1/3)</box> meters, and <b>Sense</b> in Double the Range.",
+                `<b>Clear Smelling</b> (10 XP):`,
+                `You can <b>Pinpoint</b> with Smelling within <box>5 × Perception Modifier^(1/3)</box> meters, and <b>Sense</b> in Double the Range.`,
             ],
         },
         {
             type: "p",
             content: [
-                "These Ranges assume regular scents. (???, send help)",
-                "For more and less potent scents the Range of Smelling may vary.",
-                "Exact Ruling up to GM.",
+                `These Ranges assume regular scents. (~human smell, whatever that exactly means...)`,
+                `For more and less potent scents the Range of Smelling may vary.`,
+                `This is also useful for tracking, as smells can remain on something even after the Target is gone.`,
+                `Exact Ruling up to GM.`,
             ],
         },
         {
             type: "p",
             content: [
-                "Most Entities don't have this Ability Unlocked, even if they have noses (or similar).",
-                "If an Entity has a nose (or similar) but hasn't unlocked this Ability, it smells too broadly to identify any specific source.",
+                `Most Entities don't have this Ability Unlocked, even if they have noses (or similar).`,
+                `If an Entity has a nose (or similar) but hasn't unlocked this Ability, it smells too broadly to identify any specific source.`,
                 `More details at <a href="../main/mechanics.html#senses" target="_blank">Senses.</a>`,
             ],
         },

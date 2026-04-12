@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Utility, Unlock",
-        "Communication, Information",
+        "Information",
         "Bonus-Action",
     ],
     unlock_cost: 5,
