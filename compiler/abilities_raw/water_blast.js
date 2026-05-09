@@ -5,7 +5,7 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "5 CS, (5 Conjuration | 10 Transmutation | 20 Evocation)",
+        "5 Conjuration | 10 Transmutation | 20 Evocation",
     ],
     reqs_full: [
         "<b>Spell:</b> 5 CS, (5 Conjuration | 10 Transmutation | 20 Evocation)",
@@ -27,8 +27,8 @@ module.exports = {
             type: `list`,
             content: [
                 `<b>Underwater Jet:</b>`,
-                `When the Projectile goes into the Water it will turn into an Underwater Jet.`,
-                `While in this Underwater form, each meter traveled will count as half a meter for it's range.`,
+                `When the Projectile goes into a body of Water it will turn into an Underwater Jet.`,
+                `While in Jet form, the Projectile's travel path can bend, and each meter traveled will count as half a meter for its range.`,
                 `When it exits the Water, the Jet turns back into the Projectile and continues traveling.`,
             ],
         },

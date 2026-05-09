@@ -5,7 +5,7 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Arcana | Anima",
+        "20 Arcana | 20 Anima",
     ],
     reqs_full: [
         "20 Arcana | 20 Anima",
@@ -19,26 +19,26 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You Increase the Duration of a Spell, but Decrease it's <b>Effective-ESS</b> for each Jump in Duration.",
-                "The Ability still takes the same amount of ESS, but it's effects are as if Cast from a lower ESS.",
+                `Increase the Duration of a Spell, but Divide its <b>Effective ESS</b> based on the amount of Jumps in the Duration Table.`,
+                `This Effective ESS Division has NO effect on Range, Size, and doesn't make it easier to Dispell, Hack, Disrupt, ect...`,
             ],
         },
         {
             type: "list",
             content: [
-                "Duration Table:",
-                "1 Round | Next Turn | Next Round",
-                "1 Minute (20 Rounds)",
-                "1 Hour (1200 Rounds)",
-                "1 Day (28800 Rounds)",
-                "Permanent (∞ Rounds)",
+                `<b>Duration Table:</b>`,
+                `1 Round | Next Turn | Next Round`,
+                `1 Minute (20 Rounds)`,
+                `1 Hour (1200 Rounds)`,
+                `1 Day (28800 Rounds)`,
+                `Permanent (∞ Rounds)`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Permanence Anything</b> (1000 Arcana | 1000 Anima):",
-                "The Restriction that only Spells can be Permanence Casted is lifted.",
+                `<b>Permanence Anything</b> (1000 Arcana | 1000 Anima):`,
+                `The Restriction that only Spells can be Permanence Casted is lifted.`,
             ],
         },
     ],
@@ -50,7 +50,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Type", "Spell"],
-                ["Effective-ESS Divisor", "(Cast Time Jumps) + 1"],
+                ["Effective ESS Divisor", "(Jumps in Duration) + 1"],
             ],
         },
     ],

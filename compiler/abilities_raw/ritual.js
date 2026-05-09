@@ -5,7 +5,7 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Arcana | Anima",
+        "10 Arcana | 10 Anima",
     ],
     reqs_full: [
         "10 Arcana | 10 Anima",
@@ -19,66 +19,55 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You Increase the Casting Time of a Spell, and Increase the ESS you put into it for each jump in Casting Time.",
-                "The Spell is Cast with Multiplied AOE Size, Range, and ESS.",
+                `Increase the Casting Time of a Spell, and Increase its Stats based on the amount of Jumps in Casting Time.`,
+                `The Spell is Cast with Multiplied Range, Size, and Effective ESS; <box>(Jumps in Cast Time) + 1</box>`,
+                `This Effective ESS Multiplier has NO effect on Range and Size scalings (Ritual already provides its own).`,
             ],
         },
         {
             type: "p",
             content: [
-                "This Meta-Ability can be used even when the <b>Spell Memorization</b> Feature is used for Casting.",
-                "When you use Ritual with <b>Spell Memorization</b>, you can use other Unlocked Meta-Abilities.",
-            ],
-        },
-        {
-            type: "p",
-            content: [
-                "While Casting a Ritual it takes a <b>Main-Action + Bonus-Action</b> on each of your Turns.",
-                "If you get Damaged while Casting, Roll a <box>(Soul | VIT) Save of Damage Recieved</box>",
-                "If the Save is Failed the Ability is instantly Cast on the Caster, with the highest reached time in the Cast Time Table.",
-                "<b>Example:</b> Rital Casting Fireball, 2 Hours in, attacked and Failed the Save, Fireball explodes on the Caster with the 1 Hour Ritual Multiplier.",
-                "The Spell also catastrophically Fails if the <b>Main-Action + Bonus-Action</b> is not provided.",
-            ]
-        },
-        {
-            type: "p",
-            content: [
-                "You can Ritual Stances, but only Stances which have some kind of Duration or Continuous effect, and is an AOE.",
-                "After the Ritual is complete you place down the Stance's AOE on a point in <box>10 × CS^(1/3) meters</box>",
-                "It will be count as an Active Ability, with a Duration of 1 Minute (20 Rounds), and you will NOT be in a Stance.",
-                "The Stance can still be Triggered normally, this Ends the Ability as normal, unless the Stance states that it remains after Trigger.",
+                `While Casting a Ritual it takes a all of your Actions on each of your Turns.`,
+                `If you get Damaged while Casting, Roll a <box>(Soul | VIT) Save of Damage Received</box>`,
+                `If the Save is Failed, the Ritual Catastrophically Fails, instantly Casting the Ability on the Caster.`,
+                `<b>Example:</b> Rital Casting Fireball, 15 Minutes in, Save Failed! Fireball explodes on the Caster with the 1 Minute Ritual Multipliers.`,
+                `The Spell also Catastrophically Fails if the Caster has an Action reducing Condition on their Turn.`,
+                `The Caster can safely stop the Ritual by Spending all their Actions that Turn.`,
             ]
         },
         {
             type: "dots",
             content: [
-                "You cannot use Ritual on Reactive and On-Attack Type Abilities!",
+                "You cannot use Ritual on Reactive, On-Attack, and Stance Type Abilities!",
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Cast Time Table:</b>",
-                "Up to Main-Actions + Bonus-Action",
-                "1 Minute (20 Rounds)",
-                "1 Hour (1200 Rounds)",
-                "1 Day (28800 Rounds)",
+                `<b>Cast Time Table:</b>`,
+                `1 Round (Some Actions)`,
+                `1 Minute (20 Rounds)`,
+                `1 Hour (1200 Rounds)`,
+                `1 Day (28800 Rounds)`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Community Ritual</b> (20 Arcana | 20 Anima):",
-                "You can invite in others to participate in the Ritual.",
-                "??? shortening? Potency? (WIP)",
+                `<b>Community Ritual</b> (20 Arcana | 20 Anima):`,
+                `You can invite in others to participate in the Ritual.`,
+                `The Ritual speeds up proportional to the Participants' Total XP (based on the Caster's).`,
+                `Participants can safely leave at any time (the original Caster can't).`,
+                `<b>Example:</b> Your party joins the Ritual, 2 People with the same Total XP as you speeds up the Ritual to by +2× thus 3× speed.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Pause Ritual</b> (50 Arcana | 50 Anima):",
-                "As a <b>Main-Action + Bonus-Action</b> you can Pause the Ritual.",
-                "You can Resume it at the same Place it was Paused at.",
+                `<b>Pause Ritual</b> (50 Arcana | 50 Anima):`,
+                `As a <b>Bonus-Action</b> you can Pause the Ritual.`,
+                `A Paused Ritual can be easily Disrupted (Catastrophically Fail at the Position) or Dispelled. (WIP)`,
+                `You can Resume it at the same Place it was Paused at.`,
             ],
         },
         {
@@ -97,7 +86,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Type", "Spell"],
-                ["(AOE, Range, ESS) Multiplier", "(Cast Time Jumps) + 1"],
+                ["(AOE, Range, ESS) Multiplier", "(Jumps in Cast Time) + 1"],
             ],
         },
     ],

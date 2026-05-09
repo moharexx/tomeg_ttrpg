@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Essence Veil (WIP)",
+    name: "Astral Veil (WIP)",
     category: "active",
     type: [
         "Spell",
@@ -28,8 +28,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                `The Veil has 3 different Filter, and each Filter can be made 2 or 1 way.`,
-                `Choose any combination of Filters (can be all at once), and 1 State.`,
+                `The Veil has 3 different Filter, and each Filter can be made 2 way or 1 way (only from inside to outside, or vice versa).`,
+                `Choose any combination of Filters (can be all at once).`,
                 `Additionally, the Caster can designate Entities who can bypass the Veil.`,
             ],
         },
@@ -40,6 +40,15 @@ module.exports = {
                 `<b>Information:</b> Blocks information based Abilities, like Telepathy, Message, Clairvoyance, ect...`,
                 `<b>Transportation:</b> Blocks transportation (and teleportation) based Abilities, like Teleport, Misty Step, ect...`,
                 `<b>Astral Barrier:</b> Blocks Souls without a physical Vessel from entering, aswell as Abilities coming from the Border or Astral.`,
+            ],
+        },
+        {
+            type: "p",
+            content: [
+                `Astral Veil can be bypassed or negated with a Successful <a>Hack-Device</a> <b>(Bonus-Action)</b>.`,
+                `<b>Bypass (Difficulty: <box>10 × ESS</box>):</b> You and anything with you can pass through the the Veil, till the End of your Turn.`,
+                `<b>Hole (Difficulty: <box>15 × ESS</box>):</b> Create a <box>CS^(1/3)</box> Wide, <box>5 × CS^(1/3)</box> Long hole through the Veil, lasting 1 Minute (20 Rounds).`,
+                `<b>Disrupt (Difficulty: <box>20 × ESS</box>):</b> In a <box>5 × CS^(1/3)</box> Radius the Veil is shut down for 1 Minute (20 Rounds).`,
             ],
         },
     ],

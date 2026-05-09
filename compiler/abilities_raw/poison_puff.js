@@ -5,7 +5,7 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "5 CS, (5 Conjuration | 10 Enchantment | 20 Anima)",
+        "5 Conjuration | 10 Enchantment | 20 Anima",
     ],
     reqs_full: [
         "<b>Spell:</b> 5 CS, (5 Conjuration | 10 Enchantment | 20 Anima)",

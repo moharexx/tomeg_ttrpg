@@ -8,11 +8,11 @@ module.exports = {
         "10 Abjuration | 20 Anima | 50 Enchantment",
     ],
     reqs_full: [
-        "<b>spell:</b> (20 INT | 50 WILL | 200 EGO), (10 Abjuration | 20 Anima | 50 Enchantment)",
+        "<b>spell:</b> 20 CS, (10 Abjuration | 20 Anima | 50 Enchantment)",
     ],
     tags: [
         "Utility",
-        "Negation",
+        "Ranged, Negation",
         "Main-Action + Bonus-Action",
     ],
     unlock_cost: 20,
@@ -20,23 +20,30 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, a Magical Effect must be Targeted.",
-                "If the Target Magical ESS or Tier is less than <box>Dispell Strength</box>, then the Target Ends.",
+                `When used, you Target something magical (like a Spell, Magical Item, or similar...), and attempt to Dispell it.`,
+                `Roll <box>Dispell Strength</b> against the <b>Dispell Difficulty</b>, if you Roll at least equal you Succeed.`,
             ]
         },
         {
-            type: "list",
+            type: "p",
             content: [
-                "<b>Self Dispell:</b>",
-                "Dispelling any Spell Cast by the Caster is a Free-Action, and always Succeeds.",
+                `Dispell Difficulty for Spells, Effects and such (uses ESS): <box>(10 × ESS) + Potency</box>`,
+                `Dispell Difficulty for Magical Items, and such (uses Tier): <box>40 × Tier</box>`,
+            ]
+        },
+        {
+            type: "p",
+            content: [
+                `If you use this Ability as a Reaction (Example: <a target="_blank" href="../main/mechanics.html#ready">Ready</a>), it can be used as a Counter Spell.`,
+                `Dispelling anything made by the Caster themselves is a Free-Action, and has 0 Difficulty.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Dispell Potency:</b>",
-                `For each 5 Points of <a href=".at./main/mechanics.html#potency">Potency</a> the Ability is Cast at, increase <box>Dispell Strength</box> by 1.`,
-            ],
+                `<b>Potency Boost:</b>`,
+                `For each Point of <a target="_blank" href="../main/mechanics.html#potency">Potency</a> you gain +1 Dispell Strength.`,
+            ]
         },
     ],
     stats: [
@@ -48,7 +55,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action + Bonus-Action"],
                 ["Range", "10 × CS^(1/3)"],
-                ["Dispell Strength", "ESS"]
+                ["Dispell Strength", "(1d10 + 6) × ESS"]
             ],
         },
     ],

@@ -1,6 +1,6 @@
 module.exports = {
     name: "Parry",
-    category: "stance",
+    category: "active",
     type: [
         "Skill",
     ],
@@ -13,45 +13,27 @@ module.exports = {
     tags: [
         "Defense",
         "Negation, Debuff",
-        "Bonus-Action / Trigger",
+        "Bonus-Action",
     ],
     unlock_cost: 5,
     description: [
         {
             type: "p",
             content: [
-                "When using this Ability, you are put in <b>Parry Stance.</b>",
-                "While in <b>Parry Stance</b>, the next Attack Ignores your HD, and Hits you.",
-            ],
-        },
-        {
-            type: "dots",
-            content: [
-                "When Hit, if <box>Parry-Strength</box> is Equal or Greater than <b>Incoming Pre-Mitigation Damage</b>, you Parry the Attack.",
-                "When Parrying an Attack, you Negate the full Attack, meaning Effects, ect...",
-                `When Parrying a Melee Attack, the Target gets the <a href="../main/mechanics.html#conditions">Staggered Condition</a> till End of it's Next Turn.`,
-                "When Parrying a Dash Type Attack, you stop the Dash.",
-            ],
-        },
-        {
-            type: "list",
-            content: [
-                "<b>Parry Master</b> (20 XP):",
-                "Parry does not count as a Stance, meaning you can have another Stance Active, and still use Parry.",
-                "It still counts as an Ability for Breaking Stances.",
-                "Parry still Breaks normally from all conditions below.",
+                `You ready yourself to Parry a single incoming Attack.`,
+                `Till the End of your Next Turn, if there is an incoming Attack or Save, you can try to Parry it.`,
+                `Roll <box>Parry Strength</box> against the <b>Pre-Mitigated</b> Damage, you need to Roll at least equal for a Success.`,
+                `<b>On a Success;</b> you fully Negate the Attack from yourself, with all of its effects, and block the Flow of AOEs.`,
+                `<b>On a Failed;</b> you are Hit by the Attack, or if it was a Save you Fail it.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Stance Breaks when: <box>Using Abilities, Moving, HD Decrease, Taking Damage</box>",
-            ],
-        },
-        {
-            type: "p",
-            content: [
-                "<b>Note:</b> This Ability can CRIT for 2× Parry Strength, throw your d10 pls",
+                `Parry can only be used against Attacks and Saves with Damage, Hybrid Damage's weight (HP + SP) isn't doubled, Multi-Type Damages get added together.`,
+                `If the Attack you Parried was Melee, the Target gains the <a target="_blank" href="../main/mechanics.html#conditions">Staggered Condition</a>.`,
+                `You can use the Parry Ability multiple times, when you do so you can Parry that amount of different Attacks.`,
+                `This Ability can CRIT for 2× Parry Strength, the CRIT determining Dice is the same d10 used in Parry Strength, <b><i>PARRY THE HEAVENS!!<i></b>`,
             ],
         },
     ],
@@ -63,8 +45,8 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
-                ["Stance Trigger", "Get Attacked"],
-                ["Parry Strength", "2d10 × ESS"],
+                ["Duration", "Till the End of your Next Turn."],
+                ["Parry Strength", "(1d10 + 6) × ESS"],
             ],
         },
     ],

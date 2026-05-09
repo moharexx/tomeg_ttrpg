@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Conscious Soul",
+    name: "Conscious Soul (WIP)",
     category: "passive",
     type: [
         "Innate",
@@ -19,20 +19,23 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Your Soul is conscious, even without a body.`,
+                `Your Soul is conscious, even without a Vessel.`,
                 `This means you have Actions even when you are "Dead".`,
-                `The base rule of 1 Minute for when your Soul naturally floats away after Death is removed.`,
+                `The base rule of 1 Minute (20 Rounds) for when your Soul naturally floats away after Death is removed.`,
                 `The Soul can still get destroyed if <b>SP</b> goes below <box>-Max SP</box>`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Soul is a non-corporeal thing, and can fly.",
-                "The Soul cannot use regular Senses to Pinpoint, but can still kinda use them.",
-                "The Soul cannot use Skill Type Abilities.",
-                "The Soul uses Abilities at 1/10 ESS.",
-                "The Soul can use a Main-Action to possess a suitable Body, which has no Soul already in it.",
+                `As a <b>Free-Action</b> you can leave your current Vessel.`,
+                `As a <b>Main-Action</b> you can possess a suitable Vessel.`,
+            ],
+        },
+        {
+            type: "p",
+            content: [
+                `Click here for more information about <a target="_blank" href="../main/mechanics.html#souls">Souls</a>.`,
             ],
         },
     ],

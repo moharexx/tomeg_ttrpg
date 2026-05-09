@@ -7,7 +7,7 @@ module.exports = {
     ],
     reqs_short: [
         "20 Martial Arts",
-        "10 CS, (10 Conjuration | 20 Enchantment | 50 Evocation)",
+        "10 Conjuration | 20 Enchantment | 50 Evocation",
     ],
     reqs_full: [
         "<b>Skill:</b> 20 Martial Arts",

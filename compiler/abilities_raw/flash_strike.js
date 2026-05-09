@@ -23,13 +23,12 @@ module.exports = {
                 `When using this Ability, you are put in <b>Flash Strike Stance</b>.`,
                 `On your Next Turn you can Trigger the <b>Stance</b>.`,
                 `On Trigger you flash in a Flow Line AOE Melee Attack, you are the Flow of the AOE.`,
-                `If the Abilites Damage is Fully Negated you stop midway.`,
             ],
         },
         {
             type: "p",
             content: [
-                `The Stance Breaks when: <box>Using Abilities, Moving, HD Decrease, Taking Damage</box>`,
+                `The Stance Breaks when: <box>Using Abilities, Moving, (HD Decrease | Taking Damage)</box>`,
             ],
         },
     ],
@@ -41,8 +40,9 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["Stance Trigger", "Main-Action at Your Next Turn"],
-                ["Line Length", "2 × MS"],
+                ["Stance Trigger", "Main-Action at your Next Turn"],
+                ["Line Length", "3 × MS"],
+                ["Line Width", "ESS^(1/3)"],
                 ["Damage Of Weapon's Type", "2d12 × ESS"],
             ],
         },

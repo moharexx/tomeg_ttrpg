@@ -28,10 +28,10 @@ module.exports = {
         {
             type: "list",
             content: [
-                "<b>Grab:</b>",
-                "If you have a free hand, and you are in Flung Distance, you can grab the disarmed item.",
-                "Before grabbing the disarmed item you can drop whatever you're holding or Wielding to make a free slot.",
-                "When you grab something this way you can Instantly Wield it if you have a Free Wielding Slot.",
+                `<b>Grab:</b>`,
+                `If you are in Flung Distance, you can fling the Item to yourself.`,
+                `If you have a free Wielding Slot you can instantly Wield the item.`,
+                `If you don't, you can freely drop anything you're Wielding to make space.`,
             ],
         },
         {
@@ -59,7 +59,7 @@ module.exports = {
                 ["Cast Time", "Bonus-Action"],
                 ["Melee STR Save", "12 × ESS"],
                 ["Ranged STR Save", "8 × ESS"],
-                ["Weapon Flung Distance", "2 × STR^(1/3)"],
+                ["Flung Distance", "2 × STR^(1/3)"],
             ],
         },
     ],

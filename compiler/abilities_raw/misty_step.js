@@ -6,16 +6,16 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Acrobatics",
-        "Transmutation | Conjuration",
+        "200 Acrobatics",
+        "5 Transmutation | 10 Conjuration | 20 Enchantment",
     ],
     reqs_full: [
         "200 Acrobatics",
-        "(10 INT | 10 WILL | 20 EGO), (10 Transmutation | 10 Conjuration)",
+        "10 CS, (5 Transmutation | 10 Conjuration | 20 Enchantment)",
     ],
     tags: [
         "Utility, Cooldown",
-        "Mobility",
+        "Self, Mobility",
         "Bonus-Action",
     ],
     unlock_cost: 10,
@@ -23,16 +23,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You can Teleport to a point, which you can Pinpoint with a Sense within Teleport Distance.",
-                "The Target will carry anything they hold, even other Living Entities.",
-                "Unwilling Entities can make a Soul Save against this Ability.",
+                `You can Teleport to a point which you can Pinpoint within Teleport Distance.`,
+                `You can carry things you're holding, and even Entities you're Grappling.`,
+                `The collective weight of what you bring cannot be over <box>100 × ESS Kg</box>`,
+                `Unwilling Targets can make a Soul Save against being Teleported.`,
             ],
         },
         {
             type: "list",
             content: [
-                "Misty Touch (50 Enchantment):",
-                "Makes the Ability Touch.",
+                `<b>Misty Touch</b> (50 Enchantment):`,
+                `Makes the Ability's Range Touch.`,
             ],
         },
     ],
@@ -44,9 +45,11 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
+                ["Range", "Self"],
                 ["Cooldown", "1 Minute (20 Rounds)"],
                 ["Soul Save", "10 × ESS"],
                 ["Teleport Distance", "6 × ESS^(1/3)"],
+                ["Max Weight", "100 × ESS Kg"],
             ],
         },
     ],

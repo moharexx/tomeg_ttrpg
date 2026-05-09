@@ -20,15 +20,22 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you Touch a Biological Target and its wounds close.",
-                "Undead Type Entites rather than be Healed, recieve Radiant Damage equal to the Healing.",
+                `When used, you Touch a Biological Target and its wounds close.`,
+                `Undead Type Entites instead of being Healed, recieve Radiant Damage, with high Radiant-Pen.`,
             ],
         },
         {
-            type: "dots",
+            type: "p",
             content: [
-                "This does not regrow lost body parts.",
-                "Yes, you can heal a corpse. No, it won't revive them.",
+                `This does not regrow lost body parts.`,
+                `Yes, you can heal a corpse. No, it won't revive them.`,
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                `<b>Redo Of Healer</b> (5 XP):`,
+                `Rather than Heal, you can choose to deal <a target="_blank" href="../main/mechanics.html#executing">Executing</a> Bio Damage, with high Bio-Pen.`,
             ],
         },
     ],
@@ -41,8 +48,8 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Range", "Touch"],
-                ["Healing", "(1d4 + 4) × ESS"],
-                ["Radiant-Pen", "10 × ESS"],
+                ["Healing (or Damage)", "(1d4 + 4) × ESS"],
+                ["Penetration", "10 × ESS"],
             ],
         },
     ],

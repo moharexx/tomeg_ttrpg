@@ -5,14 +5,14 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "10 Transmutation | 20 Conjuration | 20 Enchantment",
+        "10 Transmutation | 20 Conjuration | 50 Enchantment",
     ],
     reqs_full: [
-        "<b>Spell:</b> 20 CS, (10 Transmutation | 20 Conjuration | 20 Enchantment)",
+        "<b>Spell:</b> 20 CS, (10 Transmutation | 20 Conjuration | 50 Enchantment)",
     ],
     tags: [
         "Utility, Cooldown",
-        "Range, Static Sphere AOE, Soul Save, Mobility",
+        "Static Sphere AOE, Soul Save, Mobility",
         "Main-Action + Bonus-Action",
     ],
     unlock_cost: 20,
@@ -20,10 +20,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                `When used, you Teleport Entities on a Failed Save inside the Radius to a Pipointed location within Range.`,
-                `After the Cast Time you choose Targets inside the Radius, collectively not weighing more than <box>250 × ESS Kg</box>`,
-                `Teleported Entities stay in their relative position inside the Radius.`,
+                `When used, you choose Targets in a Radius around you to be Teleported to a <b>Pinpointed</b> location within Range.`,
+                `Unwilling Targets can throw a Soul Save against being Teleported.`,
+                `The Targets' collective weight can be up to <box>250 × ESS Kg</box>`,
+                `Where each Teleported Target end up in the destination's Radius is determined by the Caster.`,
                 `Combat Teleport's Teleportation does NOT Activate Reactions, or Trigger Stances.`,
+            ],
+        },
+        {
+            type: "p",
+            content: [
+                `<b>Note:</b> Yes, you can exclude yourself from the Target list.`,
             ],
         },
     ],

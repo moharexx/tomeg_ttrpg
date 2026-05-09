@@ -7,7 +7,7 @@ module.exports = {
     ],
     reqs_short: [
         "20 WILL",
-        "10 CS, (5 Enchantment | 10 Transmutation | 20 Anima)",
+        "5 Enchantment | 10 Transmutation | 20 Anima",
     ],
     reqs_full: [
         "<b>Innate:</b> 20 WILL",

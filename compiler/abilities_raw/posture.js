@@ -6,15 +6,15 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "AGI",
-        "Acrobatics",
+        "20 AGI",
+        "10 Acrobatics",
     ],
     reqs_full: [
-        "Innate: 20 AGI",
-        "Skill: 10 Acrobatics",
+        "<b>Innate:</b> 20 AGI",
+        "<b>Skill:</b> 10 Acrobatics",
     ],
     tags: [
-        "Defense",
+        "Defense, Cooldown",
         "Negation, HD",
         "Bonus-Action",
     ],
@@ -23,8 +23,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                "Gain back HD.",
-                "This Ability can only be used once per Turn.",
+                `You fix your posture, gaining back HD.`,
             ]
         },
     ],
@@ -36,6 +35,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
+                ["Cooldown", "Once per Turn"],
                 ["HD Gain", "10 × ESS"],
             ],
         },

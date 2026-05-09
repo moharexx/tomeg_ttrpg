@@ -5,10 +5,10 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "Athletics",
+        "10 Athletics",
     ],
     reqs_full: [
-        "10 Athletics",
+        "<b>Skill:</b> 10 Athletics",
     ],
     tags: [
         "Defense",
@@ -20,9 +20,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You can Expend GRIT To Reduce Slowness Effects on Yourself.",
-                "The GRIT needed is dependent on how much you want to Reduce the Slow's Strength.",
-                "While the Ability is Active all Slows, including ones you get while it is Active will have their Strength Reduced.",
+                `You can Spend GRIT to Reduce Slowness Effects from yourself.`,
+                `The GRIT needed is dependent on how much you want to Reduce the Slow's Strength.`,
+                `While the Ability is Active, all Slows, including ones you get while it's still Active, will have their Strength Reduced.`,
             ],
         },
     ],

@@ -5,10 +5,10 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "Athletics",
+        "10 Athletics",
     ],
     reqs_full: [
-        "10 Athletics",
+        "<b>Skill:</b> 10 Athletics",
     ],
     tags: [
         "Utility",

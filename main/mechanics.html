@@ -635,7 +635,7 @@
                 (on square fields you can move diagonally)
             </p>
             <p>
-                The Move-Action can be modified with <a href="#sprint">Sprint</a>, <a href="#climb">Climb</a>, <a href="#swim">Swim</a> and <a href="#pass_through">Pass-Through</a>
+                The Move-Action can be modified with <a href="#sprint">Sprint</a>, <a href="#climb">Climb</a>, <a href="#swim">Swim</a>, <a href="#pass_through">Pass-Through</a>, and <a href="#stealth">Stealth (Scouting)</a>.
             </p>
         </div>
         <h2 id="jump" class="collapsible">Jump</h2>
@@ -932,32 +932,37 @@
                 On a Successful Save your Movement is stopped right infront of your Target as you Fail to pass them.
             </p>
             <p>
-                As a Bonus-Action you can increase the Save Difficulty to the Result of an Acrobatics Check.<br>
-                When you do so, the effect lasts until the End of Your Turn.<br>
+                As a <b>Bonus-Action</b> you can increase the Save Difficulty to the Result of an Acrobatics Check.<br>
+                When you do so, the effect lasts until the End of your Turn.<br>
             </p>
             <p>
                 You can replace Acrobatics, and instead use <box><b>Half</b> of your Athletics</box>
             </p>
         </div>
-        <h2 id="stealth" class="collapsible">Stealth (WIP)</h2>
+        <h2 id="stealth" class="collapsible">Stealth</h2>
         <hr>
         <div class="collapsed">
+            <p class="bottomless">
+                There are 3 kinds of Stealth, Passive, Active, and Scouting. This is a Sleight Check.<br>
+                Unlike most other Mastery based Actions, you don't Roll a d10, the Result is Static.<br>
+            </p>
+            <ul>
+                <li><b>Passive:</b> Free-Action, Result is same as a Passive Check.</li>
+                <li><b>Active:</b> Bonus-Action, Result is same as if you Rolled a 5 on the d10 Check.</li>
+                <li><b>Scouting:</b> Main-Action, you use the <a href="#move_action">Move-Action</a> as well as an Active Stealth.</li>
+            </ul>
             <p>
-                As a <b>Bonus-Action</b> you can do the Stealth Action.<br>
-                This is a Sleight Check.<br>
-                You can make a Passive Stealth Action as a Free-Action.
+                Stealth is attempting to hide, this is hiding against all types of Senses, even Smell and Essence.<br>
+                Being hidden is relative, some Entites might Sense you, but others might not.<br>
+                Sometimes you cannot hide against a Sense, like standing in broad sight, or having an item on you emit loud noise; up to GM.<br>
             </p>
             <p>
-                With the Stealth Action you attempt to hide, this is hiding against all type of Senses, even Smell and Essence.<br>
-                Being hidden is relative, so some Entites might Sense you, some might not.<br>
-                Sometimes you cannot hide against a Sense, like standing in broad sight, or having an item on you emit sound.<br>
+                <a href="#scan">Scan Area</a> with Difficulty equal to your Stealth Check reveals you.
             </p>
             <p>
-                <a href="#scan">Scan Area</a> with Difficulty equal to your Sleight Check reveals you.<br>
-            </p>
-            <p>
-                When you move, or get moved, you must make another Stealth Action to maintain Stealth.<br>
-                If you already used a Stealth Action that Turn you don't need to repeat till the Start of Your Next Turn.
+                Stealth Breaks when you Move, or are Moved.<br>
+                Using Stealth (Passive or Active) prevents Stealth from Breaking till the Start of your Next Turn, even while Moving.<br>
+                Thus to remain in Active Stealth while moving around you will have to do an Active Stealth each Turn.<br>
             </p>
         </div>
         <h2 id="recall_knowledge" class="collapsible">Recall Knowledge</h2>
@@ -974,7 +979,7 @@
             <p>
                 <b>Example:</b> You know you will be fighting a Cosmic Monolith soon, so you try to remember what it does, its weaknesses, and strengths.<br>
                 It has Difficulties of Arcana 15, Science 50, Lore 10. You roll a 4, after calculations that's a 18 in Arcana, 12 in Science, and 9 in Lore.<br>
-                You get to know everything the Arcana part of the check gives, like how they work, that it has a forcefield, but weak to water.<br>
+                You get to know everything the Arcana part of the check gives, like how they work, that it has a forcefield, but is weak to water.<br>
                 You cannot repeat the Recall Knowledge to know about Cosmic Monolith's again, until you Long-Rest, but could to Prismatic Monoliths.<br>
                 Note that Different aspects usually overlap in what information they reveal, so a Success in Science or Lore would probably reveal the same.
             </p>
@@ -1000,7 +1005,7 @@
             <p>
                 You can perform Surgeries, the speed and type of surgery determine the Difficulty.<br>
                 On a Fail, the Target takes True HP Damage equal to the Difficulty of the surgery.<br>
-                On a CRIT Success, you somehow finish faster by 1 Jump in the Surgery Time Table.
+                On a CRIT Success, you miraculously finish faster by 1 Jump in the Surgery Time Table.
             </p>
             <table width="60%">
                 <tr>
@@ -1119,30 +1124,38 @@
         <hr>
         <div class="collapsed">
             <p>
-                You can do the Scan Action to reveal information otherwise hidden.<br>
-                This is a <b>Bonus-Action</b>, and is usually a Perception and/or Intuition Check. (Science and/or Arcana for Devices)<br>
+                You can do the Scan Action to reveal hidden Objects, Entities, motives, ect...<br>
+                By default this is a <b>Bonus-Action</b>, and is a Perception and/or Intuition Check. (Science or Arcana for <a href="#devices">Devices</a>)<br>
                 You can make Passive Scan Actions as a Free-Action.
             </p>
             <p class="bottomless"><b>Scan Area:</b></p>
             <ul>
                 <li>Perception and Intuition <a href="#multi_check">Multi-Check</a> against an Area.</li>
                 <li><b>Difficulty:</b> <box>Targets' Stealth Checks</box></li>
-                <li>On the Perception part's Success hidden Targets' position are revealed to you.</li>
-                <li>On the Intuition part's Success hidden Targets' presence, but not position, and potentional dangers are revealed to you.</li>
+                <li>On Perception Success: Hidden Targets' position are revealed to you.</li>
+                <li>On Intuition Success: Hidden Targets' presence (not position), and potentional dangers are revealed to you.</li>
             </ul>
             <p class="bottomless"><b>Scan Motive:</b></p>
             <ul>
-                <li>Intuition Check against a Target.</li>
+                <li>Intuition Check against a Sensed Target.</li>
                 <li><b>Difficulty:</b> <box>Target's Performance Check</box></li>
-                <li>On a Success you reveal the Target's motives, like friendliness, hostility, if they <a href="#speak">lie</a>, ect...</li>
+                <li>On a Success you reveal the Target's motives, like friendliness, hostility, if they are <a href="#speak">lying</a>, ect...</li>
             </ul>
-            <p class="bottomless"><b>Scan Entity:</b></p>
+            <p class="bottomless"><b>Scan Entity</b> (Main-Action):</p>
             <ul>
                 <li>(Perception | Intuition) Check against a Pinpointed Target.</li>
                 <li><b>Difficulty:</b> <box>Target's Total XP / 10</box></li>
                 <li>On a Success you know the Target's Stats, Masteries, Resources, Resistances, ect... But NOT Abilities.</li>
-                <li>As part of Scan-Entity you can also make a <a href="#recall_knowledge">Recall Knowledge</a> on the same Target.</li>
+                <li>As part of <b>Scan Entity</b> you can also make a <a href="#recall_knowledge">Recall Knowledge</a> on the same Target.</li>
             </ul>
+            <p>
+                When you Fail an Active Scan Area or Scan Motive, the Result is <b>Locked</b> in for that specific Target for the duration of the "context".<br>
+                <b>Example:</b> You Stealth into a private area, the guard Rolls badly and Fails the Active Scan Area.<br>
+                The guard, on lookout duty, making an Active Scan Area every Turn, even with a better Result can't notice you.<br>
+                If the guard's Scan gets a Bonus or Advantage, or your Stealth becomes somehow worse, then the Result is Unlocked.<br>
+                This is to prevent Rolling Scan multiple times against a single Target, thus making Stealth unviable.<br>
+                The meaning of "context" is up to the GM.
+            </p>
         </div>
         <h2 id="sense_nature" class="collapsible">Sense Nature</h2>
         <hr>
@@ -1466,33 +1479,34 @@
         <h2 id="devices" class="collapsible">Devices (WIP)</h2>
         <hr>
         <div class="collapsed">
-            <p>
-                Devices are things which are capable of some special Actions, and may have Data on them.<br>
+            <p class="bottomless">
                 Many things are considered Devices, from Electronics to Magical Items, Computers to <a href="../extra/curios.html" target="_blank">Curios</a>.<br>
-                There are 3 Modes of interaction with a Device;
+                All Devices have an Astral representation of themselves. (Even non-magical electronics.)<br>
+                There are 2 ways to get into a Device;
             </p>
-            <p class="bottomless"><b>Spy Mode:</b></p>
             <ul>
-                <li>Spy Mode cannot be used to interact with any of the Device's own Actions.</li>
-                <li>In Spy Mode you can only aquire information, and communicate with others in the Device.</li>
-                <li><b>Example:</b> You connect to a computer, but cannot write or execute any files, only read and somehow communicate through the Device.</li>
+                <li>The first is <b>Hacking</b>, this creates a "Proto-Avatar" representing you in the Device's Astral Space.</li>
+                <li>The second is by literally entering the Device's Astral Space, with a real Avatar containing your Soul.</li>
             </ul>
+            <p>
+                The Proto-Avatar has 0 Resistances, its Max HP and Max HD are the User's Science or Arcana Modifier. (Depends on the type of Device)<br>
+                SP Damage goes into the HP of the Proto-Avatar, upon reaching 0 HP the Proto-Avatar instantly dissolves.<br>
+                The Proto-Avatar can only exist inside Devices, and instantly dissolves if pushed out into the open Astral.
+            </p>
             <p class="bottomless"><b>User Mode:</b></p>
             <ul>
                 <li>The default Mode of interaction with a Device.</li>
                 <li>There can be many kinds of User Modes, specified by the Device's Protocols.</li>
                 <li><b>Example:</b> You log into a computer, but there are password protected files and actions.</li>
             </ul>
-            <p class="bottomless"><b>Admin Mode:</b></p>
+            <p class="bottomless"><b>Hacking Mode:</b></p>
             <ul>
-                <li>This Mode can do anything the Device is capable of.</li>
-                <li>Security measures like an Anit-Virus are always in Admin Mode.</li>
-                <li>WIP</li>
+                <li>WIP.</li>
             </ul>
             <p>
                 Usually a Device has some kind of basic User Mode, like the <b>Ability Type Curio</b>; While Attuned you can use the Ability.<br>
                 But this doesn't allow access to inner workings, and information about the Device, for this the User must somehow get into Spy or Admin Mode.<br>
-                use <a href="#hack_device">Hack Device</a>, idk (WIP)
+                Use <a href="#hack_device">Hack Device</a>, idk (WIP)
             </p>
         </div>
         <h2 id="souls" class="collapsible">Souls (WIP)</h2>
@@ -2119,30 +2133,37 @@
         <h2 id="aoe">AOE</h2>
         <hr>
         <p>
-            AOEs are Attacks which effect an area.<br>
-            Everything within the Area is counted as Target.<br>
-            <b>Examples:</b> Sphere, <b>*Cone</b>, Line, Cylinder, Cube, ect...<br>
-            <b>*Cone</b> is not a real cone, it's a <a target="_blank" href="https://en.wikipedia.org/wiki/Spherical_sector">Sphere Sector</a>, with its <b>Spread, or Width</b> being the side to side Angle of it.<br>
+            AOEs are Attacks which effect an area; Everything within the Area is counted as Target.<br>
+            <b>Examples:</b> Sphere, *Cone, Line, Cylinder, Cube, ect...<br>
+            <b>*Cone</b> is actually a <a target="_blank" href="https://en.wikipedia.org/wiki/Spherical_sector">Sphere Sector</a>, <box>180° Spread</box> would mean a half sphere.<br>
             <b>Note:</b> Lines, Cylinders, and Disks are technically the same shape.
         </p>
         <p>
             There are 3 Types of AOEs; Static, Flowing, and Crawling.<br>
-            Static AOEs just Appear, and Ignore any type of Cover.<br>
-            Flowing AOEs have a flow.<br>
-            A Flowing Sphere AOE will usually have a single point which it expands from, for Example: Fireball.<br>
-            A Flowing Line or Cylinder AOE will usually have a single point or plane which it flows from, for Example: Steel Tempest.<br>
-            Crawling AOEs abide by all the Rules of Flowing AOEs, but it can Change Flow Direction to fill its designated AOE.
+        </p>
+        <p class="bottomless"><b>Static AOE:</b></p>
+        <ul>
+            <li>Static AOEs just appear, ignoring any type of Cover.</li>
+        </ul>
+        <p class="bottomless"><b>Flow AOE:</b></p>
+        <ul>
+            <li>Flowing AOEs have a flow.</li>
+            <li>A Flowing Sphere AOE will usually have a single point which it expands from; <b>Example:</b> <a target="_blank" href="../abilities/fireball.html">Fireball</a></li>
+            <li>A Flowing Line AOE with thickness will usually have a small plane which it flows from; <b>Example:</b> <a target="_blank" href="../abilities/steel_tempest.html">Steel Tempest</a></li>
+        </ul>
+        <p class="bottomless"><b>Crawling AOE:</b></p>
+        <ul>
+            <li>Crawling AOEs are like Flowing AOEs, but they can Change Flow Direction to fill their designated AOE.</li>
+        </ul>
+        <p>
+            An AOE's center can be the center of a Hexa or Square, or even the corner.<br>
+            AOEs which are emitted from an Entity Start from their middle.
         </p>
         <p>
-            An AOE's center can be the Center of a Hexa or Square, or optionally even the Corner.<br>
-            It's up to the GM's choice.<br>
-            <b>Note:</b> AOEs which start from an Entity, always Start from their middle.
-        </p>
-        <p>
-            When a Flowing AOE Attack is Fully Negated by an Entity, or Tanked by something considered Full Cover, the Flow of the AOE Stops there.<br>
-            <b>Example:</b> A Line or Cylinder Hits a Target, which fully Negates the Attack, Entities behind the Target, in a Line are unaffected.<br>
-            <b>Example:</b> A Cone or Sphere Hits a Target, which fully Negates the Attack, Entities behind the Target, in a (*small) Cone are unaffected.<br>
-            <b>Note:</b> A Crawling AOE will just Crawl around a Target, even if Fully Negated, or even around a Wall if it has enough Range.
+            When a Flowing AOE Attack is Fully Negated by an Entity, or tanked by something considered Full Cover (like a wall), the AOE's Flow stops at that point.<br>
+            <b>Example:</b> A Line Hits a Target, which fully Negates the Attack, there will be a gap in the AOE behind the Target.<br>
+            <b>Example:</b> A Cone or Sphere Hits a Target, which fully Negates the Attack, there will be a thin cone shaped gap in the AOE behind the Target.<br>
+            <b>Note:</b> A Crawling AOE will just Crawl around a Target (including walls).
         </p>
     </main>
 </body>

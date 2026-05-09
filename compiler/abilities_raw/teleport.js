@@ -5,10 +5,10 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "50 CS, (20 Transmutation | 50 Conjuration | 200 Evocation)",
+        "20 Transmutation | 50 Conjuration | 200 Enchantment",
     ],
     reqs_full: [
-        "<b>Spell:</b> 50 CS, (20 Transmutation | 50 Conjuration | 200 Evocation)",
+        "<b>Spell:</b> 50 CS, (20 Transmutation | 50 Conjuration | 200 Enchantment)",
     ],
     tags: [
         "Utility",
