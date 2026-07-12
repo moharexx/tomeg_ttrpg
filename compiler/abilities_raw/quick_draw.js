@@ -20,23 +20,24 @@ module.exports = {
         {
             type: "p",
             content: [
-                `When using this Ability, you will be able to do the Attack-Action as a Free-Action once on your Next Turn.`,
-                `This Ability can only be used if you have not used the Attack-Action on your Turn.`,
-                `If you use the Attack-Action that Turn, this Ability is Cancelled, you do NOT gain back the Action Cost.`,
+                `When using this Ability, you will be able to use the <a target="_blank" href="../main/mechanics.html#attack_action">Attack-Action</a> as a <b>Free-Action</b> once on your Next Turn.`,
+                `This Ability can only be used if you haven't used an Offense Tagged Ability on that Turn. (This includes Quick Draw itself!)`,
+                `If an Offense Tagged Ability is used in that Turn, then this Ability is Cancelled, and you DON'T gain back the Action Cost.`,
+                `<b>Note:</b> Readying an Offensive Tagged Ability is by itself an Offensive Tagged Ability!`,
             ],
         },
         {
-            type: "dots",
+            type: "p",
             content: [
                 `If the Attack-Action would only cost you a Bonus-Action, you make the Free-Attack-Action with Advantage.`,
+                `This Ability cannot be used outside of your Turn, for example; as a Reaction, because like... that would be very weird.`,
             ],
         },
         {
             type: "list",
             content: [
                 `<b>COMBO:</b>`,
-                `The Free-Action Attack can be used immediately after any Trigger you have Activates, like Reactive Abilities, Stances, ect...`,
-                `This means you will be able to use Quick Draw again on your next Turn.`,
+                `The <b>Free-Action</b> Attack can be immediately used after you use a Reactive Ability like <a target="_blank" href="opportunity_attack">Opportunity Attack</a>, or something Triggers your Stance.`,
             ],
         },
     ],

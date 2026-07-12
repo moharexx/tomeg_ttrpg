@@ -29,6 +29,7 @@ module.exports = {
             type: "p",
             content: [
                 `The Stance Breaks when: <box>Using Abilities, Moving, (HD Decrease | Taking Damage)</box>`,
+                `You select the HD Decrease or Taking Damage part when you are put in the Stance.`,
             ],
         },
     ],

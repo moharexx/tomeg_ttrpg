@@ -19,18 +19,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You can pseudo Fly by jumping midair, allowing you to use any movement midair.`,
-                `You can do the <b>Move-Action</b> and any other Movement in any direction.`,
-                `You can choose to not Fall, remaining in the air.`,
+                `You can pseudo Fly by jumping midair, allowing you to use movement midair.`,
+                `You can do the <b>Move-Action</b> and any other Movement in any direction, like up or down.`,
+                `You can choose to not Fall at the End of your Turn, remaining in the air.`,
             ],
         },
         {
             type: "p",
             content: [
-                `This Ability has Stocks, which you must use to Activate it.`,
-                `This is a Free-Action on your Turn, Spending 1 Stack to Activate till Start of Your Next Turn.`,
-                `Stocks refreshes back to Max once the <b>Airborne Condition</b> ends on you.`,
-                `<b>Max Stocks:</b> <box>(Athletics | Acrobatics | Martial Arts) / 10</box>`,
+                `At the Start of your Turns you must decide if you want to use Geppo, this is a <b>Free-Action</b>.`,
+                `You can use Geppo up to <box>(Athletics | Acrobatics | Martial Arts) / 10</box> times.`,
+                `Geppo uses are restocked when the <b>Airborne Condition</b> Ends on you.`,
             ],
         },
         {
@@ -49,7 +48,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Fly Duration", "Till Start of Your Next Turn."],
+                ["Duration", "Till Start of Your Next Turn."],
                 ["Max Stocks", "(Athletics | Acrobatics | Martial Arts) / 10"],
             ],
         },

@@ -88,55 +88,86 @@
             <li>These Abilities are always active, unless the requirements are lost.</li>
             <li>Passives tagged with <b>Auto</b> will apply automatically if the Requirements are met.</li>
         </ul>
-        <h2 id="Proxy">Proxy</h2>
+        <h2 id="Proxy">PROXY</h2>
         <hr>
         <p>
-            Proxy is a Stat Entities have, this is equal to <box>INT + WILL + EGO</box><br>
-            Abilities which give you Control of an Entity usually use Proxy.<br>
-            If the Caster reaches <box>0 SP</box>, they lose all Control.
+            PROXY is a Stat which is used like a "current" rather than a regular resource, and is equal to <box>INT + WILL + EGO</box><br>
+            PROXY is usually used to hold control over Minion Entities, or Attune to some <a target="_blank" href="../extra/curios.html">Curios</a>.<br>
+            If the Caster reaches <box>0 SP</box>, they lose Control over all PROXY.
         </p>
-        <h1 id="spell_memorization">Spell Memorization</h1>
+        <h2 id="ability_memorization" class="collapsible">Ability Memorization</h2>
         <hr>
-        <p>
-            For <box>5 XP</box> Memorization of <b>Spell Type Abilities</b> can be Unlocked.<br>
-            You gain Memory Slots equal to <box>INT + Arcana</box>, and each Spell takes up Slots equal to <box>it's Unlock XP Cost.</box><br>
-            When a Spell is Memorized it can be regularly Cast, but cannot be modified with Meta-Abilities, and <b>CS</b> will always be <b>INT.</b><br>
-            If an Ability has <b>Unlocks</b>, those can be Memorized for Extra Memory Slots equal to the <box>Unlock's XP Cost.</box><br>
-            Meta-Abilities Abilities cannot be Memorized, but Passive Abilities can.
-        </p>
-        <p>
-            Memorization takes <box>4 / (INT + Arcana)</box> Hours for each Memory Slot being overwritten.<br>
-            Memorization is done with studying a written down Spell for said time.<br>
-            If the Memorization process is interrupted it can be resumed later.
-        </p>
-        <p>
-            As for finding Written down Spells it is mostly up to the GM, but there are a few suggestions here.<br>
-            Written Spells can be found in many forms, from books to scrolls, to even identified magical things such as wands, staffs, rods, magic circles, ect...<br>
-            When found in Scrolls or other magical items, to Memorize them, there is an Arcana Check with a high Difficulty, due to the need to decompile it's content.
-        </p>
-        <p>
-            A written Spell's Market Price is <box>Unlock XP Cost × 10</box>, and may not be on sale, especially higher level Spells.<br>
-            When a Spell has <b>Unlocks</b>, those have their own Market Price, it's Cost scaling with Unlock XP the same as Spells.<br>
-            If a Spell by default comes with Free Unlock(s), the Written down form will also contain them without additional Costs, or Memory Slots required.<br>
-            A Player Character may also write down or copy a Spell they have, this takes <box>100 × Unlock XP Cost / (INT + Arcana)</box> Hours.
-        </p>
-        <h1 id="ability_wishing">Ability Wishing</h1>
+        <div>
+            <p>
+                For <box>5 XP</box> you can Unlock Memorizing Abilities, allowing you to Memorize <box>1</box> Ability.<br>
+                You can only Memorize Abilities which don't have higher XP Costs than your <b>INT</b> Stat.<br>
+                While you have an Ability Memorized you can use it, with all its Unlocks.
+            </p>
+            <p class="bottomless"><b>Memorizing Abilities:</b></p>
+            <ul>
+                <li>During a <b>Short-Rest</b> you can Re-Memorize what Ability you have.</li>
+                <li>To Memorize an Ability you need to have someone who can use said Ability with you during the <b>Short-Rest</b>.</li>
+                <li>If it's a Spell you can Memorize from a written form (like a book), or a Magical Device which can Cast said Spell.</li>
+                <li>If you Memorize from a Magical Device you need an Arcana Check of <box>2 × Ability's XP Cost</box> for a Success.</li>
+                <li>For <b>Spells</b> you don't need their Unlock Requirements, but for other Types you do.</li>
+            </ul>
+            <p class="bottomless"><b>Casting Memorized Abilities:</b></p>
+            <ul>
+                <li>The <b>ESS</b> at which you Cast Memorized Abilities is <box>INT / 10</box></li>
+                <li>If it's a Spell treat your <b>CS</b> as if it were equal to your <b>INT</b> Stat.</li>
+            </ul>
+            <p class="bottomless"><b>Instant Memorization</b> (Non-Action):</p>
+            <ul>
+                <li>If you Pinpoint an Ability being used, you can instantly try to Memorize said Ability.</li>
+                <li>You can Memorize an Ability you already have Unlocked even if it wasn't used in the moment. (niche use case)</li>
+                <li>Instant Memorization's Cooldown is <b>Long-Rest</b>, and can be Refreshed by Spending <b>1 Fate</b>.</li>
+            </ul>
+            <p class="bottomless"><b>Empowered Casting:</b></p>
+            <ul>
+                <li>You can use your Memorized Ability in an Empowered state, this has a Cooldown of a <b>Short-Rest</b>.</li>
+                <li>An Empowered Ability's Type becomes <b>Innate</b> and treats all your Main Stats as if they were equal to your <b>INT</b> Stat.</li>
+                <li>You can Empower a Passive Ability, putting it in an Empowered state for 1 Minute (20 Rounds).</li>
+                <li>You can Refresh the Cooldown by Spending <b>1 Fate</b>, or using <b>Instant Memorization</b>.</li>
+            </ul>
+            <p>
+                A written Spell's Market Price is <box>10 × XP Cost</box>, but may not be on sale, especially higher level Spells.<br>
+                A Player Character may also write down or copy a Spell they have, this takes <box>100 × XP Cost / (INT + Arcana)</box> Hours.
+            </p>
+        </div>
+        <h2 id="flow_state" class="collapsible">Flow State</h2>
         <hr>
-        <p>
-            At <b>50 EGO</b> you can Unlock the Ability Wishing Feature for <box>20 XP</box><br>
-            If your EGO is at least the Ability's Unlock XP Cost, you can Wish that Ability.<br>
-            A Wished Ability's <b>CS</b> will be equal to <b>EGO</b>, and treated as an <b>Innate Type Ability</b> even if it's originally a Skill or Spell.<br>
-            Wishing an Ability has the same Cast Time as using the Ability, and Meta-Abilities effect the Casting Time as normal.<br>
-            Wishing can use any Meta-Abilities, even ones not known by the Caster.<br>
-            The GM may allow Wishes that are not normally replicable by an Ability.
-        </p>
-        <p class="bottomless"><b>Ability Wishing:</b></p>
-        <ul>
-            <li>You have a Pool of Wishes, each Wish takes 1 from this Pool.</li>
-            <li>The Pool's Size is <box>log(Total XP)</box> and Replenishes after a Long-Rest.</li>
-            <li>If you have more than 10000 Total XP, you can make Wishes at Half ESS without Spending from the Pool.</li>
-            <li>You can Spend <b>1 Fate</b> to make a Wish, and not Spend from the Pool.</li>
-        </ul>
+        <div>
+            <p>
+                For <box>5 XP</box> you can Unlock the <b>Flow State</b>, allowing you to Unlock <box>1</box> Temporary Ability.<br>
+                Entering the Flow State is a <b>Non-Action</b> and lasts for 1 Minute (20 Rounds).<br>
+                The Ability's XP Cost mustn't be higher than your <b>WILL</b>, and its Requirements must be met.<br>
+                You also gain all of the Ability's Unlocks for which you have the Requirement.<br>
+                For this Ability treat all your Bast Stats as if they were equal to your <b>WILL</b>, and its <b>ESS</b> as <box>WILL / 10</box><br>
+                Flow State's Cooldown is <b>Short-Rest</b>, Refreshed by Spending <b>1 Fate</b>. (You can Stack multiple Flow States)
+            </p>
+            <p class="bottomless"><b>Empowered Casting:</b></p>
+            <ul>
+                <li>While you have a Temporary Ability, you can use it once in an Empowered state, turning the Ability's Type to <b>Innate</b>.</li>
+                <li>When you choose a Passive Temporary Ability it's Empowered for the full Duration.</li>
+            </ul>
+        </div>
+        <h2 id="ability_wishing" class="collapsible">Ability Wishing</h2>
+        <hr>
+        <div>
+            <p>
+                For <box>5 XP</box> you can Unlock Ability Wishing, giving you <box>3</box> Wishes, replenishing after a <b>Long-Rest</b>.<br>
+                If your EGO is at least the Ability's XP Cost, you can Wish that Ability.<br>
+                The GM may allow Wishes that are not normally replicable by an Ability.
+            </p>
+            <p class="bottomless"><b>Wished Abilities:</b></p>
+            <ul>
+                <li>Treat all your Base Stats as if they were equal to your <b>EGO</b> Stat, the <b>ESS</b> as <box>EGO / 10</box>, and the Ability's Type as <b>Innate</b>.</li>
+                <li>Meta-Abilities can be used, at <box>50 EGO</box> you can even use Meta-Abilities which aren't Unlocked.<br></li>
+                <li>If you Wish a Passive Ability, it lasts 1 Minute (20 Rounds).</li>
+                <li>At <b>1000 EGO</b> you can make Wishes at Half ESS without Spending a Wish.</li>
+                <li>You can Spend <b>1 Fate</b> in place of a Wish.</li>
+            </ul>
+        </div>
         <h1 id="search">SEARCH</h1>
         <hr>
         <p>

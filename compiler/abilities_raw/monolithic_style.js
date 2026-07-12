@@ -3,15 +3,12 @@ module.exports = {
     category: "passive",
     type: [
         "Skill",
-        "Spell",
     ],
     reqs_short: [
-        "WILL, Athletics",
-        "Enchantment, Abjuration",
+        "None",
     ],
     reqs_full: [
-        "50 WILL, 50 Athletics",
-        "50 Enchantment, 50 Abjuration",
+        "<b>Skill:</b> None",
     ],
     tags: [
         "Offense, Defense, Utility, Style",
@@ -38,11 +35,11 @@ module.exports = {
         {
             type: "list",
             content: [
-                "<b>Monolithic Style Cons:</b>",
-                "You cannot use Reactions.",
-                "For the purpose of Turn Order your Rolled INIT is 0.",
-                "Every Ability, including Attack-Actions, Shove, and Grapple, but NOT the Defense-Action, will be used only at your Next Turn.",
-                "This basically means each Turn you commit those Actions only to your Next Turn.",
+                `<b>Monolithic Style Cons:</b>`,
+                `You cannot use Reactions.`,
+                `For the purpose of Turn Order your Rolled INIT is 0.`,
+                `Every Ability, including Attack-Actions, Shove, and Grapple, but NOT the Defense-Action, will be used only at your Next Turn.`,
+                `This means each Turn you must commit those Abilities (with their Meta-Abilities) to your Next Turn.`,
                 `With a <a href="../main/mechanics.html#feint" target="_blank">Feint</a> you can hide what Actions you have commited.`,
             ],
         },

@@ -20,10 +20,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You create Entities (and Object) collectively no heavier than <box>10 × ESS</box> Kg.`,
-                `The Familiar is made of <b>Biological Psudeo Material</b>, if the Duration or its Hit Points reach 0 it <b>poofs out.</b>`,
+                `You create Entities (and/or Objects) collectively no heavier than <box>10 × ESS</box> Kg.`,
+                `The Familiar is made of <b>Biological Psudeo Material</b>, if the Duration or its Hit Points reach 0 it <b>poofs out</b>.`,
                 `Having 0 in any Base Stat comes with their regular downsides!`,
-                `The Familiar has <b>no Soul</b>, thus it has and works with 0 WILL and EGO.`,
+                `The Familiar has <b>no Soul</b>, thus it has, and works with 0 WILL and EGO.`,
             ],
         },
         {
@@ -51,20 +51,20 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You must allocate <box>RoundUp(Familiar XP / 10)</box> PROXY to the Familiar, otherwise it <b>poofs out.</b>`,
-                `While you provide PROXY, you know of the condition of your Familiar, and have them <b>Pinpointed.</b>`,
+                `You must allocate <box>RoundUp(Familiar XP / 10)</box> PROXY to the Familiar, otherwise it <b>poofs out</b>.`,
+                `While you provide PROXY, you know of the condition of your Familiar, and have them <b>Pinpointed</b>.`,
                 `Max PROXY Range: <box>1000 × ESS^(1/3)</box>`,
             ],
         },
         {
             type: "list",
             content: [
-                `<b>Soul</b> (5 Anima):`,
-                `Your Familiar can have a Soul, it is either created, or a fragment of the Caster's.`,
+                `<b>Soul</b> (10 Anima):`,
+                `Your Familiar can have a Soul, it's either created, or a fragment of the Caster's.`,
                 `This means the Familiar can have, and must have at least 1 WILL and EGO.`,
                 `The Familiar can have Abilities, if the Unlock Requirements are met, Spend the XP as normal.`,
-                `The Familiar cannot have Abilities which the Caster doesn't have Unlocked.`,
-                `When the Familiar poofs out or Dies the Soul fragment tries to fly back the Caster.`,
+                `You cannot give your Familiar Abilities which you don't have, but you can still use the Traits Table.`,
+                `When the Familiar poofs out or Dies the Soul fragment tries to fly back to the Caster.`,
                 `<b>Soul Fly Back Range:</b> <box>1000 × ESS^(1/3)</box>`,
             ],
         },
@@ -85,7 +85,7 @@ module.exports = {
                 `When you Cast Familiar with Permanent Duration using the <b>Permanence Meta-Ability</b> it can be Stable Material.`,
                 `It cannot be Dispelled, doesn't poof out, can drop to Negative HP and can get the Dying Condition.`,
                 `By failing to provide PROXY you lose control of the Familiar.`,
-                `For Familiars with no Soul, when control is lost, the rules become the same as a Body with no Soul.`,
+                `For Familiars with no Soul, when control is lost, the rules become the same as a Body with no Soul. (Dead)`,
                 `For Familiars with a Soul, they behave according to the Soul given, thus (usually) remain loyal and friendly to the Caster.`,
             ],
         },

@@ -56,6 +56,7 @@ window.onload = function () {
         let open = false
         let base = elem.innerHTML
         let collapsed = elem.nextElementSibling.nextElementSibling;
+        if (collapsed.classList.contains("collapsed") == false) collapsed.classList.add("collapsed");
         elem.innerHTML = "&#x25B6 " + base
         elem.onclick = function () {
             if (collapsed.style.display === "block") {

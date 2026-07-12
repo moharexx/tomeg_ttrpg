@@ -170,7 +170,7 @@
             <li><b>Resource:</b> This has a Max Value, and a Current Value; regenerating and depleting.</li>
             <li><b>Output:</b> This indicates a Max Output, like an electrical current, only being used when something's active.</li>
         </ul>
-        <table width="80%">
+        <table width="90%">
             <tr>
                 <td width="20%">
                     Name
@@ -195,7 +195,10 @@
                 <td>Hit-Difficulty</td>
                 <td>HD</td>
                 <td>Resource</td>
-                <td>AGI + Acrobatics + (Melee Weapon | Ballistic | Martial Arts)</td>
+                <td>
+                    AGI + Min(<span style="color: darkblue;">Total XP / 10</span>, Acrobatics + Slight)<br>
+                    + Min(<span style="color: darkblue;">Total XP / 10</span>, Melee Weapon + Ballistic + Martial Arts)
+                </td>
             </tr>
             <tr>
                 <td>Soul Points</td>
@@ -225,17 +228,17 @@
                 <td>Move Speed</td>
                 <td>MS</td>
                 <td>Static</td>
-                <td>2 × (STR | AGI)^(1/3)</td>
+                <td>2 × Min(<span style="color: darkblue;">Total XP / 10</span>, STR + AGI)^(1/3)</td>
             </tr>
             <tr>
                 <td>Initiative</td>
                 <td>INIT</td>
                 <td>Static</td>
-                <td>(AGI + (Perception | Intuition)) / 2</td>
+                <td>(AGI + Min(<span style="color: darkblue;">Total XP / 10</span>, Perception + Intuition)) / 2</td>
             </tr>
         </table>
         <p>
-            If an Entity reaches 0 HP, the Entity gains the <a href="#conditions">Dying Condition.</a><br>
+            If an Entity reaches 0 HP, the Entity gains the <a href="#conditions">Dying Condition</a>.<br>
             When HP goes below <box>-(Max HP)</box> then the Body cannot contain the Soul, so it's ejected.
         </p>
         <p>
@@ -247,9 +250,9 @@
         <h1 id="masteries">MASTERIES</h1>
         <hr>
         <p>
-            Each Entity has Masteries, these are specific skills they do better.<br>
-            The Maximum of any Mastery is the same as it's associated Base Stat.<br>
-            Mastery d10 Check Modifier: <box>(Main Stat + Mastery) / 2</box>
+            Masteries are what you're skilled at, each having an associated Base Stat.<br>
+            Each Mastery is Capped by your Total XP; <box>Total XP / 10</box><br>
+            <b>Mastery d10 Check Modifier:</b> <box>(Main Stat + Mastery) / 2</box>
         </p>
         <table width="75%">
             <tr>
@@ -313,7 +316,7 @@
         <hr>
         <p>
             Martial-Masteries are for increasing Martial related Stats, and Unlocking Skill Type Abilities.<br>
-            Each Magic-Mastery is Capped by its Base Stat.<br>
+            Each Martial-Mastery is Capped by your Total XP; <box>Total XP / 10</box><br>
             <b>Martial-Mastery d10 Check Modifier:</b> <box>(Base Stat + Martial Mastery) / 4</box>
         </p>
         <table width="45%">
@@ -343,54 +346,44 @@
         <p>
             Magic-Masteries are for Unlocking Spell Type Abilities.<br>
             These Magic-Masteries are Divided into 7 Groups, each governing a collection of Meta-Concepts.<br>
-            Each Magic-Mastery is Capped by its Base Stat.<br>
-            Magic Mastery d10 Check Modifier: <box>Magic Mastery</box>
+            Each Magic-Mastery is Capped by your Total XP; <box>Total XP / 10</box><br>
+            <b>Magic-Mastery d10 Check Modifier:</b> <box>Magic Mastery</box>
         </p>
         <table width="65%">
             <tr>
-                <td width="20%">
+                <td width="25%">
                     Name
                 </td>
-                <td width="25%">
-                    Base Stat
-                </td>
-                <td width="55%">
+                <td width="75%">
                     Main Meta-Concepts
                 </td>
             </tr>
             <tr>
                 <td>Evocation</td>
-                <td>INT | WILL | EGO</td>
                 <td>Energy, Action, Power</td>
             </tr>
             <tr>
                 <td>Transmutation</td>
-                <td>INT | WILL | EGO</td>
                 <td>Transformation, Change, Shape</td>
             </tr>
             <tr>
                 <td>Conjuration</td>
-                <td>INT | WILL | EGO</td>
                 <td>Creation, Recreation</td>
             </tr>
             <tr>
                 <td>Enchantment</td>
-                <td>INT | WILL | EGO</td>
                 <td>Manipulate, Influence, Enhance, Degrade</td>
             </tr>
             <tr>
                 <td>Abjuration</td>
-                <td>INT | WILL | EGO</td>
                 <td>Negate, Cancel, Inaction</td>
             </tr>
             <tr>
                 <td>Divination</td>
-                <td>INT | WILL | EGO</td>
                 <td>Information</td>
             </tr>
             <tr>
                 <td>Anima</td>
-                <td>INT | WILL | EGO</td>
                 <td>Souls, Autonomy, Rules</td>
             </tr>
         </table>
@@ -415,18 +408,26 @@
             <li><a href="./../extra/character_assembler.html" target="_blank">Character Assembler</a></li>
             <li><a href="./../assets/mob_sheet.pdf" target="_blank">Mob Sheet (WIP)</a></li>
         </ul>
+        <p>
+            By default Player Characters can <b>Pinpoint</b> by <a target="_blank" href="../abilities/seeing.html">Seeing</a>, <b>Sense</b> by <a target="_blank" href="../abilities/hearing.html">Hearing</a>, and their <a target="_blank" href="../abilities/smelling.html">Smelling</a> is way too weak to be used in combat.<br>
+            This means they have the Seeing Ability (with its Pinpoint Unlock) and Hearing Ability both Unlocked, without counting towards their Total XP.<br>
+            From these 3 Sense you can pick 1 to Pinpoint with, and 1 to Sense with.
+        </p>
         <h2 id="experience">Experience</h2>
         <hr>
         <p>
-            Each Player Character has a Total XP, and Unspent XP.<br>
+            Each Entity has a Total XP, and Unspent XP.<br>
             To gain XP, Players must perform actions, like encounters, quests, roleplay, ect...<br>
             XP is usually given in a batch at the end of a game session, split amongst the players.<br>
         </p>
         <p>
-            To increase a Base Stat by 1 you must spend 2 XP<br>
-            To increase a Mastery by 1 you must spend 0.5 XP<br>
-            Your Base Stats are Capped at; <box>Total XP / 10</box>, so you can't go super into 1 Stat.<br>
-            Note that Masteries are also Capped by Base Stats.
+            To increase a Base Stat by 1 you must Spend 2 XP<br>
+            To increase a Mastery by 1 you must Spend 0.5 XP<br>
+            Base Stats and Masteries are Capped at; <box>Total XP / 10</box>, preventing super dumping 1 stat.<br>
+        </p>
+        <p>
+            You can slowly "Re-Train" your Character into different Stats and Abilities.<br>
+            Every Day (28800 Rounds) you can Unspend 1% of your Total XP.<br>
         </p>
         <h2 id="fate">Fate</h2>
         <hr>
@@ -438,7 +439,7 @@
         </p>
         <p class="bottomless"><b>Spending Fate:</b></p>
         <ul>
-            <li><b>Lucky:</b> 1 Fate to Reroll any 1 of your Dice, or Remove Disadvantage from a d10 Check.</li>
+            <li><b>Lucky:</b> 1 Fate to Reroll any 1 of your Dice, or Remove Disadvantage from your d10 Check.</li>
             <li><b>Resolve:</b> 1 Fate to Double your Save's Finalized Value.</li>
             <li><b>Miracle:</b> 2 Fate to <a href="#max_value">Minimize</a> Damage and/or To-Hit of an Attack.</li>
             <li><b>Unyielding:</b> 2 Fate to bring back your HP or SP to 1, and instantly End the <a href="#conditions">Prone Condition</a>.</li>
@@ -496,8 +497,8 @@
             <a href="#resistances">Resistances, Weaknesses, and Absorptions</a> change how your HP interacts with Damage.
         </p>
         <p>
-            When HP reaches 0 you gain the <a href="#conditions">Dying Condition.</a><br>
-            When HP goes below <box>- Max HP</box>, your <a href="#death">Soul leaves your Body.</a>
+            When HP reaches 0 you gain the <a href="#conditions">Dying Condition</a>.<br>
+            When HP goes below <box>- Max HP</box>, your <a href="#death">Soul leaves your Body</a>.
         </p>
         <h2 id="hit_difficulty">Hit-Difficulty</h2>
         <hr>
@@ -529,7 +530,7 @@
             <a href="#attack_action">Attack-Actions</a> are the basic Attacks of the game, <b>but not all Attacks are Attack-Actions!</b>
         </p>
         <p>
-            Attacks can be <b>Ranged</b> or <b>Melee</b>, and on top of that some Attacks can be <a href="#aoe">AOE.</a><br>
+            Attacks can be <b>Ranged</b> or <b>Melee</b>, and on top of that some Attacks can be <a href="#aoe">AOE</a>.<br>
         </p>
         <p>
             When a Ranged Attack is used, it can have 2 different ranges, Normal Range, and Long Range.<br>
@@ -540,7 +541,7 @@
         <hr>
         <p>
             Saves are a different type of Attack, where the Target must Succeed the Save, or be Hit by the Attack.<br>
-            When a Save is presented, the Target must make a <a href="#stable_checks">Stable d10 Check.</a><br>
+            When a Save is presented, the Target must make a <a href="#stable_checks">Stable d10 Check</a>.<br>
             Saves have a Difficulty. (Example: <box>STR Save 10</box>)<br>
             To Succeed a Save the Finalized Value of the Save must be at least the Save's Difficulty.<br>
             Some Saves can have multiple types, in such case the Target decides what Save they use.<br>
@@ -586,7 +587,7 @@
         </ul>
         <p class="bottomless"><b>Paralyzed</b></p>
         <ul>
-            <li>Cannot take Actions, only innate internal mental ones, like <a href="#recall_knowledge">Recall Knowledge</a> and <a href="#scan">Scan.</a></li>
+            <li>Cannot take Actions, only innate internal mental ones, like <a href="#recall_knowledge">Recall Knowledge</a> and <a href="#scan">Scan</a>.</li>
             <li>Have 0 MS, and cannot use HD and GRIT.</li>
             <li>Incoming Attacks always Hit, and Damage CRITs.</li>
             <li>All STR and AGI Based Checks have a Finalized Value of 0.</li>
@@ -594,7 +595,7 @@
         </ul>
         <p class="bottomless"><b>Unconscious</b></p>
         <ul>
-            <li>Cannot take Actions, other than <b>Passive</b> <a href="#scan">Scan.</a></li>
+            <li>Cannot take Actions, other than <b>Passive</b> <a href="#scan">Scan</a>.</li>
             <li>Have 0 MS, and cannot use HD and GRIT.</li>
             <li>Incoming Attacks always Hit, and Damage CRITs.</li>
             <li>All STR and AGI Based Checks have a Finalized Value of 0.</li>
@@ -690,6 +691,10 @@
                 The Readied Action can be Cast as a Free-Action Reaction.<br>
                 You can only have one Readied Action at a time.<br>
                 If you have not used the Readied Action by the Start of Your Next Turn, it gets wasted.
+            </p>
+            <p>
+                Ready inherets all Tags the Parent Ability has. <b>This is important!</b><br>
+                <b>Example:</b> If you can't use an Offense Ability you also can't Ready it!
             </p>
             <p>
                 If an Entity can Pinpoint you, then they also know what you're Readying.<br>
@@ -1004,7 +1009,7 @@
             </p>
             <p>
                 You can perform Surgeries, the speed and type of surgery determine the Difficulty.<br>
-                On a Fail, the Target takes True HP Damage equal to the Difficulty of the surgery.<br>
+                On a Fail, the Surgery is botched, exact effects up to GM.<br>
                 On a CRIT Success, you miraculously finish faster by 1 Jump in the Surgery Time Table.
             </p>
             <table width="60%">
@@ -1241,7 +1246,7 @@
             </p>
             <p class="bottomless"><b>Terror Effect:</b></p>
             <ul>
-                <li>Applies Disadvantage on Attacks against the User, and cannot willfully move closer.</li>
+                <li>Applies Disadvantage on Attacks against the User, and cannot willfully move closer to them.</li>
                 <li>This Effect Ends if the User gets the <a href="#conditions">Dying Condition</a> or Dies.</li>
                 <li>The <b>Terror Effect</b> Last till End of Target's Next Turn.</li>
             </ul>
@@ -1490,19 +1495,9 @@
             </ul>
             <p>
                 The Proto-Avatar has 0 Resistances, its Max HP and Max HD are the User's Science or Arcana Modifier. (Depends on the type of Device)<br>
-                SP Damage goes into the HP of the Proto-Avatar, upon reaching 0 HP the Proto-Avatar instantly dissolves.<br>
+                SP Damage also goes into the HP of the Proto-Avatar, upon reaching 0 HP the Proto-Avatar instantly dissolves.<br>
                 The Proto-Avatar can only exist inside Devices, and instantly dissolves if pushed out into the open Astral.
             </p>
-            <p class="bottomless"><b>User Mode:</b></p>
-            <ul>
-                <li>The default Mode of interaction with a Device.</li>
-                <li>There can be many kinds of User Modes, specified by the Device's Protocols.</li>
-                <li><b>Example:</b> You log into a computer, but there are password protected files and actions.</li>
-            </ul>
-            <p class="bottomless"><b>Hacking Mode:</b></p>
-            <ul>
-                <li>WIP.</li>
-            </ul>
             <p>
                 Usually a Device has some kind of basic User Mode, like the <b>Ability Type Curio</b>; While Attuned you can use the Ability.<br>
                 But this doesn't allow access to inner workings, and information about the Device, for this the User must somehow get into Spy or Admin Mode.<br>
@@ -1514,7 +1509,7 @@
         <div class="collapsed">
             <p>
                 Souls are what <b>represent YOU</b> and your agency in the world.<br>
-                The Soul can inhabit 2 different types of Vessels, the Physical, and the Avatar.
+                The Soul can inhabit 2 different types of <b>Vessels</b>, the Physical, and the Avatar.
             </p>
             <p>
                 The Physical Vessel is the one everyone is familiar with, what you would call your body.
@@ -1522,12 +1517,13 @@
             <p>
                 The other type of Vessel is the Avatar, this is the "spiritual" or "digital" version of a body.<br>
                 By default, the Avatar can only be Sensed by <a target="_blank" href="../abilities/sense_essence.html">Sensing Essence</a>, but they can choose to manifest.<br>
-                While manifesting they can be sensed in the physical too.
+                Manifesting is taking on a form sensable in the physical, like a hologram or a misty form, and/or speaking to others.<br>
             </p>
             <p class="bottomless"><b>Soul without Vessel:</b></p>
             <ul>
-                <li>Doesn't have HP, and thus cannot be harmed by HP damage.</li>
-                <li>Takes 2× SP Damage, has 1/10 Effective ESS, and cannot use Skill Type Abilities.</li>
+                <li>Isn't physical, and can't manifest.</li>
+                <li>HP cannot be Damaged, but can be Healed.</li>
+                <li>Takes 2× SP Damage, has 1/10 Effective ESS.</li>
                 <li>Soul Saves are <b>Halved!</b></li>
                 <li><b>Soul Max HD:</b> <box>Max SP</box></li>
                 <li><b>Soul MS:</b> <box>2 × CS^(1/3)</box></li>

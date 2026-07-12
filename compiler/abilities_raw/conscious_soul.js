@@ -35,7 +35,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Click here for more information about <a target="_blank" href="../main/mechanics.html#souls">Souls</a>.`,
+                `Link for more information about <a target="_blank" href="../main/mechanics.html#souls">Soul Mechanics</a>.`,
             ],
         },
     ],

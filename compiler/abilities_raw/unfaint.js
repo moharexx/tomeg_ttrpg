@@ -5,30 +5,25 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Transmutation | Enchantment | Anima",
+        "5 Enchantment | 10 Anima | 20 Transmutation",
     ],
     reqs_full: [
-        "(20 INT | 10 WILL | 5 EGO), (5 Enchantment | 10 Anima | 20 Transmutation)",
+        "<b>Spell:</b> 5 CS, (5 Enchantment | 10 Anima | 20 Transmutation)",
     ],
     tags: [
         "Defense",
-        "Buff, Touch",
-        "Main-Action",
+        "Touch, Buff",
+        "Bonus-Action",
     ],
     unlock_cost: 5,
     description: [
         {
             type: "p",
             content: [
-                `When used, you Touch an Entity and Remove the <a href="../main/mechanics.html#conditions">Unconscious Condition.</a>`,
-                `If the Entity has less then 1 HP, It will have the <a href="../main/mechanics.html#conditions">Dying Condition.</a>`,
-                `If the Unconscious Condition is caused by a Spell then this Ability will Attempt a Save against the Spell's Save.`,
-            ],
-        },
-        {
-            type: "p",
-            content: [
-                "<b>Note:</b> If the Soul Left the Body, the Spell Fails.",
+                `When used, you Touch an Entity and Remove the <a href="../main/mechanics.html#conditions" target="_blank">Unconscious Condition</a>.`,
+                `If the Unconscious Condition is caused by an Ability then this Unfaint attempts a Save against the Ability's Save.`,
+                `The Target is also immune to falling Unconscious from the <a href="../main/mechanics.html#conditions" target="_blank">Dying Condition</a> for the Duration.`,
+                `<b>Note:</b> The Dying condition still effects the Target.`
             ],
         },
     ],
@@ -39,9 +34,11 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Main-Action"],
+                ["Cast Time", "Bonus-Action"],
                 ["Range", "Touch"],
-                ["Save Modifier VS Spell", "5 × ESS"],
+                ["Duration", "1 Minute (20 Rounds)"],
+                ["Save Nat. Val. Mult", "ESS"],
+                ["Save Modifier", "5 × ESS"],
             ],
         },
     ],

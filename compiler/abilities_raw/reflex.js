@@ -19,13 +19,13 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You can make an Ability into a Reaction, but Action Cost Jumps one tier.",
+                "You can make an Ability into a Reaction, but its Action Cost Jumps up by one level.",
             ],
         },
         {
             type: "list",
             content: [
-                "Action Cost Tiers:",
+                "<b>Action Cost Levels:</b>",
                 "Free-Action",
                 "Bonus-Action",
                 "Main-Action",

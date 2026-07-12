@@ -5,10 +5,10 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Conjuration | Enchantment | Anima",
+        "10 Anima | 20 Enchantment | 50 Conjuration",
     ],
     reqs_full: [
-        "(200 INT | 50 WILL | 20 EGO), (10 Anima | 20 Enchantment | 50 Conjuration)",
+        "<b>Spell:</b> 20 CS, (10 Anima | 20 Enchantment | 50 Conjuration)",
     ],
     tags: [
         "Defense",
@@ -20,8 +20,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you Touch an Entity and restore SP.",
-                "If you spend <box>10 REST-HP × ESS</box>, then the <b>Cast Time<b> will be lowered to <box>Main-Action + Bonus-Action</box>",
+                `When used, you Touch an Entity and restore SP.`,
+                `If you spend <box>10 REST-HP × ESS</box>, then the <b>Cast Time</b> will be lowered to <box>Main-Action + Bonus-Action</box>`,
             ]
         },
     ],

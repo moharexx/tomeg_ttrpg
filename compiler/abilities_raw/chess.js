@@ -30,7 +30,7 @@ module.exports = {
         {
             type: "dots",
             content: [
-                `While in <b>Chess Stance</b> if you Take Damage, you have to use the <b>King Trick</b> once, utill the End of Your Next Turn or the Stance Breaks.`,
+                `While in <b>Chess Stance</b> if you Take Damage, you have to use the <b>King Trick</b> once until the End of your Next Turn, or the Stance Breaks.`,
                 `If The Stance Breaks, you gain the <a href="../main/mechanics.html#conditions" target="_blank">Stagered Condition</a>.`,
             ],
         },
@@ -55,7 +55,7 @@ module.exports = {
             content: [
                 `<b>Bishop</b> (Free-Action):`,
                 `Spend 2 Stacks, then use any Bonus-Action Action (Like Abilities) as a Free-Action.`,
-                `You can only use this Once per Round.`,
+                `This has a Cooldown of 1 Round.`,
             ],
         },
         {
@@ -86,7 +86,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `The Stance Breaks when: <box>Not Using the <b>King Trick</b> after taking Damage</box>`,
+                `The Stance Breaks when: <box>Not Using the <b>King Trick</b> until the End of your Next Turn when Taking Damage</box>`,
             ],
         },
     ],

@@ -5,27 +5,24 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "Melee Weapon",
+        "10 Melee Weapon",
     ],
     reqs_full: [
-        "10 Melee Weapon",
+        "<b>Skill:</b> 10 Melee Weapon",
     ],
     tags: [
         "Offense",
-        "Weapon Damage, AOE",
+        "Melee, Flow Line AOE, Weapon Damage",
         "Main-Action",
     ],
     unlock_cost: 5,
     description: [
         {
             type: "p",
-            content: "When you use this Ability, you thrust your Melee Weapon, and make an Attack in a Line.",
-        },
-        {
-            type: "dots",
             content: [
-                "This Attack Retains Armor-Pen and all Special Properties the Parent Weapon does on a Regular Attack-Action.",
-                "If the Attack's Damage is reduced to 0, the Line's AOE Stops at that Target.",
+                `When you use this Ability, you thrust your Melee Weapon, and make an Attack in a Line.`,
+                `This Attack has Penetration equal to the used Weapon's.`,
+                `The Damage of the Ability is determined by the Weapon's Weight Property, using 2 Wielding Slots uses the Heavy Damage.`,
             ],
         },
         {
@@ -43,10 +40,10 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["Line Length", "2 × Melee Attack's Reach"],
-                ["Damage when using Light Weapon", "(1d8 × ESS) Weapon Damage Type"],
-                ["Damage when using Medium Weapon", "(1d10 × ESS) Weapon Damage Type"],
-                ["Damage when using Heavy Weapon", "(1d12 × ESS) Weapon Damage Type"],
+                ["Line Length", "2 × Weapon Reach"],
+                ["Damage Of Weapon's Type (Light)", "1d8 × ESS"],
+                ["Damage Of Weapon's Type (Medium)", "1d10 × ESS"],
+                ["Damage Of Weapon's Type (Heavy)", "1d12 × ESS"],
             ],
         },
     ],

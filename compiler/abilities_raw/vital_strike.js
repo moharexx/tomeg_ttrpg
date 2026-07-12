@@ -20,7 +20,9 @@ module.exports = {
     description: [
         {
             type: "p",
-            content: `If Parent Attack was with Advantage, add Bonus On-Hit Damage of the same Type.`,
+            content: [
+                `If Parent Attack was with Advantage, add Bonus On-Hit Damage of the same Type.`,
+            ],
         },
     ],
     stats: [

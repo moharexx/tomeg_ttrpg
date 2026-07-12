@@ -45,9 +45,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Astral Veil can be bypassed or negated with a Successful <a>Hack-Device</a> <b>(Bonus-Action)</b>.`,
-                `<b>Bypass (Difficulty: <box>10 × ESS</box>):</b> You and anything with you can pass through the the Veil, till the End of your Turn.`,
-                `<b>Hole (Difficulty: <box>15 × ESS</box>):</b> Create a <box>CS^(1/3)</box> Wide, <box>5 × CS^(1/3)</box> Long hole through the Veil, lasting 1 Minute (20 Rounds).`,
+                `Astral Veil can be bypassed or negated with a Successful <a>Hack-Device</a> <b>(Bonus-Action)</b> Check.`,
+                `<b>Bypass (Difficulty: <box>10 × ESS</box>):</b> Create a <box>CS^(1/3)</box> Wide, <box>5 × CS^(1/3)</box> Long hole through the Veil, lasting 1 Round.`,
+                `<b>Hole (Difficulty: <box>15 × ESS</box>):</b> The hole lasts 1 Minute (20 Rounds) instead.`,
                 `<b>Disrupt (Difficulty: <box>20 × ESS</box>):</b> In a <box>5 × CS^(1/3)</box> Radius the Veil is shut down for 1 Minute (20 Rounds).`,
             ],
         },

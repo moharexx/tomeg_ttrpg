@@ -21,7 +21,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `When using this Ability, the Parent Attack can apply the <a href="../main/mechanics.html#conditions" target="_blank">Rooted Condition.</a>`,
+                `When using this Ability, the Parent Attack can apply the <a href="../main/mechanics.html#conditions" target="_blank">Rooted Condition</a>.`,
                 `If the Attack Deals Damage, the Target must Succeed on a STR Save, or get the <b>Rooted Condition.</b>`,
                 `The <b>Rooted Condition</b> lasts until the End of the Target's Next Turn.`,
             ],

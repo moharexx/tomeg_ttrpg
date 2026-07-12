@@ -238,7 +238,7 @@ textarea:focus {
     outline:  none;
 }
 
-/* --------- classes, box, collapsible -> collapsed --------- */
+/* --------- classes, box, collapsible -> collapsed, rainbow --------- */
 
 .bottomless {
     margin-bottom: 0px;
@@ -260,6 +260,30 @@ box {
 
 .collapsed {
     display: none;
+}
+
+.rainbow {
+        background: linear-gradient(to right,
+        #ff0000, #00aa00, #0000ff,
+        #ff0000, #00aa00, #0000ff,
+        #ff0000, #00aa00, #0000ff,
+        #ff0000, #00aa00, #0000ff,
+        #ff0000, #00aa00, #0000ff,
+        #ff0000, #00aa00, #0000ff,
+        #ff0000, #00aa00, #0000ff,
+        #ff0000, #00aa00, #0000ff,
+        #ff0000, #00aa00, #0000ff,
+        #ff0000, #00aa00, #0000ff,
+        #ff0000, #00aa00, #0000ff,
+        #ff0000, #00aa00, #0000ff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: rainbow_animation 2s linear infinite;
+        background-size: 150% 50%;
+} @keyframes rainbow_animation {
+    0% {background-position: 0 0;}
+    100% {background-position: 50% 0;}
 }
 
 /* --------- responsivity --------- */

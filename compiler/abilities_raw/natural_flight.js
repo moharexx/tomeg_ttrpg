@@ -5,10 +5,10 @@ module.exports = {
         "Innate",
     ],
     reqs_short: [
-        "Wings or similar",
+        `Wings or similar or <a target="_blank" href="../abilities/supernatural_flight.html">Supernatural Flight</a>`,
     ],
     reqs_full: [
-        "Wings or similar",
+        `<b>Innate:</b> Wings or similar or <a target="_blank" href="supernatural_flight.html">Supernatural Flight</a>`,
     ],
     tags: [
         "Utility",

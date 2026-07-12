@@ -26,19 +26,18 @@ module.exports = {
         {
             type: "p",
             content: [
-                `As a Free-Action you can Start Charging an Ability, putting you in <b>Charge Stance.</b>`,
-                `While Charging you cannot use Abilities, but you can use Actions to Charge Up your Ability.`,
-                `To Trigger this Stance, and thus use the Charged Up Ability, you must Spend the Ability's Action Cost.`,
-                `Charging can be Broken like any Stance, when Broken by Taking Damage you gain the <a href="../main/mechanics.html#conditions" target="_blank">Staggered Condition.</a>`,
+                `As a Free-Action you can Start Charging an Ability.`,
+                `While Charging you cannot use Abilities, but you can use Actions to Charge Up that Ability.`,
+                `You Spend the Ability's Action Cost to Cast it, thus stopping the Charging.`,
             ],
         },
         {
             type: "dots",
             content: [
-                "Stances can be Charged before being put into them, while in them, and even at the moment of the Trigger.",
-                "Charging before Entering the Parent Stance will be like Charging any normal Ability.",
-                "While in a Stance, the Potency from Charging will only show itself after the Stance is Triggered.",
-                "You can Charge Reactions, but only with Actions you have right when using the Reaction!",
+                `Stances can be Charged before being put into them, while in them, and even at the moment of their Trigger.`,
+                `Charging before Entering the Parent Stance will be like Charging any normal Ability.`,
+                `While in a Stance, the Potency from Charging will only show itself after the Stance is Triggered.`,
+                `You can Charge Reactions, but only with Actions you have right when using that Reaction!`,
             ],
         },
         {
@@ -46,13 +45,6 @@ module.exports = {
             content: [
                 `If an Entity can Pinpoint you, then they also know what you're Charging.`,
                 `With a <a href="../main/mechanics.html#feint" target="_blank">Feint</a> you can hide that you're Charging.`,
-            ],
-        },
-        {
-            type: "p",
-            content: [
-                "<b>Charging Breaks when:</b> <box>Using Abilities, Taking Damage</box>",
-                "<b>Charging while in a Stance Breaks when:</b> <box>Anything that would Break the Parent Stance.</box>",
             ],
         },
     ],

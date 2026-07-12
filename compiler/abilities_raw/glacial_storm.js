@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Ranged, Static Sphere AOE, Cold Damage, VIT Save, Crowd Control",
+        "Ranged, Static Sphere AOE, VIT Save, Cold Damage, Crowd Control",
         "Main-Action / Continuous",
     ],
     unlock_cost: 10,
@@ -20,7 +20,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Within Range, in a choosen Sphere the temperature drops, snow and ice starts to appear, in the air and on objects.`,
+                `Within Range, around a chosen point, the temperature drops, snow and ice grows and swirls.`,
                 `When using this Ability, you are put in <b>Glacial Storm Stance</b>.`,
                 `When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
                 `Entities Damaged by this Ability get the <b>Cold Effect</b>.`,
@@ -29,9 +29,9 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Overflow:</b>`,
-                `As a <b>Main-Action</b>, you can Double it's </b>Radius</b>`,
-                `This can be done only once on this Ability.`,
+                `<b>Overflow</b> (Main-Action):`,
+                `You Double the </b>Radius</b> until the Stance Ends.`,
+                `This can be used only once.`,
             ],
         },
         {
@@ -40,7 +40,7 @@ module.exports = {
                 `<b>Cold Effect:</b>`,
                 `The Target's MS is reduced by <box>CS^(1/3)</box>`,
                 `Slow Strength is Doubled against Soaked Targets.`,
-                `Targets reduced to 0 MS count as <a href="../main/mechanics.html#conditions">Rooted.</a>`,
+                `Targets reduced to 0 MS have the <a href="../main/mechanics.html#conditions">Rooted Condition</a>.`,
                 `The <b>Cold Effect</b> Ends at the End of Target's Next Turn.`,
             ],
         },
@@ -65,11 +65,11 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["Stance Trigger", "Continuous"],
+                ["Stance Trigger", "None"],
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["VIT Save", "8 × ESS"],
-                ["Damage", "(1d12 × ESS) Cold"],
+                ["Cold Damage", "1d12 × ESS"],
                 ["Slow Strength", "CS^(1/3)"],
             ],
         },

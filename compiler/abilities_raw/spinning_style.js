@@ -30,7 +30,8 @@ module.exports = {
                 `<b>Spinning Style:</b>`,
                 `Rather than having a Main-Action and Bonus-Action, you have 3 Bonus-Actions.`,
                 `If something would make you lose a Main-Action, you lose a Bonus-Action instead.`,
-            ],
+                `The <a target="_blank" href="../main/mechanics.html#conditions">Dying Condition</a> makes you lose <b>another</b> Bonus-Action.`,
+            ]
         },
     ],
 }

@@ -5,10 +5,10 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "Stealth",
+        "10 Sleight",
     ],
     reqs_full: [
-        "10 Stealth",
+        "<a>Skill:</a> 10 Sleight",
     ],
     tags: [
         "Offense, Utility",
@@ -20,9 +20,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When using this Ability, you are put in Prowler Stance.",
-                "While in Prowler Stance, your Stealth d10 Checks get a Bonus of <box>5 × ESS</box>",
-                "While in this Stance, your CRIT Range is Increased by <box>4</box> Against Unaware Entities.",
+                `When using this Ability, you are put in <b>Prowler</b> Stance.`,
+                `While in this Stance, your Stealth Checks get a Bonus of <box>5 × ESS</box> and your CRIT Range is Increased by <box>4</box> against Unaware Entities.`,
             ],
         },
         {

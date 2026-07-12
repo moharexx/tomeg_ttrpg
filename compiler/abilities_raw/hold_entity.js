@@ -20,23 +20,23 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you Paralyze a Pinpointed Entity or more.",
-                "You have <b>Targeting Points</b> equal to <box>6 × ESS</box>, you can spend <b>Targeting Points</b> on Entities to Target them.",
-                "The Soul Save's Difficulty is equal to the <b>Targeting Points</b> spent on the Target.",
+                `When used, you Paralyze a Pinpointed Entity or more.`,
+                `You have <b>Targeting Points</b> equal to <box>6 × ESS</box>, you can spend <b>Targeting Points</b> on Entities to Target them.`,
+                `The Soul Save's Difficulty is equal to the <b>Targeting Points</b> spent on the Target.`,
                 `On a Failed Save the Target gain the <a href="../main/mechanics.html#conditions">Paralyzed Condition.</a>`,
-                "Entities at the End of Their Turn can repeat the <b>Soul Save</b>, Ending the Paralyzed Condition on a success.",
+                `Entities at the End of Their Turn can repeat the <b>Soul Save</b>, Ending the Paralyzed Condition on a success.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Paralyzed Target is stiffened, but can be knocked over.",
+                `The Paralyzed Target is stiffened, but can be knocked over.`,
             ],
         },
         {
             type: "p",
             content: [
-                "<b>Note:</b> Making a Save doesn't count as an Action if Action Cost isn't specified, so can be done while Paralyzed.",
+                `<b>Note:</b> Making Saves are Non-Actions, unless specified, so they can be made while Paralyzed.`,
             ],
         },
     ],

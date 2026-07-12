@@ -42,7 +42,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Return</b> (50 WILL):`,
-                `It fucking returns. (Free-Action)`,
+                `It fucking returns. (Free-Action) (Also works for regular Throw Attack-Actions too)`,
                 `This feature can be used in itself as a <b>Bonus-Action</b> to retrieve any Object weighing at Max <box>ESS Kg</box> from <box>20 × ESS^(1/3) meters</box>`,
                 `The Wielder of the Object is eligable to a <b>STR Save</b> of <box>2 × ESS</box>`,
             ],

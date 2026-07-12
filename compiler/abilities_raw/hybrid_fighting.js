@@ -23,12 +23,5 @@ module.exports = {
                 `For Attacks and Abilities with <b>Finesse</b> Weapons, their Main Stat can be </box>STR + AGI</box>, Capped at <box>Total XP / 10</box>`,
             ],
         },
-        {
-            type: "p",
-            content: [
-                `Rather than choosing only 1 Martial-Mastery to add to <b>Base HD</b>, add them together, Capped at <box>Total XP / 10</box>`,
-                `<b>MS</b> benefits from both STR and AGI; <box>2 × (STR + AGI)^(1/3)</box>, Capped at <box>2 × (Total XP / 10)^(1/3)</box>`,
-            ],
-        },
     ],
 }

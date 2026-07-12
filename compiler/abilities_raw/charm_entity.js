@@ -5,10 +5,10 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "5 Enchantment | 10 Anima",
+        "5 Enchantment | 10 Anima | 20 Divination",
     ],
     reqs_full: [
-        "<b>Spell:</b> (10 INT | 10 WILL | 5 EGO), (5 Enchantment | 10 Anima)",
+        "<b>Spell:</b> 5 CS, (5 Enchantment | 10 Anima | 20 Divination)",
     ],
     tags: [
         "Offense, Defense, Utility",

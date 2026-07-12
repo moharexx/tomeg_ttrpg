@@ -25,7 +25,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Clear Smelling</b> (10 XP):`,
+                `<b>Clear Smell</b> (10 XP):`,
                 `You can <b>Pinpoint</b> with Smelling within <box>5 × Perception Modifier^(1/3)</box> meters, and <b>Sense</b> in Double the Range.`,
             ],
         },
