@@ -20,8 +20,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You steel your will, and stand up.",
-                `You gain TEMP-HP, and Remove the <a href="../main/mechanics.html#conditions">Prone Condition</a> from yourself.`,
+                `You steel your will, and stand up.`,
+                `You gain a BUFFER, and Remove the <a href="../main/mechanics.html#conditions">Prone Condition</a> from yourself.`,
+                `This Ability can CRIT for 2× BUFFER`,
             ],
         },
     ],
@@ -35,7 +36,7 @@ module.exports = {
                 ["Cast Time", "Bonus-Action"],
                 ["Cooldown", "1 Minute (20 Rounds)"],
                 ["Duration", "1 Minute (20 Rounds)"],
-                ["TEMP-HP", "2d8 × ESS"],
+                ["BUFFER", "2d8 × ESS"],
             ],
         },
     ],

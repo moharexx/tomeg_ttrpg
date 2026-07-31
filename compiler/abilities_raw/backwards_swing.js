@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense, Cooldown",
-        "Weapon Damage",
+        "Melee, Weapon Damage",
         "Bonus-Action",
     ],
     unlock_cost: 10,

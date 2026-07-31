@@ -43,7 +43,7 @@ module.exports = {
             content: [
                 `Most Entities don't have this Ability Unlocked, even if they have noses (or similar).`,
                 `If an Entity has a nose (or similar) but hasn't unlocked this Ability, it smells too broadly to identify any specific source.`,
-                `More details at <a href="../main/mechanics.html#senses" target="_blank">Senses.</a>`,
+                `More details at <a href="../main/mechanics.html#senses" target="_blank">Senses</a>.`,
             ],
         },
     ],

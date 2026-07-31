@@ -23,35 +23,18 @@
         <h1 id="d10_checks">d10 CHECKS</h1>
         <hr>
         <p>
-            d10 Checks are the heart of the game, they are used to determine if things succeed or fail.<br>
+            d10 Checks are the heart of the game, they are used to determine if things Succeed or Fail.<br>
         </p>
         <p>
-            You throw a d10, add the Modifier, and add any Bonuses.<br>
-            For the Finalized Value, the d10 Check's Natural Value is Multiplied, so it remains relevant at higher levels.<br>
-            d10 Multiplier: <box>Modifier / 5</box> (Rounded down, and at least 1!)<br>
+            You throw a d10, multiply the d10 by 1/5 of the Modifier, add the Modifier, then add any Bonuses.<br>
+            The d10's Natural Value is Multiplied so that it remains relevant at higher levels when Modifiers get huge.<br>
+            d10 Multiplier: <box>Modifier / 5</box> (Rounded down, at least 1)<br>
         </p>
         <p>
-            <b>Example:</b> Throwing a Natural 4, with a Modifier of +12, will result in a Finalized Value of
-            20 (4 × 2 + 12)
+            <b>Example:</b> Throwing a Natural 4, with a Modifier of +12, will result in a Finalized Value of 20 (4 × 2 + 12)
         </p>
         <p>
-            <box><span style="color: green;">(<span style="color: red;">(d10 Base Value × <span style="color: blue;">Max(1, Modifier / 5)</span>)</span> + Modifier + Bonus)</span> × (Advantage|Disadvantage)</box>
-        </p>
-        <h2 id="criticals">Criticals</h2>
-        <hr>
-        <p>
-            There is a Stat called <b>CRIT Range</b>, by default this is equal to 1.<br>
-            When Rolling a d10 Check, if the Natural Value is atleast <box>11 - CRIT Range</box> then the Check is a CRIT.<br>
-            <b>A CRIT Results in:</b> 2× Damage, 2× Healing, 2× Shielding, 2× BUFFER<br>
-        </p>
-        <p>
-            You may roll a d10 to determine CRIT for things which by default don't require a d10 Check, like Healing Spells.<br>
-            Some features might add or subtract from the CRIT Range, potentionally making it impossible to CRIT.
-        </p>
-        <p>
-            <b>Example:</b> Throwing a Natural 10 with the base CRIT Range of 1 will result in a CRIT.<br>
-            <b>Example:</b> Throwing a Natural 7 with 4 CRIT Range is a CRIT.<br>
-            <b>Example:</b> With 0 or less CRIT Range, even a Natural 10 won't be a CRIT.
+            <box><span style="color: green;">(<span style="color: red;">(d10 × <span style="color: blue;">Max(1, Mod/5)</span>)</span> + Mod + Bonus)</span> × (Advantage|Disadvantage)</box>
         </p>
         <h2 id="advantage_and_disadvantage">Advantage and Disadvantage</h2>
         <hr>
@@ -60,15 +43,29 @@
             <b>Disadvantage:</b> Half the Value of the d10 Check, including Bonuses.<br>
         </p>
         <p>
-            Advantage and Disadvantage do not stack, and cancel each other out.<br>
-            This means even 1 Advantage cancels out 3 Disadvantages, to where there is no Multiplier.
+            Advantage and Disadvantage's Multiplier doesn't Stack, and cancel each other out.<br>
+            This means even 1 Advantage cancels out any Disadvantages, Multiplier vise.<br>
+            Advantage and Disadvantage <b>truly</b> cancel if they are from the same source.<br>
+            <b>Examples:</b> Both parties of a battle not seeing, being prone, or being submerged in water.
+        </p>
+        <h2 id="criticals">Criticals</h2>
+        <hr>
+        <p>
+            By default, if you Roll 10 on a d10 Check, then it's a <b>CRIT</b>.<br>
+            The default <b>CRIT Range</b> is 1, and you CRIT if the Natural d10 Value is at least <box>11 - CRIT Range</box>
+            There are things which can add or subtract from your CRIT Range, making it easier, or even impossible to CRIT.
+            <b>A CRIT Results in:</b> 2× Damage, 2× Healing, 2× Shielding, 2× BUFFER<br>
+        </p>
+        <p>
+            You may roll a d10 to determine CRIT for things which by default don't require a d10 Check, like Healing Spells.<br>
+            Some features might add or subtract from the CRIT Range, potentionally making it impossible to CRIT.
         </p>
         <h2 id="stable_checks">Stable Checks</h2>
         <hr>
         <p>
-            For Stable Checks, the d10 Natural Value Multiplication is Overridden to <box>Total XP / 100</box> (Minimum of 1)<br>
-            Advantage and Disadvantage Double and Half only the Dice's Value, leaving Modifier and Bonuses unchanged.<br>
-            <a href="#saves">Saves</a> and <a href="#initiative">Initiatives</a> are <b>Stable Checks.</b>
+            For Stable Checks, the d10 Natural Value Multiplication is Overridden to <box>Total XP / 100</box> (At least 1)<br>
+            Advantage and Disadvantage Double and Half only the Dice's Value, leaving the Modifier and Bonuses unchanged.<br>
+            <a href="#saves">Saves</a> and <a href="#initiative">Initiatives</a> are <b>Stable Checks</b>.
         </p>
         <h2 id="multi_checks">Multi-Checks</h2>
         <hr>
@@ -90,8 +87,7 @@
         <h1 id="base_stats">BASE STATS</h1>
         <hr>
         <p>
-            There are 6 Base Stats Entities can have.<br>
-            Maximum of any Base Stat of an Entity: <box>Total XP / 10</box><br>
+            There are 6 Base Stats, each Capped by the Total XP of the Entity; <box>Total XP / 10</box><br>
             Base Stat d10 Check Modifier: <box>Stat / 2</box>
         </p>
         <table width="80%">
@@ -152,11 +148,11 @@
         </p>
         <p>
             0 WILL normally means the Entity is <a href="#conditions">Paralyzed</a>.<br>
-            Some Entities may not require WILL, like some constructs.<br>
+            Some Entities may not require WILL, like some Constructs.<br>
         </p>
         <p>
             0 EGO normally means the Entity is <a href="#conditions">Unconscious</a>.<br>
-            If the Entity is controlled by another, or doesn't require EGO, then it <b>isn't Unconscious.</b>
+            If the Entity is controlled by another, or doesn't require EGO, then it <b>isn't Unconscious</b>.
         </p>
         <h1 id="extra_stats">EXTRA STATS</h1>
         <hr>
@@ -168,7 +164,7 @@
         <ul>
             <li><b>Static:</b> This is a (mostly) static value.</li>
             <li><b>Resource:</b> This has a Max Value, and a Current Value; regenerating and depleting.</li>
-            <li><b>Output:</b> This indicates a Max Output, like an electrical current, only being used when something's active.</li>
+            <li><b>Output:</b> This indicates a Max Output, like an electrical current, only being used when something is active.</li>
         </ul>
         <table width="90%">
             <tr>
@@ -196,8 +192,8 @@
                 <td>HD</td>
                 <td>Resource</td>
                 <td>
-                    AGI + Min(<span style="color: darkblue;">Total XP / 10</span>, Acrobatics + Slight)<br>
-                    + Min(<span style="color: darkblue;">Total XP / 10</span>, Melee Weapon + Ballistic + Martial Arts)
+                    AGI + Min(<span style="color: blue;">Total XP / 10</span>, Acrobatics + Sleight)<br>
+                    + Min(<span style="color: blue;">Total XP / 10</span>, Melee Weapon + Ballistic + Martial Arts)
                 </td>
             </tr>
             <tr>
@@ -228,13 +224,13 @@
                 <td>Move Speed</td>
                 <td>MS</td>
                 <td>Static</td>
-                <td>2 × Min(<span style="color: darkblue;">Total XP / 10</span>, STR + AGI)^(1/3)</td>
+                <td>2 × Min(<span style="color: blue;">Total XP / 10</span>, STR + AGI)^(1/3)</td>
             </tr>
             <tr>
                 <td>Initiative</td>
                 <td>INIT</td>
                 <td>Static</td>
-                <td>(AGI + Min(<span style="color: darkblue;">Total XP / 10</span>, Perception + Intuition)) / 2</td>
+                <td>(AGI + Min(<span style="color: blue;">Total XP / 10</span>, Perception + Intuition)) / 2</td>
             </tr>
         </table>
         <p>
@@ -409,9 +405,9 @@
             <li><a href="./../assets/mob_sheet.pdf" target="_blank">Mob Sheet (WIP)</a></li>
         </ul>
         <p>
-            By default Player Characters can <b>Pinpoint</b> by <a target="_blank" href="../abilities/seeing.html">Seeing</a>, <b>Sense</b> by <a target="_blank" href="../abilities/hearing.html">Hearing</a>, and their <a target="_blank" href="../abilities/smelling.html">Smelling</a> is way too weak to be used in combat.<br>
+            By default Player Characters can <b>Pinpoint</b> by <a target="_blank" href="../abilities/seeing.html">Seeing</a>, <b>Sense</b> by <a target="_blank" href="../abilities/hearing.html">Hearing</a>, and their <a target="_blank" href="../abilities/smelling.html">Smelling</a> is too weak to be effectively used.<br>
             This means they have the Seeing Ability (with its Pinpoint Unlock) and Hearing Ability both Unlocked, without counting towards their Total XP.<br>
-            From these 3 Sense you can pick 1 to Pinpoint with, and 1 to Sense with.
+            Rather than the default you can freely pick 1 to Pinpoint with, and 1 to Sense with.
         </p>
         <h2 id="experience">Experience</h2>
         <hr>
@@ -525,18 +521,25 @@
         <h2 id="attacks">Attacks</h2>
         <hr>
         <p>
-            Attacks are d10 Checks, the Result of the Check is called the <b>To-Hit.</b><br>
+            Attacks are d10 Checks, the Result of the Check is called the <b>To-Hit</b>.<br>
             Target(s) must Spend HD equal to <box>To-Hit</box> to make the Attack Miss, or they get Hit.<br>
             <a href="#attack_action">Attack-Actions</a> are the basic Attacks of the game, <b>but not all Attacks are Attack-Actions!</b>
         </p>
         <p>
-            Attacks can be <b>Ranged</b> or <b>Melee</b>, and on top of that some Attacks can be <a href="#aoe">AOE</a>.<br>
+            Attacks can be <b>Ranged</b> or <b>Melee</b>, and on top of that some Attacks can be <a href="#aoe">AOE</a>.
         </p>
-        <p>
-            When a Ranged Attack is used, it can have 2 different ranges, Normal Range, and Long Range.<br>
-            When using the Long Range, gain Disadvantage on the Attack Roll.<br>
-            Ranged Attacks against Targets who have you in their Melee Reach gain Disadvantage.
-        </p>
+        <p class="bottomless"><b>Melee Attacks:</b></p>
+        <ul>
+            <li>Even when you can only <a href="#senses">Sense</a> a Target, you can make Melee Attacks with Disadvantage.</li>
+        </ul>
+        <p class="bottomless"><b>Ranged Attacks:</b></p>
+        <ul>
+            <li>May have 2 different ranges; Normal, and Long, with Long imposing Disadvantage.</li>
+            <li>If the Attack is Single Target then only <a href="#senses">Pinpointed</a> Entities can be Targeted.</li>
+            <li>If a Single Target Ranged Attack misses its Target, then it flies past it, but its <b>To-Hit</b> is reduced to 0.</li>
+            <li>Ranged Attacks are made with Disadvantage if the Attacker is in the Melee Reach of another Entity.</li>
+            <li>If the Entity's Total XP is less than Half the Attacker's, then this Disadvantage is ignored.</li>
+        </ul>
         <h2 id="saves">Saves</h2>
         <hr>
         <p>
@@ -621,8 +624,8 @@
         <ul>
             <li>Lose 1 Main-Action.</li>
             <li>Falls Prone, and cannot End the Prone Condition.</li>
-            <li>Fall Unconscious after <box>VIT / 5</box> Rounds.</li>
-            <li>The Unconscious Condition Lasts until the end of a <a href="../main/mechanics.html#resting" target="_blank">Short-Rest</a>.</li>
+            <li>Falls Unconscious after <box>VIT / 5</box> Rounds.</li>
+            <li>The Unconscious Condition lasts untill the End of a <a href="../main/mechanics.html#resting" target="_blank">Short-Rest</a>.</li>
         </ul>
 
         <!--ACTIONS-->
@@ -648,7 +651,7 @@
                 Jump Height is <box>MS / 4</box> meters.
             </p>
             <p>
-                At 50+ STR or AGI Jump Height becomes <box>MS</box> meters.
+                At 50+ STR or AGI your Jump Height becomes <box>MS</box> meters.
             </p>
         </div>
         <h2 id="sprint" class="collapsible">Sprint</h2>
@@ -690,7 +693,7 @@
                 You can Ready any Action (Including Abilities), by Spending the Action Cost in advance.<br>
                 The Readied Action can be Cast as a Free-Action Reaction.<br>
                 You can only have one Readied Action at a time.<br>
-                If you have not used the Readied Action by the Start of Your Next Turn, it gets wasted.
+                If you haven't used the Readied Action by the Start of your Next Turn, it gets wasted.
             </p>
             <p>
                 Ready inherets all Tags the Parent Ability has. <b>This is important!</b><br>
@@ -705,29 +708,29 @@
         <hr>
         <div class="collapsed">
             <p>
-                When you use the <b>Attack-Action</b>, you make an <a href="#attacks">Attack</a> with a <a href="#basic_weaponry">Weapon</a>, against one Target.
+                When you use the <b>Attack-Action</b>, you make an <a href="#attacks">Attack</a> with a <a href="#armaments">Weapon</a>, against one Target.
             </p>
             <p>
-                By default the Attack-Action costs a <b>Main-Action.</b><br>
-                It costs a <b>Bonus-Action</b> if the Weapon is Light, or if you're <a href="#wielding">Dual Wielding.</a><br>
+                By default the Attack-Action is a <b>Main-Action</b>.<br>
+                But it's a <b>Bonus-Action</b> if the Weapon is Light, or if you're <a href="#wielding">Dual Wielding</a>.<br>
             </p>
             <p>
                 The Modifier of this Attack is equal to the used <a href="#martial_masteries">Martial Mastery's Modifier</a>.<br>
-                For Melee Weapons use Melee Weapon Mastery, and for Ranged Weapons use Ballistic Mastery.<br>
+                Melee Weapons use Melee Weapon Mastery, and Ranged Weapons use Ballistic Mastery.<br>
                 Weapons with the Throw Property still use Melee Weapon Mastery when thrown.<br>
                 Natural Weapons can use Martial Arts Mastery in place of the relevant Mastery.<br>
             </p>
             <p>
-                On top of the Weapon's Base Damage there is an added Bonus of: <box>Base Stat / 5</box><br>
+                On top of the Weapon's Base Damage there is a Bonus of: <box>Base Stat / 5</box><br>
                 The Base Stat being <b>STR</b> for Melee and Thrown, and <b>AGI</b> for Ranged.
             </p>
             <p>
                 Arms and legs count as One-Handed, Light, Natural Melee Weapons, with 1d4 Base Damage.<br>
-                The <b>Tier</b> of your Natural Weapons are <box>Total XP / 100</box>
+                The <b>Tier</b> of your Natural Weapons are <box>Total XP / 100</box> (At least 1)
             </p>
             <p>
-                When Dual Wielding you can choose to Attack with the same Weapon multiple times, rather than alternating.<br>
-                For Dual Wielding your Natural Weapons can be considered as Weapons!
+                When Dual Wielding; you don't need to alternate Attacks between Weapons, you can use the same Weapon in succession.<br>
+                Dual Wielding works with Natural Weapons too! (<b>Example:</b> 1 sword and 1 hand)
             </p>
             <p>
                 The Attack-Action counts as a <b>Skill Type Ability</b>, with the <b>Offense</b> and <b>Weapon Damage</b> Tags.<br>
@@ -948,7 +951,7 @@
         <hr>
         <div class="collapsed">
             <p class="bottomless">
-                There are 3 kinds of Stealth, Passive, Active, and Scouting. This is a Sleight Check.<br>
+                There are 3 kinds of Stealth, Passive, Active, and Scouting. These are Sleight Checks.<br>
                 Unlike most other Mastery based Actions, you don't Roll a d10, the Result is Static.<br>
             </p>
             <ul>
@@ -958,7 +961,7 @@
             </ul>
             <p>
                 Stealth is attempting to hide, this is hiding against all types of Senses, even Smell and Essence.<br>
-                Being hidden is relative, some Entites might Sense you, but others might not.<br>
+                Being hidden is relative, some might Sense you, but others might not.<br>
                 Sometimes you cannot hide against a Sense, like standing in broad sight, or having an item on you emit loud noise; up to GM.<br>
             </p>
             <p>
@@ -1283,7 +1286,7 @@
             <p>
                 Resting is the act of recovery, this can be many things, and not necessarily just actively doing nothing.<br>
                 For example sitting and reading a book, <a href="../main/abilities.html#spell_memorization">memorizing spells</a>, or other light things would still be Resting.<br>
-                Combat, travel or similar difficult activities break Resting, meaning you need to restart it.
+                Combat, travel or similar difficult activities break Resting, meaning you'll have to restart it.
             </p>
             <p class="bottomless"><b>Short-Rest:</b></p>
             <ul>
@@ -1317,8 +1320,7 @@
         <div class="collapsed">
             <p>
                 Each Entity has 2 Wielding Slots, even if they have more limbs.<br>
-                One-Handed Weapons and Shields take 1 Wielding Slot.<br>
-                Some Weapons (Heavy, or optionally Medium) take 2 Wielding Slots.<br>
+                Weapons and Shields take 1 Wielding Slot, some Weapons take 2.<br>
                 To use a Natural Weapon (like your fists), it must be Wielded first, like any other Weapon.<br>
                 Free limbs can still Hold things which can be used without Active Wielding, like Potions and Scrolls.<br>
                 When taking the <a href="#switch_action">Switch-Action</a> you can change what you are Wielding and Holding.
@@ -1326,8 +1328,8 @@
             <p>
                 Dual Wielding is when you're Wielding 2 Weapons. (Shield doesn't count!)<br>
                 Dual Wielding makes the <a href="#attack_action">Attack-Action</a> into a <b>Bonus-Action</b>.<br>
-                Attacks you don't need to alternate between Weapons, you can use the same Weapon in succession.<br>
-                For Dual Wielding your Natural Weapons can be considered as Weapons!
+                You don't need to alternate Attacks between Weapons, you can use the same Weapon in succession.<br>
+                Dual Wielding works with Natural Weapons too! (<b>Example:</b> 1 sword and 1 hand)
             </p>
         </div>
         <h2 id="effects" class="collapsible">Effects</h2>
@@ -1563,15 +1565,15 @@
             <p class="bottomless"><b>Physical and Border interaction:</b></p>
             <ul>
                 <li>Space is 1 to 1, no funky shenanigans.</li>
-                <li>Interactions can pass through, resulting in: <box><b>Halved</b> HP Damage, STR Saves, and VIT Saves</box></li>
+                <li>Interactions can pass through, resulting in: <box><b>Halved</b> HP Damage, and STR and VIT Save Difficulties.</box></li>
             </ul>
             <p class="bottomless"><b>Border and Astral interaction:</b></p>
             <ul>
                 <li>Every point of space in the Border has a point to it in the Astral, but not vice versa.</li>
                 <li>When wanting to reach a point in the Border (or Physical), from the Astral, multiply your effective Ranges (including speed) by <box>10 × ESS^(1/3)</box></li>
                 <li>
-                    When Abilities pass through, their <b>ESS</b> and <b>CS</b> are <b>Halved</b> on everything which isn't Range and Information (Bit, Bytes or Words).<br>
-                    <b>Note:</b> This division applies per layer cross, meaning 2 layer crosses are Halved twice!
+                    When Abilities pass through, their <b>ESS</b> and <b>CS</b> are <b>Halved</b> on everything which isn't Range and Information (Bits, Bytes or Words).<br>
+                    <b>Note:</b> This division applies per layer cross, meaning 2 layer crosses Halve twice!
                 </li>
             </ul>
             <p class="bottomless"><b>Astral and Deep Astral interaction:</b></p>
@@ -1612,6 +1614,7 @@
         <p>
             Armaments are your Weapons, Shields, and Armors.<br>
             Every Armament has an amount of <b>Property Points</b>, these are allocated for its Stats and Properties.<br>
+            If you don't want to make your own Armaments, there are already <a target="_blank" href="../extra/premade_armaments.html">Premade Armaments</a> using these rules.
         </p>
         <h2 id="tier_level">Tier Level</h2>
         <hr>
@@ -1660,11 +1663,11 @@
                 <td>The Damage Dice of the Weapon.</td>
             </tr>
             <tr>
-                <td>Damage Type</td>
+                <td>Damage Types</td>
                 <td>0 | 1</td>
                 <td>
                     Choose 2 from: Bludgeoning, Slashing, Piercing<br>
-                    With all 3 options at once, comes higher cost.
+                    For 1 Point you can have all 3.
                 </td>
             </tr>
             <tr>
@@ -1676,8 +1679,8 @@
                 <td>Medium</td>
                 <td>0</td>
                 <td>
-                    Can use 1 or 2 Wielding Slots.<br>
-                    When using 2 Wielding Slots, gain +10 Max HD, and increases Base Damage to a higher Dice.
+                    Can be used both with 1 or 2 Wielding Slots.<br>
+                    When using 2 Wielding Slots, gain +10 Max HD, and increase Base Damage to a larger Dice.
                 </td>
             </tr>
             <tr>
@@ -1690,7 +1693,7 @@
                 <td>Variable</td>
                 <td>
                     For each Point add 1 Armor-Pen.<br>
-                    <b>Note:</b> This normally doesn't apply to Abilities!
+                    <b>Note:</b> This only applies to Attack-Actions, and a few Abilities!
                 </td>
             </tr>
             <tr>
@@ -1759,19 +1762,19 @@
             <tr>
                 <td>Medium</td>
                 <td>0</td>
-                <td>Uses 2 Wielding Slot.</td>
+                <td>Uses 2 Wielding Slots.</td>
             </tr>
             <tr>
                 <td>Heavy</td>
                 <td>0</td>
-                <td>Uses 2 Wielding Slot.</td>
+                <td>Uses 2 Wielding Slots.</td>
             </tr>
             <tr>
                 <td>Spread</td>
                 <td>3</td>
                 <td>
                     The Weapon's Range is Reduced to 1/10, and Long Range isn't used.<br>
-                    Attack-Actions are a 30° (~3 Forward = +2 Width) Flow Cone AOE, and ignore Melee Disadvantage.
+                    Attack-Actions are a 30° Flow Cone AOE, and ignore Melee Disadvantage.
                 </td>
             </tr>
             <tr>
@@ -1779,7 +1782,7 @@
                 <td>Variable</td>
                 <td>
                     For each Point add 1 Armor-Pen.<br>
-                    <b>Note:</b> This normally doesn't apply to Abilities!
+                    <b>Note:</b> This only applies to Attack-Actions, and a few Abilities!
                 </td>
             </tr>
             <tr>
@@ -1810,9 +1813,9 @@
         <h2 id="shields">Shields</h2>
         <hr>
         <p>
-            Shields have Max 6 Property Points, and have only 2 Weight Classes; <box>Light | Heavy </box><br>
+            Shields have Max 6 Property Points, and have only 2 Weight Classes; <box>Light | Heavy</box><br>
             You can only benefit from one Shield at a time.<br>
-            When using the <a href="#defense-action">Defense-Action</a> with a Shield, and the Shield gets Un-Wielded, you lose the Defense-Action.<br>
+            When using the <a href="#defense-action">Defense-Action</a> with a Shield; if the Shield gets Un-Wielded, you lose the Defense-Action.<br>
             <b>Price of Shields:</b> <box>5C × Property Points</box>
         </p>
         <table width="90%">
@@ -1891,9 +1894,9 @@
                 <td>See Description</td>
                 <td>
                     The Weight of the Armor is based on the Total Property Points used.<br>
-                    <b>Light (1-2):</b> Doesn't have any Negative Effects on HD.<br>
-                    <b>Medium (3-4):</b> HD doesn't benefit from Acrobatics.<br>
-                    <b>Heavy (5-6):</b> HD doesn't benefit from Acrobatics and AGI.
+                    <b>Light (1-2):</b> No negatives on HD.<br>
+                    <b>Medium (3-4):</b> HD can't benefit from Acrobatics and Sleight.<br>
+                    <b>Heavy (5-6):</b> HD can't benefit from Acrobatics, Sleight, and AGI.
                 </td>
             </tr>
             <tr>
@@ -1911,7 +1914,7 @@
         <table width="70%">
             <tr class="CellBorder">
                 <td style="width:20%">
-                    Damage Die
+                    Damage and Range
                 </td>
                 <td style="width:80%">
                     Property Points / Requirements
@@ -2089,24 +2092,24 @@
         <p>
             BUFFER, as the name implies, is a buffer for recieving Damage.<br>
             When taking any kind of Damage, the <b>Post-Mitigation</b> will go into the BUFFER rather than HP or SP.<br>
-            Any excess Damage not stopped by the BUFFER goes past it, into the HP or SP.
+            Any excess Damage not stopped by the BUFFER goes past it.
         </p>
         <p>
             For Hybrid Damage the BUFFER recieves both HP and SP, effectively Doubling Damage recieved by the BUFFER.<br>
             The Target chooses the order of Damage which goes into their BUFFER, if the Damage is Hybrid or Multiple Type.<br>
-            <b>Example:</b> Recieving Radiant (Hybrid), the Target chooses that first the SP part goes into the BUFFER.
+            <b>Example:</b> Recieving Radiant Damage, the Target chooses that the SP part goes into their BUFFER before the HP part.
         </p>
         <p>
             A BUFFER cannot be Healed. (Exceptions may exist)<br>
-            BUFFERs cannot Stack, the Target chooses between sources of BUFFER.<br>
-            If Duration isn't written, a BUFFER lasts till the End of the next Long-Rest.
+            BUFFERs cannot Stack, they Override the last one, the Target can choose to decline a BUFFER.<br>
+            If Duration isn't written, a BUFFER lasts for 1 Day (28800 Rounds).
         </p>
         <h2 id="maximize_and_minimize">Maximize and Minimize</h2>
         <hr>
         <p>
-            If an amount that should be thrown with Dice is <b>Maximized</b>, then treat it as if it rolled the highest value it could have.<br>
+            If an amount that should be thrown with Dice is <b>Maximized</b>, treat it as if you rolled the highest value it could have.<br>
             Some things might me <b>Minimized</b>, this is the opposite, treat as if you rolled the lowest.<br>
-            Maximizing and Minimizing To-Hit does NOT change its CRIT state, only the To-Hit!
+            Maximizing and Minimizing To-Hit does NOT change the CRIT state, only the To-Hit!
         </p>
         <h2 id="executing">Executing</h2>
         <hr>

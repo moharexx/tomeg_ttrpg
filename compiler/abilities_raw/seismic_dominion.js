@@ -20,7 +20,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Within Range, in a choosen Sphere the air becomes dusty, and small rocks will start to from.`,
+                `Within Range, in a choosen Sphere the air becomes dusty, and small rocks will start to form.`,
                 `When using this Ability, you are put in <b>Seismic Dominion Stance</b>.`,
                 `When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
             ],
@@ -29,7 +29,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Overflow:</b>`,
-                `As a <b>Main-Action</b>, you can Double it's </b>Armor-Pen</b>.`,
+                `As a <b>Main-Action</b>, you can Double its <b>Armor-Pen</b>.`,
                 `This can be done only once on this Ability.`,
             ],
         },
@@ -48,7 +48,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["Stance Trigger", "Continuous"],
+                ["Stance Trigger", "None"],
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["VIT Save", "8 × ESS"],

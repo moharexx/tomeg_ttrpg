@@ -43,7 +43,7 @@ module.exports = {
             content: [
                 "Most Entities have this Passive Ability Unlocked (but NOT Echolocation) as a Free Passive Ability.",
                 "If an Entity has ears (or similar) but hasn't unlocked this Ability, it hears very muffled noises.",
-                `More details at <a href="../main/mechanics.html#senses" target="_blank">Senses.</a>`,
+                `More details at <a href="../main/mechanics.html#senses" target="_blank">Senses</a>.`,
             ],
         },
     ],

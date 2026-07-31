@@ -19,15 +19,15 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You can use any Active Ability as a Stance, if it has at least 1 Minute (20 Rounds) Duration.",
-                "The Ability's Duration becomes till the Stance Ends, and the Stance counts as Continuous, with no Trigger.",
-                "The Ability also gains <box>4 × ESS</box> Potency.",
+                `You can use any Active Ability as a Stance, if it has at least 1 Minute (20 Rounds) Duration, and less than 1 Minute (20 Rounds) of Cast Time.`,
+                `The Ability's Duration becomes till the Stance Ends, and the Stance counts as Continuous, with no Trigger.`,
+                `The Ability also gains <box>4 × ESS</box> Potency, which lasts till the Ability Ends.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Stance Breaks when: <box>Taking Damage</box>",
+                `The Stance Breaks when: <box>Taking Damage</box>`,
             ],
         },
         {
@@ -46,7 +46,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Type", "At least 1 Minute (20 Rounds) Duration"],
-                ["Extra Potency", "2 × ESS"],
+                ["Extra Potency", "4 × ESS"],
             ],
         },
     ],

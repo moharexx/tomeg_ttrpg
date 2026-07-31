@@ -41,10 +41,14 @@
         <hr>
         <table width="100%">
             <tr>
+                <td class="special">Name:</td>
+                <td style="width: auto;"><input id="character_name" type="text" value="Unnamed"></td>
+            </tr>
+            <tr>
                 <td class="special">Total XP:</td>
-                <td style="width: auto;"><input id="XP_total" type="text" value="100"></td>
-                <td style="width: auto;"><input id="save" type="button" value="Save" onclick="alert('WIP')"></td>
-                <td style="width: auto;"><input id="load" type="button" value="Load" onclick="alert('WIP')"></td>
+                <td style="width: auto;"><input id="xp_total" type="text" value="100"></td>
+                <td style="width: auto;"><input id="button_save" type="button" value="Save" onclick="save_file()"></td>
+                <td style="width: auto;"><input id="button_save" type="button" value="Load" onclick="load_file()"></td>
             </tr>
         </table>
         <table width="100%">
@@ -261,7 +265,7 @@
         <table width="100%">
             <tr>
                 <td width="22%">XP Spent On Abilities</td>
-                <td width="78%"><input type="text"></td>
+                <td width="78%"><input id="ability_xp" type="text" value="0"></td>
             </tr>
         </table>
         <table width="75%">
@@ -270,125 +274,256 @@
                 <td width="33.3%">Ratio</td>
                 <td width="33.3%">XP</td>
             </tr>
-            <tr>
+            <tr id="sum_main">
                 <td>Main Stat XP</td>
-                <td id="RATIO_main"></td>
-                <td id="XP_main"></td>
+                <td name="ratio_obj">0%</td>
+                <td name="xp_obj">0</td>
             </tr>
-            <tr>
+            <tr id="sum_mastery">
                 <td>Mastery XP</td>
-                <td id="RATIO_mastery"></td>
-                <td id="XP_mastery"></td>
+                <td name="ratio_obj">0%</td>
+                <td name="xp_obj">0</td>
             </tr>
-            <tr>
+            <tr id="sum_martial">
                 <td>Martial-Mastery XP</td>
-                <td id="RATIO_martial"></td>
-                <td id="XP_martial"></td>
+                <td name="ratio_obj">0%</td>
+                <td name="xp_obj">0</td>
             </tr>
-            <tr>
+            <tr id="sum_magic">
                 <td>Magic-Mastery XP</td>
-                <td id="RATIO_magic"></td>
-                <td id="XP_magic"></td>
+                <td name="ratio_obj">0%</td>
+                <td name="xp_obj">0</td>
             </tr>
-            <tr>
+            <tr id="sum_ability">
                 <td>Abilities</td>
-                <td id="RATIO_ability"></td>
-                <td id="XP_ability"></td>
+                <td name="ratio_obj">0%</td>
+                <td name="xp_obj">0</td>
             </tr>
-            <tr>
+            <tr id="sum_total">
                 <td>Total</td>
-                <td id="RATIO_spent"></td>
-                <td id="XP_spent"></td>
+                <td name="ratio_obj">0%</td>
+                <td name="xp_obj">0</td>
             </tr>
-            <tr>
+            <tr id="sum_left">
                 <td>Left</td>
-                <td id="RATIO_left"></td>
-                <td id="XP_left"></td>
+                <td name="ratio_obj">100%</td>
+                <td name="xp_obj">100</td>
             </tr>
         </table>
     </main>
 </body>
 
 <script>
-    let totalxp_obj = document.getElementById("XP_total")
+    let totalxp_obj = document.getElementById("xp_total")
+
+    class Sum {
+        arr = [];
+        val = 0;
+        ratio_obj;
+        xp_obj;
+
+        constructor(id) {
+            let temp = document.getElementById(id).children
+            this.ratio_obj = temp.ratio_obj
+            this.xp_obj = temp.xp_obj
+        }
+
+        recalc() {
+            let sum = 0
+            this.arr.forEach(v => {sum += Number(v.xp_obj.value)})
+            this.val = sum
+            this.xp_obj.innerHTML = sum
+            this.ratio_obj.innerHTML = Math.round(sum / Number(totalxp_obj.value) * 10000) / 100 + "%"
+        }
+    }
 
     class Stat {
+        static arr = [];
+        id;
+        coefficient;
+        sum;
+
         ratio_obj;
         xp_obj;
         value_obj;
         lock_obj;
 
-        constructor(id, coefficient) {
+        constructor(id, coefficient, sum) {
+            this.id = id
+            this.coefficient = coefficient
+            this.sum = sum
+            Stat.arr.push(this)
+            sum.arr.push(this)
+
             let objects = document.getElementById(id).children
             this.ratio_obj = objects[1].firstChild
             this.xp_obj = objects[2].firstChild
             this.value_obj = objects[3].firstChild
             this.lock_obj = objects[4].firstChild
+
+            this.lock_obj.style.color = "#CC1100"
             
-            totalxp_obj.addEventListener("change", () => {
-                console.log("TOTAL XP CHANGED")
-                if (this.lock_obj.value == "Ratio") {
-                    this.xp_obj.value = Math.floor(totalxp_obj.value * this.ratio_obj.value * 0.1) * coefficient
-                    this.value_obj.value = Math.floor(totalxp_obj.value * this.ratio_obj.value * 0.1)
-                } else {
-                    this.ratio_obj.value = this.value_obj.value / totalxp_obj.value * 10
-                }
-            })
             this.ratio_obj.onchange = () => {
-                let v = Number(this.ratio_obj.value)
+                let v = Math.floor(Number(this.ratio_obj.value) * 1e6) / 1e6
+                this.ratio_obj.value = v
                 this.xp_obj.value = Math.floor(totalxp_obj.value * v * 0.1) * coefficient
                 this.value_obj.value = Math.floor(totalxp_obj.value * v * 0.1)
+                sum.recalc(); recalc_total();
             }
             this.xp_obj.onchange = () => {
                 let v = Math.floor(Number(this.xp_obj.value) / coefficient) * coefficient
-                this.ratio_obj.value = v / totalxp_obj.value * 10 / coefficient
+                this.ratio_obj.value = Math.floor(v / totalxp_obj.value * 10 / coefficient * 1e6) / 1e6
                 this.xp_obj.value = v
                 this.value_obj.value = v / coefficient
+                sum.recalc(); recalc_total();
             }
             this.value_obj.onchange = () => {
                 let v = Math.floor(Number(this.value_obj.value))
-                this.ratio_obj.value = v / totalxp_obj.value * 10
+                this.ratio_obj.value = Math.floor(v / totalxp_obj.value * 10 * 1e6) / 1e6
                 this.xp_obj.value = v * coefficient
                 this.value_obj.value = v
+                sum.recalc(); recalc_total();
             }
             this.lock_obj.onclick = () => {
                 if (this.lock_obj.value == "Ratio") {
                     this.lock_obj.value = "Value"
+                    this.lock_obj.style.color = "#1100CC"
                 } else {
                     this.lock_obj.value = "Ratio"
+                    this.lock_obj.style.color = "#CC1100"
                 }
+            }
+        }
+
+        recalc() {
+            if (this.lock_obj.value == "Ratio") {
+                this.xp_obj.value = Math.floor(totalxp_obj.value * this.ratio_obj.value * 0.1) * this.coefficient
+                this.value_obj.value = Math.floor(totalxp_obj.value * this.ratio_obj.value * 0.1)
+            } else {
+                this.ratio_obj.value = Math.floor(this.value_obj.value / totalxp_obj.value * 1e7) / 1e6
             }
         }
     }
 
-    new Stat("stat_str", 2)
-    new Stat("stat_agi", 2)
-    new Stat("stat_vit", 2)
-    new Stat("stat_int", 2)
-    new Stat("stat_will", 2)
-    new Stat("stat_ego", 2)
+    let sum_main = new Sum("sum_main")
+    let sum_mastery = new Sum("sum_mastery")
+    let sum_martial = new Sum("sum_martial")
+    let sum_magic = new Sum("sum_magic")
+    let sum_ability = new Sum("sum_ability")
+    let sum_total = new Sum("sum_total")
+    let sum_left = new Sum("sum_left")
 
-    new Stat("mastery_athletics", 0.5)
-    new Stat("mastery_acrobatics", 0.5)
-    new Stat("mastery_sleight", 0.5)
-    new Stat("mastery_arcana", 0.5)
-    new Stat("mastery_science", 0.5)
-    new Stat("mastery_lore", 0.5)
-    new Stat("mastery_perception", 0.5)
-    new Stat("mastery_intuition", 0.5)
-    new Stat("mastery_performance", 0.5)
+    let recalc_ability = () => {
+        sum_ability.xp_obj.innerHTML = Number(document.getElementById("ability_xp").value)
+        sum_ability.ratio_obj.innerHTML = Math.round(Number(document.getElementById("ability_xp").value) / (Number(totalxp_obj.value)) * 10000) / 100 + "%"
+    }
 
-    new Stat("mastery_melee", 0.5)
-    new Stat("mastery_ballistic", 0.5)
-    new Stat("mastery_martial", 0.5)
+    let recalc_total = () => {
+        let sum = sum_main.val + sum_mastery.val + sum_martial.val + sum_magic.val + Number(document.getElementById("ability_xp").value)
+        let total_xp = Number(totalxp_obj.value)
+        sum_total.xp_obj.innerHTML = sum
+        sum_total.ratio_obj.innerHTML = Math.round(sum / total_xp * 10000) / 100 + "%"
+        sum_left.xp_obj.innerHTML = total_xp - sum
+        sum_left.ratio_obj.innerHTML = Math.round((total_xp - sum) / total_xp * 10000) / 100 + "%"
+    }
 
-    new Stat("mastery_evocation", 0.5)
-    new Stat("mastery_transmutation", 0.5)
-    new Stat("mastery_conjuration", 0.5)
-    new Stat("mastery_enchantment", 0.5)
-    new Stat("mastery_abjuration", 0.5)
-    new Stat("mastery_divination", 0.5)
-    new Stat("mastery_anima", 0.5)
+    document.getElementById("ability_xp").onchange = () => {recalc_ability(); recalc_total()}
+
+    totalxp_obj.onchange = () => {
+        Stat.arr.forEach(v => {v.recalc()})
+        sum_main.recalc()
+        sum_mastery.recalc()
+        sum_martial.recalc()
+        sum_magic.recalc()
+        recalc_ability()
+        recalc_total()
+    }
+
+    new Stat("stat_str", 2, sum_main)
+    new Stat("stat_agi", 2, sum_main)
+    new Stat("stat_vit", 2, sum_main)
+    new Stat("stat_int", 2, sum_main)
+    new Stat("stat_will", 2, sum_main)
+    new Stat("stat_ego", 2, sum_main)
+
+    new Stat("mastery_athletics", 0.5, sum_mastery)
+    new Stat("mastery_acrobatics", 0.5, sum_mastery)
+    new Stat("mastery_sleight", 0.5, sum_mastery)
+    new Stat("mastery_arcana", 0.5, sum_mastery)
+    new Stat("mastery_science", 0.5, sum_mastery)
+    new Stat("mastery_lore", 0.5, sum_mastery)
+    new Stat("mastery_perception", 0.5, sum_mastery)
+    new Stat("mastery_intuition", 0.5, sum_mastery)
+    new Stat("mastery_performance", 0.5, sum_mastery)
+
+    new Stat("mastery_melee", 0.5, sum_martial)
+    new Stat("mastery_ballistic", 0.5, sum_martial)
+    new Stat("mastery_martial", 0.5, sum_martial)
+
+    new Stat("mastery_evocation", 0.5, sum_magic)
+    new Stat("mastery_transmutation", 0.5, sum_magic)
+    new Stat("mastery_conjuration", 0.5, sum_magic)
+    new Stat("mastery_enchantment", 0.5, sum_magic)
+    new Stat("mastery_abjuration", 0.5, sum_magic)
+    new Stat("mastery_divination", 0.5, sum_magic)
+    new Stat("mastery_anima", 0.5, sum_magic)
+
+    function save_file() {
+        let to_save = {
+            name: document.getElementById("character_name").value,
+            total_xp: Number(totalxp_obj.value),
+            stats: [],
+            ability_xp: Number(document.getElementById("ability_xp").value)}
+        Stat.arr.forEach(v => {
+            let to_push = {id: v.id, val: Number(v.value_obj.value), lock: v.lock_obj.value}
+            if (to_push.lock == "Ratio") to_push.val = v.ratio_obj.value
+            to_save.stats.push(to_push)
+        })
+
+        let download_obj = document.createElement("a")
+        download_obj.setAttribute("href", "data:text/plain;charset=utf-8," + JSON.stringify(to_save, null, 2))
+        download_obj.setAttribute("download", document.getElementById("character_name").value.replaceAll(" ", "_") + "_" + totalxp_obj.value + "XP" + ".txt")
+        document.body.appendChild(download_obj)
+        download_obj.click()
+        download_obj.remove()
+    }
+
+    function load_file() {
+        let upload_obj = document.createElement("input")
+        upload_obj.setAttribute("type", "file")
+        upload_obj.style.display = "none"
+        document.body.appendChild(upload_obj)
+        upload_obj.click()
+        upload_obj.addEventListener("change", () => {
+            upload_obj.files[0].text().then((v) => {
+                let to_load = JSON.parse(v)
+                upload_obj.remove()
+                totalxp_obj.value = to_load.total_xp
+                document.getElementById("character_name").value = to_load.name
+                document.getElementById("ability_xp").value = to_load.ability_xp
+                for (let i = 0; i < Stat.arr.length; i++) {
+                    let v = to_load.stats[i]
+                    let objects = document.getElementById(v.id).children
+                    objects[4].firstChild.value = v.lock
+                    if (v.lock == "Ratio") {
+                        objects[1].firstChild.value = Math.floor(v.val * 1e6) / 1e6
+                        objects[4].firstChild.style.color = "#CC1100"
+                    } else {
+                        objects[2].firstChild.value = v.val * Stat.arr[i].coefficient
+                        objects[3].firstChild.value = v.val
+                        objects[4].firstChild.style.color = "#1100CC"
+                    }
+                }
+                Stat.arr.forEach(v => {v.recalc()})
+                sum_main.recalc()
+                sum_mastery.recalc()
+                sum_martial.recalc()
+                sum_magic.recalc()
+                recalc_ability()
+                recalc_total()
+            })
+        });
+    }
 </script>
 
 </html>

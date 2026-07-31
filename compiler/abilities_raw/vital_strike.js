@@ -34,7 +34,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Free-Action"],
                 ["Trigger", "Advantage"],
-                ["Cooldown", "Can use Next Round"],
+                ["Cooldown", "Your Next Turn"],
                 ["Bonus On-Hit Damage", "4 × ESS"],
             ],
         },

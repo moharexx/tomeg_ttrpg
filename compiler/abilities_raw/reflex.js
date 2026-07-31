@@ -5,7 +5,7 @@ module.exports = {
         "Any",
     ],
     reqs_short: [
-        "INIT",
+        "20 INIT",
     ],
     reqs_full: [
         "20 INIT",
@@ -19,18 +19,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You can make an Ability into a Reaction, but its Action Cost Jumps up by one level.",
+                `You can make an Ability into a Reaction, but its Action Cost Jumps up by one level.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Action Cost Levels:</b>",
-                "Free-Action",
-                "Bonus-Action",
-                "Main-Action",
-                "Main-Action + Bonus-Action",
-                "2 Main-Actions",
+                `<b>Action Cost Levels:</b>`,
+                `Free-Action`,
+                `Bonus-Action`,
+                `Main-Action`,
+                `Main-Action + Bonus-Action`,
             ],
         },
     ],

@@ -20,8 +20,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                `When you use this Ability, you Dash and Bash your Shield into an Entity.`,
-                `The Entity that you Bash gets <a href="../main/mechanics.html#conditions">Dazed Condition</a> on a Failed STR Save.`,
+                `When you use this Ability, you Dash and Bash your Shield into a Target.`,
+                `The Bash has Reach equal to your Natural Melee Reach, and the Dash can be made before or after the Bash.`,
+                `The Target must make a STR Save of <box>8 × ESS</box>; on a Fail they get the <a href="../main/mechanics.html#conditions">Dazed Condition</a>.`,
                 `The Dazed Condition lasts till End of Target's Next Turn.`,
             ],
         },
@@ -29,7 +30,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Using this Ability with a Heavy Shield:</b>`,
-                `The Ability STR Save is <box>12 × ESS</box> But The Dash Distance is <box>MS / 2</box>`,
+                `The STR Save increases to <box>12 × ESS</box>, but The Dash Distance reduces to <box>MS / 2</box>`,
             ],
         },
     ],

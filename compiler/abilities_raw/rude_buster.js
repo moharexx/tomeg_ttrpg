@@ -5,10 +5,10 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "10 Melee Weapon, (10 Evocation | 20 Transmutation | 50 Enchantment)",
+        "10 Melee Weapon, (5 Transmutation | 10 Enchantment | 20 Evocation)",
     ],
     reqs_full: [
-        "<b>Spell:</b> 10 Melee Weapon, (10 Transmutation | 20 Enchantment | 50 Evocation)",
+        "<b>Spell:</b> 10 Melee Weapon, (5 Transmutation | 10 Enchantment | 20 Evocation)",
     ],
     tags: [
         "Offense",

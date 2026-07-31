@@ -5,10 +5,10 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "(10 Melee Weapon | 10 Martial Arts), 10 Acrobatics",
+        "10 Acrobatics, (10 Melee Weapon | 10 Martial Arts)",
     ],
     reqs_full: [
-        "<b>Skill:</b> (10 Melee Weapon | 10 Martial Arts), 10 Acrobatics",
+        "<b>Skill:</b> 10 Acrobatics, (10 Melee Weapon | 10 Martial Arts)",
     ],
     tags: [
         "Offense, Defense, Utility, Style",

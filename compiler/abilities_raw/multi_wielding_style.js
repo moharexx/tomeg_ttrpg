@@ -22,6 +22,8 @@ module.exports = {
                 `<b>Entering And Leaving the Fighting Style:</b>`,
                 `Once per Turn, as a Free-Action, you can commit to <box>Entering | Leaving</box> this Fighting Style.`,
                 `This means you <box>Enter | Leave</box> the Fighting Style at the Start of Your Next Turn.`,
+                `When you Leave this Fighting Style, you must Un-Wield something if you're Wielding too many things.`,
+                `If you don't, then one item is dropped.`,
             ],
         },
         {

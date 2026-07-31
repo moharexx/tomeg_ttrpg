@@ -5,7 +5,7 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "Melee Weapon | Martial Arts",
+        "10 Melee Weapon | 10 Martial Arts",
     ],
     reqs_full: [
         "10 Melee Weapon | 10 Martial Arts",
@@ -20,8 +20,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When using this Ability, you make a Melee Attack-Action against the Target Entity.",
-                "If the Attack-Action would cost you only a Bonus-Action you make this Attack with Advantage.",
+                `You can React to someone else moving inside your Melee Reach to make an Attack.`,
+                `When an Entity begins moving inside, or moves outside of your Melee Reach you can use this Ability to make a Melee Attack-Action.`,
+                `You can't make more than 1 Opportunity Attack against the same Target in a Turn.`,
+                `If the Attack-Action would Cost you only a Bonus-Action, you make this Attack with Advantage.`,
             ],
         },
     ],
@@ -33,7 +35,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
-                ["Trigger", "Entity begins moving inside Melee Reach."],
+                ["Trigger", "Entity begins moving inside, or moves outside of Melee Reach."],
             ],
         },
     ],

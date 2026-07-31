@@ -48,7 +48,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Free-Action"],
-                ["Cooldown", "Can use Next Round"],
+                ["Cooldown", "Your Next Turn"],
                 ["Requirement", "Strength based Attack"],
                 ["Max GRIT Spent", "STR / 5"],
                 ["(Heavy | Solo-Wield) Max GRIT", "×2"],
