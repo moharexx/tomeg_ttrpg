@@ -466,7 +466,7 @@
         </ul>
         <p>
             <b>You can use a Main-Action in place of a Bonus-Action!</b><br>
-            By default, <a href="#interact">interacting with an object</a> is a Bonus-Action.<br>
+            <a href="#interact_action">interacting with an object</a> is usually a Bonus-Action.<br>
             Some Actions can be made as <a href="#reactions">Reactions</a>, Reactions are NOT a seperate Resource!
         </p>
         <p>
@@ -574,7 +574,7 @@
         <ul>
             <li>Lose 1 Main-Action.</li>
             <li>Incoming Attacks have Advantage.</li>
-            <li>AGI Saves are made with Disadvantage.</li>
+            <li>STR and AGI Saves are made with Disadvantage.</li>
             <li>Have Half MS.</li>
         </ul>
         <p class="bottomless"><b>Dazed</b></p>
@@ -680,13 +680,14 @@
         <hr>
         <div class="collapsed">
             <p>
-                Interacting with Objects is a <b>Bonus-Action,</b> unless specifically stated otherwise.
+                Interacting with an Object is usually a <b>Bonus-Action</b>.<br>
+                Simply dropping any Held or Wielded item is a <b>Free-Action</b>.
             </p>
             <p>
                 <b>Examples:</b> Opening or closing a door, picking up an object from the floor, drinking a Potion, ect...
             </p>
         </div>
-                <h2 id="ready" class="collapsible">Ready</h2>
+        <h2 id="ready" class="collapsible">Ready</h2>
         <hr>
         <div class="collapsed">
             <p>
@@ -1332,6 +1333,15 @@
                 Dual Wielding works with Natural Weapons too! (<b>Example:</b> 1 sword and 1 hand)
             </p>
         </div>
+        <h2 id="encumbrance" class="collapsible">Encumbrance</h1>
+        <hr>
+        <div class="collapsed">
+            <p>
+                Encumbrance is the measure of how much weight an Entity can lift or carry, in Kilograms.<br>
+                By default, an Entity can lift or carry up to <box>(10 × STR) + (5 × Athletics)</box> Kg, without any side effects.<br>
+                An Entity can lift or carry up to double their default value, but their MS will be Halved.
+            </p>
+        </div>
         <h2 id="effects" class="collapsible">Effects</h2>
         <hr>
         <div class="collapsed">
@@ -1342,7 +1352,7 @@
             </p>
             <p>
                 Effects can interact with eachother and even other features.<br>
-                When Opposing Effects interact, they either Cancel eachother, or the stroger Effect wins.<br>
+                When Opposing Effects interact, they either Cancel eachother, or the stronger Effect wins.<br>
                 When the weak Effect's ESS is at least Half of the stronger's, then they both Cancel.<br>
                 Otherwise the stronger Effect overrides the weaker.
             </p>

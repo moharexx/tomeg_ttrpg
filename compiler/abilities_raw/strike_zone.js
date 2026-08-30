@@ -22,7 +22,7 @@ module.exports = {
             content: [
                 `When using this Ability, you are put in <b>Strike Zone Stance</b>.`,
                 `When an Entity Enters or starts Moving inside your Melee Reach, you can make an Attack-Action against it as a <b>Free-Action</b>.`,
-                `When you do so, you can't Attack the same Target again with this Stance, while the Stance is Active.`,
+                `You can't Attack the same Target more than once with this Stance, while the Stance is Active.`,
                 `When the Attack-Action would cost you only a Bonus-Action, then make the Attack with Advantage.`,
             ],
         },

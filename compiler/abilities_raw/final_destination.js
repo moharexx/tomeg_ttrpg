@@ -5,10 +5,10 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "20 Enchantment | 50 Anima",
+        "20 Enchantment | 50 Anima | 200 Divination",
     ],
     reqs_full: [
-        "<b>Spell:</b> (200 INT | 200 WILL | 50 EGO), (20 Enchantment | 50 Anima)",
+        "<b>Spell:</b> 50 CS, (20 Enchantment | 50 Anima | 200 Divination)",
     ],
     tags: [
         "Offense, Defense, Unlock",
@@ -30,7 +30,7 @@ module.exports = {
                 "<b>An Entity Effected by this Spell:</b>",
                 "All d10 Checks rolled 5 or Lower on the Dice are treated with a Finalized Value of 0, so a Miss or Fail.",
                 "All d10 Checks rolled 6 or Higher on the Dice are treated as 10 and a CRIT.",
-                `All Damage Recieved is <a href="../main/mechanics.html#max_value">Maximalized.</a>`,
+                `All Damage Recieved is <a href="../main/mechanics.html#max_value">Maximized</a>.`,
                 "Healing, Shielding, and any support Ability cannot CRIT.",
             ],
         },

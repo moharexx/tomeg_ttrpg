@@ -22,8 +22,8 @@ module.exports = {
             content: [
                 `Within Range, around a chosen point, the temperature drops, snow and ice grows and swirls.`,
                 `When using this Ability, you are put in <b>Glacial Storm Stance</b>.`,
-                `When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
-                `Entities Damaged by this Ability get the <b>Cold Effect</b>.`,
+                `When Entering this Stance and in your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
+                `Targets Damaged by this Ability get the <b>Cold Effect</b>.`,
             ],
         },
         {
@@ -31,7 +31,7 @@ module.exports = {
             content: [
                 `<b>Overflow</b> (Main-Action):`,
                 `You Double the </b>Radius</b> until the Stance Ends.`,
-                `This can be used only once.`,
+                `This feature can't Stack.`,
             ],
         },
         {
@@ -69,7 +69,7 @@ module.exports = {
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["VIT Save", "8 × ESS"],
-                ["Cold Damage", "1d12 × ESS"],
+                ["Cold Damage", "1d8 × ESS"],
                 ["Slow Strength", "CS^(1/3)"],
             ],
         },

@@ -23,15 +23,16 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When this Ability is used, you can count your body as Armor.",
-                "This Ability cannot get over the Property Point Maximum, and cannot be Impossible to normally Equip.",
-                "The Ability Ends when the Caster loses Consciousness.",
+                `With this Ability you can make your body act like Armor, creating a Simulated Armor.`,
+                `Simulated Armors can have Max Property Points, and can't stack on top of other Armors.`,
+                `You can change the Simulated Armor by Recasing this Ability.`,
             ],
         },
         {
-            type: "dots",
+            type: "p",
             content: [
-                "You can change the Armor by Recasing this Ability.",
+                `If you're already Wearing a real Armor, then you can attempt to override that Armor with the Simulated one.`,
+                `But only if the Armor's Tier is less than Half the ESS you Cast this Ability with.`,
             ],
         },
     ],

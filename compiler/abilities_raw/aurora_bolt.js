@@ -8,11 +8,11 @@ module.exports = {
         "5 Evocation | 10 Transmutation | 20 Conjuration",
     ],
     reqs_full: [
-        "<b>Spell:</b> (10 INT | 10 WILL | 10 EGO), (5 Evocation | 10 Transmutation | 20 Conjuration)",
+        "<b>Spell:</b> 10 CS, (5 Evocation | 10 Transmutation | 20 Conjuration)",
     ],
     tags: [
         "Offense",
-        "Heat Damage, Projectile, To-Hit",
+        "Ranged, Heat Damage, To-Hit",
         "Main-Action + Bonus-Action",
     ],
     unlock_cost: 10,
@@ -20,7 +20,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, fire a Single Target Projectile made of Light.",
+                `Fire a long range, high accuracy Single-Target Projectile made of colorful lights.`,
             ]
         },
     ],
@@ -34,7 +34,7 @@ module.exports = {
                 ["Cast Time", "Main-Action + Bonus-Action"],
                 ["Range", "60 / 120 × CS^(1/3)"],
                 ["To-Hit Multiplier", "2×"],
-                ["Damage", "(3d4 × ESS) Heat"],
+                ["Damage", "(2d8 × ESS) Heat"],
             ],
         },
     ],

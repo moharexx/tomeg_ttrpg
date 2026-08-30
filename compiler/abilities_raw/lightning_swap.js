@@ -20,10 +20,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You spend either <b>GRIT</b> or <b>HD</b> to use <a href="../main/mechanics.html#switch_weapon" target="_blank">Switch-Weapon</a> or <a href="../main/mechanics.html#interact" target="_blank">Interact-Action</a> as a <b>Free-Action.</b>`,
-                `For the purposes of Abilites and other Actions treat as if you used the <b>Switch-Action</b> or <b>Interact-Action</b> as a <b>Main-Action.</b>`,
-                `When using this Ability, even after Un-Wield Your Shield, You still gain the full benefits of the <a href="../main/mechanics.html#defense_action" target="_blank">Defense-Action</a>.`,
-                `The <b>ESS</b> you Cast this Ability at is <box>Total XP / 100</box>, and if somehow it's less, the Ability Fails.`,
+                `Spend either <b>GRIT</b> or <b>HD</b> to use a <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a> or <a href="../main/mechanics.html#interact" target="_blank">Interact-Action</a> as a <b>Free-Action</b>.`,
+                `For Ability and Feature interactions treat as if you used said Action with a <b>Main-Action</b>.`,
+                `When you Un-Wield your Shield with this Ability, you don't lose an already Active <a href="../main/mechanics.html#defense_action" target="_blank">Defense-Action</a>.`,
+                `The <b>ESS</b> this Ability is Cast at is <b>always</a> <box>Total XP / 100</box> (at least 1)`,
             ]
         },
     ],
@@ -35,7 +35,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Free-Action"],
-                ["Ability Cost", "(5 GRIT | 10 HD) × ESS"],
+                ["Resource Cost", "(5 GRIT | 10 HD) × ESS"],
             ],
         },
     ],

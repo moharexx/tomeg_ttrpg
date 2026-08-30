@@ -16,14 +16,14 @@ module.exports = {
         "Debuff",
         "Main-Action",
     ],
-    unlock_cost: 5,
+    unlock_cost: 10,
     description: [
         {
             type: "p",
             content: [
-                `When you use a Ranged Attack, you can use this Ability to make it pierce shielding and reduce defenses.`,
+                `When you use a Ranged Attack, you can use this Ability to make it pierce and reduce defenses.`,
                 `Each point of Damage the Parent does against BUFFERs and Shielding counts as 2 points of Damage.`,
-                `If the Attack Deals Damage, all Healing, Shielding, and BUFFERs the Target recieve is Reduced by <box>4 × ESS</box> until the End of their Next Turn.`,
+                `If the Attack Deals Damage; all Healing, Shielding, and BUFFERs the Target recieve are Reduced by <box>4 × ESS</box> until the End of their Next Turn.`,
             ],
         },
     ],

@@ -47,8 +47,8 @@
             <tr>
                 <td class="special">Total XP:</td>
                 <td style="width: auto;"><input id="xp_total" type="text" value="100"></td>
-                <td style="width: auto;"><input id="button_save" type="button" value="Save" onclick="save_file()"></td>
-                <td style="width: auto;"><input id="button_save" type="button" value="Load" onclick="load_file()"></td>
+                <td style="width: auto;"><input type="button" value="Save" onclick="save_file()"></td>
+                <td style="width: auto;"><input type="button" value="Load" onclick="load_file()"></td>
             </tr>
         </table>
         <table width="100%">
@@ -311,6 +311,8 @@
             </tr>
         </table>
     </main>
+    <a id="file_saver" type="file" accept=".txt" style="display: none;"></a>
+    <input id="file_loader" type="file" accept=".txt" style="display: none;">
 </body>
 
 <script>
@@ -480,50 +482,42 @@
             to_save.stats.push(to_push)
         })
 
-        let download_obj = document.createElement("a")
+        let download_obj = document.getElementById("a")
         download_obj.setAttribute("href", "data:text/plain;charset=utf-8," + JSON.stringify(to_save, null, 2))
         download_obj.setAttribute("download", document.getElementById("character_name").value.replaceAll(" ", "_") + "_" + totalxp_obj.value + "XP" + ".txt")
-        document.body.appendChild(download_obj)
         download_obj.click()
-        download_obj.remove()
     }
 
-    function load_file() {
-        let upload_obj = document.createElement("input")
-        upload_obj.setAttribute("type", "file")
-        upload_obj.style.display = "none"
-        document.body.appendChild(upload_obj)
-        upload_obj.click()
-        upload_obj.addEventListener("change", () => {
-            upload_obj.files[0].text().then((v) => {
-                let to_load = JSON.parse(v)
-                upload_obj.remove()
-                totalxp_obj.value = to_load.total_xp
-                document.getElementById("character_name").value = to_load.name
-                document.getElementById("ability_xp").value = to_load.ability_xp
-                for (let i = 0; i < Stat.arr.length; i++) {
-                    let v = to_load.stats[i]
-                    let objects = document.getElementById(v.id).children
-                    objects[4].firstChild.value = v.lock
-                    if (v.lock == "Ratio") {
-                        objects[1].firstChild.value = Math.floor(v.val * 1e6) / 1e6
-                        objects[4].firstChild.style.color = "#CC1100"
-                    } else {
-                        objects[2].firstChild.value = v.val * Stat.arr[i].coefficient
-                        objects[3].firstChild.value = v.val
-                        objects[4].firstChild.style.color = "#1100CC"
-                    }
+    function load_file() { document.getElementById("file_loader").click() }
+    document.getElementById("file_loader").addEventListener("change", () => {
+        document.getElementById("file_loader").files[0].text().then((v) => {
+            let to_load = JSON.parse(v)
+            totalxp_obj.value = to_load.total_xp
+            document.getElementById("character_name").value = to_load.name
+            document.getElementById("ability_xp").value = to_load.ability_xp
+            for (let i = 0; i < Stat.arr.length; i++) {
+                let v = to_load.stats[i]
+                let objects = document.getElementById(v.id).children
+                objects[4].firstChild.value = v.lock
+                if (v.lock == "Ratio") {
+                    objects[1].firstChild.value = Math.floor(v.val * 1e6) / 1e6
+                    objects[4].firstChild.style.color = "#CC1100"
+                } else {
+                    objects[2].firstChild.value = v.val * Stat.arr[i].coefficient
+                    objects[3].firstChild.value = v.val
+                    objects[4].firstChild.style.color = "#1100CC"
                 }
-                Stat.arr.forEach(v => {v.recalc()})
-                sum_main.recalc()
-                sum_mastery.recalc()
-                sum_martial.recalc()
-                sum_magic.recalc()
-                recalc_ability()
-                recalc_total()
-            })
-        });
-    }
+            }
+            Stat.arr.forEach(v => {v.recalc()})
+            sum_main.recalc()
+            sum_mastery.recalc()
+            sum_martial.recalc()
+            sum_magic.recalc()
+            recalc_ability()
+            recalc_total()
+        })
+    });
+
 </script>
 
 </html>

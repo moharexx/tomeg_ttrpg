@@ -28,9 +28,8 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>On Stance Trigger:</b>`,
-                `As a <b>Main-Action</b>, you can increase it's Damage to <box>1d12 × ESS</box>`,
-                `This can be done only once on this Ability.`,
+                `<b>Overflow</b> (Main-Action):`,
+                `You increase the </b>Damage</b> to <box>1d12 × ESS</box> until the Stance Ends.`,
             ],
         },
         {
@@ -52,7 +51,7 @@ module.exports = {
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["VIT Save", "8 × ESS"],
-                ["Damage", "(1d8 × ESS) Electric"],
+                ["Electric Damage", "1d8 × ESS"],
             ],
         },
     ],

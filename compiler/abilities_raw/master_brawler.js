@@ -38,7 +38,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Into The Dirt</b> (Free-Action):`,
-                `You can <b>Shove</b> a Target Grappled by You, which will end the <b>Grapple</b> on the Target.`,
+                `You can <b>Shove</b> a Target Grappled by you, which will End the <b>Grapple</b> on the Target.`,
             ],
         },
         {

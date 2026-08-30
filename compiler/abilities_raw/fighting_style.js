@@ -20,27 +20,25 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When this Ability is used, you can count your body as any Natural Melee Weapon and Shield.",
-                "This Ability cannot get over the Property Point Maximum, and cannot be Impossible to normally Wield.",
-                "The Ability Ends when the Caster loses Consciousness.",
+                `With this Ability you can make your body act like Melee Weapons and Shields, creating Simulated <b>Natural</b> Weapons.`,
+                `Simulated Weapons can have Max Property Points, and must be Wielded like any other Weapon.`,
             ],
         },
         {
-            type: "dots",
+            type: "p",
             content: [
-                `When you use the <a href="../main/mechanics.html#switch_weapon" target="_blank">Switch Weapon Action</a>, you can change the Simulated Armaments.`,
-                "Casting this Ability counts as a Switch Weapon Action, and becomes a Bonus-Action if Switch Weapon is a Bonus-Action.",
-                "Simulated Melee Weapons cannot have the Throw Property.",
+                `When you use the <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a>, you can change the Simulated Armaments.`,
+                `Casting this Ability counts as a Switch-Action, and Costs a Bonus-Action if Switch-Action is a Bonus-Action.`,
+                `Simulated Melee Weapons cannot have the Throw Property, and cannot use the <a href="weapon_throw.html">Weapon Throw</a> Ability.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Finger Guns</b> (50 Martial Arts, 20 XP):",
-                "You can Simulate Ranged Weapons, these count as Natural Ranged Weapons.",
+                `<b>Finger Guns</b> (50 Martial Arts, 20 XP):`,
+                `You can Simulate Ranged and Throw Weapons, and can use the <b>Weapon Throw</b> Ability.`,
                 `The Reload and Slow-Reload Property separately retain their state between Weapon Switches.`,
-                "Simulated Melee Weapons can now have the Throw Property.",
-                "The Throw Property is treated differently, you can simply make Ranged Attacks (still using STR) with it.",
+                `For Throwing you make the Ranged Attack as normal, and your Weapon remains Wielded.`,
             ],
         },
     ],
@@ -51,7 +49,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Free-Action"],
+                ["Cast Time", "Same as Switch-Action"],
                 ["Range", "Self"],
                 ["Duration", "Till Consciousness is lost"],
                 ["Simulated Item Tier", "ESS"],

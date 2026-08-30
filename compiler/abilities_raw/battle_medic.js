@@ -1,6 +1,6 @@
 module.exports = {
     name: "Battle Medic",
-    category: "passive",
+    category: "active",
     type: [
         "Skill",
     ],
@@ -19,15 +19,28 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You can make the <a href="../main/mechanics.html#medicate">Medicate Action</a> as a <b>Main-Action</b>.`,
-                `If you use <b>Treat Wounds</b> as a Main-Action, you cannot Treat Wounds with this feature again for <box>1 Minute (20 Rounds)</box>`,
+                `You use the <b>Treat Wounds</b> Action as a <b>Main-Action</b>, rather than the regular 1 Minute Cast Time.`,
+                `The <b>ESS</b> this Ability is Cast at is <box>Modifier / 10</box> (at least 1)`,
             ],
         },
         {
             type: "p",
             content: [
-                `Using Battle Medic counts as a Skill Type Ability, with the Defense, and Healing Tag.`,
-                `Battle Medic counts as being Cast at ESS equal to: <box>Modifier / 10</box> (at least 1)`
+                `Additionally, you can make Surgeries with just a Main-Action, but 4× Difficulty.`,
+                `This has no Cooldown.`
+            ],
+        },
+    ],
+    stats: [
+        {
+            type: "table",
+            full_width: "100%",
+            width: ["30%", "70%"],
+            content: [
+                ["Ability Stat", "Value"],
+                ["Cast Time", "Main-Action"],
+                ["Cooldown", "1 Minute (20 Rounds)"],
+                ["Range", "Touch"],
             ],
         },
     ],
