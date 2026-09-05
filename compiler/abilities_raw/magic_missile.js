@@ -5,14 +5,14 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Evocation | Abjuration",
+        "5 Evocation | 10 Abjuration | 20 Transmutation",
     ],
     reqs_full: [
-        "(5 INT | 5 WILL | 5 EGO), (5 Evocation | 10 Abjuration)",
+        "<b>Spell:</b> 5 CS, (5 Evocation | 10 Abjuration | 20 Transmutation)",
     ],
     tags: [
         "Offense",
-        "Demat Damage, Projectile",
+        "Ranged, Demat Damage",
         "Bonus-Action / Bonus-Action",
     ],
     unlock_cost: 5,
@@ -20,26 +20,26 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When using this Ability you are put in Magic Missile Stance.",
-                "When Entering or Stacking this stance, you gain 3 Orbs.",
-                "While in Magic Missile Stance, Your MS is Halved.",
-                "On Stance Trigger you shoot out the Orbs.",
-                "Each Orb is it's own Attack, but Roll only a single d10 Check for all of them, still Roll Damage separately.",
-                "MAX Orb Count: <box>12</box>",
+                `When using this Ability you are put in <b>Magic Missile Stance</b>.`,
+                `When Entering, and Stacking this Stance, gain 3 Orbs.`,
+                `While in Magic Missile Stance, Your MS is Halved.`,
+                `On Stance Trigger you shoot out all the Orbs.`,
+                `Roll only a single d10 Check for all Attacks, but Roll Damage separately.`,
+                `Max Orb Count: <box>12</box>`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Potency Boost:</b>",
+                `<b>Potency Boost:</b>`,
                 `For each point of <a href="../main/mechanics.html#potency" target="_blank">Potency</a> you can add +1 Damage to a Single Orb.`,
-                `For each <box>3 × ESS</box> points of <b>Potency</b> you add +1 Orb.`,
+                `For each <box>3 × ESS</box> points of <b>Potency</b> you can add +1 Orb.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Stance Breaks when: <box>Using Abilities, HD Decrease, Taking Damage</box>",
+                `The Stance Breaks when: <box>Using Abilities, Taking Damage</box>`,
             ],
         },
     ],
@@ -51,9 +51,9 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
-                ["Stance Trigger", "Bonus-Action at Your Next Turn"],
+                ["Stance Trigger", "Bonus-Action in your Next Turn"],
                 ["Range", "20 / 40 × CS^(1/3)"],
-                ["Orb Damage", "(1d4 × ESS) Demat"],
+                ["Orb Demat Damage", "1d4 × ESS"],
             ],
         },
     ],

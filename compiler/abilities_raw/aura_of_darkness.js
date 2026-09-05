@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Utility, Unlock",
-        "Obscurance, Any Sphere AOE",
+        "Any Sphere AOE, Obscurance",
         "Bonus-Action / Main-Action",
     ],
     unlock_cost: 5,
@@ -21,9 +21,9 @@ module.exports = {
             type: "p",
             content: [
                 `When using this Ability, you are put in <b>Aura Of Darkness Stance</b>.`,
-                `While in <b>Aura Of Darkness</b>, you emit Darkness in a chosen AOE, and Low-Light in Double the Radius.`,
                 `When Entering <b>Aura Of Darkness Stance</b>, Choose an AOE Type from the table below.`,
-                `On <b>Stance</b> Trigger, you Double the Radius of the Ability, and will emit Darkness until the End of Your Next Turn.`,
+                `While in <b>Aura Of Darkness</b>, you emit Darkness in a chosen AOE, and Low-Light in Double the Radius.`,
+                `On Trigger, you Double the Radius, this Ends the Stance, but still emits Darkness until the End of Your Next Turn.`,
             ],
         },
         {
@@ -41,8 +41,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Selective Darkness</b> (20 Divination, 5 XP):`,
-                `You can choose which Entities can't see the Darkness.`,
-                `Entities that can't see the Darkness can see it with a Perception Check of at least <box>10 × ESS</box>`,
+                `You can choose which Entities that can see through the Darkness, like it wasn't there.`,
             ],
         },
         {
@@ -59,8 +58,8 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Bonus Action"],
-                ["Stance Trigger", "Main-Action"],
+                ["Cast Time", "Bonus-Action"],
+                ["Stance Trigger", "Bonus-Action"],
             ],
         },
     ],

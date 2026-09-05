@@ -8,7 +8,7 @@ module.exports = {
         "10 Abjuration | 20 Transmutation | 50 Evocation",
     ],
     reqs_full: [
-        "<b>Spell:</b> (20 INT | 20 WILL | 20 EGO), (10 Abjuration | 20 Transmutation | 50 Evocation)",
+        "<b>Spell:</b> 20 CS, (10 Abjuration | 20 Transmutation | 50 Evocation)",
     ],
     tags: [
         "Offense",
@@ -20,16 +20,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, shoot a Cone of cold.",
-                "This is a Flow Cone AOE Ranged Save, flowing out from the Caster.",
-                "All Targets Inside the Cone must make a <b>VIT Save</b> or get Hit.",
-            ],
-        },
-        {
-            type: "list",
-            content: [
-                "<b>Cold Effect:</b>",
-                `Damage against Soaked Targets is <a href="../main/mechanics.html#max_value" target="_blank">Maximalized.</a>`,
+                `When used, shoot a Cone of cold.`,
+                `This is a Flow Cone AOE Ranged Save, flowing out from the Caster.`,
+                `All Targets Inside the Cone must make a <b>VIT Save</b> or get Hit.`,
+                `Damage against Soaked Targets is <a href="../main/mechanics.html#max_value" target="_blank">Maximized</a>.`,
             ],
         },
     ],
@@ -44,7 +38,7 @@ module.exports = {
                 ["Cone Length", "4 × CS^(1/3)"],
                 ["Cone Width", "60° (~2 Forward = +2 Width)"],
                 ["VIT Save", "10 × ESS"],
-                ["Damage", "(2d8 × ESS) Cold"],
+                ["Cold Damage", "2d8 × ESS"],
             ],
         },
     ],

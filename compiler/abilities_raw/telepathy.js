@@ -20,6 +20,7 @@ module.exports = {
             type: "p",
             content: [
                 `You can Telepathically and Empathically Communicate with Entities you can Sense within Range.`,
+                `You can also permit other Entities to Communicate with you without them having this Ability Unlocked.`,
                 `With a Successful <b>Soul Save</b> of <box>10 × ESS</box> the Target can block Communications for up to <box>1 Minute (20 Rounds)</box>`,
                 `Your Target knows who they are Communicating to, unless you use a <a href="../main/mechanics.html#feint" target="_blank">Feint Action</a>.`,
                 `The Target can attempt a <a href="../main/mechanics.html#scan" target="_blank">Scan (Arcana or Intuition)</a> Check against the <b>Feint</b>.`,

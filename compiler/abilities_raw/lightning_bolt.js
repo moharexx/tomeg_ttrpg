@@ -5,14 +5,14 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "Evocation | Conjuration",
+        "5 Evocation | 10 Conjuration | 20 Transmutation",
     ],
     reqs_full: [
-        "(10 INT | 10 WILL | 10 EGO), (10 Evocation | 20 Conjuration)",
+        "<b>Spell:</b> 10 CS, (5 Evocation | 10 Conjuration | 20 Transmutation)",
     ],
     tags: [
         "Offense",
-        "Electric Damage, AOE",
+        "Ranged, Flow Line AOE, Electric Damage",
         "Main-Action",
     ],
     unlock_cost: 10,
@@ -20,16 +20,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, fire a Lightning Bolt, in a straight Line.",
-                "This is a Line Attack, that Hits Multiple Targets.",
-                "If an Entity gets Hit, but Fully Negates the Damage, the Line Stops there.",
-            ],
-        },
-        {
-            type: "list",
-            content: [
-                "Electric Effect:",
-                `Against Wet with Water, or Airborn Targets this Ability Deals <a href="../main/mechanics.html#max_value">Max-Damage.</a>`,
+                `Fire a straight bolt of lightning.`,
+                `This is a Flow Line AOE Ranged Attack.`,
+                `<b>Note:</b> Electric Damage is <a href="../main/mechanics.html#maximize_and_minimize">Maximized</a> against <b>Soaked</b> and <b>Airborne</b> Targets.`,
             ],
         },
     ],
@@ -42,7 +35,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Line Length", "10 × CS^(1/3)"],
-                ["Damage", "(1d10 × ESS) Electric"],
+                ["Electric Damage", "2d6 × ESS"],
             ],
         },
     ],

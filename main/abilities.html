@@ -10,11 +10,11 @@
 
 <body>
     <header>
-        <div onclick="side_bar_func()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
-        <div onclick="go_to('main/main.html')">Main Page</div>
-        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
-        <div onclick="go_to('main/abilities.html')">Abilities</div>
-        <div onclick="go_to('main/extra.html')">Extra</div>
+        <a onclick="side_bar_func()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></a>
+        <a href="../main/main.html">Main Page</a>
+        <a href="../main/mechanics.html">Mechanics</a>
+        <a href="../main/abilities.html">Abilities</a>
+        <a href="../main/extra.html">Extra</a>
     </header>
     <side_orb id="side_orb" onclick="side_bar_func(true)"></side_orb>
     <side_menu id="side_menu"></side_menu>
@@ -22,10 +22,10 @@
         <h1 id="abilities">ABILITIES</h1>
         <hr>
         <p>
-            Abilities are special things Entities can do, which require to be Unlocked.<br>
+            Abilities are special actions and passive benefits, which require to be Unlocked.<br>
             Abilities canonically have an Essence Cost, we don't keep track of it as a Resource, assume you always have enough Essence.<br>
             When listing the Stats (like Damage) of Abilities you will see ESS, this is the Essence Cost, which scales with your Total XP.<br>
-            <b>Maximum ESS Of Abilities:</b> <box>Total XP / 100</box> (Rounded down, and at least 1!)
+            <b>Maximum ESS Of Abilities:</b> <box>Total XP / 100</box> (Rounded down, at least 1)
         </p>
         <p>
             <b>Casting Stat</b> will be used to calculate the Stats of a lot of Spell Type Abilities, shortened to <b>CS.</b><br>
@@ -36,7 +36,7 @@
             <li>Spell Ability To-Hit Modifier: <box>CS / 2</box></li>
             <li>Skill Ability To-Hit Modifier: <box>Same as Attack with the used Weapon (Includes Natural Weapons)</box></li>
             <li>Touch Abilities have the same Reach as your Natural Melee Weapons.</li>
-            <li>Touch Abilities have the same To-Hit as a <b>Natural Melee Weapon</b>, but can be the same a Spell's when it's a Spell.</li>
+            <li>Touch Abilities have the same To-Hit as <b>Natural Melee Weapons</b>, but if a Spell it can be the same as a Spell's.</li>
         </ul>
         <p>
             Unlocking an Ability canonically makes you able to do more than the simple combat description of the Ability.<br>
@@ -48,45 +48,41 @@
         <hr>
         <p class="bottomless"><b>Active Abilities:</b></p>
         <ul>
-            <li>These Abilities are your usual ones, often coming out instantly when used.</li>
-            <li>You can count Free-Action Active Abilities with a Duration as basically a Passive.</li>
+            <li>Active Abilities are the most intuitive, you can simply use it on your Turn.</li>
+            <li>You can count Free-Action Active Abilities with a Duration as some kind of Passive.</li>
         </ul>
         <p class="bottomless"><b>On-Attack Abilities:</b></p>
         <ul>
-            <li>These Abilities can only be used on an Attack or Save, to enhance it in some way.</li>
-            <li>On-Attack Abilities must be commited to before the Attack.</li>
-            <li>By default if the Attack or Save is an AOE, the On-Attack will Target ONLY ONE chosen Hit Target!</li>
-            <li>When an On-Attack and the Parent Attack both do the same Damage Type, count it as a singular Damage Instance.</li>
-            <li>If there are <b>Offspring Attacks,</b> they do carry on all On-Attack Abilities.</li>
-            <li>The Offspring Attack does NOT carry on the On-Attack which caused itself.</li>
+            <li>On-Attacks are used just before making a "Parent" Attack or Save, and can be made as Reactions too.</li>
+            <li>By default, even if the Parent is an AOE, the On-Attack will Target ONLY <b>ONE</b> Target!</li>
+            <li>When an On-Attack and the Parent both do the same Damage Type, unify it as one single Damage Instance.</li>
+            <li>If an On-Attack creates an Offspring Attack, you can put On-Attacks on that too.</li>
         </ul>
         <p class="bottomless"><b>Reactive Abilities:</b></p>
         <ul>
-            <li>These Abilities can only be used when an Activation Condition is met.</li>
-            <li>These can be used outside of the caster's Turn.</li>
-            <li>When more Entities want to use Reactions at the same time, they do in Descending INIT Order.</li>
-            <li>Reacting before an Attack, with a Reaction without Specific Trigger can only be if your <box>4 × INIT</box> is higher than <b>Attack's To-Hit.</b></li>
-            <li>Unaware Targets cannot make <b>Reactions</b>, unless their <box>2 × INIT</box> is at least <b>Attack's To-Hit</b> or <box>2 × Save's Difficulty</box></li>
+            <li>These Abilities can only be used when some Trigger is met.</li>
+            <li>These can be used outside of Turn order, if you have the Actions to do so.</li>
+            <li><a target="_blank" href="mechanics.html#reactions">More information about Reactions</a>.</li>
         </ul>
         <p class="bottomless"><b>Stance Abilities:</b></p>
         <ul>
-            <li>These Abilities, when used put you in a Stance, there are things which can Break or Trigger a Stance.</li>
-            <li><b>Attack-Action, Defense-Action, Shoving, and Grappling</b> Count as Abilities when Breaking Stances!</li>
-            <li>Triggering a Stance also Breaks it.</li>
+            <li>When using Stance Abilities you are put in a Stance, the Ability specifies what can Break or Trigger said Stance.</li>
+            <li>Breaking or Triggering a Stance Ends it.</li>
             <li>You can only be in one Stance at a time.</li>
             <li>You can Break your own Stance as a Free-Action.</li>
-            <li>Using On-Attack Abilities do not Break the Stance.</li>
-            <li>Stacking Stances are stackable by casting the Stance multiple times before Triggering.</li>
+            <li>Some Stances can be Stacked, allowing you to use the Stance again while already inside.</li>
+            <li><b>Note:</b> <b>Attack-Action, Defense-Action, Shoving, and Grappling</b> Count as Abilities!</li>
+            <li>Using On-Attack Abilities don't Break the Stance!</li>
         </ul>
         <p class="bottomless"><b>Meta Abilities:</b></p>
         <ul>
-            <li>These Abilities are used when using a different Ability.</li>
-            <li>These Modify the Ability in some ways.</li>
+            <li>Meta Abilities are used to Modify different Abilities in special ways.</li>
+            <li>If the Modification is anything other than <a target="_blank" href="mechanics.html#potency">Potency</a>, then the Meta-Ability's ESS must reach at least its "Parent".</li>
         </ul>
         <p class="bottomless"><b>Passive Abilities:</b></p>
         <ul>
-            <li>These Abilities are always active, unless the requirements are lost.</li>
-            <li>Passives tagged with <b>Auto</b> will apply automatically if the Requirements are met.</li>
+            <li>Passive Abilities provide some continuous effect, or allow new unique Actions.</li>
+            <li>Passives which have the <b>Auto Tag</b> will apply automatically if the Requirements are met.</li>
         </ul>
         <h2 id="Proxy">PROXY</h2>
         <hr>
@@ -129,6 +125,12 @@
                 <li>You can Empower a Passive Ability, putting it in an Empowered state for 1 Minute (20 Rounds).</li>
                 <li>You can Refresh the Cooldown by Spending <b>1 Fate</b>, or using <b>Instant Memorization</b>.</li>
             </ul>
+            <p class="bottomless"><b>Attached Meta-Abilities:</b></p>
+            <ul>
+                <li>If you have written forms of Meta-Abilities, when you Memorize you can also Attach said Meta-Abilities to it.</li>
+                <li>When you use your Memorized Abilities, it will always use it with the Attached Meta-Abilities.</li>
+                <li>If some Meta-Ability is on Cooldown then you can't use your Memorized Ability.</li>
+            </ul>
             <p>
                 A written Spell's Market Price is <box>10 × XP Cost</box>, but may not be on sale, especially higher level Spells.<br>
                 A Player Character may also write down or copy a Spell they have, this takes <box>100 × XP Cost / (INT + Arcana)</box> Hours.
@@ -139,10 +141,10 @@
         <div>
             <p>
                 For <box>5 XP</box> you can Unlock the <b>Flow State</b>, allowing you to Unlock <box>1</box> Temporary Ability.<br>
-                Entering the Flow State is a <b>Non-Action</b> and lasts for 1 Minute (20 Rounds).<br>
+                Entering the Flow State is a <b>Non-Action Reaction</b> and lasts for 1 Minute (20 Rounds).<br>
                 The Ability's XP Cost mustn't be higher than your <b>WILL</b>, and its Requirements must be met.<br>
                 You also gain all of the Ability's Unlocks for which you have the Requirement.<br>
-                For this Ability treat all your Bast Stats as if they were equal to your <b>WILL</b>, and its <b>ESS</b> as <box>WILL / 10</box><br>
+                For this Ability treat all your Base Stats as if they were equal to your <b>WILL</b>, and its <b>ESS</b> as <box>WILL / 10</box><br>
                 Flow State's Cooldown is <b>Short-Rest</b>, Refreshed by Spending <b>1 Fate</b>. (You can Stack multiple Flow States)
             </p>
             <p class="bottomless"><b>Empowered Casting:</b></p>
@@ -157,14 +159,15 @@
             <p>
                 For <box>5 XP</box> you can Unlock Ability Wishing, giving you <box>3</box> Wishes, replenishing after a <b>Long-Rest</b>.<br>
                 If your EGO is at least the Ability's XP Cost, you can Wish that Ability, with all its Unlocks.<br>
+                Wishing takes the same Action and Resource Costs as normally using the Ability does.<br>
                 The GM may allow Wishes that are not normally replicable by an Ability.
             </p>
             <p class="bottomless"><b>Wished Abilities:</b></p>
             <ul>
                 <li>Treat all your Base Stats as if they were equal to your <b>EGO</b> Stat, the <b>ESS</b> as <box>EGO / 10</box>, and the Ability's Type as <b>Innate</b>.</li>
                 <li>You can put Meta-Abilities on the Wished Ability, and at <box>50 EGO</box> you can put any Meta-Ability, even ones not Unlocked.<br></li>
-                <li>As a <b>Non-Action</b> you can Wish a Passive Ability to lasts for 1 Minute (20 Rounds).</li>
-                <li>As a <b>Non-Action Reaction</b> you can also Wish a Meta-Ability to put onto an Ability you're using.</li>
+                <li>As a <b>Non-Action Reaction</b> you can Wish to Unlock a Passive or Meta-Ability for 1 Minute (20 Rounds).</li>
+                <li>Stances and Ability Durations don't last longer than 1 Minute (20 Rounds).</li>
                 <li>At <b>1000 EGO</b> you can make Wishes at Half ESS without Spending a Wish.</li>
                 <li>You can Spend <b>1 Fate</b> in place of a Wish.</li>
             </ul>

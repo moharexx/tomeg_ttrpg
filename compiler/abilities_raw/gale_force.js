@@ -8,11 +8,11 @@ module.exports = {
         "5 Transmutation | 10 Conjuration | 20 Evocation",
     ],
     reqs_full: [
-        "<b>Spell:</b> (5 INT | 5 WILL | 5 EGO), (5 Transmutation | 10 Conjuration | 20 Evocation)",
+        "<b>Spell:</b> 5 CS, (5 Transmutation | 10 Conjuration | 20 Evocation)",
     ],
     tags: [
         "Offense",
-        "Physical Damage, Projectile",
+        "Ranged, Physical Damage",
         "Main-Action",
     ],
     unlock_cost: 5,
@@ -20,7 +20,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, fire a Single Target Projectile made of air.",
+                `Fire a long Range, Single Target Projectile of condensed air.`,
+                `You can Remove the Soaked and/or Heat Effects from chosen Targets which are Hit.`,
+                `Gale Force's ESS must be at least Half of the Effect's ESS to Remove it.`,
             ],
         },
     ],
@@ -32,8 +34,8 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["Range", "30 / 60 × CS^(1/3)"],
-                ["Damage", "(2d8 × ESS) Physical"],
+                ["Range", "40 / 80 × CS^(1/3)"],
+                ["Physical Damage", "2d8 × ESS"],
             ],
         },
     ],

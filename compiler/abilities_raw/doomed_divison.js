@@ -5,14 +5,14 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "10 CS, (5 Anima | 10 Abjuration | 20 Enchantment)",
+        "5 Anima | 10 Abjuration | 20 Enchantment",
     ],
     reqs_full: [
         "<b>Spell:</b> 10 CS, (5 Anima | 10 Abjuration | 20 Enchantment)",
     ],
     tags: [
         "Offense",
-        "Ranged, Static Sphere AOE, Necrotic Damage, VIT Save, Debuff, Effect",
+        "Ranged, Static Sphere AOE, VIT Save, Necrotic Damage, Debuff, Effect",
         "Main-Action / Continuous",
     ],
     unlock_cost: 10,
@@ -20,24 +20,24 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Within Range, in a choosen Sphere secrade light starts to emanate.`,
+                `Within Range, in a choosen Sphere, dark orbs of energy start flickering.`,
                 `When using this Ability, you are put in <b>Doomed Divison Stance</b>.`,
-                `When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
+                `When Entering this Stance and in your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
             ],
         },
         {
             type: "list",
             content: [
-                `<b>Overflow:</b>`,
-                `As a <b>Main-Action</b>, you can now inflict Damaged Entities with the <b>Darkness Effect</b>.`,
-                `This can be done only once on this Ability.`,
+                `<b>Overflow</b> (Main-Action):`,
+                `For the rest of the Stance's Duration, Damaged Entities will get the <b>Darkness Effect</b>.`,
             ],
         },
         {
             type: "list",
             content: [
                 `<b>Darkness Effect:</b>`,
-                `All Healing, Shielding, and BUFFER they recieve until the End of their Next Turn is Reduced by <box>6 × ESS</box>`,
+                `All Healing, Shielding, and BUFFER recieved is Reduced by <box>6 × ESS</box>`,
+                `This Effect lasts until the End of the Target's Next Turn.`,
             ],
         },
         {
@@ -55,12 +55,12 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["Stance Trigger", "Continuous"],
+                ["Stance Trigger", "None"],
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["VIT Save", "8 × ESS"],
-                ["Damage", "(1d10 × ESS) Necrotic"],
-                ["Healing Reductions", "6 × ESS"],
+                ["Necrotic Damage", "1d6 × ESS"],
+                ["Support Reductions", "6 × ESS"],
             ],
         },
     ],

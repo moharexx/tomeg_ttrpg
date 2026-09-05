@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Ranged, Static Sphere AOE, Physical Damage, VIT Save, Crowd Control",
+        "Ranged, Static Sphere AOE, VIT Save, Physical Damage",
         "Main-Action / Continuous",
     ],
     unlock_cost: 10,
@@ -20,17 +20,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Within Range, in a choosen Sphere the air becomes dusty, and small rocks will start to form.`,
+                `Within Range, in a choosen Sphere the air becomes dusty, small rocks will starting to form.`,
                 `When using this Ability, you are put in <b>Seismic Dominion Stance</b>.`,
-                `When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
+                `When Entering this Stance and in your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
             ],
         },
         {
             type: "list",
             content: [
-                `<b>Overflow:</b>`,
-                `As a <b>Main-Action</b>, you can Double its <b>Armor-Pen</b>.`,
-                `This can be done only once on this Ability.`,
+                `<b>Overflow</b> (Main-Action):`,
+                `For the rest of the Stance's Duration, the Base <b>Armor-Pen</b> is Doubled.`,
+                `This feature can't Stack.`,
             ],
         },
         {
@@ -52,7 +52,7 @@ module.exports = {
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["VIT Save", "8 × ESS"],
-                ["Damage", "(2d6 × ESS) Physical"],
+                ["Physical Damage", "1d8 × ESS"],
                 ["Armor-Pen", "5 × ESS"],
             ],
         },

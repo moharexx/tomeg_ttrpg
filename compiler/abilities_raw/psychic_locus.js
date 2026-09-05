@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Ranged, Static Sphere AOE, Psychic Damage, VIT Save, Effect",
+        "Ranged, Static Sphere AOE, Soul Save, Psychic Damage, Effect",
         "Main-Action / Continuous",
     ],
     unlock_cost: 10,
@@ -20,24 +20,23 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Within Range, in a choosen Sphere the air becomes dusty, and small rocks will start to from.`,
+                `Within Range, in a choosen Sphere gets filled with colorful, opaque, unrecognizable patterns.`,
                 `When using this Ability, you are put in <b>Psychic Locus Stance</b>.`,
-                `When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>Soul Save</b> or take Damage.`,
+                `When Entering this Stance and in your subsequent Turns, Entities in the Radius must Succeed a <b>Soul Save</b> or take Damage.`,
             ],
         },
         {
             type: "list",
             content: [
-                `<b>Overflow:</b>`,
-                `As a <b>Main-Action</b>, you can now inflict Damaged Entities with the <b>Charmed Effect</b>.`,
-                `This can be done only once on this Ability.`,
+                `<b>Overflow</b> (Main-Action):`,
+                `For the rest of the Stance's Duration, Damaged Targets get the <b>Charmed Effect</b>.`,
             ],
         },
                 {
             type: "list",
             content: [
                 `<b>Charmed Effect:</b>`,
-                `The Charmed Target makes <b>Soul Save's</b> with Disadvantage.`,
+                `Targets make <b>Soul Saves</b> with Disadvantage.`,
                 `This Effect Ends at the End of Casters Next Turn.`,
             ],
         },
@@ -56,11 +55,11 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["Stance Trigger", "Continuous"],
+                ["Stance Trigger", "None"],
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["Soul Save", "8 × ESS"],
-                ["Damage", "(2d6 × ESS) Psychic"],
+                ["Psychic Damage", "1d10 × ESS"],
             ],
         },
     ],

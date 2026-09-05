@@ -30,7 +30,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Overflow</b> (Main-Action):`,
-                `You Double the </b>Radius</b> until the Stance Ends.`,
+                `For the rest of the Stance's Duration, its Radius is Doubled.`,
                 `This feature can't Stack.`,
             ],
         },

@@ -8,11 +8,11 @@ module.exports = {
         "10 Transmutation | 20 Enchantment | 50 Anima",
     ],
     reqs_full: [
-        "<b>Spell:</b> (200 INT | 50 WILL | 20 EGO), (10 Transmutation | 20 Enchantment | 50 Anima)",
+        "<b>Spell:</b> 20 CS, (10 Transmutation | 20 Enchantment | 50 Anima)",
     ],
     tags: [
         "Defense",
-        "Healing, Targeting 5",
+        "Ranged, Healing",
         "Main-Action + Bonus-Action",
     ],
     unlock_cost: 20,
@@ -20,15 +20,15 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you Target up to 5 different Biological Entities you can Pinpoint within Range, and bless them with Healing.",
+                `When used, you give out a total of <box>20 × ESS</box> Healing between Pinpointed Targets in Range.`,
+                `The Maximum Healing any Target can recieve is <box>4 × ESS</box>`
             ],
         },
         {
-            type: "dots",
+            type: "list",
             content: [
-                "This does not regrow lost body parts.",
-                "Undead Entites cannot be Healed.",
-                "Yes, you can heal a corpse. No, it won't revive them.",
+                `<b>Potency Boost:</b>`,
+                `For each point of <a href="../main/mechanics.html#potency" target="_blank">Potency</a>, gain +5 Healing Pool, and +1 Max Healing.`,
             ],
         },
     ],
@@ -40,9 +40,9 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action + Bonus-Action"],
-                ["Max Targets", "5"],
                 ["Range", "5 × CS^(1/3)"],
-                ["Healing", "4 × ESS"],
+                ["Healing Pool", "20 × ESS"],
+                ["Max Healing", "4 × ESS"],
             ],
         },
     ],

@@ -23,8 +23,8 @@ module.exports = {
                 `When using this Ability, you are put in River Surfing Stance.`,
                 `While in River Surfing Stance, you cannot use the regular Movement-Action.`,
                 `Once on your Turns, including the first Turn of the Stance, as a Free-Action you can Surf <box>3 × CS^(1/3)</box> meters.`,
-                `This Stance has two triggers, you can choose one from below.`,
                 `If the caster gets Damaged while in River Surfing Stance, the Caster will get the <a href="../main/mechanics.html#conditions">Prone Condition</a>.`,
+                `This Stance has two triggers, you can choose one from below.`,
             ],
         },
         {
@@ -41,7 +41,14 @@ module.exports = {
                 `<b>Board Kick:</b>`,
                 `You make an Attack against an Entity within <box>6 × CS^(1/3)</box>`,
                 `When using this Stance Trigger, you cannot use the Free-Action Surf provided by the Stance.`,
-                `<b>Soaked Effect:</b> On Dealing Damage, the Target gets Soaked with Water.`,
+                `Targets Damaged by this get the <b>Soaked Effect</b>.`,
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                `<b>Soaked Effect:</b>`,
+                `An Entity can use a <b>Main-Action</b> to Remove this Effect from themselves.`,
             ],
         },
         {
@@ -59,10 +66,10 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action + Bonus-Action"],
-                ["Stance Trigger", "Bonus-Action at your Next Turn."],
+                ["Stance Trigger", "Bonus-Action in your Next Turn."],
                 ["Board Speed", "3 × CS^(1/3)"],
                 ["Barrel Roll", "6 × CS^(1/3)"],
-                ["Borad Kick Range", "6 × CS^(1/3)"],
+                ["Board Kick Range", "6 × CS^(1/3)"],
                 ["Physical Damage", "1d8 × ESS"],
             ],
         },

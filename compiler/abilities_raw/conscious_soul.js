@@ -5,10 +5,10 @@ module.exports = {
         "Innate",
     ],
     reqs_short: [
-        "20 INT | 20 WILL | 20 EGO",
+        "20 CS",
     ],
     reqs_full: [
-        "<b>Innate:</b> 20 INT | 20 WILL | 20 EGO",
+        "<b>Innate:</b> 20 CS",
     ],
     tags: [
         "Utility",
@@ -19,7 +19,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Your Soul is conscious, even without a Vessel.`,
+                `Your Soul is conscious even without a Vessel.`,
                 `This means you have Actions even when you are "Dead".`,
                 `The base rule of 1 Minute (20 Rounds) for when your Soul naturally floats away after Death is removed.`,
                 `The Soul can still get destroyed if <b>SP</b> goes below <box>-Max SP</box>`,

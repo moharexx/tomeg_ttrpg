@@ -21,6 +21,7 @@ module.exports = {
             type: "p",
             content: [
                 `When used, fire a Single Target Projectile made of water.`,
+                `Targets Damaged by this Ability get the <b>Soaked Effect</b>.`,
             ],
         },
         {
@@ -28,7 +29,7 @@ module.exports = {
             content: [
                 `<b>Underwater Jet:</b>`,
                 `When the Projectile goes into a body of Water it will turn into an Underwater Jet.`,
-                `While in Jet form, the Projectile's travel path can bend, and each meter traveled will count as half a meter for its range.`,
+                `While in Jet form, the Projectile's travel path can bend, and each meter traveled will count as half a meter for its Range.`,
                 `When it exits the Water, the Jet turns back into the Projectile and continues traveling.`,
             ],
         },
@@ -36,8 +37,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Soaked Effect:</b>`,
-                `On Dealing Damage, the Target gets Soaked with water.`,
-                `This Effect Ends after the Entity uses a <b>Main-Action + Bonus-Action</b> to remove it.`,
+                `An Entity can use a <b>Main-Action</b> to Remove this Effect from themselves.`,
             ],
         },
     ],
@@ -50,7 +50,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Range", "10 / 20 × CS^(1/3)"],
-                ["Damage", "(2d10 × ESS) Physical"],
+                ["Physical Damage", "2d10 × ESS"],
             ],
         },
     ],

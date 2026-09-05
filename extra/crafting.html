@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../assets/icon.png">
+    <link rel="stylesheet" href="../assets/style_main.css">
+    <script src="../assets/script_main.js"></script>
+    <title>Crafting</title>
+</head>
+
+<body>
+    <header>
+        <a onclick="side_bar_func()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></a>
+        <a href="../main/main.html">Main Page</a>
+        <a href="../main/mechanics.html">Mechanics</a>
+        <a href="../main/abilities.html">Abilities</a>
+        <a href="../main/extra.html">Extra</a>
+    </header>
+    <side_orb id="side_orb" onclick="side_bar_func(true)"></side_orb>
+    <side_menu id="side_menu"></side_menu>
+    <main onclick="side_bar_func(false)">
+        <!--CRAFTING-->
+        <h1 id="crafting">CRAFTING</h1>
+        <hr>
+        <p>
+            Crafting is process of creating items, from mundane items, to magical artifacts, and even technological marvels.<br>
+            You can Craft any Item from; <a target="_blank" href="items_and_costs.html">Items and Costs</a>, <a target="_blank" href="curios.html">Curios</a>, <a target="_blank" href="consumable_items.html">Consumable Items</a>, and <a target="_blank" href="vehicles.html">Vehicles</a>, as long as it has a Market Price.<br>
+            For this you will Spend Currency at a settlement which can provide, or your own Crafting Materials at hand.
+        </p>
+        <p>
+            The Mastery used is determined by the Item; Athletics for metalworking, Sleight for small precise things, Arcana for Magic, ect...<br>
+            The Maximum Tier the Item can be is up to <box>Mastery / 10</box><br>
+            In a single workday (Max 8 Hours) you can Spend up to <box>10 × Mastery</box> Currency in Crafting the Item.<br>
+            <b>Note:</b> Crafting Materials at hand allow 10× faster Spending.
+        </p>
+        <p>
+            By having <a target="_blank" href="../abilities/essence_sustenance.html">Essence Sustenance</a> or <a target="_blank" href="../abilities/quick_recovery.html">Quick Recovery</a> you can work for up to 16 Hours per day.<br>
+            By having both, you can work 24 Hours every day...
+        </p>
+        <h2 id="master_crafter">Master Crafter</h2>
+        <hr>
+        <p>
+            By Spending <box>5 XP</box>, the Master Crafter Ability can be Unlocked, making Crafting easier and better.
+        </p>
+        <p class="bottomless"><b>Master Crafter:</b></p>
+        <ul>
+            <li>Allows the Maximum Tier of Items Crafted to be <box>Total XP / 50</box></li>
+            <li>Allows Spending up to <box>2 × Total XP</box> in a single workday.</li>
+            <li>Provides a 10% Discount in Crafting, treating the Item as 10% less expensive.</li>
+            <li>Crafted Items are considered "Masterwork", allowing Innate Permanent <a target="_blank" href="../abilities/enchant_armament.html">Enchant Armaments</a>.</li>
+        </ul>
+        <h2 id="crafting_materials">Crafting Materials</h2>
+        <hr>
+        <p>
+            Crafting Materials can be used for Crafting, and can impact the final product.<br>
+            These Materials can range from mined minerals, ores, to exotic body parts of monsters, or even salvaged artifacts.<br>
+            Crafting Materials already at hand are Spent 10× faster than regular Crafting.<br>
+        </p>
+        <p>
+            The first property of Crafting Materials is Market Value, which tells the quantity and/or quality.<br>
+            The Market Value determines how much it can contribute to Crafting an Item, and how much it's worth to sell.<br>
+            Crafting Materials are consumed in parts, leaving leftover Market Value if it wasn't all used up.<br>
+            <b>Note to GM:</b> Crafting Materials should be hard to sell at full price, as demand for such specific items are usually very low.
+        </p>
+        <p>
+            The second property are Tags, which determine what said Crafting Material can be used for.<br>
+            These are the same Tags abilities use, for example; Offense, Defense, Heat Damage, Negation, ect...<br>
+            The more specific a Tag is the more the Crafting Material should be usually worth.<br>
+            Weapons accept the <box>Offense</box> Tag, while Armor the <box>Defense, Negation</box> Tags.<br>
+            Ability Type Curios require at least 1 matching Tag, anything else is up to GM.
+        </p>
+        <p>
+            [Type] Damage Tag can be used for both Weapons and Armor;<br>
+            If at least 20% of the Armament's Price is made of said Material, it replaces 1 Damage or Resistance Type.<br>
+            This is the same as an Innate Permanent <a target="_blank" href="../abilities/imbue_armament.html">Imbue Armament</a>.
+        </p>
+        <h2 id="salvaging">Salvaging</h2>
+        <hr>
+        <p>
+            Craftable Items can also be broken down back into Crafting Material(s).<br>
+            Total Market Value should be equal to the Salvaged Item's, and should have 2-3 Tags, exact ruling up to GM.<br>
+            This is done at 10× speed, the same speed as using Crafting Materials to Craft.
+        </p>
+    </main>
+</body>
+
+</html>

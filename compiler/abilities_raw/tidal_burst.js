@@ -5,14 +5,14 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "10 CS, (5 Conjuration | 10 Transmutation | 20 Evocation)",
+        "5 Conjuration | 10 Transmutation | 20 Evocation",
     ],
     reqs_full: [
-        "10 CS, (5 Conjuration | 10 Transmutation | 20 Evocation)",
+        "<b>Spell:</b> 10 CS, (5 Conjuration | 10 Transmutation | 20 Evocation)",
     ],
     tags: [
         "Offense, Defense",
-        "Physical Damage, BUFFER",
+        "Melee, Flow Cone AOE, Physical Damage, BUFFER",
         "Main-Action + Bonus-Action / Bonus-Action",
     ],
     unlock_cost: 10,
@@ -23,6 +23,7 @@ module.exports = {
                 `When using this Ability, you are put in <b>Tidal Burst Stance</b>, and surround yourself with a water bubble.`,
                 `When entering <b>Tidal Burst Stance</b>, you gain <b>(20 × ESS) BUFFER</b>.`,
                 `On Stance Trigger, you make an Attack in a Cone, converting half your <b>BUFFER</b> into <b>Physical Damage</b>.`,
+                `Targets Damaged by this Ability get the <b>Soaked Effect</b>.`,
             ],
         },
         {
@@ -42,8 +43,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Soaked Effect:</b>`,
-                `On Dealing Damage, the Target gets wet with water.`,
-                `This Effect Ends after the Entity uses a <b>Main-Action + Bonus-Action</b> to remove it.`,
+                `An Entity can use a <b>Main-Action</b> to Remove this Effect from themselves.`,
             ],
         },
     ],
@@ -59,7 +59,7 @@ module.exports = {
                 ["Cone Length", "2 × CS^(1/3)"],
                 ["Cone Spread", "90° (1 Forward = +2 Width)"],
                 ["BUFFER", "20 × ESS"],
-                ["Damage", "Half of Remaining BUFFER"]
+                ["Physical Damage", "Half of Remaining BUFFER"]
             ],
         },
     ],

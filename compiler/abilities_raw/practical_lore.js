@@ -44,8 +44,8 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Survival Wits</b> (Free-Action Reaction):`,
-                `You can replace a single Save's Modifier with <box>Lore Modifier / 2</box>.`,
-                `You can do this after you already Rolled the Save, don't reroll it, just adjust the Finalized Value.`,
+                `You can replace a single Save's Modifier with <box>Lore Modifier / 2</box>`,
+                `You can do this after you already Rolled the Save, don't reroll it, just adjust the Final Value.`,
             ],
         },
     ],

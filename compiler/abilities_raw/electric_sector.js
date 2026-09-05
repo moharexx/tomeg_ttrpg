@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Ranged, Static Sphere AOE, Electric Damage, VIT Save",
+        "Ranged, Static Sphere AOE, VIT Save, Electric Damage",
         "Main-Action / Continuous",
     ],
     unlock_cost: 10,
@@ -22,14 +22,14 @@ module.exports = {
             content: [
                 `Within Range, in a choosen Sphere the electric charge increases, sparkles and bolts of electricity start to appear.`,
                 `When using this Ability, you are put in <b>Electric Sector Stance</b>.`,
-                `When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
+                `When Entering this Stance and in your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
             ],
         },
         {
             type: "list",
             content: [
                 `<b>Overflow</b> (Main-Action):`,
-                `You increase the </b>Damage</b> to <box>1d12 × ESS</box> until the Stance Ends.`,
+                `You increase the </b>Base Damage</b> to <box>1d12 × ESS</box> until the Stance Ends.`,
             ],
         },
         {
@@ -47,7 +47,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["Stance Trigger", "Continuous"],
+                ["Stance Trigger", "None"],
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["VIT Save", "8 × ESS"],

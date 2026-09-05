@@ -5,23 +5,23 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "Melee Weapon | Martial Arts",
+        "50 Melee Weapon | 50 Martial Arts",
     ],
     reqs_full: [
-        "50 Melee Weapon | 50 Martial Arts",
+        "<b>Skill:</b> 50 Melee Weapon | 50 Martial Arts",
     ],
     tags: [
         "Utility",
         "Reach",
     ],
-    unlock_cost: 50,
+    unlock_cost: 0,
     description: [
         {
             type: "p",
             content: [
-                "Multiply Melee Weapon's Reach.",
-                "This only Effects Weapons which are currently weilded.",
-                "The Reach Multipler's new Reach will Affect Basic Attack-Actions, and any Reach Stat Calculation in Abilities.",
+                `Multiply your Melee Reach.`,
+                `The new Reach affects your Melee Attacks-Actions, and Abilities which scale based on your Melee Reach.`,
+                `<b>Note:</b> This gives the same scaling to Melee Reach as Ranged Attacks have by default.`,
             ],
         },
     ],

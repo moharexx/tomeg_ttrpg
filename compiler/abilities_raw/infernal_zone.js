@@ -22,14 +22,14 @@ module.exports = {
             content: [
                 `Within Range, in a choosen Sphere the temperature increases, fire and smoke starts to appear, on objects and in the air.`,
                 `When using this Ability, you are put in <b>Infernal Zone Stance</b>.`,
-                `When Entering this Stance and at the Start of your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
+                `When Entering this Stance and in your subsequent Turns, Entities in the Radius must Succeed a <b>VIT Save</b> or take Damage.`,
             ],
         },
         {
             type: "list",
             content: [
                 `<b>Overflow</b> (Main-Action):`,
-                `You increase the <b>VIT Save</b> to <box>12 × ESS</box>`,
+                `For the rest of the Stance's Duration, you increase the Base <b>VIT Save</b> to <box>12 × ESS</box>`,
             ],
         },
         {
@@ -51,7 +51,7 @@ module.exports = {
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["VIT Save", "8 × ESS"],
-                ["Heat Damage", "1d8 × ESS"],
+                ["Heat Damage", "1d10 × ESS"],
             ],
         },
     ],

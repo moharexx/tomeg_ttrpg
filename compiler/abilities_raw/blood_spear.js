@@ -11,7 +11,7 @@ module.exports = {
     ],
     reqs_full: [
         "<b>Skill:</b> 20 Martial Arts",
-        "<b>Spell:</b> (10 INT | 10 WILL | 10 EGO), (5 Transmutation | 10 Enchantment | 20 Anima)",
+        "<b>Spell:</b> 10 CS, (5 Transmutation | 10 Enchantment | 20 Anima)",
     ],
     tags: [
         "Offense",
@@ -25,15 +25,15 @@ module.exports = {
             content: [
                 `When used, fire a Spear made of Blood, in a straight Line.`,
                 `This is a Flow Line AOE Ranged Attack, flowing out from the Caster.`,
-                `This Ability has <a href="../main/mechanics.html#executing" target="_blank">Executing.</a>`,
+                `This Ability has <a href="../main/mechanics.html#executing" target="_blank">Executing</a>.`,
+                `Targets Damaged by this Ability get the <b>Soaked Effect</b>.`,
             ],
         },
         {
             type: "list",
             content: [
                 `<b>Soaked Effect:</b>`,
-                `On a Hit, the Target gets Soaked with "water".`,
-                `This Effect Ends after the Entity uses a <b>Main-Action + Bonus-Action</b> to remove it.`,
+                `An Entity can use a <b>Main-Action</b> to Remove this Effect from themselves.`,
             ],
         },
     ],
@@ -48,7 +48,7 @@ module.exports = {
                 ["Ability Cost", "(10 REST-HP) × ESS"],
                 ["Line Length", "6 × (STR | CS)^(1/3)"],
                 ["Line Width", "(STR | CS)^(1/3) / 2"],
-                ["Damage", "(2d6 × ESS) Physical"],
+                ["Physical Damage", "2d6 × ESS"],
             ],
         },
     ],

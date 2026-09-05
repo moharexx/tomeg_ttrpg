@@ -34,7 +34,7 @@ module.exports = {
                 ["Cast Time", "Main-Action + Bonus-Action"],
                 ["Range", "60 / 120 × CS^(1/3)"],
                 ["To-Hit Multiplier", "2×"],
-                ["Damage", "(2d8 × ESS) Heat"],
+                ["Heat Damage", "3d4 × ESS"],
             ],
         },
     ],

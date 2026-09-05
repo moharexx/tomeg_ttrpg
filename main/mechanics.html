@@ -10,11 +10,11 @@
 
 <body>
     <header>
-        <div onclick="side_bar_func()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></div>
-        <div onclick="go_to('main/main.html')">Main Page</div>
-        <div onclick="go_to('main/mechanics.html')">Mechanics</div>
-        <div onclick="go_to('main/abilities.html')">Abilities</div>
-        <div onclick="go_to('main/extra.html')">Extra</div>
+        <a onclick="side_bar_func()" class="side_menu_button"><img src="./../assets/icon_cog.png" alt=""></a>
+        <a href="../main/main.html">Main Page</a>
+        <a href="../main/mechanics.html">Mechanics</a>
+        <a href="../main/abilities.html">Abilities</a>
+        <a href="../main/extra.html">Extra</a>
     </header>
     <side_orb id="side_orb" onclick="side_bar_func(true)"></side_orb>
     <side_menu id="side_menu"></side_menu>
@@ -52,9 +52,9 @@
         <hr>
         <p>
             By default, if you Roll 10 on a d10 Check, then it's a <b>CRIT</b>.<br>
-            The default <b>CRIT Range</b> is 1, and you CRIT if the Natural d10 Value is at least <box>11 - CRIT Range</box>
-            There are things which can add or subtract from your CRIT Range, making it easier, or even impossible to CRIT.
-            <b>A CRIT Results in:</b> 2× Damage, 2× Healing, 2× Shielding, 2× BUFFER<br>
+            The default <b>CRIT Range</b> is 1, and you CRIT if the Natural d10 Value is at least <box>11 - CRIT Range</box><br>
+            There are things which can add or subtract from your CRIT Range, making it easier, or even impossible to CRIT.<br>
+            <b>A CRIT Results in:</b> 2× Damage, 2× Healing, 2× Shielding, 2× BUFFER
         </p>
         <p>
             You may roll a d10 to determine CRIT for things which by default don't require a d10 Check, like Healing Spells.<br>
@@ -1308,12 +1308,12 @@
                 Reactions are Actions which you can do out of your Turn Order.<br>
                 Reactions have an Action Cost just like regular Actions.<br>
                 Reactions may have a Trigger, this is when you can use said Reaction.<br>
-                Reactions without any specific Trigger can just be done anytime you feel like it.
+                Reactions without any Specific Trigger can just be done anytime you feel like it. (<a href="#ready">Ready</a>)
             </p>
             <p>
-                When more Entities want to use Reactions at the same time, they do in Descending INIT Order.<br>
-                Reacting before an Attack, with a Reaction without a specific Trigger can only be if your <box>4 × INIT</box> is higher than <b>Attack's To-Hit.</b><br>
-                Unaware Targets cannot make <b>Reactions</b>, unless their <box>2 × INIT</box> is at least <b>Attack's To-Hit</b> or <box>2 × Save's Difficulty</box>
+                When multiple Entities use Reactions at the same time, they do the same way as Initiative Order is handled.<br>
+                When Reacting against an Attack, without a Specific Trigger, your <box>3 × INIT</box> must be at least the <b>Attack's To-Hit</b>.<br>
+                Unaware Targets cannot make <b>Reactions</b>.
             </p>
         </div>
         <h2 id="wielding" class="collapsible">Wielding</h2>
@@ -2172,7 +2172,7 @@
             When a Flowing AOE Attack is Fully Negated by an Entity, or tanked by something considered Full Cover (like a wall), the AOE's Flow stops at that point.<br>
             <b>Example:</b> A Line Hits a Target, which fully Negates the Attack, there will be a gap in the AOE behind the Target.<br>
             <b>Example:</b> A Cone or Sphere Hits a Target, which fully Negates the Attack, there will be a thin cone shaped gap in the AOE behind the Target.<br>
-            <b>Note:</b> A Crawling AOE will just Crawl around a Target (including walls).
+            <b>Note:</b> Crawling AOEs will just Crawl around small Targets, even if "Fully Negated".
         </p>
     </main>
 </body>

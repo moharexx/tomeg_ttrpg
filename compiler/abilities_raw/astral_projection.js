@@ -15,7 +15,7 @@ module.exports = {
     ],
     tags: [
         "Utility",
-        "Self, Soul",
+        "Soul",
         "Bonus-Action",
     ],
     unlock_cost: 10,
