@@ -22,7 +22,7 @@ module.exports = {
             content: [
                 `When using this Ability, you are put in <b>Signature Trick Stance</b>.`,
                 `When getting into this Stance, choose an <b>On-Attack</b> or <b>Meta-Ability</b> you have Unlocked, which Costs a <b>Bonus-Action</b>.`,
-                `While in this Stance, you can use this <b>On-Attack</b> as a <b>Free-Action</b>, this has a Cooldown of <box>1 Minute (20 Rounds)</box>`,
+                `While in this Stance, you can use the chosen Ability as a <b>Free-Action</b>, this has a Cooldown of <box>1 Minute (20 Rounds)</box>`,
             ],
         },
         {

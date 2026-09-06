@@ -21,9 +21,9 @@ module.exports = {
             type: "p",
             content: [
                 `When using this Ability, you are put in <b>Black Flash</b> Stance.`,
-                `While in this Stance, whenever you score a CRIT, you gain back the Action Cost of the Action which was a CRIT.`,
-                `This includes On-Attacks, and Meta-Ability Cast Time modifications.`,
-                `Black Flash doesn't work if the CRIT Action's ESS (or Tier) was higher than it, or if the Cast Time is multiple Rounds.`,
+                `While in this Stance, whenever you score a CRIT, gain <box>6 × ESS</box> <a target="_blank" href="../main/mechanics.html#potency">Potency</a>.`,
+                `This Potency can't be Spent on the CRIT itself, but rather on any other Action, till the End of your Next Turn.`,
+                `<b>Note:</b> You don't have to be in the Stance to Spend the Potency, only to gain it.`,
             ],
         },
         {
@@ -42,6 +42,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
                 ["Stance Trigger", "None"],
+                ["Potency on CRIT", "6 × ESS"],
             ],
         },
     ],

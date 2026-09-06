@@ -8,7 +8,7 @@ module.exports = {
         "5 Conjuration | 10 Transmutation | 20 Enchantment",
     ],
     reqs_full: [
-        "<b>Spell:</b> (5 INT | 5 WILL | 5 EGO), (5 Conjuration | 10 Transmutation | 20 Enchantment)",
+        "<b>Spell:</b> 5 CS, (5 Conjuration | 10 Transmutation | 20 Enchantment)",
     ],
     tags: [
         "Offense",
@@ -20,8 +20,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, spray Acid in a Cone.",
-                "This is an AOE Attack, flowing out from the Caster.",
+                `When used, spray Acid in a Cone.`,
+                `This is an AOE Attack, flowing out from the Caster.`,
             ]
         },
     ],

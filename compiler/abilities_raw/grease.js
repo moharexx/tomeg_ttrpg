@@ -8,11 +8,11 @@ module.exports = {
         "5 Conjuration | 10 Transmutation | 20 Enchantment",
     ],
     reqs_full: [
-        "<b>Spell:</b> (5 INT | 10 WILL | 10 EGO), (5 Conjuration | 10 Transmutation | 20 Enchantment)",
+        "<b>Spell:</b> 5 CS, (5 Conjuration | 10 Transmutation | 20 Enchantment)",
     ],
     tags: [
         "Offense, Utility, Unlock",
-        "Heat Damage, Static Cube AOE, Crowd Control",
+        "Static Cube AOE, AGI Save, Heat Damage, Crowd Control",
         "Main-Action",
     ],
     unlock_cost: 5,
@@ -20,11 +20,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                `When used, you select a Point, and cover every surface with magical grease in the Area.`,
-                `All of the Covered Surface must be connected, and in Range.`,
-                `This includes Entities, covering them with Grease, but this does not cause slippage.`,
-                `Targets can make an <box>AGI Save of (8 × ESS)</box> to not be Covered in Grease.`,
-                `All Targets Entering, or Starting Their Turn on Grease, must make an <box>AGI Save of (8 × ESS)</box> or get the <a href="../main/mechanics.html#conditions" target="_blank">Prone Condition.</a>`,
+                `When used, select a Point you can Pinpoint, and cover everything with magical grease in that Area.`,
+                `All Targets must make an <b>AGI Save</b> of <box>8 × ESS</box>, on a Fail they become covered in Grease, and get the <a target="_blank" href="../main/mechanics.html#conditions">Prone</a> Condition.`,
+                `Any Entity which Enters or Starts its Turn in the Grease must also make an <b>AGI Save</b> against the same effects.`,
+                `If an Entity Succeeds the Save, for the next 1 Minute (20 Rounds) they don't have to make Saves against the specific Ability Instance.`,
                 `The Grease is a Pseudo Material and sublimates into nothing when the Spell's Duration runs out.`,
             ]
         },
@@ -32,8 +31,8 @@ module.exports = {
             type: "p",
             content: [
                 `When a Heat Based Attack Hits the Grease it quickly Ignites all the connected Grease and burns up.`,
-                `Any Target covered with Grease gets dealt <box>4 × ESS</box> Heat Damage as the Grease burns away.`,
-                `If an Ability procs the Soaked Condition (All water Abilities) it clears the Grease.`,
+                `Any Target covered in Grease gets dealt <box>4 × ESS</box> Heat Damage as the Grease burns away.`,
+                `If an Ability procs the Soaked Condition, it clears the Grease.`,
             ]
         },
         {
@@ -56,7 +55,7 @@ module.exports = {
                 ["Range", "5 × CS^(1/3)"],
                 ["Cube Side Length", "4 × ESS^(1/3)"],
                 ["AGI Save", "8 × ESS"],
-                ["Burn Up Damage", "(4 × ESS) Heat"],
+                ["Burn Up Heat Damage", "4 × ESS"],
             ],
         },
     ],
