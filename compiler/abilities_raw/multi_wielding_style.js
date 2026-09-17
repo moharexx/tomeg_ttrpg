@@ -34,5 +34,14 @@ module.exports = {
                 `But you lose a Bonus-Action or a Main-Action if you don't have a Bonus-Action, at the Start of Your Turns.`,
             ],
         },
+        {
+            type: "list",
+            content: [
+                `<b>Triple Wielding:</b>`,
+                `By using Multi-Wielding Style you can Wield 3 Weapons, when you do so you're Triple Wielding. #zoro`,
+                `When making an <b>Attack-Action</b> against a Target, you can make another into the same Target as a <b>Free-Action Reaction</b>.`,
+                `You can do this once per Target, refreshing at the Start of your Turns.`,
+            ],
+        },
     ],
 }

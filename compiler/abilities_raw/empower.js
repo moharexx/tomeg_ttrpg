@@ -5,10 +5,10 @@ module.exports = {
         "Any",
     ],
     reqs_short: [
-        "10 Anima",
+        "10 Anima | 10 Enchantment",
     ],
     reqs_full: [
-        "10 Anima",
+        "10 Anima | 10 Enchantment",
     ],
     tags: [
         "Potency +",

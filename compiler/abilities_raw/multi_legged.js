@@ -19,8 +19,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You are efficient in using your multiple legs.",
-                "While on Ground, MS increases by 4.",
+                `You are efficient in using your multiple legs.`,
+                `While on Ground, your <a target="_blank" href="../main/mechanics.html#move_action">Move-Actions</a> cover <box>4</box> Extra Meters, Doubled while <a target="_blank" href="../main/mechanics.html#sprint">Sprinting</a>.`,
             ],
         },
     ],

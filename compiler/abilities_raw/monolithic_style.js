@@ -39,7 +39,7 @@ module.exports = {
                 `You cannot use Reactions.`,
                 `For the purpose of Turn Order your Rolled INIT is 0.`,
                 `Every Ability, including Attack-Actions, Shove, and Grapple, but NOT the Defense-Action, will be used only at your Next Turn.`,
-                `This means each Turn you must commit those Abilities (with their Meta-Abilities) to your Next Turn.`,
+                `This means you must commit Abilities (with their Meta-Abilities) to your Next Turn, this takes the Action-Costs in advance.`,
                 `With a <a href="../main/mechanics.html#feint" target="_blank">Feint</a> you can hide what Actions you have commited.`,
             ],
         },

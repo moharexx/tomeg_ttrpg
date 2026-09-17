@@ -19,14 +19,14 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You use the <b>Treat Wounds</b> Action as a <b>Main-Action</b>, rather than the regular 1 Minute Cast Time.`,
+                `You use the <b>Treat Wounds</b> Action as a <b>Main-Action</b>, rather than the regular 1 Minute (20 Round) Cast Time.`,
                 `The <b>ESS</b> this Ability is Cast at is <box>Modifier / 10</box> (at least 1)`,
             ],
         },
         {
             type: "p",
             content: [
-                `Additionally, you can make Surgeries with just a Main-Action, but 4× Difficulty.`,
+                `Additionally, you can make Surgeries with just a <b>Main-Action</b>, but 4× Difficulty.`,
                 `This has no Cooldown.`
             ],
         },

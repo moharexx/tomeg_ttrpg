@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Defense",
-        "Buff, Touch",
+        "Touch, Buff",
         "Main-Action",
     ],
     unlock_cost: 20,

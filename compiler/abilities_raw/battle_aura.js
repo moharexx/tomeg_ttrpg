@@ -16,7 +16,7 @@ module.exports = {
     tags: [
         "Defense",
         "Self, Buff",
-        "Main-Action",
+        "Bonus-Action",
     ],
     unlock_cost: 20,
     description: [
@@ -43,7 +43,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Main-Action"],
+                ["Cast Time", "Bonus-Action"],
                 ["Range", "Self"],
                 ["Duration", "Till Consciousness is lost"],
                 ["Simulated Item Tier", "ESS"],

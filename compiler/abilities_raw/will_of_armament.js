@@ -8,7 +8,7 @@ module.exports = {
         "10 WILL",
     ],
     reqs_full: [
-        "<b>Innate:</b> 10 WILL",
+        "<b>Innate:</b> 10 WILL | 20 Enchantment",
     ],
     tags: [
         "Utility",
@@ -20,7 +20,7 @@ module.exports = {
             type: "p",
             content: [
                 `Any Weapons, Shield, and Armor you're currently Wielding or Wearing can be treated as having Tier equal to your ESS.`,
-                `This Tier increase doesn't effect any extra Enchantments the item has, those stay at the same Tier and ESS.`,
+                `This Ability doesn't effect any extra Enchantments the Armament has.`,
             ],
         },
         {

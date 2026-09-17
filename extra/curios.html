@@ -24,8 +24,8 @@
         <hr>
         <p>
             Curios are items with special properties, appearing as anything from weapons, to armors, to trinkets, to implants.<br>
-            It's scope isn't limited to just "magic", Curios can be technological marvels, like a laser sword for Tiered Armament.<br>
-            An item could have multiple Curio Effects, when that's the case, all Curio Effects are looked at separately!
+            Its scope isn't limited to just "magic", Curios can be technological marvels, like a laser sword for a Tiered Armament.<br>
+            An item could have multiple Curio Effects, like a Tiered Weapon with added Ability Casting.
         </p>
         <p>
             To be able to use a Curio, you must have them somewhere on your person, and be currently <b>Attuned</b> to them.<br>
@@ -90,7 +90,7 @@
         <ul>
             <li>These Curios, when used, use the Caster's ESS, Base Stats, and Masteries.</li>
             <li>But there is a <b>Cap</b>, based on this Curio's Tier, if the Curio isn't strong enough you can't Channel such power through it.</li>
-            <li><b>Curio Cap:</b> <box>Tier</box> ESS, and <box>20 × Tier</box> Base Stats and Masteries.</li>
+            <li><b>Curio Cap:</b> <box>Tier</box> ESS, and <box>10 × Tier</box> Base Stats and Masteries.</li>
         </ul>
         <p class="bottomless"><b>Full:</b></p>
         <ul>
@@ -101,7 +101,7 @@
         <p class="bottomless"><b>Modifications:</b></p>
         <ul>
             <li><b>Internal Cooldown:</b> Cooldown is placed on the Curio rather than the User.</li>
-            <li><b>Internal Resource:</b> Extra Resource Costs (like REST-HP or SP) aren't applied to the User.</li>
+            <li><b>Internal Resource:</b> Extra Resource Costs (HP, GRIT, SP, ect...) are negated. <a target="_blank" href="../abilities/refresh.html">Refresh</a> can't benefit from this!</li>
             <li><b>Meta-Ability:</b> Adds a Meta-Ability to the Cast.</li>
         </ul>
         <table width="70%">
@@ -115,31 +115,69 @@
             </tr>
             <tr>
                 <td>Channeling</td>
-                <td>200 × Tier</td>
+                <td>150 × Tier</td>
             </tr>
             <tr>
                 <td>Full</td>
-                <td>400 × Tier</td>
+                <td>300 × Tier</td>
             </tr>
             <tr>
                 <td>Internal Cooldown</td>
-                <td>+100 × Tier</td>
+                <td>+50 × Tier</td>
             </tr>
             <tr>
                 <td>Internal Resource</td>
                 <td>+100 × Tier</td>
             </tr>
             <tr>
-                <td>Meta-Abilities</td>
-                <td>+100 × Tier per Meta-Ability, <b>double</b> for <a target="_blank" href="../abilities/refresh.html">Refresh</a></td>
+                <td>Added Meta-Abilities</td>
+                <td>+50 × Tier per Meta-Ability</td>
             </tr>
             <tr>
-                <td>Minimum Price</td>
-                <td>20 × Ability's Unlock XP</td>
+                <td>Minimum Base Price</td>
+                <td>15 × Ability's Unlock XP</td>
             </tr>
             <tr>
                 <td>Unlock Extra Price</td>
                 <td>+5 × Unlock XP Cost</td>
+            </tr>
+        </table>
+        <h2 id="meta_channeling">Meta Channeling</h2>
+        <hr>
+        <p>
+            With these Curios you can use your Abilities through them to imbue them with various Meta-Abilities.<br>
+            The ESS of the Meta-Ability will be the same as the Curio's Tier.
+            <b>Note:</b> If there are Action Costs, they are still deducted from the user.
+        </p>
+        <p class="bottomless"><b>Modifications:</b></p>
+        <ul>
+            <li><b>Internal Cooldown:</b> Cooldown is placed on the Curio rather than the User.</li>
+            <li><b>Internal Resource:</b> Extra Resource Costs (HP, GRIT, SP, ect...) are negated. <a target="_blank" href="../abilities/refresh.html">Refresh</a> can't benefit from this!</li>
+        </ul>
+        <table width="70%">
+            <tr>
+                <td width="25%">
+                    Type
+                </td>
+                <td width="75%">
+                    Market Price
+                </td>
+            </tr>
+            <tr>
+                <td>Base Price</td>
+                <td>200 × Tier</td>
+            </tr>
+            <tr>
+                <td>Internal Cooldown</td>
+                <td>+200 × Tier</td>
+            </tr>
+            <tr>
+                <td>Internal Resource</td>
+                <td>+400 × Tier</td>
+            </tr>
+            <tr>
+                <td>Minimum Price</td>
+                <td>20 × Ability's Unlock XP</td>
             </tr>
         </table>
         <h2 id="special">Special</h2>
@@ -165,9 +203,9 @@
             <tr>
                 <td>Skill Card</td>
                 <td>200 × Tier</td>
-                <td>6 × Tier</td>
+                <td>5 × Tier</td>
                 <td>
-                    Sets a select Mastery up to <box>10 × Tier</box>, ignoring Base Stat Cap.<br>
+                    Sets a select Mastery up to <box>10 × Tier</box><br>
                     You can use multiple for different Masteries.
                 </td>
             </tr>
@@ -176,14 +214,23 @@
                 <td>400 × Tier</td>
                 <td>10 × Tier</td>
                 <td>
-                    <box>+2 × Tier</box> Armor VS All.<br>
+                    Gives <box>+2 × Tier</box> Armor VS All.<br>
+                    <b>Stackable!</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Dodging</td>
+                <td>400 × Tier</td>
+                <td>10 × Tier</td>
+                <td>
+                    Gives <box>+10 × Tier</box> HD.<br>
                     <b>Stackable!</b>
                 </td>
             </tr>
             <tr>
                 <td>Speed</td>
                 <td>300 × Tier</td>
-                <td>8 × Tier</td>
+                <td>6 × Tier</td>
                 <td>
                     Sets up Base MS to <box>5 × Tier^(1/3)</box>
                 </td>
@@ -195,6 +242,24 @@
                 <td>
                     Increase CRIT Range by 1 if the ESS of the Action is not greater than this Curio's Tier.<br>
                     <b>Stackable!</b>
+                </td>
+            </tr>
+            <tr>
+                <td>Potency Core</td>
+                <td>400 × Tier</td>
+                <td>None</td>
+                <td>
+                    Stores <box>6 × Tier</box> Potency, which can be Spent from any time you use an Ability.<br>
+                    Restores all Stored Potency after 1 Hour (1200 Rounds) of not being used.
+                </td>
+            </tr>
+            <tr>
+                <td>Universal Amplifier</td>
+                <td>1200 × Tier</td>
+                <td>12 × Tier</td>
+                <td>
+                    Upcasts any of your Abilities to this Curio's Tier.<br>
+                    This can't upcast anything Cast from another Curio.
                 </td>
             </tr>
         </table>

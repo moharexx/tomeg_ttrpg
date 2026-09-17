@@ -20,10 +20,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When using this Ability, you make Two Melee Attacks against a Single Target.",
-                "If at least one of the Two Attacks Hit, the Target takes Damage.",
-                "If both Attacks Hit the Target does NOT take Extra Damage.",
-                "If any Hit is a CRIT, this Ability CRITs.",
+                `When using this Ability, you make Two Melee Attacks against a Single Target.`,
+                `If at least one of the two Attacks Hit, the Target takes Damage.`,
+                `If both Attacks Hit the Target does NOT take Extra Damage.`,
+                `If any of the Attacks are a CRIT, this Ability CRITs.`,
             ],
         },
     ],
@@ -36,7 +36,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action + Bonus-Action"],
                 ["Ability Cost", "5 GRIT × ESS"],
-                ["Damage", "((1d12 + 10) × ESS) Weapon Damage"],
+                ["Damage of Weapon's Type", "(1d12 + 10) × ESS"],
             ],
         },
     ],

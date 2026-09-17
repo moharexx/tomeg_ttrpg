@@ -21,7 +21,7 @@ module.exports = {
             type: "p",
             content: [
                 "When using this Ability, you can mend Objects, molding and shaping them, making and breaking bonds.",
-                "The primary use is to Heal or Damage Objects, the Damage Type is Demat.",
+                "The primary use is to Heal or Damage Objects, the Damage is Executing and its Type is Demat.",
                 "This can also be used to tinker with Objects, like merging ropes, ect... Be creative!",
             ],
         },

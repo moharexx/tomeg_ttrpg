@@ -20,8 +20,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you make a Melee Attack with a Natural Weapon.",
-                "This Deals no Damage, but on Hit, the Target makes a <b>VIT Save.</b>",
+                `When used, you make a Melee Attack with a Natural Weapon.`,
+                `This Deals no Damage, but on Hit, the Target makes a <b>VIT Save.</b>`,
                 `Targets who Fail the VIT Save will have the <a href="../main/mechanics.html#conditions">Stunned Condition</a> till the End of their Next Turn.`,
             ],
         },

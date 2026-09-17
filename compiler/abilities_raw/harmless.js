@@ -5,22 +5,22 @@ module.exports = {
         "Any",
     ],
     reqs_short: [
-        "200 Total XP",
+        "None",
     ],
     reqs_full: [
-        "200 Total XP",
+        "None",
     ],
     tags: [
         "Control +",
         "Action Cost +, Resource Cost +",
     ],
-    unlock_cost: 10,
+    unlock_cost: 5,
     description: [
         {
             type: "p",
             content: [
-                "You make an Ability not Effect Chosen Entities at all (Including Damage).",
-                "For Each Entity saved from the Ability, this Meta-Ability has a Cost depending on the Type of Ability.",
+                `You make an AOE Ability not Target Chosen Entities at all.`,
+                `For Each Entity saved, this Meta-Ability has a Cost depending on the Type of Ability.`,
             ],
         },
         {

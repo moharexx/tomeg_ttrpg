@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Defense",
-        "Healing, Touch",
+        "Touch, Healing",
         "Main-Action",
     ],
     unlock_cost: 5,
@@ -21,7 +21,7 @@ module.exports = {
             type: "p",
             content: [
                 `When used, you Touch a Biological Target and its wounds close.`,
-                `Undead Type Entites instead of being Healed, recieve Radiant Damage, with high Radiant-Pen.`,
+                `Undead Targets instead of being Healed, recieve Executing Radiant Damage, with high Radiant-Pen.`,
             ],
         },
         {
@@ -34,7 +34,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Redo Of Healer</b> (5 XP):`,
+                `<b>Redo Of Healer</b> (10 Abjuration):`,
                 `Rather than Heal, you can choose to deal <a target="_blank" href="../main/mechanics.html#executing">Executing</a> Bio Damage, with high Bio-Pen.`,
             ],
         },
@@ -48,7 +48,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Range", "Touch"],
-                ["Healing (or Damage)", "(1d4 + 4) × ESS"],
+                ["Healing or Damage", "(1d4 + 4) × ESS"],
                 ["Penetration", "10 × ESS"],
             ],
         },

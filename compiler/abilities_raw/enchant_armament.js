@@ -32,8 +32,16 @@ module.exports = {
         {
             type: "p",
             content: [
-                `There are 3 Slots which can give an active Enchant Buff; The 2 Wielding Slots, and the Armor Slot.`,
-                `This means at most 3 Active Instances of Enchant Armament on an Entity.`,
+                `When you Unlock this Ability, choose 5 of the Enchants to Unlock with it.`,
+                `For the rest, you can Spend 5 XP to Unlock 3 more.`,
+                `If Cast as <b>Innate</b>, the Ability can only Target currently Wielded and Worn Items, and Ends when Un-Wielded or taken off.`,
+            ],
+        },
+        {
+            type: "p",
+            content: [
+                `There are 3 Slots which can give an active Enchant Buff; The Wielding Slots, and the Armor Slot.`,
+                `This means at most 3 (or 4 with <a target="_blank" href="multi_wielding_style.html">Multi-Wielding Style</a>) Active Instances of Enchant Armament on an Entity.`,
                 `An Item can only have up to 2 Instances of Enchant Armament with the <a href="permanence.html" target="_blank">Permanence Meta-Ability</a>.`,
                 `When using the <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a>, you can also change which Enchant Armament Instances you use.`,
                 `Casting a new Enchant Armament Instance on an Item allows the User of that Item to change to that Instance.`,
@@ -42,16 +50,9 @@ module.exports = {
             ],
         },
         {
-            type: "p",
-            content: [
-                `When you Unlock this Ability, Choose 1 Enchant that you own for free, without the XP Cost.`,
-                `If Cast as <b>Innate</b>, the Ability can only Target currently Wielded and Worn Items, and Ends when Un-Wielded or taken off.`,
-            ],
-        },
-        {
             type: "list",
             content: [
-                `<b>Tier Up</b> (Any Armament) <box>Unlock: 5 XP</box>:`,
+                `<b>Tier Up</b> (Any Armament):`,
                 `The Armament's <b>Tier</b> increases to <box>EP</box>`,
                 `<box><b>EP Cap:</b> ESS</box>`,
             ],
@@ -59,7 +60,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Damage</b> (Wielding) <box>Unlock: 5 XP</box>:`,
+                `<b>Damage</b> (Wielding):`,
                 `For each Point of EP allocate 1 Damage Bonus.`,
                 `Damage Types: <box>Physical | Heat | Cold | Bio | Demat | Thunder | Electric | Psychic | Radiant | Necrotic</box>`,
                 `This Damage Bonus can apply to Attack-Actions, and Damage Instances which deals the same Type.`,
@@ -70,7 +71,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Support</b> (Wielding) <box>Unlock: 5 XP</box>:`,
+                `<b>Support</b> (Wielding):`,
                 `For each Point of EP allocate 1 Potency Bonus.`,
                 `Potency Types: <box>Healing | Shielding | Negation</box>`,
                 `Healing Potency can only be Spent on Healing. Duh!`,
@@ -82,7 +83,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Piercing</b> (Wielding) <box>Unlock: 5 XP</box>:`,
+                `<b>Piercing</b> (Wielding):`,
                 `Gain <box>EP</box> extra Penetration on each Damage Instance.`,
                 `<box><b>EP Cap:</b> 3 × ESS</box>`,
             ],
@@ -90,7 +91,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Accuracy</b> (Wielding) <box>Unlock: 5 XP</box>:`,
+                `<b>Accuracy</b> (Wielding):`,
                 `Gain a To-Hit Bonus of <box>EP</box> on all Attacks.`,
                 `<box><b>EP Cap:</b> 3 × ESS</box>`,
             ],
@@ -98,7 +99,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Reach | Range</b> (Melee Weapon | Ranged Weapon) <box>Unlock: 5 XP</box>:`,
+                `<b>Reach | Range</b> (Melee Weapon | Ranged Weapon):`,
                 `This Enchantment, unlike the others, Costs a set amount per Level, and can be Upgraded at Max <box>3</box> Times.`,
                 `A Melee Weapon's Reach Increases by <box>ESS^(1/3)</box> per Level.`,
                 `A Ranged Weapon's Range Increases by <box>(20 / 40) × ESS^(1/3)</box> per Level.`,
@@ -109,7 +110,18 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Agile</b> (Wielding | Armor) <box>Unlock: 5 XP</box>:`,
+                `<b>Effect</b> (Wielding):`,
+                `Choose an Effect; <box>Heat | Cold | Soaked | Light | Darkness | Charm | Terror</box>`,
+                `If you Deal Damage, Heal, Shield, or Mitigate Damage using some Ability, you can give that Effect to your Target.`,
+                `Even if the Ability was an AOE only 1 Target can get the Effect, the Effect's ESS is equal to the <b>EP</b> used.`,
+                `This Effect lasts till the End of your Next Turn, and does nothing by itself.`,
+                `<box><b>EP Cap:</b> ESS</box>`,
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                `<b>Agile</b> (Wielding | Armor):`,
                 `Increase Max HD by: <box>5 × EP</box>`,
                 `<box><b>EP Cap:</b> 3 × ESS</box>`,
             ],
@@ -117,7 +129,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Dodging</b> (Wielding | Armor) <box>Unlock: 5 XP</box>:`,
+                `<b>Dodging</b> (Wielding | Armor):`,
                 `Incoming Attacks' Finalized To-Hit is reduced by <box>EP</box>`,
                 `<box><b>EP Cap:</b> 3 × ESS</box>`,
             ],
@@ -125,7 +137,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Armor</b> (Armor) <box>Unlock: 5 XP</box>:`,
+                `<b>Armor</b> (Armor):`,
                 `For each Point of EP put into this, allocate 9 Points of Resistance to the Armor.`,
                 `Resistance Types: <box>Physical | Heat | Cold | Bio | Demat | Thunder | Electric | Psychic | Radiant | Necrotic</box>`,
                 `All Resistance Types are Capped at <box>Armor's Property Points × Tier</box>, this Cap includes the Armor's Base Resistances.`,
@@ -135,7 +147,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Resiliance</b> (Wielding | Armor) <box>Unlock: 5 XP</box>:`,
+                `<b>Resiliance</b> (Wielding | Armor):`,
                 `Gain <box>EP</box> Armor VS All.`,
                 `<box><b>EP Cap:</b> 2 × ESS</box>`,
             ],

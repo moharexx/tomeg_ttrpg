@@ -19,7 +19,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `Multiply your Melee Reach.`,
+                `Multiply your Melee Weapon's Base Reach.`,
                 `The new Reach affects your Melee Attacks-Actions, and Abilities which scale based on your Melee Reach.`,
                 `<b>Note:</b> This gives the same scaling to Melee Reach as Ranged Attacks have by default.`,
             ],

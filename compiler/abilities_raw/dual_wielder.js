@@ -13,7 +13,7 @@ module.exports = {
     tags: [
         "Offense, Defense",
         "Self",
-        "Bonus-Action / Continuous",
+        "Free-Action / Continuous",
     ],
     unlock_cost: 5,
     description: [
@@ -28,10 +28,10 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Blade Barrage</b> (Main-Action):`,
-                `You can make 3 <a href="../main/mechanics.html#attack_action" target="_blank">Attack-Actions</a> against 3 different Targets.`,
+                `You can make 3 <a target="_blank" href="../main/mechanics.html#attack_action">Attack-Actions</a> against 3 different Targets.`,
                 `Even if the Attack-Action is somehow AOE, it still doesn't Target the same Entity more than once.`,
                 `Roll only a single d10 Check for all of them, still Roll Damage separately.`,
-                `You can also use a single <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a> after or before any of these Attacks.`,
+                `You can also use a single <a target="_blank" href="../main/mechanics.html#switch_action">Switch-Action</a> after or before any of these Attacks.`,
                 `This counts as a Skill Type Ability with the Offense Tag.`,
             ],
         },
@@ -39,7 +39,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Blade Block</b> (Bonus-Action):`,
-                `You use the <a href="../mechanics/defense_Action.html">Defense-Action</a>.`,
+                `You use the <a target="_blank" href="../mechanics/defense_Action.html">Defense-Action</a>.`,
                 `This counts as a Skill Type Ability with the Defense Tag.`,
             ],
         },
@@ -57,7 +57,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Bonus-Action"],
+                ["Cast Time", "Free-Action"],
                 ["Stance Trigger", "None"],
             ],
         },

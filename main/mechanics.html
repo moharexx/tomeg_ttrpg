@@ -46,7 +46,7 @@
             Advantage and Disadvantage's Multiplier doesn't Stack, and cancel each other out.<br>
             This means even 1 Advantage cancels out any Disadvantages, Multiplier vise.<br>
             Advantage and Disadvantage <b>truly</b> cancel if they are from the same source.<br>
-            <b>Examples:</b> Both parties of a battle not seeing, being prone, or being submerged in water.
+            <b>Examples:</b> Both parties of a battle being blinded, being prone, or being submerged in water.
         </p>
         <h2 id="criticals">Criticals</h2>
         <hr>
@@ -615,7 +615,6 @@
         <ul>
             <li>Breaks Stances, and Disables Reactions.</li>
             <li>Incoming Attacks have Advantage.</li>
-            <li>You Attack with Disadvantage.</li>
             <li>STR and AGI Saves are made with Disadvantage.</li>
             <li>Damaging a Staggered Entity makes it fall Prone.</li>
             <li>Staggered is Removed at the End of the Entity's Next Turn, or when it gets Damaged.</li>
@@ -786,20 +785,19 @@
         <hr>
         <div class="collapsed">
             <p>
-                As part of the Move-Action, an Entity can make an Athletics Check to Start Climbing.<br>
+                As part of the <a href="move_action">Move-Action</a>, you can make an Athletics Check to Start Climbing.<br>
                 Failing the Check to Start Climbing Ends the Move-Action which initiated it.
             </p>
             <p>
                 While Climbing your Move-Actions cover Half the distance.<br>
-                You make a new Check as a Free-Action at the Start of each of Your Turns while Climbing.<br>
-                Failing the Check while already Climbing lets go of the Surface, potentionally making you Airborne.<br>
+                You can make Free-Action Checks at the Start of your Turns while Climbing to keep holding on.<br>
+                Failing the Check lets go of the Surface, potentionally making you Airborne.<br>
                 On a Fail you can reattempt the Climb Check, and anchor yourself again, as a Bonus-Action Reaction.<br>
                 When taking Damage you make a STR Save VS Damage Taken, on a Fail you Fail Climbing as usual.
             </p>
             <p>
                 The Surface must be in Natural Melee Reach.<br>
-                Movement not from the Move-Action Stops the Climb.<br>
-                If you have Staggered, Dazed, or Stunned, then make the Climb Check with <b>Disadvantage.</b><br>
+                If you have Staggered, Dazed, or Stunned, then Climb Checks have <b>Disadvantage</b>.<br>
                 The <a href="../abilities/olympic_athlete.html">Olympic Athlete</a> Ability enhances your Climbing abilities.
             </p>
             <table width="60%">
@@ -839,6 +837,10 @@
                     <td>Smooth Flat Surface</td>
                     <td>100</td>
                 </tr>
+                <tr>
+                    <td>Carrying heavy weights</td>
+                    <td>+<box>Kg / 5</box> to Difficulty</td>
+                </tr>
             </table>
             <p>
                 <a href="#falling">For Falling rules click here.</a>
@@ -848,22 +850,22 @@
         <hr>
         <div class="collapsed">
             <p>
-                As part of the Move-Action, an Entity can make an Athletics Check to Start Swimming.<br>
-                Failing the Check to Start Swimming Ends the Move-Action which initiated it.<br>
+                As part of the <a href="move_action">Move-Action</a>, an Entity can make an Athletics Check to Start Swimming.<br>
+                Failing the Check Ends the Move-Action and makes you sink 2 meters into the liquid.<br>
             </p>
             <p>
-                While in Water you have Half MS.<br>
-                You make a new Check as a Free-Action at the Start of each of Your Turns while Swimming.<br>
-                Failing the Check while already Swimming makes you sink 2 meter, and stops Swimming.<br>
+                While in deep liquid your MS is halved, and you must be Swimming for <b>Move-Actions</b> to work.<br>
+                If you're already Swimming, you must make a new Check (Free-Action) at the Start of your Turns to remain Swimming.<br>
+                Failing the Check makes you sink 2 meters, and stops Swimming.<br>
             </p>
             <p>
-                If you are Staggered, Dazed, or Stunned, then make the Swim Check with <b>Disadvantage.</b><br>
+                If you are Staggered, Dazed, or Stunned, then Swim Checks have <b>Disadvantage</b>.<br>
                 The <a href="../abilities/olympic_athlete.html">Olympic Athlete</a> Ability enhances your Swimming abilities.
             </p>
             <table width="60%">
                 <tr>
                     <td width="70%">
-                        Example Water
+                        Example
                     </td>
                     <td width="30%">
                         Difficulty
@@ -896,6 +898,10 @@
                 <tr>
                     <td>Collosal Waves (5+ m Waves)</td>
                     <td>100+</td>
+                </tr>
+                <tr>
+                    <td>Carrying something dense</td>
+                    <td>+<box>Kg / 2</box> to Difficulty</td>
                 </tr>
             </table>
             <p>
@@ -999,7 +1005,7 @@
             <p>
                 You can Treat Wounds, Poisons, diseases and other ailments, and even perform Surgeries.<br>
                 This is a Science Check, which can only be done on a willing or somehow restrained Target.<br>
-                Medicate Actions are thrown with Disadvantage if you don't have the necessary tools; <a href="../extra/items_and_costs.html#toolkits" target="_blank">Medkit</a> or alike.<br>
+                Medicate is thrown with Disadvantage if you don't have the necessary tools on you; <a href="../extra/items_and_costs.html#toolkits" target="_blank">Medkit</a> or alike.<br>
             </p>
             <p>
                 Treating Wounds takes <box>1 Minute (20 Rounds)</box><br>
@@ -1019,7 +1025,7 @@
             <table width="60%">
                 <tr>
                     <td width="70%">
-                        Surgery Type
+                        Surgery Example
                     </td>
                     <td width="30%">
                         Difficulty
@@ -1134,7 +1140,7 @@
         <div class="collapsed">
             <p>
                 You can do the Scan Action to reveal hidden Objects, Entities, motives, ect...<br>
-                By default this is a <b>Bonus-Action</b>, and is a Perception and/or Intuition Check. (Science or Arcana for <a href="#devices">Devices</a>)<br>
+                This is a <b>Bonus-Action</b>, and is a Perception and/or Intuition Check. (Science or Arcana for <a href="#devices">Devices</a>)<br>
                 You can make Passive Scan Actions as a Free-Action.
             </p>
             <p class="bottomless"><b>Scan Area:</b></p>
@@ -1150,7 +1156,7 @@
                 <li><b>Difficulty:</b> <box>Target's Performance Check</box></li>
                 <li>On a Success you reveal the Target's motives, like friendliness, hostility, if they are <a href="#speak">lying</a>, ect...</li>
             </ul>
-            <p class="bottomless"><b>Scan Entity</b> (Main-Action):</p>
+            <p class="bottomless"><b>Scan Entity:</b></p>
             <ul>
                 <li>(Perception | Intuition) Check against a Pinpointed Target.</li>
                 <li><b>Difficulty:</b> <box>Target's Total XP / 10</box></li>
@@ -1170,7 +1176,7 @@
         <hr>
         <div class="collapsed">
             <p>
-                As a Main-Action you can sense the surrounding nature, and make conclusions.<br>
+                As a <b>Main-Action</b> you can "sense" the surrounding nature, and make conclusions.<br>
                 This is an Intuition Check, but can become a <a href="#multi_check">Multi-Check.</a><br>
                 If you can clearly observe or deduce the thing, Perception and/or Science can be added to make it a Multi-Check.
             </p>
@@ -1197,7 +1203,7 @@
                 </tr>
                 <tr>
                     <td>Time (Perception, Science)</td>
-                    <td>1 × (Hours spent without any measuring device)</td>
+                    <td>1 × (Hours spent without any way to measure)</td>
                 </tr>
                 <tr>
                     <td>Time (Intuition)</td>
@@ -1221,24 +1227,26 @@
         <hr>
         <div class="collapsed">
             <p>
-                As a <b>Bonus-Action</b> you can do the Feint Action.<br>
-                This is a Performance Check.<br>
+                As a <b>Bonus-Action</b> you can do the Feint Action, this is a Performance Check.<br>
                 You can make a Passive Feint Action as a Free-Action.
             </p>
             <p>
-                With a Feint you Hide or Fake doing something, like hiding that you're in a <b>Stance</b>, or faking using the <a href="#defense_action">Defense Action.</a><br>
-                <b>You can Hide or Fake:</b> <a href="#defense_action">Defense Action</a>, <a href="#ready">Ready</a>, <a href="#ready">Sprint</a>, Stances, Styles, <a href="../abilities/charge.html" target="_blank">Charge</a>, <a href="../abilities/anticipation.html" target="_blank">Anticipation</a><br>
-                You can also Hide or Fake yourself from <a href="#scan">Scan Entity</a>, hiding your Stats or making up fake Stats.<br>
-                You can Feint (Hide or Fake) other things if it's written down, or if the GM allows.
+                With a Feint you Hide or Fake doing something, like hiding that you're in a <b>Stance</b>, or faking using the <a href="#defense_action">Defense Action</a>.<br>
+                <b>You can Hide or Fake:</b> <a href="#defense_action">Defense-Action</a>, <a href="#ready">Ready</a>, <a href="#ready">Sprint</a>, Stances, Styles, <a href="../abilities/charge.html" target="_blank">Charge</a>, <a href="../abilities/anticipation.html" target="_blank">Anticipation</a><br>
+                You can also Passively Hide or Fake your Stats from <a href="#scan">Scan Entity</a>, making the Difficulty 2× your Performance Modifier.
             </p>
             <p>
-                The Target must Succeed a <a href="#scan">Scan Action</a> (Perception | Intuition) against the Feint's result to know what you're hiding.<br>
-                This Scan Action can be a Passive Check, and is taken together with any other Scan against you.<br>
+                The Target must Succeed a <a href="#scan">Scan Area</a> (Perception | Intuition) against the Feint's result to know what you're hiding.<br>
+                This Scan Action can be a Passive Check, and is taken together with any other Scan against you.
             </p>
             <p>
                 <b>Example:</b> You enter the Parry Stance, you use a Passive Feint as a Free-Action to hide that you're in a Stance.<br>
                 The bandit, with its Passive Scan cannot determine that you're in a Stance, but so happens to use Scan Entity on you.<br>
                 The Checks result is equal to your Passive Feint, he determines that you're in Parry Stance.
+            </p>
+            <p>
+                Feint could also have social interactions, like faking your identity, acting, ect...<br>
+                Exact effects up to GM.
             </p>
         </div>
         <h2 id="intimidate" class="collapsible">Intimidate</h2>
@@ -1255,7 +1263,7 @@
                 <li>The <b>Terror Effect</b> Last till End of Target's Next Turn.</li>
             </ul>
             <p>
-                Intimidate also has social interactions, to extract information, make opponents surrender or run away, ect...<br>
+                Intimidate could also have social interactions, to extract information, make opponents surrender or run away, ect...<br>
                 Exact effects up to GM.
             </p>
         </div>
@@ -1273,7 +1281,7 @@
                 <li>The <b>Charm Effect</b> Last till End of Target's Next Turn.</li>
             </ul>
             <p>
-                Taunt also has social interactions, to divert attention, ect...<br>
+                Taunt could also have social interactions, to divert attention, ect...<br>
                 Exact effects up to GM.
             </p>
         </div>
@@ -1417,7 +1425,7 @@
                 If you are not touching the ground at the End of Your Turn, you fall (10 × Rounds spent midair) meters.<br>
                 <b>Fall Damage:</b> <box>(2 × Fall Distance) - (VIT | Acrobatics)</box><br>
                 Fall Damage has <b>Armor-Pen</b> equal to the Damage of the Fall.<br>
-                Taking Fall Damage gives the <a href="#conditions">Prone Condition.</a>
+                Taking Fall Damage gives the <a href="#conditions">Prone Condition</a>.
             </p>
         </div>
         <h2 id="underwater_rules" class="collapsible">Underwater Rules</h2>
@@ -1434,7 +1442,7 @@
                 Entites which need to breath but cannot will begin to deplete their air.<br>
                 An Entity has <box>5 × VIT Rounds of Air (15 × VIT Seconds of Air)</box>, at 0 they begin to Suffocate.<br>
                 When an Entity gets Damaged it loses 5 Rounds (15 Seconds) of Air.<br>
-                While Suffocating, at the End of Each of Your Turns you take <box>5 × (Rounds Spent Suffocating) Bio Damage</box><br>
+                While Suffocating, at the End of your Turns take <box>5 × (Rounds Spent Suffocating) Bio Damage</box><br>
                 Suffocation Damage has 1000 Bio-Pen.
             </p>
         </div>
@@ -1445,15 +1453,14 @@
                 <b>Sensing</b> is when you know something is there, but not necessarily <b>Pinpointing</b> it.
             </p>
             <p>
-                <b>Pinpointing</b> is when a Sense can accurately define the position of a Target.<br>
+                <b>Pinpointing</b> is when a Sense can define the precise position of a Target.<br>
                 By default, a regular human (or alike) can only Pinpoint with Sight.<br>
-                If another Sense can Pinpoint, then it is usually written out, and made obvious.<br>
-                An Entity which cannot Pinpoint another has Disadvantage againts them, and the hidden one has Advantage against said Entity.
+                If another Sense can Pinpoint, then it's usually written out, and made obvious.<br>
+                An Entity's Attacks gain Disadvantage if their Target isn't Pinpointed, and their Target gains Advantage on their Attacks against them.
             </p>
             <p>
                 <b>Example:</b> You hear a person speak, but not see them. You Sense them, but not Pinpoint them.<br>
-                <b>Example:</b> A Blinded Bandit has Disadvantage toward all other Entities, and all others (who can
-                Pinpoint said Bandit) have Advantage againts the Bandit.<br>
+                <b>Example:</b> Blinded Bandit Attacks with Disadvantage toward all others, and all others (who can Pinpoint said Bandit) have Advantage againts the Bandit.
             </p>
         </div>
         <h2 id="surprise" class="collapsible">Surprise</h2>

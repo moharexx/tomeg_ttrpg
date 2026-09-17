@@ -48,7 +48,7 @@ module.exports = {
                 `1 Round (Some Actions)`,
                 `1 Minute (20 Rounds)`,
                 `1 Hour (1200 Rounds)`,
-                `1 Day (28800 Rounds)`,
+                `8 Hours (9600 Rounds)`,
             ],
         },
         {

@@ -20,8 +20,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you Touch a Target and harm them.",
-                "Undead Type Entites rather than be Damaged, recieve Healing equal to the Damage. (Only the HP part!)",
+                `When used, you Touch a Target and harm them, or Heal them if they are Undead.`,
+                `The Damage is Executing, the Healing is HP only.`,
             ],
         },
     ],
@@ -34,7 +34,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Range", "Touch"],
-                ["Necrotic Damage", "(1d4 + 4) × ESS"],
+                ["Healing or Damage", "(1d4 + 4) × ESS"],
                 ["Necrotic-Pen", "10 × ESS"],
             ],
         },

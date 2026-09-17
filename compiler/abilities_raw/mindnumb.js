@@ -8,7 +8,7 @@ module.exports = {
         "5 Divination | 10 Anima | 20 Enchantment",
     ],
     reqs_full: [
-        "(10 INT | 10 WILL | 20 EGO), (5 Divination | 10 Anima | 20 Enchantment)",
+        "10 CS, (5 Divination | 10 Anima | 20 Enchantment)",
     ],
     tags: [
         "Offense",
@@ -21,7 +21,7 @@ module.exports = {
             type: "p",
             content: [
                 `When used, your Touch becomes filled with mind numbing noise.`,
-                `On Hit, the Target must make a <b>Soul Save</b>, or be <b>Mindnumbed.</b>`,
+                `On Hit, the Target must make a <b>Soul Save</b>, or be <b>Mindnumbed</b>.`,
             ],
         },
         {
@@ -30,7 +30,7 @@ module.exports = {
                 `<b>Mindnumb Effect:</b>`,
                 `The Target cannot take any Actions, Reactions, and cannot Trigger their Stances.`,
                 `If this Effect is somehow gotten while it's currently the Target's Turn, it only Starts at the End of their current Turn.`,
-                `This Effect lasts till End of Target's Next Turn`,
+                `This Effect lasts till End of Target's Next Turn.`,
             ],
         },
     ],

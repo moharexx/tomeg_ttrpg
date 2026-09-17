@@ -26,8 +26,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                `As a Free-Action you can Start Charging an Ability.`,
-                `While Charging you cannot use Abilities, but you can use Actions to Charge Up that Ability.`,
+                `As a <b>Free-Action Reaction</b> you can Start Charging an Ability.`,
+                `While Charging you cannot use Abilities, and Moving or being Moved breaks Charging, but you can use Actions to Charge Up that Ability.`,
                 `You Spend the Ability's Action Cost to Cast it, thus stopping the Charging.`,
             ],
         },

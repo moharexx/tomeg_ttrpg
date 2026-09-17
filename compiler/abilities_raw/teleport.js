@@ -5,17 +5,17 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "20 Transmutation | 50 Conjuration | 200 Enchantment",
+        "50 Transmutation | 200 Conjuration | 1000 Enchantment",
     ],
     reqs_full: [
-        "<b>Spell:</b> 50 CS, (20 Transmutation | 50 Conjuration | 200 Enchantment)",
+        "<b>Spell:</b> 200 CS, (50 Transmutation | 200 Conjuration | 1000 Enchantment)",
     ],
     tags: [
         "Utility",
         "Mobility, Travel",
         "Variable",
     ],
-    unlock_cost: 50,
+    unlock_cost: 200,
     description: [
         {
             type: "p",
@@ -39,7 +39,7 @@ module.exports = {
             type: "p",
             content: [
                 `This Ability's Distance, like other Travel Abilities, scale linearly, and don't have a cube root in them.`,
-                `Travel Abilities have an Effective ESS Cap on their Distance related Stats.`,
+                `Travel Abilities have an Effective ESS Cap on their Distance related Scaling.`,
                 `This Cap is based on the Omniverse's Essence Permeability (EP) and Dimensional Permeability (DP).`,
                 `<b>Effective Essence Cap on Teleport Distance:<b> <box>(EP)^(1/DP)</box> (<b>~2e28</b> assuming EP is 1e85 and DP is 3)`,
             ],
@@ -52,8 +52,8 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Minimum Cast Time", "1 Minute (20 Rounds)"],
-                ["Maximum Cast Time", "1 Day (28800 Rounds)"],
+                ["Min Cast Time", "1 Minute (20 Rounds)"],
+                ["Max Cast Time", "1 Day (28800 Rounds)"],
                 ["Teleport Radius", "CS^(1/3)"],
                 ["Teleport Distance", "(100 × ESS × Cast Time in Seconds) meters"],
                 ["Soul Save", "14 × ESS"],
