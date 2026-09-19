@@ -8,12 +8,12 @@ module.exports = {
         "50 STR | 20 Athletics",
     ],
     reqs_full: [
-        "<b>Skill:</b> 50 AGI | 20 Athletics",
+        "<b>Skill:</b> 50 STR | 20 Athletics",
     ],
     tags: [
-        "Defense, Cooldown",
+        "Defense",
         "Self, Negation",
-        "Free-Action, GRIT",
+        "Non-Action, GRIT",
     ],
     unlock_cost: 20,
     description: [
@@ -40,8 +40,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Free-Action"],
-                ["Cooldown", "Start of Next Turn"],
+                ["Cast Time", "Non-Action"],
                 ["Trigger", "Make an STR Save"],
                 ["GRIT to STR Save Bonus", "2 to 1"],
                 ["Max GRIT Spent", "4 × ESS"],

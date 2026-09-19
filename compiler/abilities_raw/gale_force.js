@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Ranged, Physical Damage",
+        "Ranged, Physical Damage, Effect",
         "Main-Action",
     ],
     unlock_cost: 5,

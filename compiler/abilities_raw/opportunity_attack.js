@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Variable Damage",
+        "Weapon Damage",
         "Bonus-Action",
     ],
     unlock_cost: 5,
@@ -20,10 +20,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You can React to someone else moving inside your Melee Reach to make an Attack.`,
-                `When an Entity begins moving inside, or moves outside of your Melee Reach you can use this Ability to make a Melee Attack-Action.`,
+                `You can React to someone else moving inside your <b>Melee Reach</b> to make an Attack.`,
+                `When an Entity begins moving inside, or moves outside of your <b>Melee Reach</b> you can use this Ability to make a Melee Attack-Action.`,
                 `You can't make more than 1 Opportunity Attack against the same Target in a Turn.`,
-                `If the Attack-Action would Cost you only a Bonus-Action, you make this Attack with Advantage.`,
+                `If the Attack-Action would Cost you only a <b>Bonus-Action</b>, you make this Attack with Advantage.`,
             ],
         },
     ],

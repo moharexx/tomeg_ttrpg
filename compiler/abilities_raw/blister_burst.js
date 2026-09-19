@@ -22,7 +22,7 @@ module.exports = {
             content: [
                 `When used, the Target Entity swells up with blisters and pops, nearby Entities get infected from the pus.`,
                 `The Target Entity must Succeed a <b>VIT Save</b> of <box>10 × ESS</box>, or take <box>2d6 × ESS</box> Bio Damage.`,
-                `If the Target Faild the <b>VIT Save</b>, an explosion with a <b>Radius</b> of <box>3 × ESS^(1/3)</box> gets centered on the Target.`,
+                `If the Target Failed the <b>VIT Save</b>, an explosion with a <b>Radius</b> of <box>3 × ESS^(1/3)</box> gets centered on the Target.`,
                 `Entites other than the Target within the <b>Radius</b> take the same Damage on a Failed <b>AGI Save</b> of <box>14 × ESS</box>.`,
             ],
         },

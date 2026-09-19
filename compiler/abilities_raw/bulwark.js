@@ -32,6 +32,7 @@ module.exports = {
         {
             type: "p",
             content: [
+                `The <b>ESS</b> you Cast this Ability at is <box>Total XP / 100</box>, and if somehow it's less, the Ability Fails.`,
                 `Incoming Abilities with more than Double the <b>ESS</b> of this Ability are too powerful, and can ignore this Cover.`,
             ],
         },

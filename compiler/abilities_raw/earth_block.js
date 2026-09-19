@@ -5,10 +5,10 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "5 Conjuration | 10 Transmutation",
+        "5 Conjuration | 10 Transmutation | 20 Evocation",
     ],
     reqs_full: [
-        "<b>Spell:</b> (10 INT | 10 WILL | 10 EGO), (5 Conjuration | 10 Transmutation)",
+        "<b>Spell:</b> 10 CS, (5 Conjuration | 10 Transmutation | 20 Evocation)",
     ],
     tags: [
         "Defense, Utility, Unlock",
@@ -20,41 +20,41 @@ module.exports = {
         {
             type: "list",
             content: [
-                "You create Blocks made of Earth, or even Metal at higher levels.",
-                "When used, you can create a Block Pieces.",
-                "The Block Pieces are 1m<sup>3</sup>, and must be connected.",
-                "You can Stack Block Pieces into a singular piece, this consumes more Block Pieces but creates a stronger piece.",
-                "<b>Max Stack:</b> <box>CS / 10</box>, to a Min of 1.",
+                `You create Blocks made of Earth, or even Metal at higher levels.`,
+                `When used, you can create a Block Pieces.`,
+                `The Block Pieces are 1m<sup>3</sup>, and must be connected.`,
+                `You can Stack Block Pieces into a singular piece, this consumes more Block Pieces but creates a stronger piece.`,
+                `<b>Max Stack:</b> <box>CS / 10</box>, to a Min of 1.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Blocks Materials:</b>",
-                "As you Stack more Blocks Pieces, they become harder and stronger, and so their material changes to indicate this hardness.",
-                "Earth: 1+ Stacks",
-                "Stone: 5+ Stacks",
-                "Metal (iron or lead): 25+ Stacks",
+                `<b>Blocks Materials:</b>`,
+                `As you Stack more Blocks Pieces, they become harder and stronger, and so their material changes to indicate this hardness.`,
+                `Earth: 1+ Stacks`,
+                `Stone: 5+ Stacks`,
+                `Metal (iron or lead): 25+ Stacks`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Detached</b> (50 Conjuration):",
-                "The Blocks Pieces don't need to be connected.",
+                `<b>Finesse</b> (20 Transmutation):`,
+                `You can shape the Blocks in whatever fashion you desire (such as statues, cups, chairs, tables).`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Finesse</b> (50 Transmutation):",
-                "You can shape the Blocks in whatever fashion you desire (such as statues, cups, chairs, tables).",
+                `<b>Detached</b> (50 Conjuration):`,
+                `The Blocks Pieces don't need to be connected.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Potency Boost:</b>",
+                `<b>Potency Boost:</b>`,
                 `For each 2 points of <a href="../main/mechanics.html#potency" target="_blank">Potency</a> you can have +1 Block Piece.`,
                 `As an instantaneous effect, the Potency used to create more Block Pieces doesn't decay after the 1 Minute (20 Rounds) mark.`,
             ],

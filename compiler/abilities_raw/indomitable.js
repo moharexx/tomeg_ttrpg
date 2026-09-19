@@ -14,9 +14,9 @@ module.exports = {
         "<b>Spell:</b> 20 CS, (10 Abjuration | 20 Anima | 50 Enchantment)",
     ],
     tags: [
-        "Defense, Cooldown",
+        "Defense",
         "Self, Negation",
-        "Free-Action, SP",
+        "None-Action, SP",
     ],
     unlock_cost: 20,
     description: [
@@ -43,8 +43,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Free-Action"],
-                ["Cooldown", "Start of Next Turn"],
+                ["Cast Time", "None-Action"],
                 ["Trigger", "Make an Soul Save"],
                 ["SP to Soul Save Bonus", "2 to 1"],
                 ["Max SP Spent", "4 × ESS"],

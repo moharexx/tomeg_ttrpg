@@ -11,8 +11,8 @@ module.exports = {
         "20 Ballistic",
     ],
     tags: [
-        "Offense",
-        "Variable Damage, AOE, Stack",
+        "Offense, Stack",
+        "Variable Damage, Flow Sphere AOE",
         "Main-Action / Bonus-Action",
     ],
     unlock_cost: 20,
@@ -20,23 +20,23 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When using this Ability, you are put in Shotgun Pump Stance.",
-                "Your Attack's Range increases with your Stacks.",
-                "When the Stance is Triggered, you make a modified Ballistic Attack-Action.",
-                "MAX Stack: <box>4</box>",
+                `When using this Ability, you are put in Shotgun Pump Stance.`,
+                `Your Attack's Range increases with your Stacks.`,
+                `When the Stance is Triggered, you make a modified Ballistic Attack-Action.`,
+                `MAX Stack: <box>4</box>`,
             ],
         },
         {
             type: "dots",
             content: [
-                "Ballistic Weapons without Spread Property cannot be used.",
-                "Ballistic Weapons with Reload or Slow Reload Property cannot be used.",
+                `Ballistic Weapons without Spread Property cannot be used.`,
+                `Ballistic Weapons with Reload or Slow Reload Property cannot be used.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Stance Breaks when: <box>Using Abilities | HD Decrease | Taking Damage</box>",
+                `The Stance Breaks when: <box>Using Abilities, HD Decrease, Taking Damage</box>`,
             ],
         },
         {

@@ -6,14 +6,14 @@ module.exports = {
         "(Any)",
     ],
     reqs_short: [
-        "Anima",
+        "5 Anima | 10 Enchantment | 20 Evocation",
     ],
     reqs_full: [
-        "10 Anima",
+        "<b>Spell:</b> 10 CS, (5 Anima | 10 Enchantment | 20 Evocation)",
     ],
     tags: [
         "Offense",
-        "To-Hit",
+        "SP Damage",
         "Bonus-Action",
     ],
     unlock_cost: 10,
@@ -21,21 +21,15 @@ module.exports = {
         {
             type: "p",
             content: [
-                "If Parent Attack Hits, add Bonus On-Hit Damage of Chosen Type:",
-                "<box>Psychic | Radiant | Necrotic</box>",
-            ],
-        },
-        {
-            type: "dots",
-            content: [
-                "This On-Attack Ability can be used after determiming if the Parent Attack Hits.",
+                `If Parent Attack Hits, add Bonus On-Hit Damage of Chosen Type: <box>Psychic | Radiant | Necrotic</box>`,
+                `This On-Attack Ability can be used after determiming if the Parent Attack Hits.`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Evoken Smite</b> (20 Evocation):",
-                "Two additional Damage Types: <box>Electric | Thunder</box>",
+                `<b>Evoken Smite</b> (20 Evocation):`,
+                `Two additional Damage Types: <box>Electric | Thunder</box>`,
             ],
         }
     ],
@@ -47,9 +41,8 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
-                ["Bonus On-Hit Damage", "(1d10 × ESS) Psychic | Thunder"],
-                ["Bonus On-Hit Damage", "(1d8 × ESS) Electric"],
-                ["Bonus On-Hit Damage", "(1d6 × ESS) Radiant | Necrotic"],
+                ["Bonus On-Hit Damage", "(1d8 × ESS) Psychic | Thunder"],
+                ["Bonus On-Hit Damage", "(1d6 × ESS) Electric | Radiant | Necrotic"],
             ],
         },
     ],

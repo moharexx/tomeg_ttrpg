@@ -11,8 +11,8 @@ module.exports = {
         "<b>Skill:</b> 10 Melee Weapon",
     ],
     tags: [
-        "Offense",
-        "Weapon Damage, Flow Sphere AOE, Stack",
+        "Offense, Stack",
+        "Weapon Damage, Flow Sphere AOE",
         "Main-Action / Bonus-Action",
     ],
     unlock_cost: 10,

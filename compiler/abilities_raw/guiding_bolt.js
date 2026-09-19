@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense, Utility",
-        "Ranged, Radiant Damage, To-Hit",
+        "Ranged, Radiant Damage, To-Hit, Effect",
         "Main-Action",
     ],
     unlock_cost: 5,
@@ -43,7 +43,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Range", "10 / 20 × CS^(1/3)"],
-                ["Damage", "(4 × ESS) Radiant"],
+                ["Radiant Damage", "4 × ESS"],
                 ["Light Effect To-Hit Bonus", "5 × ESS"],
             ],
         },

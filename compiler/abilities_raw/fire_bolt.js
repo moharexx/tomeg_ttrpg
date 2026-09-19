@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Heat Damage, Projectile",
+        "Heat Damage, Projectile, Effect",
         "Main-Action",
     ],
     unlock_cost: 5,

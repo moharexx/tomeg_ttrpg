@@ -50,7 +50,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Water Effect:</b>`,
-                `You conjure up to <box>(Liter × ESS) water</box>, which can Soak the Target, and potentionally more.`,
+                `You conjure up to <box>(2 Liter × ESS) water</box>, which can Soak the Target, and potentionally more.`,
                 `You can also move the same amount of water, for up to <box>CS^(1/3) meters</box>`,
                 `Water can put out smaller fires. Duh!?`,
                 `You can deal <box>(1d4 × ESS) Physical Damage</box>`,

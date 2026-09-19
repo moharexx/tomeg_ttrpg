@@ -11,7 +11,7 @@ module.exports = {
         "<b>Spell:</b> 5 CS, (5 Evocation | 10 Abjuration | 20 Transmutation)",
     ],
     tags: [
-        "Offense",
+        "Offense, Stack",
         "Ranged, Demat Damage",
         "Bonus-Action / Bonus-Action",
     ],

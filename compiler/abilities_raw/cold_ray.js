@@ -8,11 +8,11 @@ module.exports = {
         "5 Abjuration | 10 Transmutation | 20 Evocation",
     ],
     reqs_full: [
-        "<b>Spell:</b> (5 INT | 5 WILL | 5 EGO), (5 Abjuration | 10 Transmutation | 20 Evocation)",
+        "<b>Spell:</b> 5 CS, (5 Abjuration | 10 Transmutation | 20 Evocation)",
     ],
     tags: [
         "Offense",
-        "Cold Damage, Projectile, Crowd Control",
+        "Cold Damage, Projectile, Crowd Control, Effect",
         "Main-Action",
     ],
     unlock_cost: 5,

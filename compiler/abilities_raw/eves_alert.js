@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Utility, Cooldown",
-        "Buff, Touch",
+        "Touch, Buff",
         "Bonus-Action",
     ],
     unlock_cost: 50,
@@ -20,8 +20,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When the Ability is used, for the Duration the Targeted Entity's <b>INIT</b> is Increased.",
-                "Additionally the Target is not Surprised or Unaware of Entities you are aware of.",
+                `When the Ability is used, for the Duration the Targeted Entity's <b>INIT</b> is Increased.`,
+                `Additionally the Target is not Surprised or Unaware of Entities you are aware of.`,
             ],
         },
     ],

@@ -13,7 +13,7 @@ module.exports = {
     tags: [
         "Utility",
         "Self, Buff",
-        "1 Minute / Continuous",
+        "Main-Action / Continuous",
     ],
     unlock_cost: 10,
     description: [
@@ -22,7 +22,7 @@ module.exports = {
             content: [
                 `When using this Ability, you are put in <b>Flaunt Stance</b>.`,
                 `While in <b>Flaunt Stance</b> Performance Checks gain a Bonus of <box>10 × ESS</box>`,
-                `While in <b>Flaunt Stance</b> you can do 1 Bonus-Action <a href="../main/mechanics.html#feint" target="_blank">Feint</a> as a Free-Action.`,
+                `While in <b>Flaunt Stance</b> the <a href="../main/mechanics.html#feint" target="_blank">Feint</a> action is a Free-Action.`,
             ],
         },
         {
@@ -45,7 +45,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "1 Minute (20 Rounds)"],
+                ["Cast Time", "Main-Action"],
                 ["Stance Trigger", "None"],
                 ["Range", "Self"],
                 ["Performance Bonus", "10 × ESS"],

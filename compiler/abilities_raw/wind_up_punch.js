@@ -11,8 +11,8 @@ module.exports = {
         "10 Martial Arts",
     ],
     tags: [
-        "Offense",
-        "Melee, Weapon Damage, Mobility, Stacks",
+        "Offense, Stack",
+        "Melee, Weapon Damage, Mobility",
         "Bonus-Action / Main-Action",
     ],
     unlock_cost: 10,

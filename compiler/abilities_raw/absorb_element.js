@@ -29,7 +29,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Potency Boost:</b>`,
-                `For each 2 points of <a href="../main/mechanics.html#potency" target="_blank">Potency</a> you can Increase the Absorbtion Amount by +1 Effect.`,
+                `For each 2 points of <a href="../main/mechanics.html#potency" target="_blank">Potency</a> you can Increase the Absorbtion Amount by 1.`,
             ],
         },
     ],

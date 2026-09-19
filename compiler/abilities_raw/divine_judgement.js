@@ -8,11 +8,11 @@ module.exports = {
         "10 Anima | 20 Enchantment | 50 Evocation",
     ],
     reqs_full: [
-        "<b>Spell:</b> (50 INT | 20 WILL | 20 EGO), (10 Anima | 20 Enchantment | 50 Evocation)",
+        "<b>Spell:</b> 20 CS, (10 Anima | 20 Enchantment | 50 Evocation)",
     ],
     tags: [
         "Offense",
-        "Radiant Damage, Healing",
+        "Ranged, Radiant Damage, Healing",
         "Main-Action + Bonus-Action",
     ],
     unlock_cost: 20,
@@ -20,8 +20,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "A circle appears under the Target Entity, which after Divine pillar smites them.",
-                "You get Healed equal to Damage Dealt.",
+                `A circle appears under the Target Entity, which after Divine pillar smites them.`,
+                `You get Healed equal to Damage Dealt.`,
             ],
         },
         {
@@ -39,9 +39,9 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action + Bonus-Action"],
-                ["Range", "5 / 10 × CS^(1/3)"],
+                ["Range", "5 × CS^(1/3)"],
                 ["To-Hit Bonus", "5 × ESS"],
-                ["Damage", "(1d8 × ESS) Radiant"],
+                ["Radiant Damage", "1d10 × ESS"],
             ],
         },
     ],

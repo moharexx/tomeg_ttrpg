@@ -13,7 +13,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Melee, Radiant Damage, Mobility",
+        "Melee, Radiant Damage, Mobility, Effect",
         "Main-Action",
     ],
     unlock_cost: 10,
@@ -56,7 +56,7 @@ module.exports = {
                 ["Cast Time", "Main-Action"],
                 ["Prerequisite", "Melee"],
                 ["Dash Length", "MS"],
-                ["Bonus Damage", "(4 × ESS) Radiant"],
+                ["Bonus Radiant Damage", "4 × ESS"],
             ],
         },
     ],

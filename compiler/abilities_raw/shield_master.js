@@ -13,24 +13,23 @@ module.exports = {
     tags: [
         "Defense",
         "Self",
-        "Bonus-Action / Continuous",
+        "Free-Action / Continuous",
     ],
     unlock_cost: 5,
     description: [
         {
             type: "p",
             content: [
-                `When using this Ability, you are put in <b>Dual Wielder Stance</b>.`,
-                `While in <b>Dual Wielder Stance</b> you gain access to 2 new Actions, which you can use only while Wielding a Shield.`,
-                `These Actions don't Trigger Shield Properties.`,
+                `When using this Ability, you are put in <b>Shield Master Stance</b>.`,
+                `While in <b>Shield Master Stance</b> you gain access to 2 new Actions, which you can use only while Wielding a Shield.`,
             ],
         },
         {
             type: "list",
             content: [
                 `<b>Human Barricade</b> (Main-Action + Bonus-Actions):`,
-                `Chosen Sensed Entities within a Radius of <box>ESS^(1/3)</box> (you included) get the <a href="../mechanics/defense_Action.html">Defense-Action</a>.`,
-                `This <b>Defense-Action</b> ends at the End of Your Next Turn, or if they are not in the Radius.`,
+                `Chosen Sensed Entities within a Radius of <box>ESS^(1/3)</box> (you included) can take the <a href="../mechanics/defense_Action.html">Defense-Action</a> as a <b>Free-Action Reaction</b>.`,
+                `This <b>Defense-Action</b> Ends at the End of Your Next Turn, or if they are not in the Radius. (The AOE stays where it's Cast)`,
                 `This counts as a Skill Type Ability with the Defense Tag.`,
             ],
         },
@@ -56,7 +55,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Bonus-Action"],
+                ["Cast Time", "Free-Action"],
                 ["Stance Trigger", "None"],
             ],
         },

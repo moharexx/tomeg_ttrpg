@@ -15,7 +15,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Melee, Flow Rectangle AOE, Physical Damage, Executing",
+        "Melee, Flow Rectangle AOE, Physical Damage, Effect, Executing",
         "Main-Action, REST-HP",
     ],
     unlock_cost: 10,

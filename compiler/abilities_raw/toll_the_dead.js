@@ -8,7 +8,7 @@ module.exports = {
         "5 Anima | 10 Enchantment | 20 Abjuration",
     ],
     reqs_full: [
-        "<b>Spell:</b> (10 INT | 10 WILL | 10 EGO), (5 Anima | 10 Enchantment | 20 Abjuration)",
+        "<b>Spell:</b> 10 CS, (5 Anima | 10 Enchantment | 20 Abjuration)",
     ],
     tags: [
         "Offense",
@@ -21,7 +21,7 @@ module.exports = {
             type: "p",
             content: [
                 `When used, you wither the Soul and Body of a Pinpointed Target.`,
-                `On a Failed <b>Soul Save</b> the Target takes <a href="../main/mechanics.html#executing" target="_blank">Executing</a> Necrotic Damage.`,
+                `On a Failed <b>Soul Save</b> of <box>10 × ESS</box> the Target takes <a href="../main/mechanics.html#executing" target="_blank">Executing</a> Necrotic Damage.`,
             ],
         },
     ],
@@ -35,7 +35,7 @@ module.exports = {
                 ["Cast Time", "Main-Action"],
                 ["Range", "5 × CS^(1/3)"],
                 ["Soul Save", "10 × ESS"],
-                ["Executing Damage", "(1d6 × ESS) Necrotic"],
+                ["Executing Necrotic Damage", "1d8 × ESS"],
             ],
         },
     ],

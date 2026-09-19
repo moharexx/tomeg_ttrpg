@@ -11,7 +11,7 @@ module.exports = {
         "<b>Spell:</b> 50 CS, (20 Evocation | 50 Conjuration | 200 Transmutation)",
     ],
     tags: [
-        "Offense",
+        "Offense, Stack",
         "Ranged, Flow Sphear AOE, Heat+Thunder Damage",
         "Main-Action + Bonus-Action / Main-Action + Bonus-Action",
     ],

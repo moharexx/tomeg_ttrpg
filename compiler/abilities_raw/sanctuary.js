@@ -20,11 +20,11 @@ module.exports = {
         {
             type: "p",
             content: [
-                `When used, you protect a Touched Entity.`,
-                `The Touched Target gains <b>Sanctuary</b>, the Target can resist this with a <b>Soul Save</b> of <box>14 × ESS</box>`,
+                `When used, you protect a Touched willing Entity giving them <b>Sanctuary</b>.`,
                 `An Attacker must Succeed a <b>Soul Save</b> to be able to Target an Entity under <b>Sancuary</b> with anything harmful. (Any Offense Tagged Ability)`,
                 `On a Fail the Attacker's Action is wasted.`,
-                `If an Entity under <b>Sanctuary</b> attempts to directly harm anyone else, they lose the <b>Sanctuary</b> effect.`,
+                `If an Entity under <b>Sanctuary</b> attempts to directly harm anyone else, they lose the <b>Sanctuary</b> effect, and get the <a href="../main/mechanics.html#conditions" target="_blank">Staggered Condition</a>.`,
+                `An Entity can use a <b>Bonus-Action</b> to remove the <b>Sanctuary</b> from themselves.`,
                 `"Anything harmful" is kinda up do GM, be logical please and reasonable. (pov: me when i cope)`,
             ],
         },
@@ -33,7 +33,7 @@ module.exports = {
             content: [
                 `<b>Mass Sanctuary</b> (10 XP):`,
                 `You make this Ability into a Stance for enchanced effects.`,
-                `Entities Within the Radius (Excluding yourself) gain <b>Sanctuary</b>, the Targets can resist this with a <b>Soul Save</b> of <box>14 × ESS</box>`,
+                `Willing Entities Within the Radius (Excluding yourself) gain <b>Sanctuary</b>.`,
                 `You don't gain any of the benefits from the <b>Sanctuary</b>, but must still follow its rules, or the Stance Breaks.`,
                 `This Stance Breaks from: <box>Using Abilities, Sanctuary Break Conditions</box>`,
             ],

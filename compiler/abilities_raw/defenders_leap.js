@@ -20,9 +20,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When Sensing an Entity getting Attacked, you can dash to said Entity, Displacing them.",
-                "You will get Attacked instead of the original Target.",
-                "This Ability can only be used on Willing Targets.",
+                `When Sensing an Entity getting Attacked, you can dash to said Entity, Displacing them.`,
+                `You and your Target can remove the <a href="../main/mechanics.html#conditions" target="_blank">Prone Condition</a> from yourselves.`,
+                `You will get Attacked instead of the original Target.`,
+                `This Ability can only be used on Willing Targets.`,
             ],
         },
     ],

@@ -13,7 +13,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Necrotic Damage",
+        "Necrotic Damage, Healing",
         "Main-Action",
     ],
     unlock_cost: 10,
@@ -21,7 +21,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                "Add Bonus On-Hit Necrotic Damage, and Heal and gain SP equal to the Damage dealt.",
+                `Add Bonus On-Hit Necrotic Damage, and Heal and gain SP equal to the Damage dealt.`,
             ],
         },
     ],
@@ -34,7 +34,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Special Condition", "Melee"],
-                ["Bonus On-Hit Damage", "(2d4 × ESS) Necrotic"],
+                ["Bonus On-Hit Necrotic Damage", "2d6 × ESS"],
             ],
         },
     ],

@@ -6,12 +6,12 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "WILL | EGO",
-        "Transmutation | Enchantment | Anima",
+        "20 VIT",
+        "5 Transmutation | 10 Anima | 20 Enchantment",
     ],
     reqs_full: [
-        "Innate: 200 WILL | 200 EGO",
-        "Spell: (20 INT | 10 WILL | 10 EGO), (5 Transmutation | 10 Anima | 20 Enchantment)",
+        "<b>Innate:</b> 20 VIT",
+        "<b>Spell:</b> 10 CS, (5 Transmutation | 10 Anima | 20 Enchantment)",
     ],
     tags: [
         "Defense",
@@ -23,22 +23,14 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you Spend REST-HP to Heal a Touched a Entity.",
-                "You can Spend HP in place of REST-HP for this Ability.",
-            ],
-        },
-        {
-            type: "dots",
-            content: [
-                "This does not regrow lost body parts.",
-                "This works on any Entity, but not Constructs.",
-                "Yes, you can heal a corpse. No, it won't revive them.",
+                `When used, you Spend REST-HP to Heal a Touched a Entity.`,
+                `You can Spend HP in place of REST-HP for this Ability.`,
             ],
         },
         {
             type: "p",
             content: [
-                "Note: This Ability cannot CRIT.",
+                `Note: This Ability cannot CRIT.`,
             ],
         },
     ],

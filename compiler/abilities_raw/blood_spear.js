@@ -15,7 +15,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Ranged, Flow Line AOE, Physical Damage, Executing",
+        "Ranged, Flow Line AOE, Physical Damage, Effect, Executing",
         "Main-Action, REST-HP",
     ],
     unlock_cost: 10,

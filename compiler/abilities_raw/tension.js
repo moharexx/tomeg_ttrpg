@@ -11,7 +11,7 @@ module.exports = {
         "<b>Skill:</b> 200 Melee Weapon | 200 Martial Arts",
     ],
     tags: [
-        "Offense, Defense",
+        "Offense, Defense, Stack",
         "Weapon Damage, HD",
         "Main-Action + Bonus-Action / Continuous",
     ],

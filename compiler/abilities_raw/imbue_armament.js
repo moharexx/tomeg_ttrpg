@@ -48,7 +48,7 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Full Electric Imbuement</b> (Weapons):`,
+                `<b>Full Electric or Hybrid Imbuement</b> (Weapons):`,
                 `Change the Damage Type to Electric, which is <b>Maximized</b> against Soaked and Airborne Targets.`,
                 `<b>Choose 1 Side Effect:</b>`,
                 `All Abilities with the <b>Weapon Damage Tag</b> have Halved To-Hit, including Attack-Actions.`,
@@ -59,12 +59,24 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Full Hybrid Imbuement</b> (Weapons):`,
-                `List of Damage Types: <box>Radiant, Necrotic</box>`,
+                `<b>Full Electric or Hybrid Imbuement</b> (Weapons):`,
+                `List of Damage Types: <box>Electric, Radiant, Necrotic</box>`,
+                `Electric Damage is <b>Maximized</b> against Soaked and Airborne Targets.`,
                 `Radiant and Necrotic are Hybrid Damage Types, which go both into HP and SP.`,
                 `<b>Choose 1 Side Effect:</b>`,
-                `The Weapon loses <box>4 × ESS</box> Armor-Pen. (The Weapon must have at least that much Armor-Pen to choose this!)`,
+                `The Weapon loses <box>4 × ESS</box> Armor-Pen. (The Weapon must have at least that much Armor-Pen pre-enchant to choose this!)`,
+                `The <b>Cast Time</b> of Abilites goes up by one level (Table Bellow) with the <b>Weapon Damage Tag</b>, including Attack-Actions.`,
                 `It Costs an Extra Bonus-Action to use any Ability with the <b>Weapon Damage Tag</b>, including Attack-Actions.`,
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                `<b>Action Cost Levels:</b>`,
+                `Free-Action`,
+                `Bonus-Action`,
+                `Main-Action`,
+                `Main-Action + Bonus-Action`,
             ],
         },
         {
@@ -80,9 +92,10 @@ module.exports = {
                 `<b>COMBO:</b>`,
                 `This Ability can be used as a <b>Main-Action</b> to Target up to 3 Items instead of 1.`,
                 `When multiple Items are Targeted, the Enchants can be different.`,
-                `When you use <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a> as a <b>Bonus-Action</b>, you can Cast this Abilty as a <b>Free-Action</b> on one Wielded Item.`,
-                `When you Cast <a href="battle_aura.html">Battle Aura</a>, you can Cast this Abilty as a <b>Free-Action</b> on it.`,
-                `When you Cast <a href="enchant_armament.html">Enchant Armament</a>, you can Cast this Abilty as a <b>Free-Action</b> on one of the same Armaments.`,
+                `When you use <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a> as a <b>Bonus-Action</b>, you can Cast this Ability as a <b>Free-Action</b> on one Wielded Item.`,
+                `When you Cast <a href="fighting_style.html">Fighting Style</a>, you can Cast this Ability as a <b>Free-Action</b> on it twice.`,
+                `When you Cast <a href="battle_aura.html">Battle Aura</a>, you can Cast this Ability as a <b>Free-Action</b> on it.`,
+                `When you Cast <a href="enchant_armament.html">Enchant Armament</a>, you can Cast this Ability as a <b>Free-Action</b> on one of the same Armaments.`,
             ],
         },
     ],

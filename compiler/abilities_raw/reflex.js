@@ -19,17 +19,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You can make an Ability into a Reaction, but its Action Cost Jumps up by one level.`,
-            ],
-        },
-        {
-            type: "list",
-            content: [
-                `<b>Action Cost Levels:</b>`,
-                `Free-Action`,
-                `Bonus-Action`,
-                `Main-Action`,
-                `Main-Action + Bonus-Action`,
+                `You make an Ability into a Reaction by increasing its <b>Cast Time</b>.`,
+                `You increase the Cast Time by either adding a <b>Bonus-Action</b>, or changing a <b>Bonus-Action</b> into a <b>Main-Action</b>.`,
+                `If the Cast Time of the Parent Ability is multiple Rounds then this Meta-Ability cannot be used!`,
             ],
         },
     ],

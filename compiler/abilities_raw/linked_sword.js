@@ -13,7 +13,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Melee, Weapon Damage",
+        "Weapon Damage",
         "Main-Action",
     ],
     unlock_cost: 10,
@@ -23,11 +23,11 @@ module.exports = {
             content: [
                 `You make your Melee Attack so precise, it hits twice.`,
                 `On a Hit you put a <b>DoT Effect</b> on the Target.`,
-                `This Effect will Trigger at the Start of Caster's Next Turn.`,
+                `This Effect will Trigger on your Next Turn.`,
                 `The <b>DoT</b> will repeat the <b>Hit</b> of the Parent Attack.`,
                 `Meaning that the <b>DoT</b> is like an Attack with infinite <b>To-Hit</b>.`,
-                `The <b>DoT</b> deals the same Damage as Parent Attack, allong with all of its On-Attacks (other than this).`,
-                `The <b>DoT Effect</b> Ends after Dealing Damage.`,
+                `The <b>DoT</b> deals the same Damage as it's Parent Attack, allong with all of its On-Attacks (other than this).`,
+                `The <b>DoT Effect</b> Ends after it Triggers.`,
             ],
         },
     ],

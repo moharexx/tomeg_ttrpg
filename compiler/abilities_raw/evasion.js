@@ -11,9 +11,9 @@ module.exports = {
         "<b>Skill:</b> 50 AGI | 20 Acrobatics",
     ],
     tags: [
-        "Defense, Cooldown",
+        "Defense",
         "Self, Negation",
-        "Free-Action, HD",
+        "Non-Action, HD",
     ],
     unlock_cost: 20,
     description: [
@@ -40,8 +40,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Free-Action"],
-                ["Cooldown", "Start of Next Turn"],
+                ["Cast Time", "Non-Action"],
                 ["Trigger", "Make an AGI Save"],
                 ["HD to AGI Save Bonus", "5 to 1"],
                 ["Max HD Spent", "5 × ESS"],

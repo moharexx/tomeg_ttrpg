@@ -5,14 +5,14 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "5 Abjuration | 10 Evocation",
+        "5 Abjuration | 10 Transmutation | 20 Evocation",
     ],
     reqs_full: [
-        "<b>Spell:</b> (10 INT | 10 WILL | 10 EGO), (5 Abjuration | 10 Evocation)",
+        "<b>Spell:</b> 10 CS, (5 Abjuration | 10 Transmutation | 20 Evocation)",
     ],
     tags: [
         "Offense",
-        "Ranged, Demat Damage, Pen",
+        "Ranged, Demat Damage",
         "Main-Action",
     ],
     unlock_cost: 10,

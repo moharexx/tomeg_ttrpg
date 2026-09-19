@@ -11,9 +11,9 @@ module.exports = {
         "<b>Innate:</b> 20 VIT",
     ],
     tags: [
-        "Defense, Cooldown",
+        "Defense",
         "Self, Negation",
-        "Free-Action, REST-HP",
+        "Non-Action, REST-HP",
     ],
     unlock_cost: 20,
     description: [
@@ -40,8 +40,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Free-Action"],
-                ["Cooldown", "Start of Next Turn"],
+                ["Cast Time", "Non-Action"],
                 ["Trigger", "Make an VIT Save"],
                 ["REST-HP to VIT Save Bonus", "5 to 1"],
                 ["Max REST-HP Spent", "10 × ESS"],

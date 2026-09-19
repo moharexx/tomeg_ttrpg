@@ -8,11 +8,11 @@ module.exports = {
         "5 Evocation | 10 Abjuration",
     ],
     reqs_full: [
-        "<b>Spell:</b> (10 INT | 10 WILL | 10 EGO), (5 Evocation | 10 Abjuration)",
+        "<b>Spell:</b> 10 CS, (5 Evocation | 10 Abjuration | 20 Anima)",
     ],
     tags: [
         "Offense, Unlock",
-        "Ranged, Demat Damage, Projectile",
+        "Ranged, Demat Damage, Projectile, To-Hit",
         "Main-Action",
     ],
     unlock_cost: 10,

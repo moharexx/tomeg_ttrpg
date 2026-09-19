@@ -6,12 +6,12 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "VIT | WILL",
-        "Evocation | Transmutation | Enchantment",
+        "50 VIT | 200 WILL",
+        "10 Enchantment | 20 Transmutation | 50 Evocation",
     ],
     reqs_full: [
-        "Innate: 50 CON | 200 WILL | Vampirism | Lycanthropy",
-        "Spell: (50 INT | 20 WILL | 20 EGO), (20 Enchantment | 50 Transmutation | 200 Evocation)",
+        "<b>Innate:</b> 50 VIT | 200 WILL",
+        "<b>Spell:</b> 20 CS, (10 Enchantment | 20 Transmutation | 50 Evocation)",
     ],
     tags: [
         "Defense",
@@ -23,16 +23,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you Regenerate Yourself.",
-                "This can regrow bodyparts, and other permanent Damage.",
-            ],
-        },
-        {
-            type: "list",
-            content: [
-                "Passive Regeneration ((200 CON | 1000 WILL | 200 Transmutation | 200 Enchantment), 50 XP):",
-                "Unlocking this will Simulate the following Passive Ability:",
-                "At the Start of your Turns You Heal <box>2 × ESS</box> Amount.",
+                `When used, you Regenerate Yourself.`,
+                `This can regrow bodyparts, and other permanent Damage.`,
             ],
         },
     ],

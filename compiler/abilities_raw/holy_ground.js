@@ -52,7 +52,7 @@ module.exports = {
                 ["Range", "5 × CS^(1/3)"],
                 ["Radius", "CS^(1/3)"],
                 ["VIT Save", "8 × ESS"],
-                ["Radiant Damage", "1d6 × ESS"],
+                ["Radiant Damage", "1d8 × ESS"],
             ],
         },
     ],

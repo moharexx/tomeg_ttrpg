@@ -11,8 +11,8 @@ module.exports = {
         "<b>Skill:</b> 10 Ballistic",
     ],
     tags: [
-        "Offense",
-        "Variable Damage, Projectile, Stack",
+        "Offense, Stack",
+        "Variable Damage, Projectile",
         "Main-Action / Bonus-Action",
     ],
     unlock_cost: 10,

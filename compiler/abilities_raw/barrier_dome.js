@@ -11,7 +11,7 @@ module.exports = {
         "<b>Spell:</b> 10 CS, (5 Abjuration | 10 Conjuration | 20 Enchantment)",
     ],
     tags: [
-        "Defense",
+        "Defense, Unlock",
         "Self, Static Sphere AOE, Shielding",
         "Main-Action + Bonus-Action / Continuous",
     ],
@@ -30,6 +30,13 @@ module.exports = {
         {
             type: "p",
             content: [
+                `If the Barrier is Between the point of an Ability and its Caster, you can force them to make a <b>Soul Save</b> of <box>20 × ESS</box>`,
+                `On a Failed Save, the Ability fails wasting the Actions it Cost to Cast it.`,
+            ],
+        },
+        {
+            type: "p",
+            content: [
                 `On the moment of Cast, you can decide if Barrier Dome is Anchored or not.`,
                 `When Anchored, Barrier Dome can stay still midair, just floating there, carrying up to <box>500 × ESS Kg</box>`,
                 `An Athletics Check of <box>50 × ESS</box> can move an Anchored Barrier Dome. (Passive Checks can be used here)`,
@@ -42,14 +49,21 @@ module.exports = {
             content: [
                 `Some Attacks can bypass the Barrier, by being incorporeal or just being placed inside.`,
                 `When an SP Attack goes through the Barrier, the Armor VS All reduces the SP Damage.`,
-                `Barrier Dome can be repaired with <a href="../abilities/mending.html" target="_blank">Mending</a>, up to Dome Max HP`,
+                `Barrier Dome can be repaired with <a href="../abilities/mending.html" target="_blank">Mending</a>, up to Dome HP`,
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                `<b>Absorbing Dome</b> (50 Transmutation, 20 XP):`,
+                `The Dome Instead of having <box>6 × ESS</box> Armor VS All, it has <box>4 × ESS</box> <a href="../main/mechanics.html#resistances" target="_blank">Absorption</a> against a single Damage Type.`,
             ],
         },
         {
             type: "p",
             content: [
                 `The Stance only Breaks when entering any other Stance.`,
-                `This Ability can CRIT for 2× Dome Starting HP, throw your d10 please.`,
+                `This Ability cannot CRIT!`,
             ],
         },
     ],
@@ -64,9 +78,9 @@ module.exports = {
                 ["Stance Trigger", "None"],
                 ["Range", "Self"],
                 ["Radius", "CS^(1/3)"],
-                ["Dome Starting HP", "10 × ESS"],
-                ["Dome Max HP", "20 × ESS"],
+                ["Dome HP", "15 × ESS"],
                 ["Dome Armor VS All", "6 × ESS"],
+                ["Soul Save", "20 × ESS"],
             ],
         },
     ],

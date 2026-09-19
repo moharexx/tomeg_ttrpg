@@ -13,7 +13,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Bio Damage",
+        "Bio Damage, Effect",
         "Main-Action",
     ],
     unlock_cost: 10,
@@ -21,16 +21,16 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You imbue your Melee Attack with Poison.",
-                "Upon dealing Damage the Target is inflicted with the <b>Poison Effect.</b>",
+                `You imbue your Melee Attack with Poison.`,
+                `Upon dealing Damage the Target is inflicted with the <b>Poison Effect.</b>`,
             ],
         },
         {
             type: "list",
             content: [
-                "<b>Poison Effect:</b>",
-                "At the Start of the Caster's Next Turn the Target takes <box>(2d12 × ESS) Bio</box> Damage.",
-                "This Effect Ends after Dealing Damage.",
+                `<b>Poison Effect:</b>`,
+                `At the Start of the Caster's Next Turn the Target takes <box>2d12 × ESS</box> Bio Damage.`,
+                `This Effect Ends after Dealing Damage.`,
             ],
         },
     ],
@@ -43,7 +43,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Special Condition", "Melee"],
-                ["Poison Damage", "(2d12 × ESS) Bio"],
+                ["Bio Damage", "2d12 × ESS"],
             ],
         },
     ],

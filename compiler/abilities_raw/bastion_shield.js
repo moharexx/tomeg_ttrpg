@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Defense",
-        "Negation, Self",
+        "Self, Negation",
         "Bonus-Action",
     ],
     unlock_cost: 10,

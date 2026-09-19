@@ -13,7 +13,7 @@ module.exports = {
     tags: [
         "Utility",
         "Self, Buff",
-        "1 Minute / Continuous",
+        "Main-Action / Continuous",
     ],
     unlock_cost: 10,
     description: [
@@ -44,7 +44,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "1 Minute (20 Rounds)"],
+                ["Cast Time", "Main-Action"],
                 ["Stance Trigger", "None"],
                 ["Range", "Self"],
                 ["Perception and Intuition Bonus", "10 × ESS"],

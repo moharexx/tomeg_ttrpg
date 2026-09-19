@@ -23,7 +23,7 @@ module.exports = {
                 `Spend either <b>GRIT</b> or <b>HD</b> to use a <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a> or <a href="../main/mechanics.html#interact" target="_blank">Interact-Action</a> as a <b>Free-Action</b>.`,
                 `For Ability and Feature interactions treat as if you used said Action with a <b>Main-Action</b>.`,
                 `When you Un-Wield your Shield with this Ability, you don't lose an already Active <a href="../main/mechanics.html#defense_action" target="_blank">Defense-Action</a>.`,
-                `The <b>ESS</b> this Ability is Cast at is <b>always</a> <box>Total XP / 100</box> (at least 1)`,
+                `The <b>ESS</b> this Ability is Cast at is <b>always</b> <box>Total XP / 100</box> (at least 1)`,
             ]
         },
     ],

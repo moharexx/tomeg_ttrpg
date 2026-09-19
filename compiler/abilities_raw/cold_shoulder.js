@@ -11,11 +11,11 @@ module.exports = {
     ],
     reqs_full: [
         "<b>Skill:</b> 20 Martial Arts",
-        "<b>Spell:</b> (10 INT | 10 WILL | 10 EGO), (5 Abjuration | 10 Transmutation | 20 Evocation)",
+        "<b>Spell:</b> 10 CS, (5 Abjuration | 10 Transmutation | 20 Evocation)",
     ],
     tags: [
         "Offense",
-        "Cold Damage, VIT Save, Touch, Crowd Control",
+        "Cold Damage, VIT Save, Touch, Crowd Control, Effect",
         "Main-Action",
     ],
     unlock_cost: 10,
