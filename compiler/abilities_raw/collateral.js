@@ -19,8 +19,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "You use a Bonus-Action to make a Single Target Ability have a small Radius.",
-                "When you use this with any kind of Melee Attack you can choose Yourself to be Excluded from the AOE.",
+                `You use a Bonus-Action to make a Single Target Ability have a small Radius.`,
+                `When you use this with any kind of Melee Attack you can choose to Exclude yourself from the AOE.`,
             ],
         },
     ],

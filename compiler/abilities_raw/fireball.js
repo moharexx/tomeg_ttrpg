@@ -8,7 +8,7 @@ module.exports = {
         "10 Evocation | 20 Transmutation | 50 Conjuration",
     ],
     reqs_full: [
-        "<b>Spell:</b> (20 INT | 20 WILL | 20 EGO), (10 Evocation | 20 Transmutation | 50 Conjuration)",
+        "<b>Spell:</b> 20 CS, (10 Evocation | 20 Transmutation | 50 Conjuration)",
     ],
     tags: [
         "Offense",
@@ -43,7 +43,7 @@ module.exports = {
                 ["Range", "20 × CS^(1/3)"],
                 ["Radius", "3 × ESS^(1/3)"],
                 ["AGI Save", "10 × ESS"],
-                ["Damage", "(2d8 × ESS) Heat"],
+                ["Heat Damage", "2d8 × ESS"],
             ],
         },
     ],

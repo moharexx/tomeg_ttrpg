@@ -8,11 +8,11 @@ module.exports = {
         "50 Transmutation | 200 Abjuration | 1000 Evocation",
     ],
     reqs_full: [
-        "<b>Spell:</b> (200 INT | 200 WILL | 200 EGO), (50 Transmutation | 200 Abjuration | 1000 Evocation)",
+        "<b>Spell:</b> 200 CS, (50 Transmutation | 200 Abjuration | 1000 Evocation)",
     ],
     tags: [
         "Offense",
-        "Ranged, Targeting, Physical Damage",
+        "Melee, Physical Damage",
         "Main-Action / Main-Action",
     ],
     unlock_cost: 200,
@@ -20,29 +20,23 @@ module.exports = {
         {
             type: "p",
             content: [
-                `<i>"Scale of the Dragon, Recoil, Twin Meteors..."</i>`,
+                `<i>"Phase; Scale of the Dragon; Recoil; Twin Meteors..."</i>`,
                 `<i><b>"World Cutting Slash"</b></i>`,
             ],
         },
         {
             type: "p",
             content: [
-                "When using this Ability, you are put in <b>World Cutting Slash Stance.</b>",
-                "The Next Turn you can Trigger the <b>World Cutting Slash.</b>",
-                "You Target an Entity which you can Pinpoint and is in Range, and make an Attack against them.",
-                "This is not a Projectile or anything blockable in it's path, the Attack just happens at the Target's Position.",
-            ],
-        },
-        {
-            type: "dots",
-            content: [
-                "Each point of Damage going into TEMP-HP or Shielding Abilities counts as 2 points of Damage.",
+                `When using this Ability, you are put in <b>World Cutting Slash Stance</b>.`,
+                `The Next Turn you can Trigger the <b>World Cutting Slash</b>, making a single Attack against a Pinpointed Target.`,
+                `This Attack counts as Melee, it simply happens at the Target's Position.`,
+                `Each point of Damage going into BUFFERs or Shielding Abilities count as 2 points of Damage.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Stance Breaks when: <box>Using Abilities, Moving, HD Decrease, Taking Damage</box>",
+                `The Stance Breaks when: <box>Using Abilities, Moving, HD Decrease, Taking Damage</box>`,
             ],
         },
     ],
@@ -54,10 +48,10 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
-                ["Stance Trigger", "Main-Action at Your Next Turn"],
+                ["Stance Trigger", "Main-Action in your Next Turn"],
                 ["Range", "5 × CS^(1/3)"],
-                ["Damage", "(2d12 × ESS) Physical"],
-                ["Armor-Pen", "6 × ESS"],
+                ["Physical Damage", "2d12 × ESS"],
+                ["Armor-Pen", "10 × ESS"],
             ],
         },
     ],

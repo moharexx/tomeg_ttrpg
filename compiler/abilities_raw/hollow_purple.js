@@ -5,10 +5,10 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "50 Abjuration | 200 Evocation | 1000 Transmutation",
+        "50 Abjuration | 200 Transmutation | 1000 Evocation",
     ],
     reqs_full: [
-        "<b>Spell:</b> (200 INT | 200 WILL | 200 EGO), (50 Abjuration | 200 Evocation | 1000 Transmutation)",
+        "<b>Spell:</b> 20 CS, (50 Abjuration | 200 Transmutation | 1000 Evocation)",
     ],
     tags: [
         "Offense",
@@ -20,23 +20,22 @@ module.exports = {
         {
             type: "p",
             content: [
-                `<i>"Nine Ropes, Polarized Light, Crow and Declaration, The gap within and without..."</i>`,
+                `<i>"Phase; Twilight; Eyes Of Wisdom; Nine Ropes; Polarized Light; Crow And Declaration; Between Front And Back..."</i>`,
                 `<i><b>"Hollow Purple"</b></i>`,
             ],
         },
         {
             type: "p",
             content: [
-                "When using this Ability, you are put in <b>Hollow Purple Stance</b>.",
-                "The Next Turn you can Trigger the <b>Hollow Purple Stance</b>.",
-                "You shoot out a large sphere of exotic matter, dematerializing everything in its path.",
-                "This is a Projectile, Targeting everything in its path, acting like a Flow Line AOE Attack with a Width.",
+                `When using this Ability, you are put in <b>Hollow Purple Stance</b>.`,
+                `Next Turn you can Trigger <b>Hollow Purple</b>, shooting out a large orb, dematerializing everything in its path.`,
+                `This is a Projectile, Targeting everything in its path, making it a Flow Line AOE Attack with a Width.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Stance Breaks when: <box>Using Abilities, Moving, HD Decrease, Taking Damage</box>",
+                `The Stance Breaks when: <box>Using Abilities, Moving, HD Decrease, Taking Damage</box>`,
             ],
         },
     ],
@@ -51,7 +50,7 @@ module.exports = {
                 ["Stance Trigger", "Main-Action at Your Next Turn"],
                 ["Range", "20 × CS^(1/3)"],
                 ["Width", "CS^(1/3)"],
-                ["Damage", "(2d8 × ESS) Demat"],
+                ["Demat Damage", "10 × ESS"],
                 ["Demat-Pen", "10 × ESS"],
             ],
         },

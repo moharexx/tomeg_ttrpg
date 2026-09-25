@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Action Surge",
+    name: "Mobility Surge",
     category: "active",
     type: [
         "Innate",
@@ -22,6 +22,7 @@ module.exports = {
             content: [
                 `Your horizon expands, everything around you slows.`,
                 `Choose an option from the two below, and lose a Bonus-Action from your Next Turn.`,
+                `If you can't provide this Bonus-Action at the Start of your Next Turn, you gain the <a target="_blank" href="../main/mechanics.html#conditions">Staggered Condition</a>.`,
             ],
         },
         {

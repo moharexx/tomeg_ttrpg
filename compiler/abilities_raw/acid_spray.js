@@ -35,7 +35,7 @@ module.exports = {
                 ["Cast Time", "Main-Action"],
                 ["Cone Length", "4 × CS^(1/3)"],
                 ["Cone Spread", "30° (~3 Forward = +2 width)"],
-                ["Damage", "(1d12 × ESS) Demat"],
+                ["Demat Damage", "1d12 × ESS"],
             ],
         },
     ],

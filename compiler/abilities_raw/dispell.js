@@ -1,5 +1,5 @@
 module.exports = {
-    name: "Dispell",
+    name: "Dispell (WIP)",
     category: "active",
     type: [
         "Spell",
@@ -13,7 +13,7 @@ module.exports = {
     tags: [
         "Utility",
         "Ranged, Negation",
-        "Main-Action + Bonus-Action",
+        "Main-Action",
     ],
     unlock_cost: 20,
     description: [
@@ -21,21 +21,22 @@ module.exports = {
             type: "p",
             content: [
                 `When used, you Target something magical (like a Spell, Magical Item, or similar...), and attempt to Dispell it.`,
-                `Roll <box>Dispell Strength</b> against the <b>Dispell Difficulty</b>, if you Roll at least equal you Succeed.`,
+                `Roll <box>(1d10 + 5) × ESS</b> against the <b>Dispell Difficulty</b>, if you Roll at least equal you Succeed.`,
             ]
         },
         {
             type: "p",
             content: [
-                `Dispell Difficulty for Spells, Effects and such (uses ESS): <box>(10 × ESS) + Potency</box>`,
-                `Dispell Difficulty for Magical Items, and such (uses Tier): <box>40 × Tier</box>`,
+                `Dispell Difficulty of a Spell is based off its <b>Base</b> Cast Time, ESS, and Potency; <box>(+6 per Bonus-Action, +10 per Main-Action) × ESS + Potency</box>`,
+                `If the Base Cast Time of the Spell is multi Round, then its Dispell Difficulty is <box>(20 × ESS) + Potency</box>`,
+                `For Permanent Effects the Dispell Difficulty is <box>40 × (ESS | Tier)</box>`,
             ]
         },
         {
             type: "p",
             content: [
-                `If you use this Ability as a Reaction (Example: <a target="_blank" href="../main/mechanics.html#ready">Ready</a>), it can be used as a Counter Spell.`,
-                `Dispelling anything made by the Caster themselves is a Free-Action, and has 0 Difficulty.`,
+                `By using this as a Reaction (Example: <a target="_blank" href="../main/mechanics.html#ready">Ready</a>), it can be used as a Counter Spell.`,
+                `Dispelling anything made by yourself is a Free-Action, and has 0 Difficulty.`,
             ],
         },
         {
@@ -53,9 +54,9 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Main-Action + Bonus-Action"],
+                ["Cast Time", "Main-Action"],
                 ["Range", "10 × CS^(1/3)"],
-                ["Dispell Strength", "(1d10 + 6) × ESS"]
+                ["Dispell Strength", "(1d10 + 5) × ESS"]
             ],
         },
     ],

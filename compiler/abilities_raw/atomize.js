@@ -8,7 +8,7 @@ module.exports = {
         "10 Abjuration | 20 Evocation | 50 Transmutation",
     ],
     reqs_full: [
-        "<b>Spell:</b> (20 INT | 20 WILL | 20 EGO), (10 Abjuration | 20 Evocation | 50 Transmutation)",
+        "<b>Spell:</b> 20 CS, (10 Abjuration | 20 Evocation | 50 Transmutation)",
     ],
     tags: [
         "Offense",
@@ -20,14 +20,14 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, it fires a Single Target beam of Disintegration, in a straight line.",
+                `When used, it fires a Single Target beam of Disintegration, in a straight line.`,
             ],
         },
         {
             type: "dots",
             content: [
-                "Each point of Damage going into TEMP-HP or Shielding Abilities counts as 2 points of Damage.",
-                "This Ability cannot CRIT!",
+                `Each point of Damage going into TEMP-HP or Shielding Abilities counts as 2 points of Damage.`,
+                `This Ability cannot CRIT!`,
             ],
         },
     ],
@@ -41,7 +41,7 @@ module.exports = {
                 ["Cast Time", "Main-Action"],
                 ["Range", "10 × CS^(1/3)"],
                 ["Overridden Finalized To-Hit", "10 × ESS"],
-                ["Damage", "(10 × ESS) Demat"],
+                ["Demat Damage", "10 × ESS"],
                 ["Damage Against TEMP-HP and Shield like Abilities", "2×"],
             ],
         },

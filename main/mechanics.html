@@ -1486,18 +1486,24 @@
             <p class="bottomless"><b>Against Surprised Targets:</b></p>
             <ul>
                 <li>Attacks are made with <b>Advantage.</b></li>
-                <li>Cannot take <b>Reactions</b>, unless their <box>2 × INIT</box> is at least <b>Attack's To-Hit</b> or <b>Save's Difficulty</b>
-                </li>
+                <li>Cannot take <b>Reactions</b>, unless their <box>2 × INIT</box> is at least <b>Attack's To-Hit</b> or <b>Save's Difficulty</b></li>
             </ul>
         </div>
         <h2 id="economy" class="collapsible">Economy (WIP)</h2>
         <hr>
         <div class="collapsed">
             <p>
-                Economy is based around Currency, often denoted as C, COCKONOMY !!!!
+                The general rules of Economy, detailing how trade works, and what can settlements provide.<br>
+                The Currency will be denoted with <box>C</box>, one worth around 3 American Dollars, give or take.<br>
             </p>
+            <p class="bottomless"><b>Settlement Total Value:</b></p>
+            <ul>
+                <li>Refers to the total worth the settlement has, in money, goods, and infrastructure.</li>
+                <li>Scales by the amount of people and technological level of the settlement.</li>
+                <li>Per Capita; [Primal/Medival/Industrial/Modern/Cyberpunk] <box>[100/500/1000/2000/3000]</box></li>
+            </ul>
             <p>
-                ???
+                WIP
             </p>
         </div>
         <h2 id="devices" class="collapsible">Devices (WIP)</h2>
@@ -1710,7 +1716,7 @@
                 <td>Variable</td>
                 <td>
                     For each Point add 1 Armor-Pen.<br>
-                    <b>Note:</b> This only applies to Attack-Actions, and a few Abilities!
+                    This <b>ONLY</b> applies to <a href="#attack_action">Attack-Actions</a>, and a few Abilities!
                 </td>
             </tr>
             <tr>
@@ -1791,7 +1797,7 @@
                 <td>3</td>
                 <td>
                     The Weapon's Range is Reduced to 1/10, and Long Range isn't used.<br>
-                    Attack-Actions are a 30° Flow Cone AOE, and ignore Melee Disadvantage.
+                    <a href="#attack_action">Attack-Actions</a> are a 30° Flow Cone AOE, and ignore Melee Disadvantage.
                 </td>
             </tr>
             <tr>
@@ -1799,7 +1805,7 @@
                 <td>Variable</td>
                 <td>
                     For each Point add 1 Armor-Pen.<br>
-                    <b>Note:</b> This only applies to Attack-Actions, and a few Abilities!
+                    This <b>ONLY</b> applies to <a href="#attack_action">Attack-Actions</a>, and a few Abilities!
                 </td>
             </tr>
             <tr>
@@ -1815,7 +1821,7 @@
                 <td>-3</td>
                 <td>
                     The Weapon uses a Main-Action to Reload.<br>
-                    Only the Attack-Action needs the Weapon Reloaded, Abilities can be used freely.
+                    Only the <a href="#attack_action">Attack-Actions</a> needs the Weapon Reloaded, Abilities can be used freely.
                 </td>
             </tr>
             <tr>
@@ -1823,7 +1829,7 @@
                 <td>-2</td>
                 <td>
                     The Weapon uses a Bonus-Action to Reload.<br>
-                    Only the Attack-Action needs the Weapon Reloaded, Abilities can be used freely.
+                    Only the <a href="#attack_action">Attack-Actions</a> needs the Weapon Reloaded, Abilities can be used freely.
                 </td>
             </tr>
         </table>
@@ -1989,8 +1995,8 @@
         <h2 id="physical_damage">Physical</h2>
         <hr>
         <p>
-            A Physical Attack inflicts either Bludgeoning, Slashing, Piercing Damage.<br>
-            If a Damage says Physical, freely chooses specific type.<br>
+            Physical Damage has 3 Subtypes; Bludgeoning, Slashing, and Piercing.<br>
+            If a Damage just says Physical, freely chooses a specific type.<br>
             Things with loose physical presence (air, shadow and light Entities, ect...) have 100 Armor.<br>
             Incorporeal things have 1000 Armor.
         </p>
@@ -2021,15 +2027,14 @@
         <h2 id="thunder_damage">Thunder</h2>
         <hr>
         <p>
-            Thunder based Attacks will invoke sounds, vibrations, pressure waves to deal its Damage.<br>
-            Brittle things will usually have some kind of weakness to Thunder, like taking <b>Max-Damage</b>, or Double
-            Damage.
+            Thunder based Attacks will invoke sounds, vibrations, pressure waves to deal Damage.<br>
+            Brittle things will usually have some kind of weakness to Thunder, like taking <b>Max-Damage</b>, or Double Damage.
         </p>
         <h2 id="electric_damage">Electric</h2>
         <hr>
         <p>
             Electric Damage is induced by Electric currents, duh!?<br>
-            Attacks made with Electricity deal <b>Max-Damage</b> to <b>Soaked</b>, and <b>Airborne</b> Targets.
+            Attacks made with Electricity deal <b>Max-Damage</b> to <b>Soaked</b> or <b>Airborne</b> Targets.
         </p>
         <h2 id="psychic_damage">Psychic</h2>
         <hr>
@@ -2041,20 +2046,20 @@
         <hr>
         <p>
             Radiant Damage is about overwhelming Body and Soul.<br>
-            This type of Damage is Hybrid, meaning it's both HP and SP Damage.
+            This is a Hybrid Damage Type, meaning it's both HP and SP Damage.
         </p>
         <h2 id="radiant_necrotic">Necrotic</h2>
         <hr>
         <p>
             Necrotic Damage is about rotting Body and Soul.<br>
-            This type of Damage is Hybrid, meaning it's both HP and SP Damage.
+            This is a Hybrid Damage Type, meaning it's both HP and SP Damage.
         </p>
-        <h2 id="true">True</h2>
+        <h2 id="true" class="rainbow">True</h2>
         <hr>
         <p>
             True Damage just is.<br>
-            With 3 Types; regular (HP), SP, and Hybrid (both HP and SP).<br>
-            This type of Damage cannot be reduced by any means less than HyperEntity Powers, or Reset Essence Artifacts.
+            With 3 Sub-Types; regular (HP), SP, and Hybrid (both HP and SP).<br>
+            This type of Damage cannot be reduced by <b>any means</b> less than <span class="rainbow">HyperEntity Powers</span>, or <span class="rainbow">Reset Essence Artifacts</span>.
         </p>
         <h1 id="resistances">RESISTANCES</h1>
         <hr>

@@ -52,20 +52,21 @@ module.exports = {
             type: "p",
             content: [
                 `You must allocate <box>RoundUp(Familiar XP / 10)</box> PROXY to the Familiar, otherwise it <b>poofs out</b>.`,
-                `While you provide PROXY, you know of the condition of your Familiar, and have them <b>Pinpointed</b>.`,
+                `While you provide PROXY, you know of the condition of your Familiar, can Communicate with them, and have them <b>Pinpointed</b>.`,
                 `Max PROXY Range: <box>1000 × ESS^(1/3)</box>`,
             ],
         },
         {
             type: "list",
             content: [
-                `<b>Soul</b> (10 Anima):`,
+                `<b>Souls and Thoughtforms</b> (10 Anima, 5 XP):`,
                 `Your Familiar can have a Soul, it's either created, or a fragment of the Caster's.`,
-                `This means the Familiar can have, and must have at least 1 WILL and EGO.`,
-                `The Familiar can have Abilities, if the Unlock Requirements are met, Spend the XP as normal.`,
+                `A Soul means the Familiar can and must have at least 1 WILL and EGO.`,
+                `The Soul allows Unlocking Abilities, if the Unlock Requirements are met, Spend the XP as normal.`,
                 `You cannot give your Familiar Abilities which you don't have, but you can still use the Traits Table.`,
-                `When the Familiar poofs out or Dies the Soul fragment tries to fly back to the Caster.`,
+                `When a Familiar with a Soul poofs out or Dies, the Soul fragment tries to fly back to the Caster.`,
                 `<b>Soul Fly Back Range:</b> <box>1000 × ESS^(1/3)</box>`,
+                `You can also make Thoughtforms, these are Familiars without a Physical Vessel, and instead an Astral Vessel.`,
             ],
         },
         {
@@ -81,12 +82,22 @@ module.exports = {
         {
             type: "list",
             content: [
-                `<b>Stable Material</b> (<a href="../abilities/permanence.html">Permanence</a>):`,
-                `When you Cast Familiar with Permanent Duration using the <b>Permanence Meta-Ability</b> it can be Stable Material.`,
+                `<b>Stable Vessel</b> (<a href="../abilities/permanence.html">Permanence</a>):`,
+                `When you Cast Familiar with Permanent Duration using the <b>Permanence Meta-Ability</b> it can be Stable.`,
                 `It cannot be Dispelled, doesn't poof out, can drop to Negative HP and can get the Dying Condition.`,
                 `By failing to provide PROXY you lose control of the Familiar.`,
-                `For Familiars with no Soul, when control is lost, the rules become the same as a Body with no Soul. (Dead)`,
+                `For Familiars with no Soul, when control is lost, they become some kind of "automaton", due to having no EGO.`,
                 `For Familiars with a Soul, they behave according to the Soul given, thus (usually) remain loyal and friendly to the Caster.`,
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                `<b>Potency Boost:</b>`,
+                `For each point of <a href="../main/mechanics.html#potency" target="_blank">Potency</a> Familiars can have +5 XP to Spend.`,
+                `If you don't supply PROXY to a Familiar, the Potency Boost fades away, even if it's a Stable Vessel.`,
+                `A Familiar under Potency Boost cannot use any Ability which summons or creates other Entities.`,
+                `<b>Note:</b> Potency Effects fade after <box>1 Minute (20 Rounds)</box>, even if the Ability would last longer!`,
             ],
         },
         {
@@ -94,7 +105,7 @@ module.exports = {
             content: [
                 `<i>"Go my go-pro!"</i> - moharexx`,
                 `This has caused a few philosophical debates...`,
-                `The make anything spell! little creatures, full people, just organs, any tools, and even thoughtforms!`,
+                `The make anything spell! Little creatures, full people, just organs, chairs, tools, and even thoughtforms!`,
                 `<b>Note:</b> Please don't make your GM execute your entire family tree. Use at max 1-2 combat familiars, unless your GM is a masochist.`,
             ],
         },

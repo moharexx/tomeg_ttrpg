@@ -20,17 +20,17 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, spray a Cone of dazzling lights, or colorful spray material, or whatever the Caster desires.",
-                "This is a Melee Flow Cone AOE, flowing out from the Caster.",
-                "Targets must Succeed a <b>VIT Save</b> or get the <b>Dazzled Effect</b>.",
+                `When used, spray a Cone of dazzling lights, or colorful spray material, or whatever the Caster desires.`,
+                `This is a Melee Flow Cone AOE, flowing out from the Caster.`,
+                `Targets must Succeed a <b>VIT Save</b> or get the <b>Distorted Effect</b>.`,
             ]
         },
         {
             type: "list",
             content: [
-                "<b>Dazzled Effect:</b>",
-                "The Target cannot Pinpoint with any of their Senses.",
-                "This lasts till the End of the Target's Next Turn.",
+                `<b>Distorted Effect:</b>`,
+                `The Target cannot <b>Pinpoint</b> with any of their Senses, and makes <b>AGI Saves</b> with Disadvantage.`,
+                `This lasts till the End of the Target's Next Turn.`,
             ],
         },
     ],

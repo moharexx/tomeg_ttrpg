@@ -23,16 +23,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                `With this Ability you can make your body act like Armor, creating a Simulated Armor.`,
-                `Simulated Armors can have Max Property Points, and can't stack on top of other Armors.`,
-                `You can change the Simulated Armor by Recasing this Ability.`,
-            ],
-        },
-        {
-            type: "p",
-            content: [
-                `If you're already Wearing a real Armor, then you can attempt to override that Armor with the Simulated one.`,
-                `But only if the Armor's Tier is less than Half the ESS you Cast this Ability with.`,
+                `You can use this Ability when making the <a target="_blank" href="../main/mechanics.html#switch_action">Switch-Action</a>, allowing you to change your Armor.`,
+                `You can either Simulate an Armor, or change the one you're currently Wearing.`,
+                `The new Armor can have up to <box>6</box> Property Points, and Tier equal to your ESS.`,
+                `If you change an Armor you're currently Wearing, the changes only last while Wearing it.`,
             ],
         },
     ],
@@ -43,10 +37,10 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Bonus-Action"],
+                ["Cast Time", "Same as Switch-Action (Counts as Switch-Action)"],
                 ["Range", "Self"],
                 ["Duration", "Till Consciousness is lost"],
-                ["Simulated Item Tier", "ESS"],
+                ["Armament Tier", "ESS"],
             ],
         },
     ],

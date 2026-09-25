@@ -23,8 +23,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                `When used, you Damage yourself to dodge an Attack.`,
-                `You gain HD which you can instantly spend from to dodge the Attack.`,
+                `When used, you Damage yourself to give yourself HD, and potentially dodge an Attack.`,
+                `You gain HD which you can instantly Spend from to dodge the Attack.`,
             ],
         },
     ],
@@ -39,7 +39,7 @@ module.exports = {
                 ["Trigger", "Get Attacked"],
                 ["Cooldown", "Short-Rest"],
                 ["HD Gain", "12 × ESS"],
-                ["Self Damage", "(5 × ESS) True"],
+                ["Self True Damage", "5 × ESS"],
             ],
         },
     ],

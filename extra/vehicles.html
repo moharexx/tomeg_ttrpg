@@ -20,13 +20,13 @@
     <side_menu id="side_menu"></side_menu>
     <main onclick="side_bar_func(false)">
         <!--VEHICLES-->
-        <h1 id="vehicle">VEHICLES</h1>
+        <h1 id="vehicle">VEHICLES (WIP)</h1>
         <hr>
         <p>
             Vehicle... bruh.
         </p>
         <p>
-            To move with a Vehicle you must use an Interact Action (Bonus-Action), and most Vehicles can only move once per Round.
+            The Default way to Move with a Vehicle is by using an Interact Action (Bonus-Action), this can only be used once per Round.
             WIP
         </p>
         <h1 id="premade_vehicles">PREMADE VEHICLES</h1>
@@ -119,30 +119,30 @@
             </tr>
             <tr>
                 <td>Air Locks</td>
-                <td>200<br>(No Scaling)</td>
-                <td>Any door and room can be airtight, probably a good idea underwater and in space.</td>
+                <td>20 × Tier</td>
+                <td>Any door and room can be airtight, probably a good idea underwater or in space.</td>
             </tr>
             <tr>
-                <td>Arms</td>
-                <td>20 × Tier</td>
+                <td>Mech Arms</td>
+                <td>40 × Tier</td>
                 <td>
                     Arms are cool! This can be bought multiple times, each adding +1 Wielding Slot to the Vehicle.<br>
-                    For each Wielding Slot controlled, a Pilot must use their own Wielding Slots.
+                    For Wielding Slot controlled, a Pilot must use their own Wielding Slots and Masteries.
                 </td>
             </tr>
             <tr>
                 <td>Pilot Synchronizer</td>
-                <td>60 × Tier</td>
+                <td>100 × Tier</td>
                 <td>
                     The dreams of a mech pilot. This can be bought multiple times, each adding a Special Pilot Seat.<br>
                     Attunement to this Pilot Seat requires an <a href="../main/mechanics.html#interact_action" target="_blank">Interact-Action</a> <b>(Bonus-Action)</b><br>
                     <p class="bottomless"><b>While Attuned to:</b></p>
                     <ul>
-                        <li>If the Vehicle has at least a Movement Type; then its AGI is Overridden;</li>
-                        <li>New AGI: <b>(Light/Medium/Heavy)</b> <box>10 × Tier</box>/<box>6 × Tier</box>/<box>2 × Tier</box></li>
+                        <li>If the Vehicle can Move then its AGI is Overridden; <b>[Light/Medium/Heavy]</b> <box>[10/6/2] × Tier</box></li>
                         <li>The Vehicle benefits from the Pilot's Masteries, like Athletics, Acrobatics, Sleight, ect...</li>
                         <li>The Pilot can use any of their own Abilities as the Vehicle's.</li>
-                        <li>For Abilities, the Pilot can use the Vehicle's STR, AGI and MS for scaling, but must still use their own ESS.</li>
+                        <li>The Pilot can use the Vehicle's STR and AGI, but must still use their own ESS, Capped by Synchronizer Tier.</li>
+                        <li>For Abilities which Scale with MS, it's Overridden; <b>[Light/Medium/Heavy]</b> <box>[5/4/3] × Tier^(1/3)</box></li>
                     </ul>
                 </td>
             </tr>
@@ -169,31 +169,31 @@
             </tr>
             <tr>
                 <td>Ground</td>
-                <td>20 × Tier</td>
+                <td>100 × Tier</td>
                 <td>
                     Wheels, tank tracks, or even legs. Anything that moves on ground.<br>
                     <b>Move Speed:</b> <box>10 × Tier^(1/3)</box><br>
-                    <b>AGI (Light/Medium/Heavy)</b> <box>6 × Tier</box>/<box>4 × Tier</box>/<box>2 × Tier</box><br>
+                    <b>AGI [Light/Medium/Heavy]</b> <box>[6/4/2] × Tier</box><br>
                     <b>Maximum Cargo Weight:</b> <box>10Kg × Vehicle STR</box>
                 </td>
             </tr>
             <tr>
                 <td>Areal</td>
-                <td>40 × Tier</td>
+                <td>200 × Tier</td>
                 <td>
                     The Vehicle can fly, even in space.<br>
                     <b>Move Speed:</b> <box>20 × Tier^(1/3)</box><br>
-                    <b>AGI (Light/Medium/Heavy)</b> <box>8 × Tier</box>/<box>4 × Tier</box>/<box>2 × Tier</box><br>
+                    <b>AGI [Light/Medium/Heavy]</b> <box>[8/4/2] × Tier</box><br>
                     <b>Maximum Cargo Weight:</b> <box>5Kg × Vehicle STR</box>
                 </td>
             </tr>
             <tr>
                 <td>Naval</td>
-                <td>20 × Tier</td>
+                <td>100 × Tier</td>
                 <td>
                     The Vehicle can move without penalties on and in water.<br>
                     <b>Move Speed:</b> <box>8 × Tier^(1/3)</box><br>
-                    <b>AGI (Light/Medium/Heavy)</b> <box>4 × Tier</box>/<box>2 × Tier</box>/<box>1 × Tier</box><br>
+                    <b>AGI [Light/Medium/Heavy]</b> <box>[4/2/1] × Tier</box><br>
                     <b>Maximum Cargo Weight:</b> <box>15Kg × Vehicle STR</box>
                 </td>
             </tr>
@@ -201,9 +201,9 @@
         <h2 id="industrial_grade_weapons">Industrial Grade Weapons</h2>
         <hr>
         <p>
-            Industrial Grade (I.G.) Weapons are Weapons too big to be used personally, and must be Mounted to something or Wielded by a Vehicle.<br>
+            Industrial Grade (I.G.) Weapons are Weapons too big to be comfortably used personally, and must be Mounted to something or Wielded by a Vehicle.<br>
             These are mostly like regular Weapons, and have <b>8 Property Points</b>, but there are some differences.<br>
-            Using when not Mounted or not Wielded by a Vehicle gives Disadvantage, unless STR is at least <box>30 × Tier</box>
+            Using when not Mounted or not Wielded by a Vehicle gives Disadvantage, unless STR is at least <box>20 × Tier</box>
         </p>
         <table width="50%">
             <tr>
@@ -228,19 +228,21 @@
             These Types also interact differently with Melee and Ranged.
         </p>
         <ul>
-            <li><b>Mounted:</b> These must be Mounted to a Vehicle or Terrain, Taking <box>2 × Tier</box> <b>Attachment Points</b> from a Vehicle.</li>
-            <li><b>Wieldable:</b> These will require to be Wielded by a Vehicle to be used.</li>
+            <li><b>Mounted:</b> These must be Mounted to a Vehicle, taking <box>10 × Tier</box> <b>PROXY</b> from a Vehicle.</li>
+            <li><b>Wieldable:</b> These will require to be Wielded by a Vehicle to be used, requiring Mech Arms.</li>
         </ul>
         <p class="bottomless"><b>Melee I.G. Weapons:</b></p>
         <ul>
             <li>When Mounted; replace the Attack made on Vehicle Collisions.</li>
             <li>I.G. Shield are also possible, but only Wieldable ones.</li>
         </ul>
-        <p class="bottomless"><b>Ranged I.G. Weapons:</b></p>
+        <p class="bottomless"><b>Ranged Mounted I.G. Weapons:</b></p>
         <ul>
-            <li>When Mounted; Range is Double that of regular Ranged Weapons.</li>
-            <li>When Mounted; the Weapon can only shoot once per Round, or Twice if it's a Light Weapon.</li>
-            <li>The <b>Aim Property</b> can only be used on <b>Wieldable Types</b>.</li>
+            <li>The Weapon has a Clip Size, 3 for Light, 2 for Medium, 1 for Heavy.</li>
+            <li>To fire, someone must use an <a href="../main/mechanics.html#interact_action" target="_blank">Interact-Action</a> <b>(Bonus-Action)</b></li>
+            <li>When firing the Weapon, it makes an amount of Attack-Actions equal to the Clip Size.</li>
+            <li>Only the Slow version of the <b>Reload Property</b> can be used, which makes it so the Weapon must reload for 1 Round to fill its Clip.
+            <li>The <b>Aim Property</b> cannot be used.</li>
         </ul>
         <h2 id="industrial_grade_curios">Industrial Grade Curios</h2>
         <hr>
@@ -256,8 +258,8 @@
         <p class="bottomless"><b>Miniaturization:</b></p>
         <ul>
             <li>With this the Hull, Movement Type, I.G. Weapon, or I.G. Curio can be much smaller and lighter.</li>
-            <li>For <box>2× Market Price</box> the Weight and Size is reducible, Capped to 1/5 of <b>Tier 1</b>.</li>
-            <li>The AGI of the Vehicle gets Tripled!</li>
+            <li>For <box>2.5× Market Price</box> the Weight and Size is reducible, Capped to 1/5 of <b>Tier 1</b>.</li>
+            <li>The AGI of the Vehicle gets Doubled!</li>
             <li>A Miniaturized Hull only accepts Miniaturized Components.</li>
             <li><b>Note:</b> If you want to make an iron man suit, this is the way.</li>
         </ul>

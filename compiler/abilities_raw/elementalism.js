@@ -5,10 +5,10 @@ module.exports = {
         "Spell",
     ],
     reqs_short: [
-        "5 Evocation | 5 Transmutation | 5 Conjuration | 5 Anima",
+        "5 Evocation | 5 Transmutation | 5 Conjuration",
     ],
     reqs_full: [
-        "<b>Spell:</b> 5 CS, (5 Evocation | 5 Transmutation | 5 Conjuration | 5 Anima)",
+        "<b>Spell:</b> 5 CS, (5 Evocation | 5 Transmutation | 5 Conjuration)",
     ],
     tags: [
         "Offense, Utility, Unlock",

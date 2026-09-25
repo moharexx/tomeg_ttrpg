@@ -24,7 +24,7 @@ module.exports = {
             type: "p",
             content: [
                 `When you use this Ability, you Enchant an Armament.`,
-                `Spend up to <box>2 × ESS</box> Enchantment Points (<b>EP</b> for short) on the Targeted Armament(s).`,
+                `Spend up to <box>2 × ESS</box> Enchantment Points (<b>EP</b> for short) for Targeted Armament(s).`,
                 `At Cast you allocate the EP to the Armament(s), which lasts for the Duration; <box>1 Minute (20 Rounds)</box>`,
                 `Different Enchantments have different Caps on how much EP can be put into them.`,
             ],
@@ -34,7 +34,7 @@ module.exports = {
             content: [
                 `When you Unlock this Ability, choose 5 of the Enchants to Unlock with it.`,
                 `For the rest, you can Spend 5 XP to Unlock 3 more.`,
-                `If Cast as <b>Innate</b>, the Ability can only Target currently Wielded and Worn Items, and Ends when Un-Wielded or taken off.`,
+                `If Cast as <b>Innate</b>, the Ability can only Target currently Wielded and Worn Items, and only Ends when Un-Wielded or taken off.`,
             ],
         },
         {
@@ -114,7 +114,7 @@ module.exports = {
                 `Choose an Effect; <box>Heat | Cold | Soaked | Light | Darkness | Charm | Terror</box>`,
                 `If you Deal Damage, Heal, Shield, or Mitigate Damage using some Ability, you can give that Effect to your Target.`,
                 `Even if the Ability was an AOE only 1 Target can get the Effect, the Effect's ESS is equal to the <b>EP</b> used.`,
-                `This Effect lasts till the End of your Next Turn, and does nothing by itself.`,
+                `This Effect does nothing by itself, and lasts till the End of your Next Turn, and does nothing by itself.`,
                 `<box><b>EP Cap:</b> ESS</box>`,
             ],
         },
@@ -157,11 +157,8 @@ module.exports = {
             content: [
                 `<b>COMBO:</b>`,
                 `This Ability can be used as a <b>Main-Action</b> to Target up to 3 Items instead of 1.`,
-                `When multiple Items are Targeted, the Enchants can be different.`,
-                `When you use <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a> as a <b>Bonus-Action</b>, you can Cast this Ability as a <b>Free-Action</b> on one Wielded Item.`,
-                `When you Cast <a href="fighting_style.html">Fighting Style</a>, you can Cast this Ability as a <b>Free-Action</b> on it twice.`,
-                `When you Cast <a href="battle_aura.html">Battle Aura</a>, you can Cast this Ability as a <b>Free-Action</b> on it.`,
-                `When you Cast <a href="imbue_armament.html">Imbue Armament</a>, you can Cast this Ability as a <b>Free-Action</b> on one of the same Armaments.`,
+                `When you use the <a href="../main/mechanics.html#switch_action" target="_blank">Switch-Action</a> you can Cast this as a <b>Free-Action Reaction</b> on your Armaments.`,
+                `When you Cast <a href="imbue_armament.html">Imbue Armament</a>, you can Cast this as a <b>Free-Action Reaction</b> on one of the same Armaments.`,
             ],
         },
         {

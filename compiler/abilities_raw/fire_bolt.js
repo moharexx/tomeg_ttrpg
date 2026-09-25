@@ -8,7 +8,7 @@ module.exports = {
         "5 Evocation | 10 Transmutation | 20 Conjuration",
     ],
     reqs_full: [
-        "<b>Spell:</b> (5 INT | 5 WILL | 5 EGO), (5 Evocation | 10 Transmutation | 20 Conjuration)",
+        "<b>Spell:</b> 5 CS, (5 Evocation | 10 Transmutation | 20 Conjuration)",
     ],
     tags: [
         "Offense",
