@@ -2,13 +2,13 @@ module.exports = {
     name: "Absorb Element",
     category: "active",
     type: [
-        "Skill",
+        "Spell",
     ],
     reqs_short: [
         "5 Transmutation | 10 Evocation | 20 Anima",
     ],
     reqs_full: [
-        "<b>Skill:</b> 10 CS, (5 Transmutation | 10 Evocation | 20 Anima)",
+        "<b>Spell:</b> 10 CS, (5 Transmutation | 10 Evocation | 20 Anima)",
     ],
     tags: [
         "Defense",

@@ -28,7 +28,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                "<b>Note:</b> While this Attack doesn't deal any Damage by itself, On-Attacks and other modifiers can add Damage.",
+                `<b>Note:</b> While this Attack doesn't deal any Damage by itself, On-Attacks and other modifiers can add Damage.`,
             ]
         },
     ],

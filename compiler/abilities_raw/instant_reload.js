@@ -20,7 +20,8 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you Instantly Reload your currently Wielded Weapons.",
+                `When used, till the Start of your Next Turn, you ignore Reload Property of Ranged Weapons.`,
+                `The <b>ESS</b> you Cast this Ability at is <box>Total XP / 100</box>, and if somehow it's less, the Ability Fails.`,
             ],
         },
     ],
@@ -32,7 +33,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Free-Action"],
-                ["Cooldown", "1 Minute (20 Rounds)"]
+                ["Resource Cost", "10 × HD"]
             ],
         },
     ],

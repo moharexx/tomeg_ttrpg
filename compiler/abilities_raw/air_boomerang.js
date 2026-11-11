@@ -11,7 +11,7 @@ module.exports = {
     ],
     reqs_full: [
         "<b>Skill:</b> 20 Martial Arts",
-        "<b>Spell:</b> (10 INT | 10 WILL | 10 EGO), (5 Transmutation | 10 Enchantment | 20 Evocation)",
+        "<b>Spell:</b> 10 CS, (5 Transmutation | 10 Enchantment | 20 Evocation)",
     ],
     tags: [
         "Offense",

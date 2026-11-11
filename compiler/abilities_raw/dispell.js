@@ -21,7 +21,7 @@ module.exports = {
             type: "p",
             content: [
                 `When used, you Target something magical (like a Spell, Magical Item, or similar...), and attempt to Dispell it.`,
-                `Roll <box>(1d10 + 5) × ESS</b> against the <b>Dispell Difficulty</b>, if you Roll at least equal you Succeed.`,
+                `Roll <box>(1d10 + 5) × ESS</box> against the <b>Dispell Difficulty</b>, if you Roll at least equal you Succeed.`,
             ]
         },
         {

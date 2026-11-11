@@ -11,7 +11,7 @@ module.exports = {
     ],
     reqs_full: [
         "<b>Innate:</b> 200 WILL | 200 EGO",
-        "<b>Spell:</b> (200 INT | 50 WILL | 50 EGO), (20 Enchantment | 50 Divination | 200 Anima)",
+        "<b>Spell:</b> 50 CS, (20 Enchantment | 50 Divination | 200 Anima)",
     ],
     tags: [
         "Utility, Cooldown",
@@ -23,9 +23,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you can Reroll Any One Dice, on an Action you did, and choose between the two Rolled values.",
-                "This Ability cannot Reroll the d10 Check itself, only Damage, Healing, ect...",
-                "The ESS this Ability must be Cast at is equal to the Ability it is used on, or the Tier of the Armament used.",
+                `When used, you can Reroll Any One Dice, on an Action you did, and choose between the two Rolled values.`,
+                `This Ability cannot Reroll the d10 Check itself, only Damage, Healing, ect...`,
+                `The ESS this Ability must be Cast at is equal to the Ability it is used on, or the Tier of the Armament used.`,
             ],
         },
     ],

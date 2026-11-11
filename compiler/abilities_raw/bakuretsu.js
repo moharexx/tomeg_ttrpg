@@ -23,7 +23,7 @@ module.exports = {
                 `When using this Ability, you are put in <b>Bakuretsu! Stance</b>.`,
                 `The Point of the Explosion is visible and obvious to anyone nearby.`,
                 `While in this Stance, your Rolled INIT for the purpose of Turn Order is 0.`,
-                `MAX Stack: <box>4</box>`,
+                `MAX Stacks: <box>4</box>`,
             ],
         },
         {
@@ -31,10 +31,6 @@ module.exports = {
             content: [
                 `The Stance Breaks when: <box>Using Abilities, Moving, HD Decrease, Taking Damage</box>`,
             ],
-        },
-        {
-            type: "p",
-            content: `Damage per Stacks:`,
         },
         {
             type: "table",
@@ -69,7 +65,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action + Bonus-Action"],
-                ["Stance Trigger", "Main-Action + Bonus-Action at your next Turn."],
+                ["Stance Trigger", "Main-Action + Bonus-Action in your Next Turn."],
                 ["Range", "50 × CS^(1/3)"],
                 ["VIT Save", "14 × ESS"],
                 ["Blast Radius", "(Stack + 2) × ESS^(1/3)"],

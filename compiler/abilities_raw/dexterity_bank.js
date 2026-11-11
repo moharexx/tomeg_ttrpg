@@ -6,8 +6,8 @@ module.exports = {
         "Skill",
     ],
     reqs_short: [
-        "AGI",
-        "Acrobatics",
+        "20 AGI",
+        "10 Acrobatics",
     ],
     reqs_full: [
         "<b>Innate:</b> 20 AGI",
@@ -24,14 +24,14 @@ module.exports = {
             type: "p",
             content: [
                 `You either take a HD Loan or a HD Interest`,
-                `HD Gained or Spent does NOT interact with Abilities, like Breaking Stances, ect...`,
+                `This Ability doesn't Break your Stance, even if it would Break by using Abilities or Spending HD.`,
             ],
         },
         {
             type: "list",
             content: [
                 `<b>Loan:</b>`,
-                `You gain <box>(20 × ESS) HD</box> but lose <box>(25 × ESS) HD</box> at the End of Your Next Turn.`,
+                `You gain <box>(20 × ESS) HD</box> but lose <box>(25 × ESS) HD</box> at the End of your Next Turn.`,
                 `If you cannot pay back the Loan your HD drops to 0, and you gain the <a href="../main/mechanics.html#conditions" target="_blank">Staggered Condition.</a>`,
             ],
         },

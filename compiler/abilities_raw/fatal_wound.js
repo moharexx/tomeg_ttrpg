@@ -21,7 +21,7 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You imbue your Melee Attack with Fire.`,
+                `You make your Melee Attack Wound your Target.`,
                 `On a Hit you inflict the <b>Wound Effect</b>.`,
             ],
         },
@@ -29,8 +29,8 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Wound Effect:</b>`,
-                `At the Start of the Caster's Next Turn the Target takes <box>(1d8 × ESS) Physical</box> <a href="../main/mechanics.html#executing" target="_blank">Executing</a> Damage, with <box>10 × ESS</box> Armor-Pen.`,
-                `This Effect Ends after Dealing Damage.`,
+                `In the Caster's Next Turn the Target takes <box>(1d8 × ESS) Physical</box> <a href="../main/mechanics.html#executing" target="_blank">Executing</a> Damage, with <box>10 × ESS</box> Armor-Pen.`,
+                `This Effect Ends after Dealing its Damage.`,
             ],
         },
     ],
@@ -44,8 +44,8 @@ module.exports = {
                 ["Cast Time", "Bonus-Action"],
                 ["Ability Cost", "(5 GRIT | 10 HD) × ESS"],
                 ["Special Condition", "Melee"],
-                ["Damage", "(1d8 × ESS) Physical"],
-                ["Wound's-Pen", "10 × ESS"],
+                ["Physical Damage", "1d8 × ESS"],
+                ["Wound Penetration", "10 × ESS"],
             ],
         },
     ],

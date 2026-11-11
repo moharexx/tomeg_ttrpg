@@ -2,7 +2,7 @@ module.exports = {
     name: "Collateral",
     category: "meta",
     type: [
-        "Single Target",
+        "Single-Target",
     ],
     reqs_short: [
         "200 Total XP",
@@ -19,8 +19,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                `You use a Bonus-Action to make a Single Target Ability have a small Radius.`,
-                `When you use this with any kind of Melee Attack you can choose to Exclude yourself from the AOE.`,
+                `You increase the Cast Time to make a Single-Target Ability have a small Radius.`,
+                `Increase the Cast Time by either adding a <b>Bonus-Action</b>, or changing a <b>Bonus-Action</b> into a <b>Main-Action</b>.`,
+                `If the Cast Time of the Parent Ability is multiple Rounds then this Meta-Ability cannot be used!`,
             ],
         },
     ],
@@ -31,8 +32,7 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Type", "Single Target"],
-                ["Action Cost", "Bonus-Action"],
+                ["Type", "Single-Target"],
                 ["Radius", "ESS^(1/3)"],
             ],
         },

@@ -21,8 +21,11 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When you use this Ability, you attempt to disarm an Entity.",
-                "The Hit Entity must make a <b>STR Save</b>, or one of their held or Wielded Items gets flung away.",
+                `When you use this Ability, you attempt to disarm an Entity.`,
+                `The Hit Entity must make a <b>STR Save</b>, or one of their held or Wielded Items gets flung away.`,
+                `If you Succeed against a Wielded Item, then that Wielding Slot is Disabled till the End of their Next Turn.`,
+                `You can Target a Natural Weapons or Shield, Un-Wielding them, and also Disabling one Wielding Slot.`,
+                `The Save Difficulty depends on if the Parent Attack is [Melee/Ranged]; <box>[12/8] × ESS</box>`,
             ],
         },
         {
@@ -30,22 +33,8 @@ module.exports = {
             content: [
                 `<b>Grab:</b>`,
                 `If you are in Flung Distance, you can fling the Item to yourself.`,
-                `If you have a free Wielding Slot you can instantly Wield the item.`,
+                `If you have a free Wielding Slot you can instantly Wield the Item.`,
                 `If you don't, you can freely drop anything you're Wielding to make space.`,
-            ],
-        },
-        {
-            type: "list",
-            content: [
-                "<b>When Melee:</b>",
-                "The <b>STR Save</b> is <box>12 × ESS</box>.",
-            ],
-        },
-        {
-            type: "list",
-            content: [
-                "<b>When Ranged:</b>",
-                "The <b>STR Save</b> is <box>8 × ESS</box>.",
             ],
         },
     ],
@@ -57,9 +46,8 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
-                ["Melee STR Save", "12 × ESS"],
-                ["Ranged STR Save", "8 × ESS"],
-                ["Flung Distance", "2 × STR^(1/3)"],
+                ["[Melee/Ranged] STR Save", "[12/8] × ESS"],
+                ["Flung Distance", "2 × (STR | CS)^(1/3)"],
             ],
         },
     ],

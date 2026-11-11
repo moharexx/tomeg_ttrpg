@@ -20,7 +20,7 @@ module.exports = {
             type: "p",
             content: [
                 `Increase the Duration of a Spell, but Divide its <b>Effective ESS</b> based on the amount of Jumps in the Duration Table.`,
-                `This Effective ESS Division has NO effect on Range, Size, and doesn't make it easier to Dispell, Hack, Disrupt, ect...`,
+                `This Effective ESS Division has NO effect on Range and Size Scalings.`,
             ],
         },
         {
@@ -32,6 +32,18 @@ module.exports = {
                 `1 Hour (1200 Rounds)`,
                 `1 Day (28800 Rounds)`,
                 `Permanent (∞ Rounds)`,
+            ],
+        },
+        {
+            type: "list",
+            content: [
+                `<b>Stance Synergy:</b>`,
+                `If there is a Stance which uses some kind of Continuous AOE or similar, you can Permanence it.`,
+                `Treat it as if its Base Duration was 1 Minute, and you must at least jump 1 in the Duration Table.`,
+                `You place the Stance down at a Pinpointed Position in Range.`,
+                `If the Stance would be an Aura around you, or doesn't have a Range, then its Range is Touch.`,
+                `It doesn't count as a Stance; doesn't take away your Stance Slot, and can't Break.`,
+                `When you use this, the restriction that Stances cannot use the Ritual Meta-Ability is lifted.`,
             ],
         },
         {

@@ -28,7 +28,7 @@ module.exports = {
             type: "list",
             content: [
                 `<b>Soaked Effect:</b>`,
-                `On Dealing Damage, the Target gets Soaked with Acid.`,
+                `The Target is Soaked with Acid.`,
                 `At the Start of the Caster's subsequent Turn the Target takes <box>(8 × ESS) Demat</box> Damage.`,
                 `This Effect Ends after the Entity uses a <b>Main-Action + Bonus-Action</b> to remove it.`,
             ],
@@ -41,10 +41,10 @@ module.exports = {
             width: ["30%", "70%"],
             content: [
                 ["Ability Stat", "Value"],
-                ["Cast Time", "Main-Action"],
+                ["Cast Time", "Main-Action + Bonus-Action"],
                 ["Range", "10 × CS^(1/3)"],
                 ["AGI Save", "12 × ESS"],
-                ["Damage", "(1d8 × ESS) Demat"],
+                ["Soaked Demat Damage", "8 × ESS"],
             ],
         },
     ],

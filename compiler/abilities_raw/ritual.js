@@ -22,23 +22,9 @@ module.exports = {
                 `Increase the Casting Time of a Spell, and Increase its Stats based on the amount of Jumps in Casting Time.`,
                 `The Spell is Cast with Multiplied Range, Size, and Effective ESS; <box>(Jumps in Cast Time) + 1</box>`,
                 `This Effective ESS Multiplier has NO effect on Range and Size scalings (Ritual already provides its own).`,
-            ],
-        },
-        {
-            type: "p",
-            content: [
-                `While Casting a Ritual it takes a all of your Actions on each of your Turns.`,
-                `If you get Damaged while Casting, Roll a <box>(Soul | VIT) Save of Damage Received</box>`,
-                `If the Save is Failed, the Ritual Catastrophically Fails, instantly Casting the Ability on the Caster.`,
-                `<b>Example:</b> Rital Casting Fireball, 15 Minutes in, Save Failed! Fireball explodes on the Caster with the 1 Minute Ritual Multipliers.`,
-                `The Spell also Catastrophically Fails if the Caster has an Action reducing Condition on their Turn.`,
-                `The Caster can safely stop the Ritual by Spending all their Actions that Turn.`,
-            ]
-        },
-        {
-            type: "dots",
-            content: [
-                "You cannot use Ritual on Reactive, On-Attack, and Stance Type Abilities!",
+                `If you have the written version of a Spell, you can Cast that Spell even if you don't have it Unlocked.`,
+                `You do this by jumping at least 1 higher in the Cast Time Table, and you do gain the benefits.`,
+                `You cannot use Ritual on Reactives, On-Attacks, and Stance Abilities!`,
             ],
         },
         {
@@ -52,13 +38,24 @@ module.exports = {
             ],
         },
         {
+            type: "p",
+            content: [
+                `While Casting a Ritual it takes all of your Actions on each of your Turns.`,
+                `If you get Damaged while Casting, Roll a <box>(VIT | Soul) Save of Damage Received</box>`,
+                `If the Save is Failed, the Ritual Catastrophically Fails, instantly Casting the Ability on the Caster.`,
+                `<b>Example:</b> Rital Casting Fireball, 15 Minutes in, Save Failed! Fireball explodes on the Caster with the 1 Minute Ritual Multipliers.`,
+                `The Spell also Catastrophically Fails if the Caster has an Action reducing Condition on their Turn.`,
+                `The Caster can safely stop the Ritual by Spending all their Actions that Turn.`,
+            ]
+        },
+        {
             type: "list",
             content: [
                 `<b>Community Ritual</b> (20 Arcana | 20 Anima):`,
-                `You can invite in others to participate in the Ritual.`,
+                `You can invite in others to participate in the Ritual, even if they don't have this Meta-Ability.`,
                 `The Ritual speeds up proportional to the Participants' Total XP (based on the Caster's).`,
-                `Participants can safely leave at any time (the original Caster can't).`,
-                `<b>Example:</b> Your party joins the Ritual, 2 People with the same Total XP as you speeds up the Ritual to by +2× thus 3× speed.`,
+                `Participants can safely leave at any time, but not the original Caster.`,
+                `<b>Example:</b> Your party joins the Ritual, 2 People with the same Total XP as you speed the Ritual up by +2× thus 3× speed.`,
             ],
         },
         {
@@ -86,7 +83,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Type", "Spell"],
-                ["(AOE, Range, ESS) Multiplier", "(Jumps in Cast Time) + 1"],
+                ["(ESS, Range, AOE) Multiplier", "(Jumps in Cast Time) + 1"],
             ],
         },
     ],

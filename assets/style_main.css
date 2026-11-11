@@ -23,8 +23,8 @@ header {
     z-index: 999;
     position: fixed;
     display: flex;
+    top: 0;
     width: 100%;
-    transform: translateY(-4rem);
     background-color: #202020;
     user-select: none;
 }
@@ -87,11 +87,11 @@ side_menu {
     overflow-y: scroll;
     position: fixed;
     top: 4rem;
-    height: calc(100% - 6rem);
+    height: calc(100% - 10rem);
     color: #f0f0f0;
     background-color: #404040;
     width: 24rem;
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
 }
 
 side_menu h1 {

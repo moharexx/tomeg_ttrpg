@@ -20,17 +20,16 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When using this Ability, you are put in <b>Lock'n Load Stance.</b>",
-                "While in <b>Lock'n Load Stance</b>, Slow-Reload's Action Cost is only a Bonus-Action.",
-                "While in <b>Lock'n Load Stance</b>, Reload's Action Cost is a Free-Action, only once a Turn.",
-                "When Reloading or Slow-Reloading, You can Reload all currently Wielded Weapons.",
+                `When using this Ability, you are put in <b>Lock'n Load Stance</b>.`,
+                `While in <b>Lock'n Load Stance</b>, you ignore the Reload Property of your Ranged Weapons.`,
             ],
         },
         {
             type: "list",
             content: [
                 `<b>Stance Trigger</b>`,
-                `You instantly Reload and Slow-Reload any chosen Weapons in Natural Melee Reach.`,
+                `You can make any Ranged Weapon ignore its Reload Property in Natural Melee Reach.`,
+                `This lasts until the Start of your Next Turn.`,
             ],
         },
         {

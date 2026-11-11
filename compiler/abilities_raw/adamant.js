@@ -5,10 +5,10 @@ module.exports = {
         "Innate",
     ],
     reqs_short: [
-        "10 VIT, (10 INT | 10 WILL | 10 EGO)",
+        "10 VIT, 10 CS",
     ],
     reqs_full: [
-        "<b>Innate:</b> 10 VIT, (10 INT | 10 WILL | 10 EGO)",
+        "<b>Innate:</b> 10 VIT, 10 CS",
     ],
     tags: [
         "Defense",
@@ -20,14 +20,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, You Reduce a single instance of incoming Damage.",
-                "This Ability reduces both HP and SP Damage.",
-            ],
-        },
-        {
-            type: "p",
-            content: [
-                "<b>Note:</b> This Ability can CRIT for 2× Damage Reduction, throw your d10 pls.",
+                `When used, You Reduce a single instance of incoming Damage.`,
+                `This Ability reduces both HP and SP Damage.`,
+                `This Ability can CRIT for 2× Damage Reduction, throw your d10 pls`,
             ],
         },
     ],
@@ -40,7 +35,7 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
                 ["Trigger", "Take Damage"],
-                ["Damage Reduction", "6 × ESS"],
+                ["Damage Reduction", "8 × ESS"],
             ],
         },
     ],

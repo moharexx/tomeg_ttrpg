@@ -12,7 +12,7 @@ module.exports = {
     ],
     tags: [
         "Offense",
-        "Weapon Damage, Projectile, Executing",
+        "Ranged, Weapon Damage, Executing",
         "Main-Action",
     ],
     unlock_cost: 10,
@@ -20,15 +20,10 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When you use this Ability, you make a Ranged Projectile Attack.",
-                `This Ability has <a href="../main/mechanics.html#executing" target="_blank">Executing</a> against Entities with the <a href="../main/mechanics.html#conditions" target="_blank">Airborne Condition.</a>`,
-                "This Ability adheres to the rules of the Reload Property.",
-            ],
-        },
-        {
-            type: "dots",
-            content: [
-                "This Attack Retains Armor-Pen and all Special Properties the Parent Weapon does on a Regular Attack-Action.",
+                `When you use this Ability, you make a Single-Target Ranged Projectile Attack with a Wielded Ranged Weapon.`,
+                `The Damage is <a href="../main/mechanics.html#executing" target="_blank">Executing</a> against Entities with the <a href="../main/mechanics.html#conditions" target="_blank">Airborne Condition.</a>`,
+                `This Attack inherets the Armor-Pen of your Ranged Weapon.`,
+                `This Ability adheres to the rules of the Reload Property, needing your Weapon Reloaded, and making you have to Reload after using it.`,
             ],
         },
     ],
@@ -41,9 +36,9 @@ module.exports = {
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Main-Action"],
                 ["Range", "Weapon Range"],
-                ["Damage when using Light Weapon", "(1d8 × ESS) Weapon Damage Type"],
-                ["Damage when using Medium Weapon", "(1d10 × ESS) Weapon Damage Type"],
-                ["Damage when using Heavy Weapon", "(1d12 × ESS) Weapon Damage Type"],
+                ["Damage using Light Weapons", "(1d8 × ESS) Weapon Damage Type"],
+                ["Damage using Medium Weapons", "(1d10 × ESS) Weapon Damage Type"],
+                ["Damage using Heavy Weapons", "(1d12 × ESS) Weapon Damage Type"],
             ],
         },
     ],

@@ -6,23 +6,23 @@ module.exports = {
         "(Ranged, Cone)",
     ],
     reqs_short: [
-        "Ballistic | Perception",
+        "10 Ballistic | 10 Perception",
     ],
     reqs_full: [
-        "10 Ballistic | 20 Perception",
+        "<b>Skill:</b> 10 Ballistic | 10 Perception",
     ],
     tags: [
         "Utility",
         "Range",
         "Bonus-Action",
     ],
-    unlock_cost: 10,
+    unlock_cost: 5,
     description: [
         {
             type: "p",
             content: [
-                "When you use a Ranged Projectile Attack, you can increases it's Range and Long Range.",
-                "When used on a Cone Attack, the Length of the Cone is Increased.",
+                `When you use a Ranged Attack, you can increases its Range, including Long Range.`,
+                `When used on a Cone Attack, the Length of the Cone is increased.`,
             ],
         },
     ],
@@ -34,9 +34,8 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
-                ["Extra Range", "60 × ESS^(1/3)"],
-                ["Extra Long Range", "120 × ESS^(1/3)"],
-                ["Extra Cone Length", "2 × ESS^(1/3)"],
+                ["Extra Range", "(60 / 120) × ESS^(1/3)"],
+                ["Extra Cone Length", "4 × ESS^(1/3)"],
             ],
         },
     ],

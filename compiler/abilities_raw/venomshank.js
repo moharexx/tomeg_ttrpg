@@ -22,7 +22,7 @@ module.exports = {
             type: "p",
             content: [
                 `You imbue your Melee Attack with Poison.`,
-                `Upon dealing Damage the Target is inflicted with the <b>Poison Effect.</b>`,
+                `Upon dealing Damage the Target is inflicted with the <b>Poison Effect</b>.`,
             ],
         },
         {
@@ -30,7 +30,7 @@ module.exports = {
             content: [
                 `<b>Poison Effect:</b>`,
                 `At the Start of the Caster's Next Turn the Target takes <box>2d12 × ESS</box> Bio Damage.`,
-                `This Effect Ends after Dealing Damage.`,
+                `This Effect Ends after Dealing its Damage.`,
             ],
         },
     ],

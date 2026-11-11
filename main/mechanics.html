@@ -522,7 +522,9 @@
         <hr>
         <p>
             Attacks are d10 Checks, the Result of the Check is called the <b>To-Hit</b>.<br>
-            Target(s) must Spend HD equal to <box>To-Hit</box> to make the Attack Miss, or they get Hit.<br>
+            The Check's Modifier is based off the Attack, <box>Melee Weapon | Ballistic</box> Mastery Modifiers.<br>
+            Spells can use <box>(INT | WILL | EGO) / 2</box>, and Natural <b>Melee</b> Weapons can use Martial Arts Modifier.<br>
+            Target(s) can Spend HD equal to the <b>To-Hit</b> to Dodge the Attack, otherwise they are Hit.<br>
             <a href="#attack_action">Attack-Actions</a> are the basic Attacks of the game, <b>but not all Attacks are Attack-Actions!</b>
         </p>
         <p>
@@ -537,7 +539,7 @@
             <li>May have 2 different ranges; Normal, and Long, with Long imposing Disadvantage.</li>
             <li>If the Attack is Single Target then only <a href="#senses">Pinpointed</a> Entities can be Targeted.</li>
             <li>If a Single Target Ranged Attack misses its Target, then it flies past it, but its <b>To-Hit</b> is reduced to 0.</li>
-            <li>Ranged Attacks are made with Disadvantage if the Attacker is in the Melee Reach of another Entity.</li>
+            <li>Ranged Attacks are made with Disadvantage if the Attacker is in the Melee Reach of a Hostile Entity.</li>
             <li>If the Entity's Total XP is less than Half the Attacker's, then this Disadvantage is ignored.</li>
         </ul>
         <h2 id="saves">Saves</h2>
@@ -660,7 +662,7 @@
                 As a <b>Free-Action</b> an Entity can Start Sprinting.<br>
                 When doing so it will be count as Sprinting till the Start of its Next Turn.<br>
                 Using the Move-Action while Sprinting covers Double the distance.<br>
-                Attacks are made with <b>Advantage</b> against Sprinting Targets.
+                <b>Melee</b> Attacks are made with <b>Advantage</b> against Sprinting Targets.
             </p>
         </div>
         <h2 id="speak" class="collapsible">Speak</h2>
@@ -715,10 +717,10 @@
                 But it's a <b>Bonus-Action</b> if the Weapon is Light, or if you're <a href="#wielding">Dual Wielding</a>.<br>
             </p>
             <p>
-                The Modifier of this Attack is equal to the used <a href="#martial_masteries">Martial Mastery's Modifier</a>.<br>
-                Melee Weapons use Melee Weapon Mastery, and Ranged Weapons use Ballistic Mastery.<br>
+                The Modifier of this Attack is equal to the used <a href="#martial_masteries">Mastery's Modifier</a>.<br>
+                Melee Weapon Mastery for Melee Weapons, and Ballistic Mastery for Ranged Weapons.<br>
                 Weapons with the Throw Property still use Melee Weapon Mastery when thrown.<br>
-                Natural Weapons can use Martial Arts Mastery in place of the relevant Mastery.<br>
+                Natural <b>Melee</b> Weapons can use Martial Arts Mastery in place of Melee Weapon Mastery.<br>
             </p>
             <p>
                 On top of the Weapon's Base Damage there is a Bonus of: <box>Base Stat / 5</box><br>
@@ -915,9 +917,9 @@
                 As a Bonus-Action, you can Attempt a Grapple againts a Target in Natural Melee Weapon Reach.<br>
                 A Grappled a Target takes up 1 Wielding Slot of the Grappler.<br>
                 The Target must pass a <b>(STR | AGI) Save</b> of <box>Athletics Modifier</box>, or be Grappled.<br>
-                A Grappled Target is <a href="#conditions">Rooted.</a><br>
+                A Grappled Target is <a href="#conditions">Rooted</a>, and makes Attacks with Disadvantage.<br>
                 You can move your Target in a way that it stays in your Reach.<br>
-                The Target may Attempt the Save again as a Bonus-Action.
+                The Target may Attempt the Save again as a Bonus-Action, Escaping on a Success.
             </p>
             <p>
                 Grapple counts as a <b>Skill Type Ability</b>, with the <b>Offense</b> and <b>Crowd Control</b> Tag.<br>
@@ -1259,8 +1261,9 @@
             <p class="bottomless"><b>Terror Effect:</b></p>
             <ul>
                 <li>Applies Disadvantage on Attacks against the User, and cannot willfully move closer to them.</li>
-                <li>This Effect Ends if the User gets the <a href="#conditions">Dying Condition</a> or Dies.</li>
-                <li>The <b>Terror Effect</b> Last till End of Target's Next Turn.</li>
+                <li>The <b>Terror Effect</b> lasts for 1 Minute (20 Rounds).</li>
+                <li>The Target may Attempt the Save again as a Bonus-Action, Ending the Effect early on a Success.</li>
+                <li>This Effect Ends early if the User gets the <a href="#conditions">Unconscious Condition</a>.</li>
             </ul>
             <p>
                 Intimidate could also have social interactions, to extract information, make opponents surrender or run away, ect...<br>
@@ -1272,13 +1275,14 @@
         <div class="collapsed">
             <p>
                 As a <b>Bonus-Action</b> you can attempt to Taunt a Target.<br>
-                If the Target can <b>Sense</b> you, on a Failed <b>Soul Save</b> of <box>Performance Modifier</box> it gains the <b>Charm Effect.</b><br>
+                If the Target can <b>Sense</b> you, on a Failed <b>Soul Save</b> of <box>Performance Modifier</box> it gains the <b>Charm Effect</b>.<br>
             </p>
             <p class="bottomless"><b>Charm Effect:</b></p>
             <ul>
                 <li>Applies Disadvantage on Attacks made against any other Entity than the User.</li>
-                <li>This Effect Ends if the User gets the <a href="#conditions">Dying Condition</a> or Dies.</li>
-                <li>The <b>Charm Effect</b> Last till End of Target's Next Turn.</li>
+                <li>The <b>Charm Effect</b> lasts for 1 Minute (20 Rounds).</li>
+                <li>The Target may Attempt the Save again as a Bonus-Action, Ending the Effect early on a Success.</li>
+                <li>This Effect Ends early if the User gets the <a href="#conditions">Unconscious Condition</a>.</li>
             </ul>
             <p>
                 Taunt could also have social interactions, to divert attention, ect...<br>
@@ -1682,7 +1686,7 @@
             </tr>
             <tr>
                 <td>Base Damage</td>
-                <td><a href="#damage_and_range_table">See Table</a></td>
+                <td><a href="#damage_table">See Table</a></td>
                 <td>The Damage Dice of the Weapon.</td>
             </tr>
             <tr>
@@ -1695,7 +1699,7 @@
             </tr>
             <tr>
                 <td>Light</td>
-                <td>0</td>
+                <td>1</td>
                 <td>Uses 1 Wielding Slot, and makes the <a href="#attack_action">Attack-Action</a> with a Bonus-Action.</td>
             </tr>
             <tr>
@@ -1708,7 +1712,7 @@
             </tr>
             <tr>
                 <td>Heavy</td>
-                <td>-1</td>
+                <td>-2</td>
                 <td>Uses 2 Wielding Slots.</td>
             </tr>
             <tr>
@@ -1726,20 +1730,20 @@
             </tr>
             <tr>
                 <td>Throw</td>
-                <td>1</td>
+                <td>1 | 3</td>
                 <td>
                     Weapon gains 5 × STR^(1/3) Throw Distance, Double for the Long-Range.<br>
                     Can use Ballistic or Martial Arts Mastery when Throwing Finesse Weapons.<br>
-                    <b>Heavy Weapons Excluded!</b>
+                    <b>1 Property Point for Light and Medium, 3 Proprety Points for Heavy.</b>
                 </td>
             </tr>
             <tr>
                 <td>Finesse</td>
-                <td>1</td>
+                <td>1 | 3</td>
                 <td>
                     Attacks and Abilities can use AGI in place of STR.<br>
                     Attacks and Abilities can use Martial Arts in place of Melee Weapon Mastery.<br>
-                    <b>Heavy Weapons Excluded!</b>
+                    <b>1 Property Point for Light and Medium, 3 Proprety Points for Heavy.</b>
                 </td>
             </tr>
         </table>
@@ -1764,13 +1768,13 @@
             </tr>
             <tr>
                 <td>Base Damage</td>
-                <td><a href="#damage_and_range_table">See Table</a></td>
+                <td><a href="#damage_table">See Table</a></td>
                 <td>The Damage Dice of the Weapon.</td>
             </tr>
             <tr>
                 <td>Range</td>
-                <td><a href="#damage_and_range_table">See Table</a></td>
-                <td>Range of the Weapon, depends on Base Damage.</td>
+                <td>Variable</td>
+                <td>By default <box>40 / 80</box>, each Property Point Spent to Range adds <box>+10 / +20</box></td>
             </tr>
             <tr>
                 <td>Damage Type</td>
@@ -1785,11 +1789,11 @@
             <tr>
                 <td>Medium</td>
                 <td>0</td>
-                <td>Uses 2 Wielding Slots.</td>
+                <td>Uses 1 Wielding Slots.</td>
             </tr>
             <tr>
                 <td>Heavy</td>
-                <td>0</td>
+                <td>-2</td>
                 <td>Uses 2 Wielding Slots.</td>
             </tr>
             <tr>
@@ -1810,26 +1814,21 @@
             </tr>
             <tr>
                 <td>Aim</td>
-                <td>2</td>
+                <td>2 | 3</td>
                 <td>
                     Can use 2 Wielding Slots to gain Advantage on <a href="#attack_action">Attack-Actions</a>.<br>
-                    <b>Light Ranged Weapons Only!</b>
-                </td>
-            </tr>
-            <tr>
-                <td>Slow-Reload</td>
-                <td>-3</td>
-                <td>
-                    The Weapon uses a Main-Action to Reload.<br>
-                    Only the <a href="#attack_action">Attack-Actions</a> needs the Weapon Reloaded, Abilities can be used freely.
+                    This Advantage doesn't apply if you have Disadvantage from a Melee Hostile Entity.<br>
+                    <b>2 Property Points for Light, 3 Property Points for Medium, cannot be put on Heavy.</b>
                 </td>
             </tr>
             <tr>
                 <td>Reload</td>
-                <td>-2</td>
+                <td>-3</td>
                 <td>
-                    The Weapon uses a Bonus-Action to Reload.<br>
-                    Only the <a href="#attack_action">Attack-Actions</a> needs the Weapon Reloaded, Abilities can be used freely.
+                    When you make an <a href="#attack_action">Attack-Action</a> you must use a <a href="#switch_action">Switch-Action</a> to Reload.<br>
+                    This consumes the Switch-Action without doing anything other than Reloading.<br>
+                    If you're not Reloaded, you can't use the <a href="#attack_action">Attack-Action</a> with any Ranged Weapon that has the Reload Property.<br>
+                    The state of if you're Reloaded or not is kept on you as an Entity, rather than the Weapon, for balance reasons...<br>
                 </td>
             </tr>
         </table>
@@ -1886,7 +1885,7 @@
                 <td>Tower</td>
                 <td>2</td>
                 <td>
-                    Can provide <a href="#cover">Cover</a> to others and to yourself in 180° degrees.<br>
+                    Can provide <a href="#cover">Cover</a> to yourself and others behind you.<br>
                     To get the Cover one must use the <a href="#take_cover">Take Cover Action</a>, as normal.<br>
                     When you use the <a href="#defense_action">Defense-Action</a>, you can <b>Take Cover</b> as a Free-Action in that Turn.<br>
                     The Cover you provide is gone when you: move, get moved, get <a href="#conditions">Prone or Staggered</a>.<br>
@@ -1932,60 +1931,42 @@
                 </td>
             </tr>
         </table>
-        <h2 id="damage_and_range_table">Damage and Range Table</h2>
+        <h2 id="damage_table">Damage Table</h2>
         <hr>
         <table width="70%">
             <tr class="CellBorder">
                 <td style="width:20%">
-                    Damage and Range
+                    Damage
                 </td>
                 <td style="width:80%">
                     Property Points / Requirements
                 </td>
             </tr>
             <tr>
-                <td>
-                    1d4<br>
-                    20 / 40
-                </td>
+                <td>1d4</td>
                 <td>-1 / Requires Light!</td>
             </tr>
             <tr>
-                <td>
-                    1d6<br>
-                    30 / 60
-                </td>
+                <td>1d6</td>
                 <td>1 / Requires Light or Medium!</td>
             </tr>
             <tr>
-                <td>
-                    1d8<br>
-                    40 / 80
-                </td>
+                <td>1d8</td>
                 <td>3 / Requires Medium or Heavy!</td>
             </tr>
             <tr>
-                <td>
-                    1d10<br>
-                    60 / 120
-                </td>
+                <td>1d10</td>
                 <td>
                     4 / Requires Heavy!<br>
                     <b>Note:</b> Also reachable by using 2 Wielding Slots on Medium Melee Weapons.
                 </td>
             </tr>
             <tr>
-                <td>
-                    1d12<br>
-                    80 / 160
-                </td>
+                <td>1d12</td>
                 <td>5 / Requires Heavy!</td>
             </tr>
             <tr>
-                <td>
-                    1d20<br>
-                    120 / 240
-                </td>
+                <td>1d20</td>
                 <td>9 / Requires Heavy!</td>
             </tr>
         </table>

@@ -20,16 +20,15 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When using this Ability, you are put in <b>Active Dodge! Stance.</b>",
-                "While in <b>Active Dodge! Stance</b> you can Spend extra <box>4 × ESS</box> Free HD against Attacks, potentionally making them miss.",
-                "You also make <b>AGI Saves</b> with Advantage.",
-                "Using this Free HD doesn't Spend from your HD Pool, but still counts as Spending HD for the purposes of Abilities, like Breaking Stances.",
+                `When using this Ability, you are put in <b>Active Dodge! Stance.</b>`,
+                `While in <b>Active Dodge! Stance</b>; incoming Attacks have their <b>To-Hit</b> Reduced by <box>4 × ESS</box>, after Advantage and Disadvantage.`,
+                `You also make <b>AGI Saves</b> with Advantage.`,
             ],
         },
         {
             type: "p",
             content: [
-                "The Stance Breaks when: <box>Using Abilities, Moving, Taking Damage</box>",
+                `The Stance Breaks when: <box>Using Abilities, Moving, Taking Damage</box>`,
             ],
         },
     ],

@@ -20,9 +20,9 @@ module.exports = {
         {
             type: "p",
             content: [
-                "When used, you can make an additional Ranged Attack-Action.",
-                "When doing so, the would be Action Cost of the Attack-Action is deducted from Your Next Turn.",
-                "If for some reason you don't have the Action that would be deduced, you're not punished.",
+                `When used, you can make an additional Ranged Attack-Action.`,
+                `When doing so, the would be Action Cost of the Attack-Action is deducted from Your Next Turn.`,
+                `If you can't provide the Actions at the Start of your Next Turn, you gain the <a target="_blank" href="../main/mechanics.html#conditions">Staggered Condition</a>.`,
             ],
         },
     ],

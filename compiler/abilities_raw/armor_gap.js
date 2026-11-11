@@ -33,7 +33,7 @@ module.exports = {
             content: [
                 ["Ability Stat", "Value"],
                 ["Cast Time", "Bonus-Action"],
-                ["Bonus Penetration", "6 × ESS"],
+                ["Bonus Penetration", "8 × ESS"],
             ],
         },
     ],
